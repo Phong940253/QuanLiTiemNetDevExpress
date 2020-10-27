@@ -88,11 +88,11 @@
     <Compile Include="RibbonForm1.Designer.cs">
       <DependentUpon>RibbonForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="RibbonFormAddNguoiDung.cs">
+    <Compile Include="RibbonFormAddTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RibbonFormAddNguoiDung.Designer.cs">
-      <DependentUpon>RibbonFormAddNguoiDung.cs</DependentUpon>
+    <Compile Include="RibbonFormAddTaiKhoan.Designer.cs">
+      <DependentUpon>RibbonFormAddTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="RibbonFormAddNhanVien.cs">
       <SubType>Form</SubType>
@@ -117,11 +117,8 @@
     <EmbeddedResource Include="RibbonForm1.resx">
       <DependentUpon>RibbonForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RibbonFormAddNguoiDung.resx">
-      <DependentUpon>RibbonFormAddNguoiDung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RibbonFormAdd.resx">
-      <DependentUpon>RibbonFormAdd.cs</DependentUpon>
+    <EmbeddedResource Include="RibbonFormAddTaiKhoan.resx">
+      <DependentUpon>RibbonFormAddTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonFormAddNhanVien.resx">
       <DependentUpon>RibbonFormAddNhanVien.cs</DependentUpon>

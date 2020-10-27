@@ -132,7 +132,7 @@ namespace QuanLiTiemNet
 
         private void barButtonItemAddNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSet, quanLiTiemNet.Tables[0].NewRow());
+            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSetNguoiDung, quanLiTiemNet.Tables[0].NewRow());
             addNhanVien.Show();
         }
 
@@ -197,10 +197,21 @@ namespace QuanLiTiemNet
             gridControl3.DataMember = "TAIKHOAN";
         }
 
-        public void addDataSet(DataRow dataRow)
+        public void addDataSetNhanVien(DataRow dataRow)
         {
             quanLiTiemNet.Tables[0].Rows.Add(dataRow);
             SaveDatabase(ref gridView1);
+        }
+
+        public void addDataSetNguoiDung(DataRow dataRow)
+        {
+            quanLiTiemNet.Tables[1].Rows.Add(dataRow);
+            SaveDatabase(ref gridView2);
+        }
+        public void addDataSetTaiKhoan(DataRow dataRow)
+        {
+            quanLiTiemNet.Tables[2].Rows.Add(dataRow);
+            SaveDatabase(ref gridView3);
         }
 
 
@@ -242,7 +253,6 @@ namespace QuanLiTiemNet
         private void barButtonItemEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
             int rowHandle = gridView1.FocusedRowHandle;
-
             RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, quanLiTiemNet.Tables[0].Rows[gridView1.GetSelectedRows()[0]]);
             editNhanVien.Show();
             SaveDatabase(ref gridView1);
@@ -267,6 +277,12 @@ namespace QuanLiTiemNet
                 setPictureEditAvatarNhanVien(null);
             setTenNhanVien(dataRow["HO"]?.ToString() + " " + dataRow["TENDEM"]?.ToString() + " " + dataRow["TEN"]?.ToString());
             setChucVuNhanVien(dataRow["CHUCVU"]?.ToString());
+        }
+
+        private void barButtonItemAddTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow());
+            addTaiKhoan.Show();
         }
 
         private void setTaiKhoan(int index)
