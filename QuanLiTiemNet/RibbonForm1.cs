@@ -9,6 +9,7 @@ using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLiTiemNet
 {
+    public delegate void editData(DataRow dataRow, ref GridView gridView);
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         SqlConnection sqlConnection;
@@ -132,7 +133,7 @@ namespace QuanLiTiemNet
 
         private void barButtonItemAddNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSetNguoiDung, quanLiTiemNet.Tables[0].NewRow());
+            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSetNhanVien, quanLiTiemNet.Tables[0].NewRow());
             addNhanVien.Show();
         }
 
@@ -198,7 +199,7 @@ namespace QuanLiTiemNet
         }
 
         public void addDataSetNhanVien(DataRow dataRow)
-        {
+        {            
             quanLiTiemNet.Tables[0].Rows.Add(dataRow);
             SaveDatabase(ref gridView1);
         }
@@ -210,14 +211,20 @@ namespace QuanLiTiemNet
         }
         public void addDataSetTaiKhoan(DataRow dataRow)
         {
-            quanLiTiemNet.Tables[2].Rows.Add(dataRow);
-            SaveDatabase(ref gridView3);
+            try
+            {
+                quanLiTiemNet.Tables[2].Rows.Add(dataRow);
+                SaveDatabase(ref gridView3);
+            } catch(ArgumentException ex)
+            {
+                //quanLiTiemNet.Tables[2].Rows.Remove();
+            }
         }
 
 
-        public void editDataSet(DataRow dataRow)
+        public void editDataSet(DataRow dataRow, ref GridView gridView)
         {
-            SaveDatabase(ref gridView1);
+            SaveDatabase(ref gridView);
         }
 
         private void SaveDatabase(ref GridView gridView)
@@ -252,10 +259,22 @@ namespace QuanLiTiemNet
 
         private void barButtonItemEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int rowHandle = gridView1.FocusedRowHandle;
-            RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, quanLiTiemNet.Tables[0].Rows[gridView1.GetSelectedRows()[0]]);
-            editNhanVien.Show();
-            SaveDatabase(ref gridView1);
+            if (navigationFrame1.SelectedPage == navigationPage1)
+            {
+
+            }
+        }
+
+        private void editDataSet(GridView gridView)
+        {
+            int rowHandle = gridView.FocusedRowHandle;
+            if (gridView == gridView3)
+            {
+                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                editTaiKhoan.Show();
+                SaveDatabase(ref gridView);
+            }
+            
         }
 
         private void setChucVuNhanVien(string chucVu)
@@ -281,7 +300,9 @@ namespace QuanLiTiemNet
 
         private void barButtonItemAddTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow());
+            int indexMaTaiKhoan;
+            indexMaTaiKhoan = quanLiTiemNet.Tables[2].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[2].Rows[quanLiTiemNet.Tables[2].Rows.Count - 1]["MATK"] + 1;
+            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow(), indexMaTaiKhoan);
             addTaiKhoan.Show();
         }
 

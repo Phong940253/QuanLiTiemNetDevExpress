@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLiTiemNet
 {
@@ -10,6 +11,9 @@ namespace QuanLiTiemNet
     {
         DataRow dataRow;
         sendNewNhanVien sendNewTaiKhoan;
+        editData sendEditData;
+        GridView gridView;
+        int maTaiKhoan;
         public RibbonFormAddTaiKhoan()
         {
             InitializeComponent();
@@ -18,6 +22,18 @@ namespace QuanLiTiemNet
         {
             this.sendNewTaiKhoan = sender;
             this.dataRow = dataRow;
+        }
+
+        public RibbonFormAddTaiKhoan(sendNewNhanVien sender, DataRow dataRow, int maTaiKhoan) : this(sender, dataRow)
+        {
+            this.maTaiKhoan = maTaiKhoan;
+        }
+
+        public RibbonFormAddTaiKhoan(editData sender, DataRow dataRow, ref GridView gridView) : this()
+        {
+            this.sendEditData = sender;
+            this.dataRow = dataRow;
+            this.gridView = gridView;
         }
 
         private void loadDataRow()
@@ -32,20 +48,19 @@ namespace QuanLiTiemNet
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            dataRow["MATK"] = maTaiKhoan;
             dataRow["TENTK"] = textEditTenTaiKhoan.Text;
             dataRow["MATKHAU"] = textEditMatKhau.Text;
-            dataRow["TONGTIEN"] = spinEditTongSoTien.Text;
-            dataRow["TRANGTHAI"] = comboBoxEditTrangThai.Text;
-            dataRow["LOAI"] = comboBoxEditLoaiTaiKhoan.Text;
+            dataRow["TONGTIEN"] = string.IsNullOrEmpty(spinEditTongSoTien.Text) ? "0" : spinEditTongSoTien.Text;
+            dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "UNLOCK" : "LOCK";
+            dataRow["LOAI"] = string.IsNullOrEmpty(comboBoxEditLoaiTaiKhoan.Text) ? "Thường" : "VIP";
+            dataRow["SOTIENSUDUNG"] = "0";
+            dataRow["SOGIOSUDUNG"] = "00:00:00";
             if (!string.IsNullOrEmpty(comboBoxEditMaNguoiDung.Text))
                 dataRow["MANGUOIDUNG"] = comboBoxEditMaNguoiDung.Text;
+            dataRow["NGAYTAO"] = DateTime.Now;
             sendNewTaiKhoan(dataRow);
         }
-
-
-
-        
 
         private void bbiClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -104,39 +119,27 @@ namespace QuanLiTiemNet
             this.Text += Caption ?? "Tài khoản mới";
         }
 
-        /*private void bbiReset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bbiReset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            textEditHo.Text = null;
-            textEditTenDem.Text = null;
-            textEditTen.Text = null;
-            textEditTaiKhoan.Text = null;
+            textEditTenTaiKhoan.Text = null;
             textEditMatKhau.Text = null;
-            textEditSDT.Text = null;
-            textEditEmail.Text = null;
-            spinEditTienLuong.Text = null;
-            comboBoxEditChucVu.Text = null;
-            pictureEditAnh.Image = null;
-            textEditDiaChi.Text = null;
-        }*/
+            spinEditTongSoTien.Text = null;
+            comboBoxEditTrangThai.Text = null;
+            comboBoxEditLoaiTaiKhoan.Text = null;
+            comboBoxEditMaNguoiDung.Text = null;
+        }
 
-        /*private void bbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
-        }*/
-
-
-
-        private void bbiSaveAndNew_ItemClick(object sender, ItemClickEventArgs e)
-        {
-        }
-
-        private void bbiReset_ItemClick(object sender, ItemClickEventArgs e)
-        {
+            maTaiKhoan++;
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
         {
+            bbiSave_ItemClick(sender, e);
+            bbiClose_ItemClick(sender, e);
         }
 
     }
