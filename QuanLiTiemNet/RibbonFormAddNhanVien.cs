@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLiTiemNet
 {
@@ -9,6 +10,8 @@ namespace QuanLiTiemNet
     {
         DataRow dataRow;
         sendNewNhanVien sendNewNhanVien;
+        editData sendEditData;
+        GridView gridView;
         public RibbonFormAddNhanVien()
         {
             InitializeComponent();
@@ -17,6 +20,13 @@ namespace QuanLiTiemNet
         {
             this.sendNewNhanVien = sender;
             this.dataRow = dataRow;
+        }
+
+        public RibbonFormAddNhanVien(editData sender, DataRow dataRow, ref GridView gridView) : this()
+        {
+            this.sendEditData = sender;
+            this.dataRow = dataRow;
+            this.gridView = gridView;
         }
 
         private void loadDataRow()
@@ -47,7 +57,8 @@ namespace QuanLiTiemNet
             dataRow["CHUCVU"] = comboBoxEditChucVu.Text;
             dataRow["ANH"] = (pictureEditAnh.Image != null ? ProcessImage.ImageToByteArray(pictureEditAnh.Image, System.Drawing.Imaging.ImageFormat.Png) : null);
             dataRow["DIACHI"] = textEditDiaChi.Text;
-            sendNewNhanVien(dataRow);
+            if (sendEditData != null) sendEditData(dataRow, ref gridView);
+            else sendNewNhanVien(dataRow);
         }
 
 

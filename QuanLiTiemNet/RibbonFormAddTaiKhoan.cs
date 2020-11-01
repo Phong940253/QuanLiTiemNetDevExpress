@@ -36,6 +36,7 @@ namespace QuanLiTiemNet
             this.gridView = gridView;
         }
 
+
         private void loadDataRow()
         {
             textEditTenTaiKhoan.Text = dataRow["TENTK"]?.ToString();
@@ -48,18 +49,19 @@ namespace QuanLiTiemNet
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            dataRow["MATK"] = maTaiKhoan;
+            if (sendEditData == null) dataRow["MATK"] = maTaiKhoan;
             dataRow["TENTK"] = textEditTenTaiKhoan.Text;
             dataRow["MATKHAU"] = textEditMatKhau.Text;
             dataRow["TONGTIEN"] = string.IsNullOrEmpty(spinEditTongSoTien.Text) ? "0" : spinEditTongSoTien.Text;
-            dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "UNLOCK" : "LOCK";
-            dataRow["LOAI"] = string.IsNullOrEmpty(comboBoxEditLoaiTaiKhoan.Text) ? "Thường" : "VIP";
+            dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "UNLOCK" : comboBoxEditTrangThai.Text;
+            dataRow["LOAI"] = string.IsNullOrEmpty(comboBoxEditLoaiTaiKhoan.Text) ? "Thường" : comboBoxEditLoaiTaiKhoan.Text;
             dataRow["SOTIENSUDUNG"] = "0";
             dataRow["SOGIOSUDUNG"] = "00:00:00";
             if (!string.IsNullOrEmpty(comboBoxEditMaNguoiDung.Text))
                 dataRow["MANGUOIDUNG"] = comboBoxEditMaNguoiDung.Text;
             dataRow["NGAYTAO"] = DateTime.Now;
-            sendNewTaiKhoan(dataRow);
+            if (sendEditData != null) sendEditData(dataRow, ref gridView);
+            else sendNewTaiKhoan(dataRow);
         }
 
         private void bbiClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

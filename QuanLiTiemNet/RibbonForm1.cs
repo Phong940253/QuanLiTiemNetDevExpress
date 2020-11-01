@@ -199,15 +199,28 @@ namespace QuanLiTiemNet
         }
 
         public void addDataSetNhanVien(DataRow dataRow)
-        {            
-            quanLiTiemNet.Tables[0].Rows.Add(dataRow);
-            SaveDatabase(ref gridView1);
+        {
+            try
+            {
+                quanLiTiemNet.Tables[0].Rows.Add(dataRow);
+                SaveDatabase(ref gridView1);
+            }
+            catch (ArgumentException ex)
+            {
+            }
+            
         }
 
         public void addDataSetNguoiDung(DataRow dataRow)
         {
-            quanLiTiemNet.Tables[1].Rows.Add(dataRow);
-            SaveDatabase(ref gridView2);
+            try
+            {
+                quanLiTiemNet.Tables[1].Rows.Add(dataRow);
+                SaveDatabase(ref gridView2);
+            }
+            catch (ArgumentException ex)
+            {
+            }
         }
         public void addDataSetTaiKhoan(DataRow dataRow)
         {
@@ -217,7 +230,6 @@ namespace QuanLiTiemNet
                 SaveDatabase(ref gridView3);
             } catch(ArgumentException ex)
             {
-                //quanLiTiemNet.Tables[2].Rows.Remove();
             }
         }
 
@@ -261,20 +273,55 @@ namespace QuanLiTiemNet
         {
             if (navigationFrame1.SelectedPage == navigationPage1)
             {
-
+                editDataSet(gridView1);
+            } else if (navigationFrame1.SelectedPage == navigationPage2)
+            {
+                editDataSet(gridView2);
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+            {
+                editDataSet(gridView3);
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+            {
+                editDataSet(gridView3);
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+            {
+                editDataSet(gridView3);
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+            {
+                editDataSet(gridView3);
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+            {
+                editDataSet(gridView3);
             }
         }
 
         private void editDataSet(GridView gridView)
         {
             int rowHandle = gridView.FocusedRowHandle;
-            if (gridView == gridView3)
+            if (gridView == gridView1)
+            {
+                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, quanLiTiemNet.Tables[0].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                editNhanVien.Show();
+                SaveDatabase(ref gridView);
+            }
+            else if (gridView == gridView2)
             {
                 RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView);
                 editTaiKhoan.Show();
                 SaveDatabase(ref gridView);
             }
-            
+            else if (gridView == gridView3)
+            {
+                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                editTaiKhoan.Show();
+                SaveDatabase(ref gridView);
+            }
+
         }
 
         private void setChucVuNhanVien(string chucVu)
