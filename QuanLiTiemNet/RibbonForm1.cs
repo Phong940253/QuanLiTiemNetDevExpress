@@ -362,7 +362,7 @@ namespace QuanLiTiemNet
         {
             int indexMaNguoiDung;
             indexMaNguoiDung = quanLiTiemNet.Tables[1].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[1].Rows[quanLiTiemNet.Tables[1].Rows.Count - 1]["MATK"] + 1;
-            RibbonFormAddTaiKhoan addNguoiDung = new RibbonFormAddTaiKhoan(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung);
+            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung);
             addNguoiDung.Show();
         }
 

@@ -52,7 +52,7 @@ namespace QuanLiTiemNet
             if (sendEditData == null) dataRow["MATK"] = maTaiKhoan;
             dataRow["TENTK"] = textEditTenTaiKhoan.Text;
             dataRow["MATKHAU"] = textEditMatKhau.Text;
-            dataRow["TONGTIEN"] = string.IsNullOrEmpty(spinEditTongSoTien.Text) ? "0" : spinEditTongSoTien.Text;
+            dataRow["TONGTIEN"] = spinEditTongSoTien.Value.ToString();
             dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "UNLOCK" : comboBoxEditTrangThai.Text;
             dataRow["LOAI"] = string.IsNullOrEmpty(comboBoxEditLoaiTaiKhoan.Text) ? "Thường" : comboBoxEditLoaiTaiKhoan.Text;
             dataRow["SOTIENSUDUNG"] = "0";

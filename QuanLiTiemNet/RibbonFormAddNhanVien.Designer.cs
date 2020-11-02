@@ -304,6 +304,8 @@
             this.spinEditTienLuong.Name = "spinEditTienLuong";
             this.spinEditTienLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinEditTienLuong.Properties.Mask.EditMask = "c0";
+            this.spinEditTienLuong.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.spinEditTienLuong.Properties.ValidateOnEnterKey = true;
             this.spinEditTienLuong.Size = new System.Drawing.Size(199, 20);
             this.spinEditTienLuong.StyleController = this.dataLayoutControl1;
