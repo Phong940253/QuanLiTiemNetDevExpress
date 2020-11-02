@@ -343,7 +343,7 @@
             this.barButtonItemAddNguoiDung.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItemAddNguoiDung.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime;
-            this.barButtonItemAddNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            this.barButtonItemAddNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNguoiDung_ItemClick);
             // 
             // barButtonItemAddTaiKhoan
             // 

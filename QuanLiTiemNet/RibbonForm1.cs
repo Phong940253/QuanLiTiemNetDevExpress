@@ -27,7 +27,7 @@ namespace QuanLiTiemNet
         {
             InitializeComponent();
             gridView1.CustomDrawGroupRow += GridView1_CustomDrawGroupRow;
-            
+
         }
 
         private void barButtonItemDelete_ItemClick(object sender, ItemClickEventArgs e)
@@ -36,6 +36,14 @@ namespace QuanLiTiemNet
                 deleteRowGridView(ref gridView1);
             else if (navigationFrame1.SelectedPage == navigationPage2)
                 deleteRowGridView(ref gridView2);
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+                deleteRowGridView(ref gridView3);
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+                deleteRowGridView(ref gridView3);
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+                deleteRowGridView(ref gridView3);
+            else if (navigationFrame1.SelectedPage == navigationPage3)
+                deleteRowGridView(ref gridView3);
             else if (navigationFrame1.SelectedPage == navigationPage3)
                 deleteRowGridView(ref gridView3);
         }
@@ -73,11 +81,6 @@ namespace QuanLiTiemNet
             setTaiKhoan(0);
             gridView1.SelectRow(1);
             updateRecord(ref gridView1);
-        }
-
-        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
         }
 
         private void navigationPane1_Click(object sender, EventArgs e)
@@ -208,7 +211,7 @@ namespace QuanLiTiemNet
             catch (ArgumentException ex)
             {
             }
-            
+
         }
 
         public void addDataSetNguoiDung(DataRow dataRow)
@@ -228,7 +231,8 @@ namespace QuanLiTiemNet
             {
                 quanLiTiemNet.Tables[2].Rows.Add(dataRow);
                 SaveDatabase(ref gridView3);
-            } catch(ArgumentException ex)
+            }
+            catch (ArgumentException ex)
             {
             }
         }
@@ -274,7 +278,8 @@ namespace QuanLiTiemNet
             if (navigationFrame1.SelectedPage == navigationPage1)
             {
                 editDataSet(gridView1);
-            } else if (navigationFrame1.SelectedPage == navigationPage2)
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage2)
             {
                 editDataSet(gridView2);
             }
@@ -311,8 +316,8 @@ namespace QuanLiTiemNet
             }
             else if (gridView == gridView2)
             {
-                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView);
-                editTaiKhoan.Show();
+                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(editDataSet, quanLiTiemNet.Tables[1].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                editNguoiDung.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView3)
@@ -351,6 +356,14 @@ namespace QuanLiTiemNet
             indexMaTaiKhoan = quanLiTiemNet.Tables[2].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[2].Rows[quanLiTiemNet.Tables[2].Rows.Count - 1]["MATK"] + 1;
             RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow(), indexMaTaiKhoan);
             addTaiKhoan.Show();
+        }
+
+        private void barButtonItemAddNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int indexMaNguoiDung;
+            indexMaNguoiDung = quanLiTiemNet.Tables[1].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[1].Rows[quanLiTiemNet.Tables[1].Rows.Count - 1]["MATK"] + 1;
+            RibbonFormAddTaiKhoan addNguoiDung = new RibbonFormAddTaiKhoan(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung);
+            addNguoiDung.Show();
         }
 
         private void setTaiKhoan(int index)
