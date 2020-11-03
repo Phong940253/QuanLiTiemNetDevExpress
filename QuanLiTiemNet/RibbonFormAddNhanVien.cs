@@ -5,11 +5,11 @@ using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLiTiemNet
 {
-    public delegate void sendNewNhanVien(DataRow dataRow);
+
     public partial class RibbonFormAddNhanVien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         DataRow dataRow;
-        sendNewNhanVien sendNewNhanVien;
+        sendNewDataRow sendNewNhanVien;
         editData sendEditData;
         GridView gridView;
         xoaDataRow deleDataRow;
@@ -17,7 +17,7 @@ namespace QuanLiTiemNet
         {
             InitializeComponent();
         }
-        public RibbonFormAddNhanVien(sendNewNhanVien sender, DataRow dataRow, xoaDataRow deleDataRow) : this()
+        public RibbonFormAddNhanVien(sendNewDataRow sender, DataRow dataRow, xoaDataRow deleDataRow) : this()
         {
             this.sendNewNhanVien = sender;
             this.dataRow = dataRow;

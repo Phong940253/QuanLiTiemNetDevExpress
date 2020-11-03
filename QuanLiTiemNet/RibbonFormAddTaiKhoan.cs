@@ -10,7 +10,7 @@ namespace QuanLiTiemNet
     public partial class RibbonFormAddTaiKhoan : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         DataRow dataRow;
-        sendNewNhanVien sendNewTaiKhoan;
+        sendNewDataRow sendNewTaiKhoan;
         editData sendEditData;
         GridView gridView;
         int maTaiKhoan;
@@ -19,13 +19,13 @@ namespace QuanLiTiemNet
         {
             InitializeComponent();
         }
-        public RibbonFormAddTaiKhoan(sendNewNhanVien sender, DataRow dataRow) : this()
+        public RibbonFormAddTaiKhoan(sendNewDataRow sender, DataRow dataRow) : this()
         {
             this.sendNewTaiKhoan = sender;
             this.dataRow = dataRow;
         }
 
-        public RibbonFormAddTaiKhoan(sendNewNhanVien sender, DataRow dataRow, int maTaiKhoan, xoaDataRow deleDataRow) : this(sender, dataRow)
+        public RibbonFormAddTaiKhoan(sendNewDataRow sender, DataRow dataRow, int maTaiKhoan, xoaDataRow deleDataRow) : this(sender, dataRow)
         {
             this.maTaiKhoan = maTaiKhoan;
             this.deleDataRow = deleDataRow;
