@@ -146,5 +146,9 @@ namespace QuanLiTiemNet
             bbiClose_ItemClick(sender, e);
         }
 
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

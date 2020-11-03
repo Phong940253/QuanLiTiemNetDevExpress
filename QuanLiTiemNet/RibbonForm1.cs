@@ -10,6 +10,9 @@ using DevExpress.XtraGrid.Views.Grid;
 namespace QuanLiTiemNet
 {
     public delegate void editData(DataRow dataRow, ref GridView gridView);
+
+    public delegate void xoaDataRow(object sender, ItemClickEventArgs e);
+
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         SqlConnection sqlConnection;
@@ -322,7 +325,7 @@ namespace QuanLiTiemNet
             }
             else if (gridView == gridView3)
             {
-                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick);
                 editTaiKhoan.Show();
                 SaveDatabase(ref gridView);
             }
@@ -354,7 +357,7 @@ namespace QuanLiTiemNet
         {
             int indexMaTaiKhoan;
             indexMaTaiKhoan = quanLiTiemNet.Tables[2].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[2].Rows[quanLiTiemNet.Tables[2].Rows.Count - 1]["MATK"] + 1;
-            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow(), indexMaTaiKhoan);
+            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow(), indexMaTaiKhoan, barButtonItemDelete_ItemClick);
             addTaiKhoan.Show();
         }
 
@@ -399,7 +402,7 @@ namespace QuanLiTiemNet
 
         private void setTongTien(string s)
         {
-            textEdit4.Text = s;
+            spinEdit1.Text = s;
         }
 
         private void setTrangThaiTaiKhoan(string s)
@@ -424,7 +427,7 @@ namespace QuanLiTiemNet
 
         private void setSoTienSuDung(string s)
         {
-            textEdit22.Text = s;
+            spinEdit2.Text = s;
         }
 
         private void setNgayTaoTaiKhoan(string s)

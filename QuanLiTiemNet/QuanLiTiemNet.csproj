@@ -56,6 +56,7 @@
     <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -103,6 +104,12 @@
     <Compile Include="RibbonFormAddNhanVien.Designer.cs">
       <DependentUpon>RibbonFormAddNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardFormInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardFormInstall.Designer.cs">
+      <DependentUpon>WizardFormInstall.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonFormAddNhanVien.resx">
       <DependentUpon>RibbonFormAddNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardFormInstall.resx">
+      <DependentUpon>WizardFormInstall.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
