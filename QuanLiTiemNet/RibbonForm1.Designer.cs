@@ -48,6 +48,11 @@
             this.barButtonItemAddTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItemAddMay = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemAddThietBi = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemAddPhong = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemAddGiaoDich = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemAddKhuyenMai = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -156,6 +161,19 @@
             this.navigationPage7 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationPage8 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tablePanel4 = new DevExpress.Utils.Layout.TablePanel();
+            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.tablePanel5 = new DevExpress.Utils.Layout.TablePanel();
+            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.gridControl6 = new DevExpress.XtraGrid.GridControl();
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
@@ -228,6 +246,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).BeginInit();
+            this.navigationPage4.SuspendLayout();
+            this.navigationPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel4)).BeginInit();
+            this.tablePanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel5)).BeginInit();
+            this.tablePanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -248,9 +278,14 @@
             this.barButtonItemAddNguoiDung,
             this.barButtonItemAddTaiKhoan,
             this.barStaticItem1,
-            this.barStaticItem2});
+            this.barStaticItem2,
+            this.barButtonItemAddMay,
+            this.barButtonItemAddThietBi,
+            this.barButtonItemAddPhong,
+            this.barButtonItemAddGiaoDich,
+            this.barButtonItemAddKhuyenMai});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 22;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -264,7 +299,7 @@
             this.barButtonItem1.Caption = "Đăng xuất";
             this.barButtonItem1.Enabled = false;
             this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -273,7 +308,7 @@
             // 
             this.barButtonItem2.Caption = "Đăng nhập";
             this.barButtonItem2.Id = 2;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -282,7 +317,7 @@
             // 
             this.barButtonItem3.Caption = "Thoát";
             this.barButtonItem3.Id = 3;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -340,7 +375,7 @@
             // 
             this.barButtonItemAddNguoiDung.Caption = "Thêm người dùng";
             this.barButtonItemAddNguoiDung.Id = 13;
-            this.barButtonItemAddNguoiDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemAddNguoiDung.ImageOptions.Image")));
+            this.barButtonItemAddNguoiDung.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNguoiDung.ImageOptions.SvgImage")));
             this.barButtonItemAddNguoiDung.Name = "barButtonItemAddNguoiDung";
             this.barButtonItemAddNguoiDung.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -351,7 +386,7 @@
             // 
             this.barButtonItemAddTaiKhoan.Caption = "Thêm tài khoản";
             this.barButtonItemAddTaiKhoan.Id = 14;
-            this.barButtonItemAddTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemAddTaiKhoan.ImageOptions.Image")));
+            this.barButtonItemAddTaiKhoan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddTaiKhoan.ImageOptions.SvgImage")));
             this.barButtonItemAddTaiKhoan.Name = "barButtonItemAddTaiKhoan";
             this.barButtonItemAddTaiKhoan.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -369,6 +404,41 @@
             this.barStaticItem2.Caption = "0";
             this.barStaticItem2.Id = 21;
             this.barStaticItem2.Name = "barStaticItem2";
+            // 
+            // barButtonItemAddMay
+            // 
+            this.barButtonItemAddMay.Caption = "Thêm máy";
+            this.barButtonItemAddMay.Id = 22;
+            this.barButtonItemAddMay.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddMay.ImageOptions.SvgImage")));
+            this.barButtonItemAddMay.Name = "barButtonItemAddMay";
+            // 
+            // barButtonItemAddThietBi
+            // 
+            this.barButtonItemAddThietBi.Caption = "Thêm thiết bị";
+            this.barButtonItemAddThietBi.Id = 23;
+            this.barButtonItemAddThietBi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddThietBi.ImageOptions.SvgImage")));
+            this.barButtonItemAddThietBi.Name = "barButtonItemAddThietBi";
+            // 
+            // barButtonItemAddPhong
+            // 
+            this.barButtonItemAddPhong.Caption = "Thêm phòng";
+            this.barButtonItemAddPhong.Id = 24;
+            this.barButtonItemAddPhong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddPhong.ImageOptions.SvgImage")));
+            this.barButtonItemAddPhong.Name = "barButtonItemAddPhong";
+            // 
+            // barButtonItemAddGiaoDich
+            // 
+            this.barButtonItemAddGiaoDich.Caption = "Thêm giao dịch";
+            this.barButtonItemAddGiaoDich.Id = 25;
+            this.barButtonItemAddGiaoDich.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddGiaoDich.ImageOptions.SvgImage")));
+            this.barButtonItemAddGiaoDich.Name = "barButtonItemAddGiaoDich";
+            // 
+            // barButtonItemAddKhuyenMai
+            // 
+            this.barButtonItemAddKhuyenMai.Caption = "Thêm khuyến mãi";
+            this.barButtonItemAddKhuyenMai.Id = 26;
+            this.barButtonItemAddKhuyenMai.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddKhuyenMai.ImageOptions.SvgImage")));
+            this.barButtonItemAddKhuyenMai.Name = "barButtonItemAddKhuyenMai";
             // 
             // ribbonPage1
             // 
@@ -393,6 +463,11 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddNhanVien);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddNguoiDung);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddTaiKhoan);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddMay);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddThietBi);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddPhong);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddGiaoDich);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddKhuyenMai);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Thêm";
             // 
@@ -1530,6 +1605,7 @@
             // navigationPage4
             // 
             this.navigationPage4.Caption = "Máy";
+            this.navigationPage4.Controls.Add(this.tablePanel4);
             this.navigationPage4.Name = "navigationPage4";
             this.navigationPage4.Size = new System.Drawing.Size(1109, 469);
             // 
@@ -1542,6 +1618,7 @@
             // navigationPage6
             // 
             this.navigationPage6.Caption = "Phòng";
+            this.navigationPage6.Controls.Add(this.tablePanel5);
             this.navigationPage6.Name = "navigationPage6";
             this.navigationPage6.Size = new System.Drawing.Size(1109, 469);
             // 
@@ -1563,6 +1640,164 @@
             this.imageList1.ImageSize = new System.Drawing.Size(32, 40);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // tablePanel4
+            // 
+            this.tablePanel4.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F)});
+            this.tablePanel4.Controls.Add(this.layoutControl2);
+            this.tablePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel4.Location = new System.Drawing.Point(0, 0);
+            this.tablePanel4.Name = "tablePanel4";
+            this.tablePanel4.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
+            this.tablePanel4.Size = new System.Drawing.Size(1109, 469);
+            this.tablePanel4.TabIndex = 1;
+            // 
+            // layoutControl2
+            // 
+            this.tablePanel4.SetColumn(this.layoutControl2, 2);
+            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl2.Location = new System.Drawing.Point(781, 10);
+            this.layoutControl2.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.layoutControl2.Name = "layoutControl2";
+            this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
+            this.layoutControl2.Root = this.layoutControlGroup1;
+            this.tablePanel4.SetRow(this.layoutControl2, 0);
+            this.layoutControl2.Size = new System.Drawing.Size(318, 449);
+            this.layoutControl2.TabIndex = 1;
+            this.layoutControl2.Text = "layoutControl2";
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(318, 449);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // tablePanel5
+            // 
+            this.tablePanel5.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F)});
+            this.tablePanel5.Controls.Add(this.gridControl6);
+            this.tablePanel5.Controls.Add(this.layoutControl4);
+            this.tablePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel5.Location = new System.Drawing.Point(0, 0);
+            this.tablePanel5.Name = "tablePanel5";
+            this.tablePanel5.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
+            this.tablePanel5.Size = new System.Drawing.Size(1109, 469);
+            this.tablePanel5.TabIndex = 2;
+            this.tablePanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.tablePanel5_Paint);
+            // 
+            // layoutControl4
+            // 
+            this.tablePanel5.SetColumn(this.layoutControl4, 2);
+            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl4.Location = new System.Drawing.Point(781, 10);
+            this.layoutControl4.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.layoutControl4.Name = "layoutControl4";
+            this.layoutControl4.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
+            this.layoutControl4.Root = this.layoutControlGroup3;
+            this.tablePanel5.SetRow(this.layoutControl4, 0);
+            this.layoutControl4.Size = new System.Drawing.Size(318, 449);
+            this.layoutControl4.TabIndex = 1;
+            this.layoutControl4.Text = "layoutControl4";
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Name = "Root";
+            this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(318, 449);
+            this.layoutControlGroup3.TextVisible = false;
+            // 
+            // gridControl6
+            // 
+            this.tablePanel5.SetColumn(this.gridControl6, 1);
+            this.gridControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl6.Location = new System.Drawing.Point(121, 10);
+            this.gridControl6.MainView = this.gridView6;
+            this.gridControl6.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.gridControl6.MenuManager = this.ribbon;
+            this.gridControl6.Name = "gridControl6";
+            this.tablePanel5.SetRow(this.gridControl6, 0);
+            this.gridControl6.Size = new System.Drawing.Size(650, 449);
+            this.gridControl6.TabIndex = 2;
+            this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView6});
+            // 
+            // gridView6
+            // 
+            this.gridView6.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn4,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn17});
+            this.gridView6.GridControl = this.gridControl6;
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsView.ShowIndicator = false;
+            this.gridView6.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Mã phòng";
+            this.gridColumn4.FieldName = "MAPHONG";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowFocus = false;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 0;
+            this.gridColumn4.Width = 141;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "Loại phòng";
+            this.gridColumn13.FieldName = "LOAIPHONG";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowFocus = false;
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 2;
+            this.gridColumn13.Width = 150;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "Trạng thái";
+            this.gridColumn14.FieldName = "TRANGTHAI";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowFocus = false;
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 3;
+            this.gridColumn14.Width = 164;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "Phụ phí phòng";
+            this.gridColumn15.DisplayFormat.FormatString = "#,##0 đ";
+            this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn15.FieldName = "DONGIA";
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowFocus = false;
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 4;
+            this.gridColumn15.Width = 144;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "Tên phòng";
+            this.gridColumn17.FieldName = "TENPHONG";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.AllowFocus = false;
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 1;
+            this.gridColumn17.Width = 109;
+            // 
             // RibbonForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1572,10 +1807,12 @@
             this.Controls.Add(this.officeNavigationBar1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("RibbonForm1.IconOptions.SvgImage")));
             this.Name = "RibbonForm1";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản lí tiệm net";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RibbonForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).EndInit();
@@ -1649,6 +1886,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).EndInit();
+            this.navigationPage4.ResumeLayout(false);
+            this.navigationPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel4)).EndInit();
+            this.tablePanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel5)).EndInit();
+            this.tablePanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1778,5 +2027,23 @@
         private DevExpress.XtraEditors.SpinEdit spinEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemTongTien;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemSoTienSuDung;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddMay;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddThietBi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddPhong;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddGiaoDich;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddKhuyenMai;
+        private DevExpress.Utils.Layout.TablePanel tablePanel4;
+        private DevExpress.XtraLayout.LayoutControl layoutControl2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.Utils.Layout.TablePanel tablePanel5;
+        private DevExpress.XtraLayout.LayoutControl layoutControl4;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraGrid.GridControl gridControl6;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
     }
 }

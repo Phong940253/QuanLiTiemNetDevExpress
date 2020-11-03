@@ -80,6 +80,7 @@ namespace QuanLiTiemNet
             loadTableNhanVien();
             loadTableNguoiDung();
             loadTableTaiKhoan();
+            loadTablePhong();
             setProfile(0);
             setTaiKhoan(0);
             gridView1.SelectRow(1);
@@ -202,6 +203,12 @@ namespace QuanLiTiemNet
         {
             gridControl3.DataSource = quanLiTiemNet;
             gridControl3.DataMember = "TAIKHOAN";
+        }
+
+        private void loadTablePhong()
+        {
+            gridControl6.DataSource = quanLiTiemNet;
+            gridControl6.DataMember = "PHONG";
         }
 
         public void addDataSetNhanVien(DataRow dataRow)
@@ -356,7 +363,7 @@ namespace QuanLiTiemNet
         private void barButtonItemAddTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
         {
             int indexMaTaiKhoan;
-            indexMaTaiKhoan = quanLiTiemNet.Tables[2].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[2].Rows[quanLiTiemNet.Tables[2].Rows.Count - 1]["MATK"] + 1;
+            indexMaTaiKhoan = (quanLiTiemNet.Tables[2].Rows.Count == 0 ? 1 : (int)quanLiTiemNet.Tables[2].Rows[quanLiTiemNet.Tables[2].Rows.Count - 1]["MATK"] + 1);
             RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow(), indexMaTaiKhoan, barButtonItemDelete_ItemClick);
             addTaiKhoan.Show();
         }
@@ -364,9 +371,14 @@ namespace QuanLiTiemNet
         private void barButtonItemAddNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
         {
             int indexMaNguoiDung;
-            indexMaNguoiDung = quanLiTiemNet.Tables[1].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[1].Rows[quanLiTiemNet.Tables[1].Rows.Count - 1]["MATK"] + 1;
+            indexMaNguoiDung = (quanLiTiemNet.Tables[1].Rows.Count == 0 ? 1 : (int)quanLiTiemNet.Tables[1].Rows[quanLiTiemNet.Tables[1].Rows.Count - 1]["MANGUOIDUNG"] + 1);
             RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung, barButtonItemDelete_ItemClick);
             addNguoiDung.Show();
+        }
+
+        private void tablePanel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void setTaiKhoan(int index)
