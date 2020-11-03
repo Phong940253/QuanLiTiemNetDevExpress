@@ -12,21 +12,24 @@ namespace QuanLiTiemNet
         sendNewNhanVien sendNewNhanVien;
         editData sendEditData;
         GridView gridView;
+        xoaDataRow deleDataRow;
         public RibbonFormAddNhanVien()
         {
             InitializeComponent();
         }
-        public RibbonFormAddNhanVien(sendNewNhanVien sender, DataRow dataRow) : this()
+        public RibbonFormAddNhanVien(sendNewNhanVien sender, DataRow dataRow, xoaDataRow deleDataRow) : this()
         {
             this.sendNewNhanVien = sender;
             this.dataRow = dataRow;
+            this.deleDataRow = deleDataRow;
         }
 
-        public RibbonFormAddNhanVien(editData sender, DataRow dataRow, ref GridView gridView) : this()
+        public RibbonFormAddNhanVien(editData sender, DataRow dataRow, ref GridView gridView, xoaDataRow deleDataRow) : this()
         {
             this.sendEditData = sender;
             this.dataRow = dataRow;
             this.gridView = gridView;
+            this.deleDataRow = deleDataRow;
         }
 
         private void loadDataRow()
@@ -151,6 +154,11 @@ namespace QuanLiTiemNet
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
+        }
+
+        private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            deleDataRow(sender, e);
         }
     }
 }

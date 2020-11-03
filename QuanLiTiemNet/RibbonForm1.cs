@@ -139,7 +139,7 @@ namespace QuanLiTiemNet
 
         private void barButtonItemAddNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSetNhanVien, quanLiTiemNet.Tables[0].NewRow());
+            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSetNhanVien, quanLiTiemNet.Tables[0].NewRow(), barButtonItemDelete_ItemClick);
             addNhanVien.Show();
         }
 
@@ -313,13 +313,13 @@ namespace QuanLiTiemNet
             int rowHandle = gridView.FocusedRowHandle;
             if (gridView == gridView1)
             {
-                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, quanLiTiemNet.Tables[0].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, quanLiTiemNet.Tables[0].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick);
                 editNhanVien.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView2)
             {
-                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(editDataSet, quanLiTiemNet.Tables[1].Rows[gridView.GetSelectedRows()[0]], ref gridView);
+                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(editDataSet, quanLiTiemNet.Tables[1].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick);
                 editNguoiDung.Show();
                 SaveDatabase(ref gridView);
             }
@@ -365,7 +365,7 @@ namespace QuanLiTiemNet
         {
             int indexMaNguoiDung;
             indexMaNguoiDung = quanLiTiemNet.Tables[1].Rows.Count == 1 ? 1 : (int)quanLiTiemNet.Tables[1].Rows[quanLiTiemNet.Tables[1].Rows.Count - 1]["MATK"] + 1;
-            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung);
+            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung, barButtonItemDelete_ItemClick);
             addNguoiDung.Show();
         }
 
