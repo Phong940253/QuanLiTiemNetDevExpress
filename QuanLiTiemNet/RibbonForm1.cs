@@ -12,7 +12,7 @@ namespace QuanLiTiemNet
     public delegate void editData(DataRow dataRow, ref GridView gridView);
     public delegate void sendNewDataRow(DataRow dataRow);
     public delegate void xoaDataRow(object sender, ItemClickEventArgs e);
-    public delegate DataRow getNewDataRow(GridView gridView);
+    public delegate DataRow getNewDataRow(ref GridView gridView);
 
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -339,25 +339,25 @@ namespace QuanLiTiemNet
             int rowHandle = gridView.FocusedRowHandle;
             if (gridView == gridView1)
             {
-                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, quanLiTiemNet.Tables[0].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick);
+                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
                 editNhanVien.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView2)
             {
-                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(editDataSet, quanLiTiemNet.Tables[1].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick);
+                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
                 editNguoiDung.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView3)
             {
-                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, quanLiTiemNet.Tables[2].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick);
+                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
                 editTaiKhoan.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView6)
             {
-                RibbonFormAddPhong editPhong = new RibbonFormAddPhong(editDataSet, quanLiTiemNet.Tables[5].Rows[gridView.GetSelectedRows()[0]], ref gridView, barButtonItemDelete_ItemClick, GetNewDataRow);
+                RibbonFormAddPhong editPhong = new RibbonFormAddPhong(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick, GetNewDataRow);
                 editPhong.Show();
                 SaveDatabase(ref gridView);
             }
@@ -376,7 +376,7 @@ namespace QuanLiTiemNet
 
         private void setProfile(int index)
         {
-            DataRow dataRow = quanLiTiemNet.Tables[0].Rows[index];
+            DataRow dataRow = gridView1.GetDataRow(index);
             if (!Convert.IsDBNull(dataRow["ANH"]))
                 setPictureEditAvatarNhanVien((byte[])dataRow["ANH"]);
             else
@@ -408,7 +408,7 @@ namespace QuanLiTiemNet
             addPhong.Show();
         }
 
-        public DataRow GetNewDataRow(GridView gridView)
+        public DataRow GetNewDataRow(ref GridView gridView)
         {
             int index = new int();
             if (gridView == gridView1)
@@ -424,7 +424,7 @@ namespace QuanLiTiemNet
 
         private void setTaiKhoan(int index)
         {
-            DataRow dataRow = quanLiTiemNet.Tables[2].Rows[index];
+            DataRow dataRow = gridView3.GetDataRow(index);
             setMaTaiKhoan(dataRow["MATK"]?.ToString());
             setTenTaiKhoan(dataRow["TENTK"]?.ToString());
             setMatKhauTaiKhoan(dataRow["MATKHAU"]?.ToString());

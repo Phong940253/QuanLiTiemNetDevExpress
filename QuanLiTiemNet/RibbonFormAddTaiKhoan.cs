@@ -150,6 +150,7 @@ namespace QuanLiTiemNet
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
             deleDataRow(sender, e);
+            bbiClose_ItemClick(sender, e);
         }
     }
 }

@@ -305,6 +305,11 @@
             this.spinEditTienLuong.Name = "spinEditTienLuong";
             this.spinEditTienLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinEditTienLuong.Properties.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.spinEditTienLuong.Properties.Mask.EditMask = "c0";
             this.spinEditTienLuong.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.spinEditTienLuong.Properties.ValidateOnEnterKey = true;

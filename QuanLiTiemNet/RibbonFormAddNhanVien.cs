@@ -56,7 +56,7 @@ namespace QuanLiTiemNet
             dataRow["MATKHAU"] = textEditMatKhau.Text;
             dataRow["SDT"] = textEditSDT.Text;
             dataRow["EMAIL"] = textEditEmail.Text;
-            dataRow["LUONG"] = spinEditTienLuong.Text;
+            dataRow["LUONG"] = spinEditTienLuong.Value;
             dataRow["CHUCVU"] = comboBoxEditChucVu.Text;
             dataRow["ANH"] = (pictureEditAnh.Image != null ? ProcessImage.ImageToByteArray(pictureEditAnh.Image, System.Drawing.Imaging.ImageFormat.Png) : null);
             dataRow["DIACHI"] = textEditDiaChi.Text;
@@ -159,6 +159,7 @@ namespace QuanLiTiemNet
         private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             deleDataRow(sender, e);
+            bbiClose_ItemClick(sender, e);
         }
     }
 }

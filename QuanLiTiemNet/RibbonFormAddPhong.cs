@@ -131,7 +131,7 @@ namespace QuanLiTiemNet
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
-            dataRow = getNewDataRow(gridView);
+            dataRow = getNewDataRow(ref gridView);
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
@@ -143,6 +143,7 @@ namespace QuanLiTiemNet
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
             deleDataRow(sender, e);
+            bbiClose_ItemClick(sender, e);
         }
     }
 }
