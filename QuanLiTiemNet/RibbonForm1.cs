@@ -12,7 +12,8 @@ namespace QuanLiTiemNet
     public delegate void editData(DataRow dataRow, ref GridView gridView);
     public delegate void sendNewDataRow(DataRow dataRow);
     public delegate void xoaDataRow(object sender, ItemClickEventArgs e);
-    public delegate DataRow getNewDataRow(ref GridView gridView);
+    public delegate DataRow getNewDataRow(int index);
+    public delegate int getNewCode(int index, string column);
 
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -337,6 +338,7 @@ namespace QuanLiTiemNet
         private void editDataSet(GridView gridView)
         {
             int rowHandle = gridView.FocusedRowHandle;
+
             if (gridView == gridView1)
             {
                 RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
@@ -357,7 +359,8 @@ namespace QuanLiTiemNet
             }
             else if (gridView == gridView6)
             {
-                RibbonFormAddPhong editPhong = new RibbonFormAddPhong(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick, GetNewDataRow);
+                int indexMaPhong = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAPHONG"];
+                RibbonFormAddPhong editPhong = new RibbonFormAddPhong(true, addDataSetPhong, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editPhong.Show();
                 SaveDatabase(ref gridView);
             }
@@ -402,24 +405,19 @@ namespace QuanLiTiemNet
         }
         private void barButtonItemAddPhong_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int indexMaPhong;
-            indexMaPhong = (quanLiTiemNet.Tables[5].Rows.Count == 0 ? 1 : (int)quanLiTiemNet.Tables[5].Rows[quanLiTiemNet.Tables[5].Rows.Count - 1]["MAPHONG"] + 1);
-            RibbonFormAddPhong addPhong = new RibbonFormAddPhong(addDataSetPhong, quanLiTiemNet.Tables[5].NewRow(), indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow);
+            int indexMaPhong = GetNewCode(5, "MAPHONG");
+            RibbonFormAddPhong addPhong = new RibbonFormAddPhong(false, addDataSetPhong, editDataSet, quanLiTiemNet.Tables[5].NewRow(), ref gridView6, indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addPhong.Show();
         }
 
-        public DataRow GetNewDataRow(ref GridView gridView)
+        public DataRow GetNewDataRow(int index)
         {
-            int index = new int();
-            if (gridView == gridView1)
-                index = 1;
-            else if (gridView == gridView2)
-                index = 2;
-            else if (gridView == gridView3)
-                index = 3;
-            else if (gridView == gridView6)
-                index = 6;
             return quanLiTiemNet.Tables[index].NewRow();
+        }
+
+        public int GetNewCode(int index, string column)
+        {
+            return (quanLiTiemNet.Tables[index].Rows.Count == 0 ? 1 : (int)quanLiTiemNet.Tables[index].Rows[quanLiTiemNet.Tables[index].Rows.Count - 1][column] + 1);
         }
 
         private void setTaiKhoan(int index)

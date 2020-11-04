@@ -16,29 +16,27 @@ namespace QuanLiTiemNet
         int maPhong;
         xoaDataRow deleDataRow;
         getNewDataRow getNewDataRow;
+        bool isEdit;
+        getNewCode getNewCode;
         public RibbonFormAddPhong()
         {
             InitializeComponent();
         }
-        public RibbonFormAddPhong(sendNewDataRow sender, DataRow dataRow, getNewDataRow getNewRow) : this()
+        public RibbonFormAddPhong(DataRow dataRow, getNewDataRow getNewRow, xoaDataRow deleDataRow, getNewCode getNewCode) : this()
         {
-            this.sendNewPhong = sender;
             this.dataRow = dataRow;
             this.getNewDataRow = getNewRow;
+            this.deleDataRow = deleDataRow;
+            this.getNewCode = getNewCode;
         }
 
-        public RibbonFormAddPhong(sendNewDataRow sender, DataRow dataRow, int maPhong, xoaDataRow deleDataRow, getNewDataRow getNewRow) : this(sender, dataRow, getNewRow)
+        public RibbonFormAddPhong(bool isEdit, sendNewDataRow senderNew, editData senderEdit, DataRow dataRow, ref GridView gridView, int maPhong, xoaDataRow deleDataRow, getNewDataRow getNewRow, getNewCode getNewCode) : this(dataRow, getNewRow, deleDataRow, getNewCode)
         {
+            this.sendNewPhong = senderNew;
+            this.sendEditData = senderEdit;
             this.maPhong = maPhong;
-            this.deleDataRow = deleDataRow;
-        }
-
-        public RibbonFormAddPhong(editData sender, DataRow dataRow, ref GridView gridView, xoaDataRow deleDataRow, getNewDataRow getNewRow) : this()
-        {
-            this.sendEditData = sender;
-            this.dataRow = dataRow;
             this.gridView = gridView;
-            this.deleDataRow = deleDataRow;
+            this.isEdit = isEdit;
         }
 
 
@@ -46,19 +44,19 @@ namespace QuanLiTiemNet
         {
             textEditTenPhong.Text = dataRow["TENPHONG"]?.ToString();
             if (Convert.IsDBNull(dataRow["DONGIA"])) spinEditDonGia.Value = 0;
-            else spinEditDonGia.Value = (int)dataRow["DONGIA"];
+            else spinEditDonGia.Value = (decimal)dataRow["DONGIA"];
             comboBoxEditTrangThai.Text = dataRow["TRANGTHAI"]?.ToString();
             comboBoxEditLoaiPhong.Text = dataRow["LOAIPHONG"]?.ToString();
         }
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (sendEditData == null) dataRow["MAPHONG"] = maPhong;
+            if (!isEdit) dataRow["MAPHONG"] = maPhong;
             dataRow["TENPHONG"] = textEditTenPhong.Text;
             dataRow["DONGIA"] = spinEditDonGia.Value.ToString();
             dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "Có thể sử dụng" : comboBoxEditTrangThai.Text;
             dataRow["LOAIPHONG"] = string.IsNullOrEmpty(comboBoxEditLoaiPhong.Text) ? "Phòng máy 1*" : comboBoxEditLoaiPhong.Text;
-            if (sendEditData != null) sendEditData(dataRow, ref gridView);
+            if (isEdit) sendEditData(dataRow, ref gridView);
             else sendNewPhong(dataRow);
         }
 
@@ -131,7 +129,9 @@ namespace QuanLiTiemNet
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
-            dataRow = getNewDataRow(ref gridView);
+            dataRow = getNewDataRow(5);
+            isEdit = false;
+            maPhong = getNewCode(5, "MAPHONG");
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
