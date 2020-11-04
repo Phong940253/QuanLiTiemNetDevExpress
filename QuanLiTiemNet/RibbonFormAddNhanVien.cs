@@ -13,23 +13,26 @@ namespace QuanLiTiemNet
         editData sendEditData;
         GridView gridView;
         xoaDataRow deleDataRow;
+        getNewDataRow getNewDataRow;
+        bool isEdit;
+
         public RibbonFormAddNhanVien()
         {
             InitializeComponent();
         }
-        public RibbonFormAddNhanVien(sendNewDataRow sender, DataRow dataRow, xoaDataRow deleDataRow) : this()
+        public RibbonFormAddNhanVien(DataRow dataRow, getNewDataRow getNewRow, xoaDataRow deleDataRow) : this()
         {
-            this.sendNewNhanVien = sender;
             this.dataRow = dataRow;
+            this.getNewDataRow = getNewRow;
             this.deleDataRow = deleDataRow;
         }
 
-        public RibbonFormAddNhanVien(editData sender, DataRow dataRow, ref GridView gridView, xoaDataRow deleDataRow) : this()
+        public RibbonFormAddNhanVien(bool isEdit, sendNewDataRow senderNew, editData senderEdit, DataRow dataRow, ref GridView gridView, xoaDataRow deleDataRow, getNewDataRow getNewRow) : this(dataRow, getNewRow, deleDataRow)
         {
-            this.sendEditData = sender;
-            this.dataRow = dataRow;
+            this.sendNewNhanVien = senderNew;
+            this.sendEditData = senderEdit;
             this.gridView = gridView;
-            this.deleDataRow = deleDataRow;
+            this.isEdit = isEdit;
         }
 
         private void loadDataRow()
@@ -60,7 +63,7 @@ namespace QuanLiTiemNet
             dataRow["CHUCVU"] = comboBoxEditChucVu.Text;
             dataRow["ANH"] = (pictureEditAnh.Image != null ? ProcessImage.ImageToByteArray(pictureEditAnh.Image, System.Drawing.Imaging.ImageFormat.Png) : null);
             dataRow["DIACHI"] = textEditDiaChi.Text;
-            if (sendEditData != null) sendEditData(dataRow, ref gridView);
+            if (isEdit) sendEditData(dataRow, ref gridView);
             else sendNewNhanVien(dataRow);
         }
 
@@ -154,6 +157,8 @@ namespace QuanLiTiemNet
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
+            dataRow = getNewDataRow(0);
+            isEdit = false;
         }
 
         private void bbiDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -147,7 +147,7 @@ namespace QuanLiTiemNet
 
         private void barButtonItemAddNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(addDataSetNhanVien, quanLiTiemNet.Tables[0].NewRow(), barButtonItemDelete_ItemClick);
+            RibbonFormAddNhanVien addNhanVien = new RibbonFormAddNhanVien(false, addDataSetNhanVien, editDataSet, quanLiTiemNet.Tables[0].NewRow(), ref gridView1, barButtonItemDelete_ItemClick, GetNewDataRow);
             addNhanVien.Show();
         }
 
@@ -341,19 +341,21 @@ namespace QuanLiTiemNet
 
             if (gridView == gridView1)
             {
-                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
+                RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(true, addDataSetNhanVien, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick, GetNewDataRow);
                 editNhanVien.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView2)
             {
-                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
+                int indexMaNguoiDung = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MANGUOIDUNG"];
+                RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(true, addDataSetNguoiDung, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaNguoiDung, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editNguoiDung.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView3)
             {
-                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick);
+                int indexMaTaiKhoan = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MATK"];
+                RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(true, addDataSetTaiKhoan, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaTaiKhoan, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editTaiKhoan.Show();
                 SaveDatabase(ref gridView);
             }
@@ -390,17 +392,15 @@ namespace QuanLiTiemNet
 
         private void barButtonItemAddTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int indexMaTaiKhoan;
-            indexMaTaiKhoan = (quanLiTiemNet.Tables[2].Rows.Count == 0 ? 1 : (int)quanLiTiemNet.Tables[2].Rows[quanLiTiemNet.Tables[2].Rows.Count - 1]["MATK"] + 1);
-            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(addDataSetTaiKhoan, quanLiTiemNet.Tables[2].NewRow(), indexMaTaiKhoan, barButtonItemDelete_ItemClick);
+            int indexMaTaiKhoan = GetNewCode(2, "MATK");
+            RibbonFormAddTaiKhoan addTaiKhoan = new RibbonFormAddTaiKhoan(false, addDataSetTaiKhoan, editDataSet, quanLiTiemNet.Tables[2].NewRow(), ref gridView3, indexMaTaiKhoan, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addTaiKhoan.Show();
         }
 
         private void barButtonItemAddNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int indexMaNguoiDung;
-            indexMaNguoiDung = (quanLiTiemNet.Tables[1].Rows.Count == 0 ? 1 : (int)quanLiTiemNet.Tables[1].Rows[quanLiTiemNet.Tables[1].Rows.Count - 1]["MANGUOIDUNG"] + 1);
-            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(addDataSetNguoiDung, quanLiTiemNet.Tables[1].NewRow(), indexMaNguoiDung, barButtonItemDelete_ItemClick);
+            int indexMaNguoiDung = GetNewCode(1, "MAPHONG");
+            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(false, addDataSetNguoiDung, editDataSet, quanLiTiemNet.Tables[5].NewRow(), ref gridView6, indexMaNguoiDung, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addNguoiDung.Show();
         }
         private void barButtonItemAddPhong_ItemClick(object sender, ItemClickEventArgs e)

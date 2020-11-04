@@ -15,28 +15,29 @@ namespace QuanLiTiemNet
         GridView gridView;
         int maNguoiDung;
         xoaDataRow deleDataRow;
+        getNewDataRow getNewDataRow;
+        bool isEdit;
+        getNewCode getNewCode;
+
         public RibbonFormAddNguoiDung()
         {
             InitializeComponent();
         }
-        public RibbonFormAddNguoiDung(sendNewDataRow sender, DataRow dataRow) : this()
+        public RibbonFormAddNguoiDung(DataRow dataRow, getNewDataRow getNewRow, xoaDataRow deleDataRow, getNewCode getNewCode) : this()
         {
-            this.sendNewNguoiDung = sender;
             this.dataRow = dataRow;
+            this.getNewDataRow = getNewRow;
+            this.deleDataRow = deleDataRow;
+            this.getNewCode = getNewCode;
         }
 
-        public RibbonFormAddNguoiDung(sendNewDataRow sender, DataRow dataRow, int maNguoiDung, xoaDataRow deleDataRow) : this(sender, dataRow)
+        public RibbonFormAddNguoiDung(bool isEdit, sendNewDataRow senderNew, editData senderEdit, DataRow dataRow, ref GridView gridView, int maNguoiDung, xoaDataRow deleDataRow, getNewDataRow getNewRow, getNewCode getNewCode) : this(dataRow, getNewRow, deleDataRow, getNewCode)
         {
+            this.sendNewNguoiDung = senderNew;
+            this.sendEditData = senderEdit;
             this.maNguoiDung = maNguoiDung;
-            this.deleDataRow = deleDataRow;
-        }
-
-        public RibbonFormAddNguoiDung(editData sender, DataRow dataRow, ref GridView gridView, xoaDataRow deleDataRow) : this()
-        {
-            this.sendEditData = sender;
-            this.dataRow = dataRow;
             this.gridView = gridView;
-            this.deleDataRow = deleDataRow;
+            this.isEdit = isEdit;
         }
 
 
@@ -52,7 +53,7 @@ namespace QuanLiTiemNet
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (sendEditData == null) dataRow["MANGUOIDUNG"] = maNguoiDung;
+            if (!isEdit) dataRow["MANGUOIDUNG"] = maNguoiDung;
             dataRow["HO"] = textEditHo.Text;
             dataRow["TENDEM"] = textEditTenDem.Text;
             dataRow["TEN"] = textEditTen.Text;
@@ -60,7 +61,7 @@ namespace QuanLiTiemNet
             dataRow["SDT"] = textEditSDT.Text;
             dataRow["EMAIL"] = textEditEmail.Text;
             dataRow["DIACHI"] = textEditDiaChi.Text;
-            if (sendEditData != null) sendEditData(dataRow, ref gridView);
+            if (isEdit) sendEditData(dataRow, ref gridView);
             else sendNewNguoiDung(dataRow);
         }
 
@@ -140,7 +141,9 @@ namespace QuanLiTiemNet
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
-            maNguoiDung++;
+            dataRow = getNewDataRow(1);
+            isEdit = false;
+            maNguoiDung = getNewCode(1, "MANGUOIDUNG");
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)

@@ -15,28 +15,28 @@ namespace QuanLiTiemNet
         GridView gridView;
         int maTaiKhoan;
         xoaDataRow deleDataRow;
+        getNewDataRow getNewDataRow;
+        bool isEdit;
+        getNewCode getNewCode;
         public RibbonFormAddTaiKhoan()
         {
             InitializeComponent();
         }
-        public RibbonFormAddTaiKhoan(sendNewDataRow sender, DataRow dataRow) : this()
+        public RibbonFormAddTaiKhoan(DataRow dataRow, getNewDataRow getNewRow, xoaDataRow deleDataRow, getNewCode getNewCode) : this()
         {
-            this.sendNewTaiKhoan = sender;
             this.dataRow = dataRow;
+            this.getNewDataRow = getNewRow;
+            this.deleDataRow = deleDataRow;
+            this.getNewCode = getNewCode;
         }
 
-        public RibbonFormAddTaiKhoan(sendNewDataRow sender, DataRow dataRow, int maTaiKhoan, xoaDataRow deleDataRow) : this(sender, dataRow)
+        public RibbonFormAddTaiKhoan(bool isEdit, sendNewDataRow senderNew, editData senderEdit, DataRow dataRow, ref GridView gridView, int maTaiKhoan, xoaDataRow deleDataRow, getNewDataRow getNewRow, getNewCode getNewCode) : this(dataRow, getNewRow, deleDataRow, getNewCode)
         {
+            this.sendNewTaiKhoan = senderNew;
+            this.sendEditData = senderEdit;
             this.maTaiKhoan = maTaiKhoan;
-            this.deleDataRow = deleDataRow;
-        }
-
-        public RibbonFormAddTaiKhoan(editData sender, DataRow dataRow, ref GridView gridView, xoaDataRow deleDataRow) : this()
-        {
-            this.sendEditData = sender;
-            this.dataRow = dataRow;
             this.gridView = gridView;
-            this.deleDataRow = deleDataRow;
+            this.isEdit = isEdit;
         }
 
 
@@ -52,7 +52,7 @@ namespace QuanLiTiemNet
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (sendEditData == null) dataRow["MATK"] = maTaiKhoan;
+            if (!isEdit) dataRow["MATK"] = maTaiKhoan;
             dataRow["TENTK"] = textEditTenTaiKhoan.Text;
             dataRow["MATKHAU"] = textEditMatKhau.Text;
             dataRow["TONGTIEN"] = spinEditTongSoTien.Value.ToString();
@@ -63,7 +63,7 @@ namespace QuanLiTiemNet
             if (!string.IsNullOrEmpty(comboBoxEditMaNguoiDung.Text))
                 dataRow["MANGUOIDUNG"] = comboBoxEditMaNguoiDung.Text;
             dataRow["NGAYTAO"] = DateTime.Now;
-            if (sendEditData != null) sendEditData(dataRow, ref gridView);
+            if (isEdit) sendEditData(dataRow, ref gridView);
             else sendNewTaiKhoan(dataRow);
         }
 
@@ -138,7 +138,9 @@ namespace QuanLiTiemNet
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
-            maTaiKhoan++;
+            dataRow = getNewDataRow(2);
+            isEdit = false;
+            maTaiKhoan = getNewCode(2, "MATK");
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
