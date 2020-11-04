@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLiTiemNet

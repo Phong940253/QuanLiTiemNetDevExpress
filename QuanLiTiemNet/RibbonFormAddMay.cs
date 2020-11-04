@@ -6,23 +6,22 @@ using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLiTiemNet
 {
-    public partial class RibbonFormAddNguoiDung : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class RibbonFormAddMay : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         DataRow dataRow;
-        sendNewDataRow sendNewNguoiDung;
+        sendNewDataRow sendNewMay;
         editData sendEditData;
         GridView gridView;
-        int maNguoiDung;
+        int maMay;
         xoaDataRow deleDataRow;
         getNewDataRow getNewDataRow;
         bool isEdit;
         getNewCode getNewCode;
-
-        public RibbonFormAddNguoiDung()
+        public RibbonFormAddMay()
         {
             InitializeComponent();
         }
-        public RibbonFormAddNguoiDung(DataRow dataRow, getNewDataRow getNewRow, xoaDataRow deleDataRow, getNewCode getNewCode) : this()
+        public RibbonFormAddMay(DataRow dataRow, getNewDataRow getNewRow, xoaDataRow deleDataRow, getNewCode getNewCode) : this()
         {
             this.dataRow = dataRow;
             this.getNewDataRow = getNewRow;
@@ -30,11 +29,11 @@ namespace QuanLiTiemNet
             this.getNewCode = getNewCode;
         }
 
-        public RibbonFormAddNguoiDung(bool isEdit, sendNewDataRow senderNew, editData senderEdit, DataRow dataRow, ref GridView gridView, int maNguoiDung, xoaDataRow deleDataRow, getNewDataRow getNewRow, getNewCode getNewCode) : this(dataRow, getNewRow, deleDataRow, getNewCode)
+        public RibbonFormAddMay(bool isEdit, sendNewDataRow senderNew, editData senderEdit, DataRow dataRow, ref GridView gridView, int maMay, xoaDataRow deleDataRow, getNewDataRow getNewRow, getNewCode getNewCode) : this(dataRow, getNewRow, deleDataRow, getNewCode)
         {
-            this.sendNewNguoiDung = senderNew;
+            this.sendNewMay = senderNew;
             this.sendEditData = senderEdit;
-            this.maNguoiDung = maNguoiDung;
+            this.maMay = maMay;
             this.gridView = gridView;
             this.isEdit = isEdit;
         }
@@ -42,26 +41,22 @@ namespace QuanLiTiemNet
 
         private void loadDataRow()
         {
-            textEditHo.Text = dataRow["HO"]?.ToString();
-            textEditTenDem.Text = dataRow["TENDEM"]?.ToString();
-            textEditTen.Text = dataRow["TEN"]?.ToString();
-            textEditSDT.Text = dataRow["SDT"]?.ToString();
-            textEditDiaChi.Text = dataRow["DIACHI"]?.ToString();
-            textEditEmail.Text = dataRow["EMAIL"]?.ToString();
+            /*textEditTenMay.Text = dataRow["TENPHONG"]?.ToString();
+            if (Convert.IsDBNull(dataRow["DONGIA"])) spinEditDonGia.Value = 0;
+            else spinEditDonGia.Value = (decimal)dataRow["DONGIA"];
+            comboBoxEditTrangThai.Text = dataRow["TRANGTHAI"]?.ToString();
+            comboBoxEditLoaiMay.Text = dataRow["LOAIPHONG"]?.ToString();*/
         }
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!isEdit) dataRow["MANGUOIDUNG"] = maNguoiDung;
-            dataRow["HO"] = textEditHo.Text;
-            dataRow["TENDEM"] = textEditTenDem.Text;
-            dataRow["TEN"] = textEditTen.Text;
-            dataRow["NGAYTAO"] = DateTime.Now;
-            dataRow["SDT"] = textEditSDT.Text;
-            dataRow["EMAIL"] = textEditEmail.Text;
-            dataRow["DIACHI"] = textEditDiaChi.Text;
+            /*if (!isEdit) dataRow["MAPHONG"] = maMay;
+            dataRow["TENPHONG"] = textEditTenMay.Text;
+            dataRow["DONGIA"] = spinEditDonGia.Value.ToString();
+            dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "Có thể sử dụng" : comboBoxEditTrangThai.Text;
+            dataRow["LOAIPHONG"] = string.IsNullOrEmpty(comboBoxEditLoaiMay.Text) ? "Phòng máy 1*" : comboBoxEditLoaiMay.Text;
             if (isEdit) sendEditData(dataRow, ref gridView);
-            else sendNewNguoiDung(dataRow);
+            else sendNewMay(dataRow);*/
         }
 
         private void bbiClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -69,7 +64,7 @@ namespace QuanLiTiemNet
             this.Close();
         }
 
-        private void RibbonFormAddNguoiDung_FormClosing(object sender, FormClosingEventArgs e)
+        private void RibbonFormAddMay_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = false;
         }
@@ -98,13 +93,13 @@ namespace QuanLiTiemNet
 
         private void textEditValidate_EditValueChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textEditTen.Text))
+            /*if (string.IsNullOrEmpty(textEditTenMay.Text))
                 lockSave();
             else
-                unlockSave();
+                unlockSave();*/
         }
 
-        private void RibbonFormAddNguoiDung_Load(object sender, EventArgs e)
+        private void RibbonFormAddMay_Load(object sender, EventArgs e)
         {
             setCaptionForm();
             lockSave();
@@ -113,36 +108,29 @@ namespace QuanLiTiemNet
 
         private void setCaptionForm()
         {
-            string HoVaTen = null;
-            if (Convert.IsDBNull(dataRow["HO"]) && Convert.IsDBNull(dataRow["TENDEM"]) && !Convert.IsDBNull(dataRow["TEN"]))
-                HoVaTen = dataRow["TEN"]?.ToString();
-            else if (!Convert.IsDBNull(dataRow["HO"]) && !Convert.IsDBNull(dataRow["TEN"]))
+            string Caption = null;
+            if (!Convert.IsDBNull(dataRow["MAMAY"]))
             {
-                HoVaTen += dataRow["HO"]?.ToString();
-                if (!Convert.IsDBNull(dataRow["TENDEM"]))
-                    HoVaTen += " " + dataRow["TENDEM"]?.ToString();
-                HoVaTen += " " + dataRow["TEN"]?.ToString();
+                Caption += dataRow["MAMAY"]?.ToString();
             }
-            this.Text += HoVaTen ?? "Người dùng mới";
+            this.Text += Caption ?? "Thêm máy mới";
         }
 
         private void bbiReset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            textEditHo.Text = null;
-            textEditTenDem.Text = null;
-            textEditTen.Text = null;
-            textEditSDT.Text = null;
-            textEditDiaChi.Text = null;
-            textEditEmail.Text = null;
+            /*textEditTenMay.Text = null;
+            spinEditDonGia.Value = 0;
+            comboBoxEditTrangThai.Text = null;
+            comboBoxEditLoaiMay.Text = null;*/
         }
 
         private void bbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bbiSave_ItemClick(sender, e);
             bbiReset_ItemClick(sender, e);
-            dataRow = getNewDataRow(1);
+            dataRow = getNewDataRow(5);
             isEdit = false;
-            maNguoiDung = getNewCode(1, "MANGUOIDUNG");
+            maMay = getNewCode(5, "MAPHONG");
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
