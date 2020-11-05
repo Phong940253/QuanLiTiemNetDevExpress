@@ -408,7 +408,7 @@ namespace QuanLiTiemNet
         private void barButtonItemAddNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
         {
             int indexMaNguoiDung = GetNewCode(1, "MANGUOIDUNG");
-            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(false, addDataSetNguoiDung, editDataSet, quanLiTiemNet.Tables[5].NewRow(), ref gridView6, indexMaNguoiDung, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+            RibbonFormAddNguoiDung addNguoiDung = new RibbonFormAddNguoiDung(false, addDataSetNguoiDung, editDataSet, quanLiTiemNet.Tables[1].NewRow(), ref gridView6, indexMaNguoiDung, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addNguoiDung.Show();
         }
         private void barButtonItemAddTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
