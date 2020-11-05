@@ -50,26 +50,25 @@ namespace QuanLiTiemNet
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.dxValidationProvider2 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.comboBoxEditMaTaiKhoan = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.comboBoxEditMaPhong = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxEditLoaiMay = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxEditTrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.spinEditSoTien = new DevExpress.XtraEditors.SpinEdit();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.spinEditGiaTien = new DevExpress.XtraEditors.SpinEdit();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.timeSpanEditThoiGianSuDung = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
             this.memoEditThongSoMay = new DevExpress.XtraEditors.MemoEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.timeSpanEditThoiGianSuDung = new DevExpress.XtraEditors.TimeSpanEdit();
+            this.spinEditGiaTien = new DevExpress.XtraEditors.SpinEdit();
+            this.spinEditSoTien = new DevExpress.XtraEditors.SpinEdit();
+            this.comboBoxEditTrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEditLoaiMay = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEditMaTaiKhoan = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -77,29 +76,29 @@ namespace QuanLiTiemNet
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.dxValidationProvider2 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaPhong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout)).BeginInit();
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaTaiKhoan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaPhong.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditLoaiMay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTrangThai.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEditSoTien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEditGiaTien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEditThoiGianSuDung.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditThongSoMay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEditThoiGianSuDung.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEditGiaTien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEditSoTien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTrangThai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditLoaiMay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaTaiKhoan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
@@ -107,6 +106,7 @@ namespace QuanLiTiemNet
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // mainRibbonControl
@@ -129,7 +129,7 @@ namespace QuanLiTiemNet
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(777, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(769, 143);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiSave
@@ -239,6 +239,22 @@ namespace QuanLiTiemNet
             this.dxValidationProvider1.ValidationFailed += new DevExpress.XtraEditors.DXErrorProvider.ValidationFailedEventHandler(this.dxValidationProvider1_ValidationFailed);
             this.dxValidationProvider1.ValidationSucceeded += new DevExpress.XtraEditors.DXErrorProvider.ValidationSucceededEventHandler(this.dxValidationProvider1_ValidationSucceeded);
             // 
+            // comboBoxEditMaPhong
+            // 
+            this.comboBoxEditMaPhong.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
+            this.comboBoxEditMaPhong.Location = new System.Drawing.Point(284, 12);
+            this.comboBoxEditMaPhong.MenuManager = this.mainRibbonControl;
+            this.comboBoxEditMaPhong.Name = "comboBoxEditMaPhong";
+            this.comboBoxEditMaPhong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditMaPhong.Size = new System.Drawing.Size(84, 20);
+            this.comboBoxEditMaPhong.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.comboBoxEditMaPhong.TabIndex = 5;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Mã phòng trống!";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.comboBoxEditMaPhong, conditionValidationRule2);
+            // 
             // RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout
             // 
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Controls.Add(this.memoEditThongSoMay);
@@ -254,8 +270,99 @@ namespace QuanLiTiemNet
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Name = "RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout";
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 91, 650, 400);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Root = this.layoutControlGroup2;
-            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Size = new System.Drawing.Size(777, 225);
+            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Size = new System.Drawing.Size(769, 221);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.TabIndex = 2;
+            // 
+            // memoEditThongSoMay
+            // 
+            this.memoEditThongSoMay.Location = new System.Drawing.Point(512, 12);
+            this.memoEditThongSoMay.MenuManager = this.mainRibbonControl;
+            this.memoEditThongSoMay.Name = "memoEditThongSoMay";
+            this.memoEditThongSoMay.Size = new System.Drawing.Size(228, 190);
+            this.memoEditThongSoMay.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.memoEditThongSoMay.TabIndex = 12;
+            // 
+            // timeSpanEditThoiGianSuDung
+            // 
+            this.timeSpanEditThoiGianSuDung.EditValue = System.TimeSpan.Parse("00:00:00");
+            this.timeSpanEditThoiGianSuDung.Location = new System.Drawing.Point(100, 182);
+            this.timeSpanEditThoiGianSuDung.MenuManager = this.mainRibbonControl;
+            this.timeSpanEditThoiGianSuDung.Name = "timeSpanEditThoiGianSuDung";
+            this.timeSpanEditThoiGianSuDung.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeSpanEditThoiGianSuDung.Size = new System.Drawing.Size(268, 20);
+            this.timeSpanEditThoiGianSuDung.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.timeSpanEditThoiGianSuDung.TabIndex = 11;
+            // 
+            // spinEditGiaTien
+            // 
+            this.spinEditGiaTien.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spinEditGiaTien.Location = new System.Drawing.Point(100, 148);
+            this.spinEditGiaTien.MenuManager = this.mainRibbonControl;
+            this.spinEditGiaTien.Name = "spinEditGiaTien";
+            this.spinEditGiaTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinEditGiaTien.Size = new System.Drawing.Size(268, 20);
+            this.spinEditGiaTien.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.spinEditGiaTien.TabIndex = 10;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotEquals;
+            conditionValidationRule1.ErrorText = "Giá trị của máy quá ít!";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            conditionValidationRule1.Value1 = ((short)(0));
+            this.dxValidationProvider1.SetValidationRule(this.spinEditGiaTien, conditionValidationRule1);
+            // 
+            // spinEditSoTien
+            // 
+            this.spinEditSoTien.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spinEditSoTien.Location = new System.Drawing.Point(100, 114);
+            this.spinEditSoTien.MenuManager = this.mainRibbonControl;
+            this.spinEditSoTien.Name = "spinEditSoTien";
+            this.spinEditSoTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinEditSoTien.Size = new System.Drawing.Size(268, 20);
+            this.spinEditSoTien.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.spinEditSoTien.TabIndex = 9;
+            // 
+            // comboBoxEditTrangThai
+            // 
+            this.comboBoxEditTrangThai.Location = new System.Drawing.Point(100, 46);
+            this.comboBoxEditTrangThai.MenuManager = this.mainRibbonControl;
+            this.comboBoxEditTrangThai.Name = "comboBoxEditTrangThai";
+            this.comboBoxEditTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditTrangThai.Size = new System.Drawing.Size(268, 20);
+            this.comboBoxEditTrangThai.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.comboBoxEditTrangThai.TabIndex = 8;
+            // 
+            // comboBoxEditLoaiMay
+            // 
+            this.comboBoxEditLoaiMay.Location = new System.Drawing.Point(100, 80);
+            this.comboBoxEditLoaiMay.MenuManager = this.mainRibbonControl;
+            this.comboBoxEditLoaiMay.Name = "comboBoxEditLoaiMay";
+            this.comboBoxEditLoaiMay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditLoaiMay.Size = new System.Drawing.Size(268, 20);
+            this.comboBoxEditLoaiMay.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.comboBoxEditLoaiMay.TabIndex = 7;
+            // 
+            // comboBoxEditMaTaiKhoan
+            // 
+            this.comboBoxEditMaTaiKhoan.Location = new System.Drawing.Point(100, 12);
+            this.comboBoxEditMaTaiKhoan.MenuManager = this.mainRibbonControl;
+            this.comboBoxEditMaTaiKhoan.Name = "comboBoxEditMaTaiKhoan";
+            this.comboBoxEditMaTaiKhoan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditMaTaiKhoan.Size = new System.Drawing.Size(79, 20);
+            this.comboBoxEditMaTaiKhoan.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
+            this.comboBoxEditMaTaiKhoan.TabIndex = 4;
             // 
             // layoutControlGroup2
             // 
@@ -279,144 +386,52 @@ namespace QuanLiTiemNet
             this.emptySpaceItem8,
             this.emptySpaceItem1});
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(777, 225);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(752, 224);
             this.layoutControlGroup2.TextVisible = false;
-            // 
-            // dxValidationProvider2
-            // 
-            this.dxValidationProvider2.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
-            // 
-            // comboBoxEditMaTaiKhoan
-            // 
-            this.comboBoxEditMaTaiKhoan.Location = new System.Drawing.Point(100, 12);
-            this.comboBoxEditMaTaiKhoan.MenuManager = this.mainRibbonControl;
-            this.comboBoxEditMaTaiKhoan.Name = "comboBoxEditMaTaiKhoan";
-            this.comboBoxEditMaTaiKhoan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditMaTaiKhoan.Size = new System.Drawing.Size(85, 20);
-            this.comboBoxEditMaTaiKhoan.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.comboBoxEditMaTaiKhoan.TabIndex = 4;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.comboBoxEditMaTaiKhoan;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(177, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(171, 24);
             this.layoutControlItem1.Text = "Mã tài khoản";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // comboBoxEditMaPhong
-            // 
-            this.comboBoxEditMaPhong.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
-            this.comboBoxEditMaPhong.Location = new System.Drawing.Point(290, 12);
-            this.comboBoxEditMaPhong.MenuManager = this.mainRibbonControl;
-            this.comboBoxEditMaPhong.Name = "comboBoxEditMaPhong";
-            this.comboBoxEditMaPhong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditMaPhong.Size = new System.Drawing.Size(91, 20);
-            this.comboBoxEditMaPhong.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.comboBoxEditMaPhong.TabIndex = 5;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "Mã phòng trống!";
-            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.dxValidationProvider1.SetValidationRule(this.comboBoxEditMaPhong, conditionValidationRule2);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.AllowHtmlStringInCaption = true;
-            this.layoutControlItem2.Control = this.comboBoxEditMaPhong;
-            this.layoutControlItem2.Location = new System.Drawing.Point(190, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(183, 24);
-            this.layoutControlItem2.Text = "Mã phòng<b><color=red>*</color></b>";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // comboBoxEditLoaiMay
-            // 
-            this.comboBoxEditLoaiMay.Location = new System.Drawing.Point(100, 80);
-            this.comboBoxEditLoaiMay.MenuManager = this.mainRibbonControl;
-            this.comboBoxEditLoaiMay.Name = "comboBoxEditLoaiMay";
-            this.comboBoxEditLoaiMay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditLoaiMay.Size = new System.Drawing.Size(281, 20);
-            this.comboBoxEditLoaiMay.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.comboBoxEditLoaiMay.TabIndex = 7;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.comboBoxEditLoaiMay;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 68);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(373, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(360, 24);
             this.layoutControlItem4.Text = "Loại máy";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // comboBoxEditTrangThai
-            // 
-            this.comboBoxEditTrangThai.Location = new System.Drawing.Point(100, 46);
-            this.comboBoxEditTrangThai.MenuManager = this.mainRibbonControl;
-            this.comboBoxEditTrangThai.Name = "comboBoxEditTrangThai";
-            this.comboBoxEditTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditTrangThai.Size = new System.Drawing.Size(281, 20);
-            this.comboBoxEditTrangThai.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.comboBoxEditTrangThai.TabIndex = 8;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.comboBoxEditTrangThai;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 34);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(373, 24);
-            this.layoutControlItem5.Text = "Trạng thái";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // spinEditSoTien
-            // 
-            this.spinEditSoTien.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spinEditSoTien.Location = new System.Drawing.Point(100, 114);
-            this.spinEditSoTien.MenuManager = this.mainRibbonControl;
-            this.spinEditSoTien.Name = "spinEditSoTien";
-            this.spinEditSoTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinEditSoTien.Size = new System.Drawing.Size(281, 20);
-            this.spinEditSoTien.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.spinEditSoTien.TabIndex = 9;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.spinEditSoTien;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 102);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(373, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(360, 24);
             this.layoutControlItem6.Text = "Số tiền mỗi giờ";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(85, 13);
             // 
-            // spinEditGiaTien
+            // emptySpaceItem2
             // 
-            this.spinEditGiaTien.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spinEditGiaTien.Location = new System.Drawing.Point(100, 148);
-            this.spinEditGiaTien.MenuManager = this.mainRibbonControl;
-            this.spinEditGiaTien.Name = "spinEditGiaTien";
-            this.spinEditGiaTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinEditGiaTien.Size = new System.Drawing.Size(281, 20);
-            this.spinEditGiaTien.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.spinEditGiaTien.TabIndex = 10;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotEquals;
-            conditionValidationRule1.ErrorText = "Giá trị của máy quá ít!";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            conditionValidationRule1.Value1 = ((short)(0));
-            this.dxValidationProvider1.SetValidationRule(this.spinEditGiaTien, conditionValidationRule1);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(360, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(52, 194);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.comboBoxEditTrangThai;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 34);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(360, 24);
+            this.layoutControlItem5.Text = "Trạng thái";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 13);
             // 
             // layoutControlItem7
             // 
@@ -424,63 +439,44 @@ namespace QuanLiTiemNet
             this.layoutControlItem7.Control = this.spinEditGiaTien;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 136);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(373, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(360, 24);
             this.layoutControlItem7.Text = "Giá trị máy <b><color=red>*</color></b>";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(85, 13);
             // 
-            // timeSpanEditThoiGianSuDung
+            // layoutControlItem3
             // 
-            this.timeSpanEditThoiGianSuDung.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEditThoiGianSuDung.Location = new System.Drawing.Point(100, 182);
-            this.timeSpanEditThoiGianSuDung.MenuManager = this.mainRibbonControl;
-            this.timeSpanEditThoiGianSuDung.Name = "timeSpanEditThoiGianSuDung";
-            this.timeSpanEditThoiGianSuDung.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEditThoiGianSuDung.Size = new System.Drawing.Size(281, 20);
-            this.timeSpanEditThoiGianSuDung.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.timeSpanEditThoiGianSuDung.TabIndex = 11;
+            this.layoutControlItem3.Control = this.memoEditThongSoMay;
+            this.layoutControlItem3.Location = new System.Drawing.Point(412, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(320, 194);
+            this.layoutControlItem3.Text = "Thông số máy";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 13);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.timeSpanEditThoiGianSuDung;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 170);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(373, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(360, 24);
             this.layoutControlItem8.Text = "Thời gian sử dụng";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(85, 13);
             // 
-            // memoEditThongSoMay
+            // layoutControlItem2
             // 
-            this.memoEditThongSoMay.Location = new System.Drawing.Point(527, 12);
-            this.memoEditThongSoMay.MenuManager = this.mainRibbonControl;
-            this.memoEditThongSoMay.Name = "memoEditThongSoMay";
-            this.memoEditThongSoMay.Size = new System.Drawing.Size(238, 190);
-            this.memoEditThongSoMay.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
-            this.memoEditThongSoMay.TabIndex = 12;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.memoEditThongSoMay;
-            this.layoutControlItem3.Location = new System.Drawing.Point(427, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(330, 194);
-            this.layoutControlItem3.Text = "Thông số máy";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(373, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(54, 194);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.AllowHtmlStringInCaption = true;
+            this.layoutControlItem2.Control = this.comboBoxEditMaPhong;
+            this.layoutControlItem2.Location = new System.Drawing.Point(184, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(176, 24);
+            this.layoutControlItem2.Text = "Mã phòng<b><color=red>*</color></b>";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(85, 13);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 24);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(373, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(360, 10);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
@@ -488,7 +484,7 @@ namespace QuanLiTiemNet
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 58);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(373, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(360, 10);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
@@ -496,7 +492,7 @@ namespace QuanLiTiemNet
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 92);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(373, 10);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(360, 10);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
@@ -504,7 +500,7 @@ namespace QuanLiTiemNet
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.Location = new System.Drawing.Point(0, 126);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(373, 10);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(360, 10);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
@@ -512,13 +508,13 @@ namespace QuanLiTiemNet
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.Location = new System.Drawing.Point(0, 160);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(373, 10);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(360, 10);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(177, 0);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(171, 0);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
             this.emptySpaceItem8.Size = new System.Drawing.Size(13, 24);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
@@ -528,15 +524,19 @@ namespace QuanLiTiemNet
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 194);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(757, 11);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(732, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // dxValidationProvider2
+            // 
+            this.dxValidationProvider2.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
             // RibbonFormAddMay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(777, 368);
+            this.ClientSize = new System.Drawing.Size(769, 364);
             this.Controls.Add(this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout);
             this.Controls.Add(this.mainRibbonControl);
             this.Name = "RibbonFormAddMay";
@@ -546,27 +546,26 @@ namespace QuanLiTiemNet
             this.Load += new System.EventHandler(this.RibbonFormAddMay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaPhong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout)).EndInit();
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaTaiKhoan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaPhong.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditLoaiMay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTrangThai.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEditSoTien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEditGiaTien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEditThoiGianSuDung.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditThongSoMay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEditThoiGianSuDung.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEditGiaTien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEditSoTien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTrangThai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditLoaiMay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaTaiKhoan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
@@ -574,6 +573,7 @@ namespace QuanLiTiemNet
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
