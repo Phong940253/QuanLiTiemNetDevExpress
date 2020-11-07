@@ -44,7 +44,7 @@ namespace QuanLiTiemNet
             else if (navigationFrame1.SelectedPage == navigationPage3)
                 deleteRowGridView(ref gridView3);
             else if (navigationFrame1.SelectedPage == navigationPage4)
-                deleteRowGridView(ref gridView3);
+                deleteRowGridView(ref gridView4);
             else if (navigationFrame1.SelectedPage == navigationPage5)
                 deleteRowGridView(ref gridView3);
             else if (navigationFrame1.SelectedPage == navigationPage6)
@@ -65,6 +65,8 @@ namespace QuanLiTiemNet
                     ;
                 else if (gridView == gridView3)
                     setTaiKhoan(gridView.GetSelectedRows()[0]);
+                else if (gridView == gridView4)
+                    setMay(gridView.GetSelectedRows()[0]);
                 else if (gridView == gridView6)
                     ;
                 updateRecord(ref gridView);
@@ -84,9 +86,11 @@ namespace QuanLiTiemNet
             loadTableNhanVien();
             loadTableNguoiDung();
             loadTableTaiKhoan();
+            loadTableMay();
             loadTablePhong();
             setProfile(0);
             setTaiKhoan(0);
+            setMay(0);
             gridView1.SelectRow(1);
             updateRecord(ref gridView1);
         }
@@ -186,8 +190,8 @@ namespace QuanLiTiemNet
             sqlDataNhanVien.Fill(quanLiTiemNet, "NHANVIEN");
             sqlDataNguoiDung.Fill(quanLiTiemNet, "NGUOIDUNG");
             sqlDataTaiKhoan.Fill(quanLiTiemNet, "TAIKHOAN");
-            sqlDataThietBi.Fill(quanLiTiemNet, "THIETBI");
             sqlDataMay.Fill(quanLiTiemNet, "MAY");
+            sqlDataThietBi.Fill(quanLiTiemNet, "THIETBI");
             sqlDataPhong.Fill(quanLiTiemNet, "PHONG");
             sqlDataGiaoDich.Fill(quanLiTiemNet, "GIAODICH");
             sqlDataKhuyenMai.Fill(quanLiTiemNet, "KHUYENMAI");
@@ -214,6 +218,11 @@ namespace QuanLiTiemNet
         {
             gridControl3.DataSource = quanLiTiemNet;
             gridControl3.DataMember = "TAIKHOAN";
+        }
+        private void loadTableMay()
+        {
+            gridControl4.DataSource = quanLiTiemNet;
+            gridControl4.DataMember = "MAY";
         }
 
         private void loadTablePhong()
@@ -262,7 +271,7 @@ namespace QuanLiTiemNet
         {
             try
             {
-                quanLiTiemNet.Tables[4].Rows.Add(dataRow);
+                quanLiTiemNet.Tables[3].Rows.Add(dataRow);
                 SaveDatabase(ref gridView4);
             }
             catch (ArgumentException ex)
@@ -298,6 +307,8 @@ namespace QuanLiTiemNet
                     sqlDataNguoiDung.Update(quanLiTiemNet, "NGUOIDUNG");
                 else if (gridView == gridView3)
                     sqlDataTaiKhoan.Update(quanLiTiemNet, "TAIKHOAN");
+                else if (gridView == gridView4)
+                    sqlDataMay.Update(quanLiTiemNet, "MAY");
                 else if (gridView == gridView6)
                     sqlDataPhong.Update(quanLiTiemNet, "PHONG");
                 updateRecord(ref gridView);
@@ -335,7 +346,7 @@ namespace QuanLiTiemNet
             }
             else if (navigationFrame1.SelectedPage == navigationPage4)
             {
-                editDataSet(gridView3);
+                editDataSet(gridView4);
             }
             else if (navigationFrame1.SelectedPage == navigationPage5)
             {
@@ -373,6 +384,13 @@ namespace QuanLiTiemNet
                 int indexMaTaiKhoan = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MATK"];
                 RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(true, addDataSetTaiKhoan, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaTaiKhoan, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editTaiKhoan.Show();
+                SaveDatabase(ref gridView);
+            }
+            else if (gridView == gridView4)
+            {
+                int indexMaMay = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAMAY"];
+                RibbonFormAddMay editMay = new RibbonFormAddMay(true, addDataSetMay, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaMay, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+                editMay.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView6)
@@ -421,7 +439,7 @@ namespace QuanLiTiemNet
         private void barButtonItemAddMay_ItemClick(object sender, ItemClickEventArgs e)
         {
             int indexMaMay = GetNewCode(3, "MAMAY");
-            RibbonFormAddMay addMay = new RibbonFormAddMay(false, addDataSetMay, editDataSet, quanLiTiemNet.Tables[4].NewRow(), ref gridView4, indexMaMay, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+            RibbonFormAddMay addMay = new RibbonFormAddMay(false, addDataSetMay, editDataSet, quanLiTiemNet.Tables[3].NewRow(), ref gridView4, indexMaMay, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addMay.Show();
         }
         private void barButtonItemAddPhong_ItemClick(object sender, ItemClickEventArgs e)
@@ -457,6 +475,20 @@ namespace QuanLiTiemNet
             setMaNguoiDung(dataRow["MANGUOIDUNG"]?.ToString());
             setSoTienSuDung(dataRow["SOTIENSUDUNG"]?.ToString());
             setNguoiTaoTaiKhoan(dataRow["NGUOITAO"]?.ToString());
+        }
+
+        private void setMay(int index)
+        {
+            DataRow dataRow = gridView4.GetDataRow(index);
+            setMaTaiKhoanMay(dataRow["MATK"]?.ToString());
+            setMaMay(dataRow["MAMAY"]?.ToString());
+            setMaPhong(dataRow["MAPHONG"]?.ToString());
+            setSoTienMoiGio(dataRow["SOTIEN"]?.ToString());
+            setLoaiMay(dataRow["LOAIMAY"]?.ToString());
+            setTrangThaiMay(dataRow["TRANGTHAI"]?.ToString());
+            setGiaTienMay(dataRow["GIATIEN"]?.ToString());
+            setThoiGianSuDung(dataRow["THOIGIANSUDUNG"]?.ToString());
+            setThongSoMay(dataRow["THONGSOMAY"]?.ToString());
         }
 
         private void setMaTaiKhoan(string s)
@@ -499,6 +531,11 @@ namespace QuanLiTiemNet
             textEdit13.Text = s;
         }
 
+        private void gridView4_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            setMay(e.RowHandle);
+        }
+
         private void setSoTienSuDung(string s)
         {
             spinEdit2.Text = s;
@@ -512,6 +549,51 @@ namespace QuanLiTiemNet
         private void setNguoiTaoTaiKhoan(string s)
         {
             textEdit33.Text = s;
+        }
+
+        private void setMaTaiKhoanMay(string s)
+        {
+            textEdit4.Text = s;
+        }
+
+        private void setMaMay(string s)
+        {
+            textEdit1.Text = s;
+        }
+
+        private void setMaPhong(string s)
+        {
+            textEdit5.Text = s;
+        }
+
+        private void setSoTienMoiGio(string s)
+        {
+            textEdit10.Text = s;
+        }
+
+        private void setLoaiMay(string s)
+        {
+            textEdit7.Text = s;
+        }
+
+        private void setTrangThaiMay(string s)
+        {
+            textEdit8.Text = s;
+        }
+
+        private void setGiaTienMay(string s)
+        {
+            textEdit6.Text = s;
+        }
+
+        private void setThoiGianSuDung(string s)
+        {
+            textEdit9.Text = s;
+        }
+
+        private void setThongSoMay(string s)
+        {
+            memoEdit1.Text = s;
         }
 
         private void GridView1_CustomDrawGroupRow(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
