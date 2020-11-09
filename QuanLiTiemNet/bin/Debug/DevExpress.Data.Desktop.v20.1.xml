@@ -162,12 +162,6 @@
       </summary>
       <value>An <see cref="T:System.Int32"/> value that specifies the default value of the video property.</value>
     </member>
-    <member name="P:DevExpress.Data.Camera.DeviceVideoProperty.IsActive">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.Data.Camera.DeviceVideoProperty.Max">
       <summary>
         <para>Gets the maximum value of the video property.</para>
@@ -653,12 +647,6 @@
         <para>Provides access to compatibility settings.</para>
       </summary>
     </member>
-    <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.AllowEditTextExpressionInFormatRule">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.AllowEditValueBindingInInplaceEditors">
       <summary>
         <para>Gets or sets whether the GridControl&#39;s logic of getting/setting the editor&#39;s value is enabled.</para>
@@ -703,9 +691,9 @@
     </member>
     <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.LegacyDefaultTheme">
       <summary>
-        <para>Specifies a legacy default theme which the application should use.</para>
+        <para>Gets or sets whether the application should use a legacy default theme.</para>
       </summary>
-      <value>A legacy default theme.</value>
+      <value>A <see cref="T:System.Nullable"/> <see cref="T:DevExpress.Xpf.Core.LegacyDefaultTheme"/> that is the legacy default theme which the application should use.</value>
     </member>
     <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.MakeGetWindowReturnActualFloatPanelWindow">
       <summary>

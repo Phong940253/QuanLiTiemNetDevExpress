@@ -403,7 +403,6 @@
         <para>Returns the layout element of the type designated by the specified generic type parameter which relates to the specified position in the document model.</para>
       </summary>
       <param name="position">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> object that specifies the position in the document model.</param>
-      <typeparam name="T"></typeparam>
       <returns>The layout element of the type designated by the specified generic type parameter.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.DocumentLayout.GetFormattedPageCount">
@@ -778,7 +777,6 @@
       <summary>
         <para>Returns the parent layout element of the type designated by the specified generic type parameter.</para>
       </summary>
-      <typeparam name="T"></typeparam>
       <returns>The layout element of the type designated by the specified generic type parameter.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.LayoutElement.GetRelativeBounds(DevExpress.XtraRichEdit.API.Layout.LayoutElement)">
@@ -821,7 +819,6 @@
       <summary>
         <para>Returns the parent layout element of the type designated by the specified generic type parameter.</para>
       </summary>
-      <typeparam name="T"></typeparam>
       <returns>The layout element of the type designated by the specified generic type parameter.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.LayoutElementBase.GetRelativeBounds(DevExpress.XtraRichEdit.API.Layout.LayoutElement)">
@@ -847,7 +844,6 @@
       <summary>
         <para>Base collection for collections of layout elements.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutElementCollection`1.Count">
       <summary>
@@ -3152,25 +3148,20 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.CanvasShapeCollection">
       <summary>
-        <para>A collection of shapes in a drawing canvas.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraRichEdit.API.Native.CanvasShapeCollection.Clear">
-      <summary>
-        <para>Removes all shapes from the canvas.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.CanvasShapeCollection.Remove(DevExpress.XtraRichEdit.API.Native.NestedShape)">
       <summary>
-        <para>Removes the specified shape from the canvas.</para>
+        <para></para>
       </summary>
-      <param name="shape">A shape to remove.</param>
+      <param name="shape"></param>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.CanvasShapeCollection.RemoveAt(System.Int32)">
       <summary>
-        <para>Removes a shape with the specified index from the canvas.</para>
+        <para></para>
       </summary>
-      <param name="index">A zero-based index of the shape to remove.</param>
+      <param name="index"></param>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.Capture">
       <summary>
@@ -4046,45 +4037,45 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ConnectorFormat">
       <summary>
-        <para>Contains connector settings.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ConnectorFormat.ConnectorType">
       <summary>
-        <para>Gets or sets the connector&#39;s type.</para>
+        <para></para>
       </summary>
-      <value>An enumeration member that specifies the connector&#39;s type.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ConnectorFormat.EndPoint">
       <summary>
-        <para>Provides access to an object that stores information about a connector&#39;s end point.</para>
+        <para></para>
       </summary>
-      <value>An object that contains end point settings.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ConnectorFormat.StartPoint">
       <summary>
-        <para>Provides access to an object that stores information about a connector&#39;s start point.</para>
+        <para></para>
       </summary>
-      <value>An object that contains start point settings.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ConnectorType">
       <summary>
-        <para>Lists connector types.</para>
+        <para>Lists values used to specify a connector type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ConnectorType.Curved">
       <summary>
-        <para>A curved connector.</para>
+        <para>Specifies a curved connector.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ConnectorType.Elbow">
       <summary>
-        <para>An elbow-shaped connector.</para>
+        <para>Specifies an elbow-shaped connector.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ConnectorType.Straight">
       <summary>
-        <para>A straight line connector.</para>
+        <para>Specifies a straight line connector.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.CustomHyphenationDictionary">
@@ -5679,36 +5670,12 @@
         <para>Contains core properties of the document.</para>
       </summary>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Application">
-      <summary>
-        <para>Specifies an application used to modify the document.</para>
-      </summary>
-      <value>The application name. The default is &quot;DevExpress Office File API/<span id="macro" data-macro-template="xx.x.x">20.1.7</span>.0&quot;.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.AppVersion">
-      <summary>
-        <para>Gets or sets the version of an application used to modify the document.</para>
-      </summary>
-      <value>The application version. The default is <span id="macro" data-macro-template="xx.x">20.1</span></value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Author">
-      <summary>
-        <para>Gets or sets the name of the document&#39;s author.</para>
-      </summary>
-      <value>The author&#39;s name.</value>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Category">
       <summary>
         <para>Gets or sets metadata used for categorization of the document content, e.g. Resume, Letter, Financial Forecast, Proposal, Technical
 Presentation, and so on.</para>
       </summary>
       <value>A string of text that specifies the category name.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Company">
-      <summary>
-        <para>Gets or sets the name of the company associated with the document.</para>
-      </summary>
-      <value>The company name.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.ContentStatus">
       <summary>
@@ -5772,12 +5739,6 @@ context.</para>
       </summary>
       <value>A <see cref="T:System.DateTime"/> value that is the moment when a document was last printed.</value>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Manager">
-      <summary>
-        <para>Gets or sets a manager of the document&#39;s author.</para>
-      </summary>
-      <value>The manager&#39;s name.</value>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Modified">
       <summary>
         <para>Gets or sets the date and time a document was last saved.</para>
@@ -5795,12 +5756,6 @@ context.</para>
         <para>Gets or sets metadata recognized as the document&#39;s topic of the content.</para>
       </summary>
       <value>A string of text.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Template">
-      <summary>
-        <para>Gets or sets the name of a template attached to the document.</para>
-      </summary>
-      <value>The template name.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Title">
       <summary>
@@ -6335,43 +6290,31 @@ context.</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.DrawingObject">
       <summary>
-        <para>A base interface for drawing objects.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.DrawingObject.AddHyperlink">
       <summary>
-        <para>Adds a hyperlink to a shape.</para>
+        <para></para>
       </summary>
-      <returns>A hyperlink attached to the drawing object.</returns>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.AltText">
-      <summary>
-        <para>Gets or sets the alternative text for a shape.</para>
-      </summary>
-      <value>The descriptive text associated with a shape.</value>
+      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.CanvasItems">
       <summary>
-        <para>Provides access to the collection of shapes in a drawing canvas.</para>
+        <para></para>
       </summary>
-      <value>The collection of canvas items.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.ConnectorFormat">
       <summary>
-        <para>Provides access to connector settings.</para>
+        <para></para>
       </summary>
-      <value>An object that stores connector settings.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.DrawingObject.DeleteHyperlink">
       <summary>
-        <para>Removes a hyperlink associated with a shape.</para>
+        <para></para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Description">
-      <summary>
-        <para>Gets or sets the alternative description for a shape.</para>
-      </summary>
-      <value>The detailed explanation of shape content.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Fill">
       <summary>
@@ -6381,111 +6324,93 @@ context.</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.GroupItems">
       <summary>
-        <para>Provides access to the collection of shapes in a group.</para>
+        <para></para>
       </summary>
-      <value>The collection of group items.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Height">
-      <summary>
-        <para>Gets or sets the shape&#39;s absolute height.</para>
-      </summary>
-      <value>The height in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Hyperlink">
       <summary>
-        <para>Returns a hyperlink associated with a shape.</para>
+        <para></para>
       </summary>
-      <value>A hyperlink attached to the drawing object.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Id">
       <summary>
-        <para>Returns the shape&#39;s unique identifier.</para>
+        <para></para>
       </summary>
-      <value>An integer value that uniquely identifies this shape.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Line">
       <summary>
-        <para>Allows you to format a shape outline.</para>
+        <para></para>
       </summary>
-      <value>An object that contains line format settings.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.LockAspectRatio">
-      <summary>
-        <para>Specifies whether to maintain proportions of a shape when you resize it.</para>
-      </summary>
-      <value>true if a shape retains its original proportions when you resize it; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Name">
       <summary>
-        <para>Gets or sets the shape&#39;s name.</para>
+        <para></para>
       </summary>
-      <value>The shape&#39;s name.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Offset">
       <summary>
-        <para>Gets or sets the absolute position of a shape on the page.</para>
+        <para></para>
       </summary>
-      <value>An object that specifies the horizontal and vertical offsets in measurement units defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.OriginalSize">
       <summary>
-        <para>Returns the original size of a shape or picture (that is the size before you scale or resize the object).</para>
+        <para></para>
       </summary>
-      <value>An object that stores the shape&#39;s original width and height in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.PictureFormat">
       <summary>
-        <para>Provides access to picture settings.</para>
+        <para></para>
       </summary>
-      <value>An object that contains picture settings.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.RotationAngle">
       <summary>
-        <para>Gets or sets the shape&#39;s rotation angle.</para>
+        <para></para>
       </summary>
-      <value>The rotation angle in degrees.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.ScaleX">
       <summary>
-        <para>Gets or sets the horizontal scale factor for a shape.</para>
+        <para></para>
       </summary>
-      <value>The scale factor to apply to a shape. Default is 1 (the shape is not scaled).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.ScaleY">
       <summary>
-        <para>Gets or sets the vertical scale factor for a shape.</para>
+        <para></para>
       </summary>
-      <value>The scale factor to apply to a shape. Default is 1 (the shape is not scaled).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.ShapeFormat">
       <summary>
-        <para>Provides access to shape properties.</para>
+        <para></para>
       </summary>
-      <value>An object that contains shape properties.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Size">
       <summary>
-        <para>Gets or sets the shape&#39;s size.</para>
+        <para></para>
       </summary>
-      <value>An object that stores the shape&#39;s width and height in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Title">
       <summary>
-        <para>Gets or sets the alternative title for a shape.</para>
+        <para></para>
       </summary>
-      <value>The descriptive title for a shape.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Type">
       <summary>
-        <para>Returns the shape&#39;s type.</para>
+        <para></para>
       </summary>
-      <value>An enumeration member that specifies the shape&#39;s type.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Width">
-      <summary>
-        <para>Gets or sets the shape&#39;s absolute width.</para>
-      </summary>
-      <value>The width in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.EncryptionSettings">
       <summary>
@@ -6926,12 +6851,6 @@ Supported in Microsoft Word 2007 and higher.</para>
       </summary>
       <value>The angle in degrees (from 0&#176; to 360&#176;).</value>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.GradientFill.FillRect">
-      <summary>
-        <para>Specifies the gradient fill direction.</para>
-      </summary>
-      <value>An object that specifies offsets (in percentage) from the fill rectangle edges to the center shade rectangle.</value>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.GradientFill.GradientStops">
       <summary>
         <para>Provides access to the collection of gradient stops.</para>
@@ -6949,12 +6868,6 @@ Supported in Microsoft Word 2007 and higher.</para>
         <para>Specifies whether to rotate the gradient fill with the shape.</para>
       </summary>
       <value>true to rotate the gradient with the shape; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.GradientFill.TileRect">
-      <summary>
-        <para>Specifies the rectangular region to which a gradient is applied. This region is tiled to fill the shape.</para>
-      </summary>
-      <value>An object that specifies offsets (in percentage) from the edges of a shape&#39;s bounding box to the tile rectangle. A positive percentage specifies an inset, and a negative percentage defines an outset.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.GradientStop">
       <summary>
@@ -7064,14 +6977,14 @@ Supported in Microsoft Word 2007 and higher.</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.GroupShapeCollection">
       <summary>
-        <para>A collection of shapes in a group.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.GroupShapeCollection.Ungroup">
       <summary>
-        <para>Splits a group into individual shapes.</para>
+        <para></para>
       </summary>
-      <returns>A collection of shapes retrieved from the group.</returns>
+      <returns></returns>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.HeaderFooterType">
       <summary>
@@ -7607,37 +7520,37 @@ Supported in Microsoft Word 2007 and higher.</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.LineArrowType">
       <summary>
-        <para>Lists values that specify the arrowhead type.</para>
+        <para>Lists values used to specify the arrowhead type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineArrowType.Arrow">
       <summary>
-        <para>An open arrowhead.</para>
+        <para>Specifies an open arrowhead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineArrowType.Diamond">
       <summary>
-        <para>A diamond-shaped arrowhead.</para>
+        <para>Specifies a diamond-shaped arrowhead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineArrowType.None">
       <summary>
-        <para>A line has no arrowhead at the specified end.</para>
+        <para>Specifies that a line has no arrowhead at the specified end.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineArrowType.Oval">
       <summary>
-        <para>An oval-shaped arrowhead.</para>
+        <para>Specifies an oval-shaped arrowhead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineArrowType.StealthArrow">
       <summary>
-        <para>A stealth-shaped arrowhead.</para>
+        <para>Specifies a stealth-shaped arrowhead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineArrowType.TriangleArrow">
       <summary>
-        <para>A triangular arrowhead.</para>
+        <para>Specifies a triangular arrowhead.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.LineCapType">
@@ -7662,92 +7575,92 @@ Supported in Microsoft Word 2007 and higher.</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.LineCompoundType">
       <summary>
-        <para>Lists values that specify the compound line type.</para>
+        <para>Lists values used to specify the compound line type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineCompoundType.Double">
       <summary>
-        <para>A line style composed of double lines of equal width.</para>
+        <para>Specifies a line style composed of double lines of equal width.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineCompoundType.Single">
       <summary>
-        <para>A single line of normal width.</para>
+        <para>Specifies a single line of normal width.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineCompoundType.ThickThin">
       <summary>
-        <para>A line style composed of double lines, the first of which is thick and the second - thin.</para>
+        <para>Specifies a line style composed of double lines, the first of which is thick and the second - thin.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineCompoundType.ThinThick">
       <summary>
-        <para>A line style composed of double lines, the first of which is thin and the second - thick.</para>
+        <para>Specifies a line style composed of double lines, the first of which is thin and the second - thick.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineCompoundType.Triple">
       <summary>
-        <para>A line style composed of triple lines, the first of which is thin, the second - thick, and the last one - thin.</para>
+        <para>Specifies a line style composed of triple lines, the first of which is thin, the second - thick, and the last one - thin.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.LineDashType">
       <summary>
-        <para>Lists values that specify the line dash type.</para>
+        <para>Lists values used to specify the line dash type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.Dash">
       <summary>
-        <para>A line that consists of dashes. The binary pattern is 1111000 (four filled points and three spaces).</para>
+        <para>Specifies a line that consists of dashes.The binary pattern is 1111000 (four filled points and three spaces).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.DashDot">
       <summary>
-        <para>A line that consists of a repeating dash-dot pattern. The binary pattern is 11110001000 (four filled points - three spaces - one filled point - three spaces).</para>
+        <para>Specifies a line that consists of a repeating dash-dot pattern.The binary pattern is 11110001000 (four filled points - three spaces - one filled point - three spaces).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.Dot">
       <summary>
-        <para>A line that consists of dots. The binary pattern is 1000 (one filled point and three spaces).</para>
+        <para>Specifies a line that consists of dots.The binary pattern is 1000 (one filled point and three spaces).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.LongDash">
       <summary>
-        <para>A line that consists of long dashes. The binary pattern is 11111111000 (eight filled points and three spaces).</para>
+        <para>Specifies a line that consists of long dashes.The binary pattern is 11111111000 (eight filled points and three spaces).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.LongDashDot">
       <summary>
-        <para>A line that consists of a repeating long dash-dot pattern. The binary pattern is 111111110001000 (eight filled points - three spaces - one filled point - three spaces).</para>
+        <para>Specifies a line that consists of a repeating long dash-dot pattern.The binary pattern is 111111110001000 (eight filled points - three spaces - one filled point - three spaces).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.LongDashDotDot">
       <summary>
-        <para>A line that consists of a repeating long dash-dot-dot pattern. The binary pattern is 1111111100010001000 (eight filled points - three spaces - one filled point - three spaces - one filled point - three spaces).</para>
+        <para>Specifies a line that consists of a repeating long dash-dot-dot pattern.The binary pattern is 1111111100010001000 (eight filled points - three spaces - one filled point - three spaces - one filled point - three spaces).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.Solid">
       <summary>
-        <para>A solid line. The binary pattern is 1 (a continuous line).</para>
+        <para>Specifies a solid line.The binary pattern is 1 (a continuous line).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.SystemDash">
       <summary>
-        <para>A line that consists of short dashes. The binary pattern is 1110 (three filled points and one space).</para>
+        <para>Specifies a line that consists of short dashes.The binary pattern is 1110 (three filled points and one space).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.SystemDashDot">
       <summary>
-        <para>A line that consists of a repeating short dash-dot pattern. The binary pattern is 111010 (three filled points - one space - one filled point - one space).</para>
+        <para>Specifies a line that consists of a repeating short dash-dot pattern.The binary pattern is 111010 (three filled points - one space - one filled point - one space).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.SystemDashDotDot">
       <summary>
-        <para>A line that consists of a repeating short dash-dot-dot pattern. The binary pattern is 11101010 (three filled points - one space - one filled point - one space - one filled point - one space).</para>
+        <para>Specifies a line that consists of a repeating short dash-dot-dot pattern.The binary pattern is 11101010 (three filled points - one space - one filled point - one space - one filled point - one space).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineDashType.SystemDot">
       <summary>
-        <para>A line that consists of dots with a short space between them. The binary pattern is 10 (one filled point and one space).</para>
+        <para>Specifies a line that consists of dots with a short space between them.The binary pattern is 10 (one filled point and one space).</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.LineFillFormat">
@@ -7820,7 +7733,7 @@ Supported in Microsoft Word 2007 and higher.</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.LineJoinType">
       <summary>
-        <para>Lists values that specify the line join type.</para>
+        <para>Lists values used to specify the line join type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.LineJoinType.Bevel">
@@ -8094,73 +8007,73 @@ Supported in Microsoft Word 2007 and higher.</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.NestedShape">
       <summary>
-        <para>A shape that belongs to a group or drawing canvas.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.NestedShape.Parent">
       <summary>
-        <para>Returns the group or canvas to which this shape belongs.</para>
+        <para></para>
       </summary>
-      <value>The parent shape.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection">
       <summary>
-        <para>A base interface for collections that store nested shapes.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddGroup">
       <summary>
-        <para>Adds a nested group to an existing shape group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <returns>The nested group.</returns>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddLine(System.Drawing.PointF,System.Drawing.PointF)">
       <summary>
-        <para>Adds a line to a shape group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <param name="start">An object that specifies x- and y-coordinates of the start point relative to the top left corner of the parent object. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <param name="end">An object that specifies x- and y-coordinates of the end point relative to the top left corner of the parent object. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The shape in the group or drawing canvas.</returns>
+      <param name="start"></param>
+      <param name="end"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddPicture(DevExpress.XtraRichEdit.API.Native.DocumentImageSource,System.Drawing.PointF)">
       <summary>
-        <para>Adds a picture to a shape group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <param name="imageSource">An object that specifies the image source.</param>
-      <param name="location">An object that defines the picture&#39;s location (relative to the top left corner of the parent object). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property specifies the measurement units.</param>
-      <returns>The picture in the group or drawing canvas.</returns>
+      <param name="imageSource"></param>
+      <param name="location"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddPicture(DevExpress.XtraRichEdit.API.Native.DocumentImageSource,System.Drawing.RectangleF)">
       <summary>
-        <para>Adds a picture to a shape group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <param name="imageSource">An object that specifies the image source.</param>
-      <param name="bounds">An object that defines the picture&#39;s size and location (relative to the top left corner of the parent object). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property specifies the measurement units.</param>
-      <returns>The picture in the group or drawing canvas.</returns>
+      <param name="imageSource"></param>
+      <param name="bounds"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddPicture(System.Drawing.Image,System.Drawing.PointF)">
       <summary>
-        <para>Adds a picture to a shape group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <param name="image">The image to insert.</param>
-      <param name="location">An object that defines the picture&#39;s location (relative to the top left corner of the parent object). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property specifies the measurement units.</param>
-      <returns>The picture in the group or drawing canvas.</returns>
+      <param name="image"></param>
+      <param name="location"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddPicture(System.Drawing.Image,System.Drawing.RectangleF)">
       <summary>
-        <para>Adds a picture to a shape group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <param name="image">The image to insert.</param>
-      <param name="bounds">An object that defines the picture&#39;s size and location (relative to the top left corner of the parent object). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property specifies the measurement units.</param>
-      <returns>The picture in the group or drawing canvas.</returns>
+      <param name="image"></param>
+      <param name="bounds"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.NestedShapeCollection.AddShape(DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset,System.Drawing.RectangleF)">
       <summary>
-        <para>Adds a shape to a group or a drawing canvas.</para>
+        <para></para>
       </summary>
-      <param name="preset">An enumeration member that specifies the shape&#39;s geometry.</param>
-      <param name="bounds">An object that defines the shape&#39;s size and location (relative to the top left corner of the parent object). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property specifies the measurement units.</param>
-      <returns>The shape in the group or drawing canvas.</returns>
+      <param name="preset"></param>
+      <param name="bounds"></param>
+      <returns></returns>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.Note">
       <summary>
@@ -9539,289 +9452,289 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.PatternFillType">
       <summary>
-        <para>Lists preset patterns for a pattern fill.</para>
+        <para>Lists values used to specify preset patterns for the pattern fill.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Cross">
       <summary>
-        <para>A pattern of horizontal and vertical lines that cross each other.</para>
+        <para>Specifies a pattern of horizontal and vertical lines that cross each other.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DarkDownwardDiagonal">
       <summary>
-        <para>A pattern of thick downward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> lines.</para>
+        <para>Specifies a pattern of thick downward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DarkHorizontal">
       <summary>
-        <para>A pattern of thick horizontal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> lines.</para>
+        <para>Specifies a pattern of thick horizontal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DarkUpwardDiagonal">
       <summary>
-        <para>A pattern of thick upward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> lines.</para>
+        <para>Specifies a pattern of thick upward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DarkVertical">
       <summary>
-        <para>A pattern of thick vertical lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> lines.</para>
+        <para>Specifies a pattern of thick vertical lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> pattern and whose width is two times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DashedDownwardDiagonal">
       <summary>
-        <para>A pattern of dashed downward diagonal lines.</para>
+        <para>Specifies a pattern of dashed downward diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DashedHorizontal">
       <summary>
-        <para>A pattern of dashed horizontal lines.</para>
+        <para>Specifies a pattern of dashed horizontal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DashedUpwardDiagonal">
       <summary>
-        <para>A pattern of dashed upward diagonal lines.</para>
+        <para>Specifies a pattern of dashed upward diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DashedVertical">
       <summary>
-        <para>A pattern of dashed vertical lines.</para>
+        <para>Specifies a pattern of dashed vertical lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DiagonalBrick">
       <summary>
-        <para>A pattern that has the appearance of diagonally layered bricks.</para>
+        <para>Specifies a pattern that has the appearance of diagonally layered bricks.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DiagonalCross">
       <summary>
-        <para>A pattern of crisscross diagonal lines.</para>
+        <para>Specifies a pattern of crisscross diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Divot">
       <summary>
-        <para>A pattern that has the appearance of divots.</para>
+        <para>Specifies a pattern that has the appearance of divots.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DottedDiamond">
       <summary>
-        <para>A pattern of dotted forward and backward diagonal lines that cross each other.</para>
+        <para>Specifies a pattern of dotted forward and backward diagonal lines that cross each other.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DottedGrid">
       <summary>
-        <para>A pattern of dotted horizontal and vertical lines that cross each other.</para>
+        <para>Specifies a pattern of dotted horizontal and vertical lines that cross each other.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal">
       <summary>
-        <para>A pattern of downward diagonal lines.</para>
+        <para>Specifies a pattern of downward diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal">
       <summary>
-        <para>A pattern of horizontal lines.</para>
+        <para>Specifies a pattern of horizontal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.HorizontalBrick">
       <summary>
-        <para>A pattern that has the appearance of horizontally layered bricks.</para>
+        <para>Specifies a pattern that has the appearance of horizontally layered bricks.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LargeCheckerBoard">
       <summary>
-        <para>A pattern that has the appearance of a checkerboard with large squares.</para>
+        <para>Specifies a pattern that has the appearance of a checkerboard with large squares.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LargeConfetti">
       <summary>
-        <para>A pattern that has the appearance of large confetti.</para>
+        <para>Specifies a pattern that has the appearance of large confetti.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LargeGrid">
       <summary>
-        <para>A pattern of horizontal and vertical lines that cross each other to form a series of large squares. This pattern is equal to <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Cross"/>.</para>
+        <para>Specifies a pattern of horizontal and vertical lines that cross each other to form a series of large squares. This pattern is equal to <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Cross"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LightDownwardDiagonal">
       <summary>
-        <para>A pattern of thin downward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> pattern.</para>
+        <para>Specifies a pattern of thin downward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> pattern.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LightHorizontal">
       <summary>
-        <para>A pattern of thin horizontal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> pattern.</para>
+        <para>Specifies a pattern of thin horizontal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> pattern.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LightUpwardDiagonal">
       <summary>
-        <para>A pattern of thin upward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> pattern.</para>
+        <para>Specifies a pattern of thin upward diagonal lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> pattern.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.LightVertical">
       <summary>
-        <para>A pattern of thin vertical lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> pattern.</para>
+        <para>Specifies a pattern of thin vertical lines that are spaced 50% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> pattern.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.NarrowHorizontal">
       <summary>
-        <para>A pattern of thin horizontal lines that are spaced 75% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> pattern.</para>
+        <para>Specifies a pattern of thin horizontal lines that are spaced 75% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Horizontal"/> pattern.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.NarrowVertical">
       <summary>
-        <para>A pattern of thin vertical lines that are spaced 75% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> pattern.</para>
+        <para>Specifies a pattern of thin vertical lines that are spaced 75% closer together than in the <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical"/> pattern.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.OpenDiamond">
       <summary>
-        <para>A pattern of forward and backward diagonal lines that cross each other.</para>
+        <para>Specifies a pattern of forward and backward diagonal lines that cross each other.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent10">
       <summary>
-        <para>A 10% pattern. The ratio of the foreground color to the background color is 10 to 90.</para>
+        <para>Specifies the 10% pattern. The ratio of the foreground color to the background color is 10 to 90.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent20">
       <summary>
-        <para>A 20% pattern. The ratio of the foreground color to the background color is 20 to 80.</para>
+        <para>Specifies the 20% pattern. The ratio of the foreground color to the background color is 20 to 80.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent25">
       <summary>
-        <para>A 25% pattern. The ratio of the foreground color to the background color is 25 to 75.</para>
+        <para>Specifies the 25% pattern. The ratio of the foreground color to the background color is 25 to 75.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent30">
       <summary>
-        <para>A 30% pattern. The ratio of the foreground color to the background color is 30 to 70.</para>
+        <para>Specifies the 30% pattern. The ratio of the foreground color to the background color is 30 to 70.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent40">
       <summary>
-        <para>A 40% pattern. The ratio of the foreground color to the background color is 40 to 60.</para>
+        <para>Specifies the 40% pattern. The ratio of the foreground color to the background color is 40 to 60.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent5">
       <summary>
-        <para>A 5% pattern. The ratio of the foreground color to the background color is 5 to 95.</para>
+        <para>Specifies the 5% pattern. The ratio of the foreground color to the background color is 5 to 95.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent50">
       <summary>
-        <para>A 50% pattern. The ratio of the foreground color to the background color is 50 to 50.</para>
+        <para>Specifies the 50% pattern. The ratio of the foreground color to the background color is 50 to 50.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent60">
       <summary>
-        <para>A 60% pattern. The ratio of the foreground color to the background color is 60 to 40.</para>
+        <para>Specifies the 60% pattern. The ratio of the foreground color to the background color is 60 to 40.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent70">
       <summary>
-        <para>A 70% pattern. The ratio of the foreground color to the background color is 70 to 30.</para>
+        <para>Specifies the 70% pattern. The ratio of the foreground color to the background color is 70 to 30.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent75">
       <summary>
-        <para>A 75% pattern. The ratio of the foreground color to the background color is 75 to 25.</para>
+        <para>Specifies the 75% pattern. The ratio of the foreground color to the background color is 75 to 25.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent80">
       <summary>
-        <para>A 80% pattern. The ratio of the foreground color to the background color is 80 to 20.</para>
+        <para>Specifies the 80% pattern. The ratio of the foreground color to the background color is 80 to 20.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Percent90">
       <summary>
-        <para>A 90% pattern. The ratio of the foreground color to the background color is 90 to 10.</para>
+        <para>Specifies the 90% pattern. The ratio of the foreground color to the background color is 90 to 10.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Plaid">
       <summary>
-        <para>A pattern that has the appearance of the plaid material.</para>
+        <para>Specifies a pattern that has the appearance of the plaid material.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Shingle">
       <summary>
-        <para>A pattern that has the appearance of diagonally layered shingles.</para>
+        <para>Specifies a pattern that has the appearance of diagonally layered shingles.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.SmallCheckerBoard">
       <summary>
-        <para>A pattern that has the appearance of a checkerboard with small squares.</para>
+        <para>Specifies a pattern that has the appearance of a checkerboard with small squares.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.SmallConfetti">
       <summary>
-        <para>A pattern that has the appearance of small confetti.</para>
+        <para>Specifies a pattern that has the appearance of small confetti.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.SmallGrid">
       <summary>
-        <para>A pattern of closely spaced horizontal and vertical lines that cross each other to form a series of small squares.</para>
+        <para>Specifies a pattern of closely spaced horizontal and vertical lines that cross each other to form a series of small squares.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.SolidDiamond">
       <summary>
-        <para>A pattern that has the appearance of a checkerboard made up of equal-sized diamonds.</para>
+        <para>Specifies a pattern that has the appearance of a checkerboard made up of equal-sized diamonds.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Sphere">
       <summary>
-        <para>A pattern that has the appearance of adjacent spheres.</para>
+        <para>Specifies a pattern that has the appearance of adjacent spheres.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Trellis">
       <summary>
-        <para>A pattern that has the appearance of a trellis.</para>
+        <para>Specifies a pattern that has the appearance of a trellis.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal">
       <summary>
-        <para>A pattern of upward diagonal lines.</para>
+        <para>Specifies a pattern of upward diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Vertical">
       <summary>
-        <para>A pattern of vertical lines.</para>
+        <para>Specifies a pattern of vertical lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Wave">
       <summary>
-        <para>A pattern of horizontal lines that are composed of reversed tildes.</para>
+        <para>Specifies a pattern of horizontal lines that are composed of reversed tildes.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.Weave">
       <summary>
-        <para>A pattern that has the appearance of the woven material.</para>
+        <para>Specifies a pattern that has the appearance of the woven material.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.WideDownwardDiagonal">
       <summary>
-        <para>A pattern of wide downward diagonal lines whose width is three times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> lines.</para>
+        <para>Specifies a pattern of wide downward diagonal lines whose width is three times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.DownwardDiagonal"/> lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.WideUpwardDiagonal">
       <summary>
-        <para>A pattern of wide upward diagonal lines whose width is three times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> lines.</para>
+        <para>Specifies a pattern of wide upward diagonal lines whose width is three times greater than the width of <see cref="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.UpwardDiagonal"/> lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.PatternFillType.ZigZag">
       <summary>
-        <para>A pattern of horizontal lines that are composed of zigzags.</para>
+        <para>Specifies a pattern of horizontal lines that are composed of zigzags.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.PictureFill">
       <summary>
-        <para>Contains picture fill settings.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFill.FillRect">
       <summary>
-        <para>Specifies the portion of the shape to fill with a picture.</para>
+        <para></para>
       </summary>
-      <value>An object that specifies offsets from the shape&#39;s edges. Valid values range from -1000 (-100 000%) to 1000 (100 000%).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFill.OffsetX">
       <summary>
@@ -9885,50 +9798,50 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.PictureFormat">
       <summary>
-        <para>Contains picture settings.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.ConnectionSiteCount">
       <summary>
-        <para>Returns the number of connection sites on a picture.</para>
+        <para></para>
       </summary>
-      <value>The connection site number.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.Picture">
       <summary>
-        <para>Returns the source image that this drawing object contains.</para>
+        <para></para>
       </summary>
-      <value>An object that stores information on original image format, size, and resolution.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.PictureUri">
       <summary>
-        <para>Gets or sets the picture&#39;s URI.</para>
+        <para></para>
       </summary>
-      <value>A URI used to load the picture. An empty string, if the picture has no URI.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.Preset">
       <summary>
-        <para>Gets or sets the picture&#39;s geometry type.</para>
+        <para></para>
       </summary>
-      <value>An enumeration member that specifies the picture&#39;s geometry.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.PictureFormat.SetPicture(DevExpress.XtraRichEdit.API.Native.DocumentImageSource)">
       <summary>
-        <para>Allows you to replace the current picture.</para>
+        <para></para>
       </summary>
-      <param name="imageSource">An object that specifies the image source.</param>
+      <param name="imageSource"></param>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.PictureFormat.SetPicture(System.Drawing.Image)">
       <summary>
-        <para>Allows you to replace the current picture.</para>
+        <para></para>
       </summary>
-      <param name="image">The image to insert.</param>
+      <param name="image"></param>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.SourceRect">
       <summary>
-        <para>Specifies the part of the picture to display in the document.</para>
+        <para></para>
       </summary>
-      <value>An object that specifies offsets from the picture&#39;s edges.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.RangePermission">
       <summary>
@@ -10896,29 +10809,29 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.RectangleOffset">
       <summary>
-        <para>Defines offsets from the shape edges.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.RectangleOffset.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>
-        <para>Initializes a new <see cref="T:DevExpress.XtraRichEdit.API.Native.RectangleOffset"/> instance with the specified settings.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraRichEdit.API.Native.RectangleOffset"/> class with specified settings.</para>
       </summary>
-      <param name="leftOffset">The offset from the left edge of the shape.</param>
-      <param name="topOffset">The offset from the top edge of the shape.</param>
-      <param name="rightOffset">The offset from the right edge of the shape.</param>
-      <param name="bottomOffset">The offset from the bottom edge of the shape.</param>
+      <param name="leftOffset"></param>
+      <param name="topOffset"></param>
+      <param name="rightOffset"></param>
+      <param name="bottomOffset"></param>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.RectangleOffset.BottomOffset">
       <summary>
-        <para>Returns the offset from the bottom edge of the shape.</para>
+        <para></para>
       </summary>
-      <value>The offset value. A positive value indicates an inset and a negative value specifies an outset.</value>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.RectangleOffset.Empty">
       <summary>
-        <para>Represents a <see cref="T:DevExpress.XtraRichEdit.API.Native.RectangleOffset"/> instance whose offset values are zeros.</para>
+        <para></para>
       </summary>
-      <value>The RectangleOffset instance.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.RectangleOffset.Equals(DevExpress.XtraRichEdit.API.Native.RectangleOffset)">
       <summary>
@@ -10942,9 +10855,9 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.RectangleOffset.LeftOffset">
       <summary>
-        <para>Returns the offset from the left edge of the shape.</para>
+        <para></para>
       </summary>
-      <value>The offset value. A positive value indicates an inset and a negative value specifies an outset.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.RectangleOffset.op_Equality(DevExpress.XtraRichEdit.API.Native.RectangleOffset,DevExpress.XtraRichEdit.API.Native.RectangleOffset)">
       <summary>
@@ -10964,15 +10877,15 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.RectangleOffset.RightOffset">
       <summary>
-        <para>Returns the offset from the right edge of the shape.</para>
+        <para></para>
       </summary>
-      <value>The offset value. A positive value indicates an inset and a negative value specifies an outset.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.RectangleOffset.TopOffset">
       <summary>
-        <para>Returns the offset from the top edge of the shape.</para>
+        <para></para>
       </summary>
-      <value>The offset value. A positive value indicates an inset and a negative value specifies an outset.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.Revision">
       <summary>
@@ -11783,327 +11696,340 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.Shape">
       <summary>
-        <para>A drawing object embedded in a document.</para>
+        <para>Represents a drawing object.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.Height">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.HeightRelative">
       <summary>
-        <para>Gets or sets the shape height relative to an element specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalSize"/> property.</para>
+        <para></para>
       </summary>
-      <value>A value that specifies the ratio of the shape height to the height of the specified element. A valid value is from 0 (0%) to 10 (1000%).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.HorizontalAlignment">
       <summary>
-        <para>Specifies how a shape is aligned horizontally.</para>
+        <para>Gets or sets how the shape is positioned horizontally.</para>
       </summary>
-      <value>An enumeration member that specifies the shape&#39;s horizontal alignment.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment"/> enumeration member that specifies the shape&#39;s horizontal position.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.LockAnchor">
       <summary>
-        <para>Specifies whether to lock the shape anchor.</para>
+        <para></para>
       </summary>
-      <value>true to lock the anchor; otherwise, false.</value>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.LockAspectRatio">
+      <summary>
+        <para>Gets or sets whether you can change the height and width of a shape independently when you resize it.</para>
+      </summary>
+      <value>true if the specified shape retains its original proportions when you resize it; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.MarginBottom">
       <summary>
-        <para>Gets or sets the distance between the document text and the bottom edge of the shape.</para>
+        <para>Gets or sets the distance between the document text and the bottom border of the shape.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that is the distance in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.MarginLeft">
       <summary>
-        <para>Gets or sets the distance between the document text and the left edge of the shape.</para>
+        <para>Gets or sets the distance between the document text and the left border of the shape.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that is the distance in in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.MarginRight">
       <summary>
-        <para>Gets or sets the distance between the document text and the right edge of the shape.</para>
+        <para>Gets or sets the distance between the document text and the right border of the shape.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that is the distance in in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.MarginTop">
       <summary>
-        <para>Gets or sets the distance between the document text and the top edge of the shape.</para>
+        <para>Gets or sets the distance between the document text and the top border of the shape.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that is the distance in in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetRelative">
       <summary>
-        <para>Gets or sets the relative position of a shape on the page.</para>
+        <para></para>
       </summary>
-      <value>An object that defines the horizontal and vertical offsets (in percentage) relative to the specified elements. Valid values range from -10 (-1000%) to 10 (1000%).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetX">
       <summary>
-        <para>Specifies the absolute horizontal position of a shape relative to an element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property.</para>
+        <para></para>
       </summary>
-      <value>The horizontal offset in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetXRelative">
       <summary>
-        <para>Specifies the horizontal position of a shape relative to an element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property.</para>
+        <para></para>
       </summary>
-      <value>The offset (in percentage) relative to the specified element. Valid values range from -10 (-1000%) to 10 (1000%).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetY">
       <summary>
-        <para>Specifies the absolute vertical position of a shape relative to an element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property.</para>
+        <para></para>
       </summary>
-      <value>The vertical offset in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetYRelative">
       <summary>
-        <para>Specifies the vertical position of a shape relative to an element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property.</para>
+        <para></para>
       </summary>
-      <value>The offset (in percentage) relative to the specified element. Valid values range from -10 (-1000%) to 10 (1000%).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.Picture">
       <summary>
-        <para>Use the <see cref="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.Picture"/> property instead.</para>
+        <para>Gets a picture residing in the floating object.</para>
       </summary>
-      <value></value>
+      <value>An <see cref="T:DevExpress.Office.Utils.OfficeImage"/> object that is the image in a shape object that is the floating picture; if a shape object is a text box, null (Nothing in Visual Basic) is returned.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.PictureUri">
       <summary>
-        <para>Use the <see cref="P:DevExpress.XtraRichEdit.API.Native.PictureFormat.PictureUri"/> property instead.</para>
+        <para>Gets or sets the URI of a picture represented by a floating object.</para>
       </summary>
-      <value></value>
+      <value>A string that is the URI of the picture. A floating picture can have no URI or the shape can actually be a text box. In this case, an empty string is returned.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.Range">
       <summary>
-        <para>Returns the anchoring range for a shape.</para>
+        <para>Gets the anchoring range for the specified shape.</para>
       </summary>
-      <value>A range to which the shape is anchored.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> object that is the anchoring range for the specified shape.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition">
       <summary>
-        <para>Gets or sets the element to which the shape&#39;s horizontal position is relative.</para>
+        <para>Gets or sets an item to what the horizontal position of a shape is relative.</para>
       </summary>
-      <value>Defines the element relative to which the shape is positioned horizontally.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition"/> enumeration member.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalSize">
       <summary>
-        <para>Gets or sets the element relative to which the shape width is calculated.</para>
-      </summary>
-      <value>An enumeration member that specifies the element to which the shape width is relative.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition">
-      <summary>
-        <para>Gets or sets the element to which the shape&#39;s vertical position is relative.</para>
-      </summary>
-      <value>Defines the element relative to which the shape is positioned vertically.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalSize">
-      <summary>
-        <para>Gets or sets the element relative to which the shape height is calculated.</para>
-      </summary>
-      <value>An enumeration member that specifies the element to which the shape height is relative.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.SizeRelative">
-      <summary>
-        <para>Gets or sets the shape&#39;s relative size.</para>
-      </summary>
-      <value>Specifies values that define the ratio of the shape width and height to the width and height of the given elements. Valid values range from 0 (0%) to 10 (1000%).</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.TextBox">
-      <summary>
-        <para>Use the <see cref="P:DevExpress.XtraRichEdit.API.Native.ShapeFormat.TextBox"/> property instead.</para>
+        <para></para>
       </summary>
       <value></value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition">
+      <summary>
+        <para>Gets or sets an item to what the vertical position of a shape is relative.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition"/> enumeration member.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalSize">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.SizeRelative">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.TextBox">
+      <summary>
+        <para>Provides access to text box content.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> interface that exposes the content of a text box.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.TextWrapping">
       <summary>
-        <para>Specifies how a shape is surrounded by text.</para>
+        <para>Gets or sets how the shape is surrounded by the text.</para>
       </summary>
-      <value>An enumeration member that specifies how text wraps around the shape.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TextWrappingType"/> enumeration member.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.TextWrappingSide">
       <summary>
-        <para>Specifies how the text wraps around the shape&#39;s edges.</para>
+        <para>Specifies how text should wrap around the shape&#39;s sides.</para>
       </summary>
-      <value>An enumeration value that specifies the text wrapping side.</value>
+      <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.TextWrappingSide"/> enumeration values indicating the wrap side.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.VerticalAlignment">
       <summary>
-        <para>Specifies how a shape is aligned vertically.</para>
+        <para>Gets or sets how the shape is positioned vertically.</para>
       </summary>
-      <value>An enumeration member that specifies the shape&#39;s vertical alignment.</value>
+      <value>&#39;A <see cref="T:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment"/> enumeration member that specifies the shape&#39;s vertical position.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.Width">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.WidthRelative">
       <summary>
-        <para>Gets or sets the shape width relative to an element specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalSize"/> property.</para>
+        <para></para>
       </summary>
-      <value>A value that specifies the ratio of the shape width to the width of the specified element. A valid value is from 0 (0%) to 10 (1000%).</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.ZOrder">
       <summary>
-        <para>Gets or sets the shape&#39;s position in the z-order.</para>
+        <para>Gets or sets the position of the shape in the z-order.</para>
       </summary>
-      <value>An integer that specifies the shape&#39;s position in the z-order.</value>
+      <value>An integer that represents a shape position in the z-order.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeCollection">
       <summary>
-        <para>A collection of drawing objects (shapes, pictures, and text boxes).</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.Clear">
-      <summary>
-        <para>Removes all shapes from the collection.</para>
+        <para>A collection of Shape objects.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.Flatten">
       <summary>
-        <para>Converts a shape collection into a flattened collection that contains all drawing objects in the document, including items of shape groups and canvases.</para>
+        <para></para>
       </summary>
-      <returns>A flattened collection of drawing objects in the document.</returns>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertCanvas(DevExpress.XtraRichEdit.API.Native.DocumentPosition)">
       <summary>
-        <para>Inserts a drawing canvas in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the canvas anchor.</param>
-      <returns>The canvas embedded in the document.</returns>
+      <param name="pos"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertCanvas(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Drawing.RectangleF)">
       <summary>
-        <para>Inserts a drawing canvas at the specified position in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the canvas anchor.</param>
-      <param name="bounds">An object that specifies the canvas size and location (relative to the top and left edges of the page). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The canvas embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="bounds"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertCanvas(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Drawing.SizeF)">
       <summary>
-        <para>Inserts a drawing canvas of specified size in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the canvas anchor.</param>
-      <param name="size">An object that specifies the canvas width and height. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The canvas embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="size"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertGroup(DevExpress.XtraRichEdit.API.Native.DocumentPosition)">
       <summary>
-        <para>Inserts a shape group in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the group&#39;s anchor.</param>
-      <returns>The group embedded in the document.</returns>
+      <param name="pos"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertLine(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Drawing.PointF,System.Drawing.PointF)">
       <summary>
-        <para>Inserts a line in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the line&#39;s anchor.</param>
-      <param name="start">An object that specifies x- and y-coordinates of the start point relative to the page&#39;s top left corner. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <param name="end">An object that specifies x- and y-coordinates of the end point relative to the page&#39;s top left corner. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The line embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="start"></param>
+      <param name="end"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertPicture(DevExpress.XtraRichEdit.API.Native.DocumentPosition,DevExpress.XtraRichEdit.API.Native.DocumentImageSource)">
       <summary>
-        <para>Inserts a picture in the document.</para>
+        <para>Inserts a picture.</para>
       </summary>
-      <param name="pos">The position of the picture&#39;s anchor.</param>
-      <param name="imageSource">An object that specifies the image source.</param>
-      <returns>The picture embedded in the document.</returns>
+      <param name="pos">The position of a picture&#39;s anchor.</param>
+      <param name="imageSource">The image to insert.</param>
+      <returns>A shape with a picture.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertPicture(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Drawing.Image)">
       <summary>
-        <para>Inserts a picture in the document.</para>
+        <para>Inserts a picture.</para>
       </summary>
-      <param name="pos">The position of the picture&#39;s anchor.</param>
+      <param name="pos">The position of a picture&#39;s anchor.</param>
       <param name="image">The image to insert.</param>
-      <returns>The picture embedded in the document.</returns>
+      <returns>A shape with a picture.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertShape(DevExpress.XtraRichEdit.API.Native.DocumentPosition,DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset)">
       <summary>
-        <para>Inserts a shape in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the shape&#39;s anchor.</param>
-      <param name="preset">An enumeration member that defines the shape&#39;s geometry.</param>
-      <returns>The shape embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="preset"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertShape(DevExpress.XtraRichEdit.API.Native.DocumentPosition,DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset,System.Drawing.RectangleF)">
       <summary>
-        <para>Inserts a shape at the specified position in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the shape&#39;s anchor.</param>
-      <param name="preset">An enumeration member that defines the shape&#39;s geometry.</param>
-      <param name="bounds">An object that specifies the shape&#39;s size and location (relative to the top and left edges of the page). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The shape embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="preset"></param>
+      <param name="bounds"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertShape(DevExpress.XtraRichEdit.API.Native.DocumentPosition,DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset,System.Drawing.SizeF)">
       <summary>
-        <para>Inserts a shape of specified size in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the shape&#39;s anchor.</param>
-      <param name="preset">An enumeration member that defines the shape&#39;s geometry.</param>
-      <param name="size">An object that specifies the shape&#39;s width and height. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The shape embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="preset"></param>
+      <param name="size"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertTextBox(DevExpress.XtraRichEdit.API.Native.DocumentPosition)">
       <summary>
-        <para>Inserts a text box in the document.</para>
+        <para>Inserts a text box.</para>
       </summary>
-      <param name="pos">The position of the text box&#39;s anchor.</param>
-      <returns>The text box embedded in the document.</returns>
+      <param name="pos">The position of a text box&#39;s anchor.</param>
+      <returns>A shape with a text.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertTextBox(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Drawing.RectangleF)">
       <summary>
-        <para>Inserts a text box at the specified position in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the text box&#39;s anchor.</param>
-      <param name="bounds">An object that specifies the text box&#39;s size and location (relative to the top and left edges of the page). The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The text box embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="bounds"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.InsertTextBox(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Drawing.SizeF)">
       <summary>
-        <para>Inserts a text box of the specified size in the document.</para>
+        <para></para>
       </summary>
-      <param name="pos">The position of the text box&#39;s anchor.</param>
-      <param name="size">An object that specifies the text box&#39;s width and height. The <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property defines the measurement units.</param>
-      <returns>The text box embedded in the document.</returns>
+      <param name="pos"></param>
+      <param name="size"></param>
+      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeCollection.Item(System.String)">
       <summary>
-        <para>Returns a shape with the specified name.</para>
+        <para>Gets the shape with the specified name.</para>
       </summary>
-      <param name="name">The name of the shape to return.</param>
-      <value>A shape with the given name, or null (Nothing in Visual Basic) if the element is not found.</value>
+      <param name="name">A string specifying the shape&#39;s name.</param>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Shape"/> element of the collection or null (Nothing in Visual Basic) if the element is not found.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.Remove(DevExpress.XtraRichEdit.API.Native.Shape)">
       <summary>
-        <para>Removes the specified shape from the collection.</para>
+        <para></para>
       </summary>
-      <param name="shape">A shape to remove.</param>
-      <returns>true if the element is found and successfully removed; otherwise, false.</returns>
+      <param name="shape"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeCollection.RemoveAt(System.Int32)">
       <summary>
-        <para>Removes a shape with the specified index from the collection.</para>
+        <para></para>
       </summary>
-      <param name="index">A zero-based index of the shape to remove. It should not be negative and should be less than the number of elements in the collection.</param>
+      <param name="index"></param>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeConnectionPoint">
       <summary>
-        <para>Contains information about connection points.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeConnectionPoint.Connected">
       <summary>
-        <para>Indicates whether a connector&#39;s point is attached to a shape.</para>
+        <para></para>
       </summary>
-      <value>true if the point is connected to a shape; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeConnectionPoint.ConnectionSite">
       <summary>
-        <para>Returns the connection site to which a connector&#39;s point is attached.</para>
+        <para></para>
       </summary>
-      <value>The connection site index.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeConnectionPoint.ShapeId">
       <summary>
-        <para>Returns the ID of the shape to which a connector&#39;s point is attached.</para>
+        <para></para>
       </summary>
-      <value>The shape&#39;s unique identifier.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeFill">
       <summary>
@@ -12136,9 +12062,9 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeFill.PictureFill">
       <summary>
-        <para>Provides access to picture fill settings.</para>
+        <para></para>
       </summary>
-      <value>An object that stores picture fill settings.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ShapeFill.SetAutoFill">
       <summary>
@@ -12199,961 +12125,955 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeFormat">
       <summary>
-        <para>Contains shape properties.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeFormat.ConnectionSiteCount">
       <summary>
-        <para>Returns the number of connection sites on a shape.</para>
+        <para></para>
       </summary>
-      <value>The number of shape connection sites.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeFormat.HasText">
-      <summary>
-        <para>Indicates whether a shape contains text.</para>
-      </summary>
-      <value>true if the shape has text; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeFormat.Preset">
       <summary>
-        <para>Gets or sets the shape&#39;s geometry type.</para>
+        <para></para>
       </summary>
-      <value>An enumeration member that specifies the shape&#39;s geometry.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ShapeFormat.TextBox">
       <summary>
-        <para>Provides access to text box content and its settings.</para>
+        <para></para>
       </summary>
-      <value>An object that defines text box content and its settings.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset">
       <summary>
-        <para>Lists values that specify the shape geometry type.</para>
+        <para>Lists values used to specify the shape geometry type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.AccentBorderLineCallout1">
       <summary>
-        <para>A callout with a border, accent bar, and a straight callout line.</para>
+        <para>Specifies a callout with a border, accent bar, and a straight callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.AccentBorderLineCallout2">
       <summary>
-        <para>A callout with a border, accent bar, and a two-segment callout line.</para>
+        <para>Specifies a callout with a border, accent bar, and a two-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.AccentBorderLineCallout3">
       <summary>
-        <para>A callout with a border, accent bar, and a three-segment callout line.</para>
+        <para>Specifies a callout with a border, accent bar, and a three-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.AccentLineCallout1">
       <summary>
-        <para>A callout with an accent bar and a straight callout line.</para>
+        <para>Specifies a callout with an accent bar and a straight callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.AccentLineCallout2">
       <summary>
-        <para>A callout with an accent bar and a two-segment callout line.</para>
+        <para>Specifies a callout with an accent bar and a two-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.AccentLineCallout3">
       <summary>
-        <para>A callout with an accent bar and a three-segment callout line.</para>
+        <para>Specifies a callout with an accent bar and a three-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonBackPrevious">
       <summary>
-        <para>The Back or Previous button.</para>
+        <para>Specifies the Back or Previous button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonBeginning">
       <summary>
-        <para>The Beginning button.</para>
+        <para>Specifies the Beginning button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonBlank">
       <summary>
-        <para>An empty button.</para>
+        <para>Specifies an empty button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonDocument">
       <summary>
-        <para>The Document button.</para>
+        <para>Specifies the Document button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonEnd">
       <summary>
-        <para>The End button.</para>
+        <para>Specifies the End button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonForwardNext">
       <summary>
-        <para>The Forward or Next button.</para>
+        <para>Specifies the Forward or Next button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonHelp">
       <summary>
-        <para>The Help button.</para>
+        <para>Specifies the Help button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonHome">
       <summary>
-        <para>The Home button.</para>
+        <para>Specifies the Home button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonInformation">
       <summary>
-        <para>The Information button.</para>
+        <para>Specifies the Information button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonMovie">
       <summary>
-        <para>The Movie button.</para>
+        <para>Specifies the Movie button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonReturn">
       <summary>
-        <para>The Return button.</para>
+        <para>Specifies the Return button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ActionButtonSound">
       <summary>
-        <para>The Sound button.</para>
+        <para>Specifies the Sound button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Arc">
       <summary>
-        <para>An arc.</para>
+        <para>Specifies an arc.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.BentArrow">
       <summary>
-        <para>A block arrow that follows a curved 90-degree angle.</para>
+        <para>Specifies a block arrow that follows a curved 90-degree angle.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.BentUpArrow">
       <summary>
-        <para>A block arrow that follows a sharp 90-degree angle and points up by default.</para>
+        <para>Specifies a block arrow that follows a sharp 90-degree angle and points up by default.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Bevel">
       <summary>
-        <para>A bevel.</para>
+        <para>Specifies a bevel.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.BlockArc">
       <summary>
-        <para>A block arc.</para>
+        <para>Specifies a block arc.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.BorderLineCallout1">
       <summary>
-        <para>A callout with a border and a straight callout line.</para>
+        <para>Specifies a callout with a border and a straight callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.BorderLineCallout2">
       <summary>
-        <para>A callout with a border and a two-segment callout line.</para>
+        <para>Specifies a callout with a border and a two-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.BorderLineCallout3">
       <summary>
-        <para>A callout with a border and a three-segment callout line.</para>
+        <para>Specifies a callout with a border and a three-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Can">
       <summary>
-        <para>A can.</para>
+        <para>Specifies a can.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ChartPlus">
       <summary>
-        <para>A rectangle divided vertically and horizontally into four quarters.</para>
+        <para>Specifies a rectangle divided vertically and horizontally into four quarters.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ChartStar">
       <summary>
-        <para>A rectangle divided into six parts along a vertical line and diagonal lines.</para>
+        <para>Specifies a rectangle divided into six parts along a vertical line and diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.ChartX">
       <summary>
-        <para>A rectangle divided into four parts along diagonal lines.</para>
+        <para>Specifies a rectangle divided into four parts along diagonal lines.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Chevron">
       <summary>
-        <para>A chevron.</para>
+        <para>Specifies a chevron.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Chord">
       <summary>
-        <para>A circle with a chord.</para>
+        <para>Specifies a circle with a chord.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CircularArrow">
       <summary>
-        <para>A block arrow that follows a curved 180-degree angle.</para>
+        <para>Specifies a block arrow that follows a curved 180-degree angle.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Cloud">
       <summary>
-        <para>A cloud shape.</para>
+        <para>Specifies a cloud shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CloudCallout">
       <summary>
-        <para>A cloud callout.</para>
+        <para>Specifies a cloud callout.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CornerTabs">
       <summary>
-        <para>Four right triangles that define a rectangular shape.</para>
+        <para>Specifies four right triangles that define a rectangular shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Cross">
       <summary>
-        <para>A cross.</para>
+        <para>Specifies a cross.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Cube">
       <summary>
-        <para>A cube.</para>
+        <para>Specifies a cube.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CurvedDownArrow">
       <summary>
-        <para>A block arrow that curves down.</para>
+        <para>Specifies a block arrow that curves down.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CurvedDownRibbon">
       <summary>
-        <para>A curved down ribbon banner.</para>
+        <para>Specifies a curved down ribbon banner.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CurvedLeftArrow">
       <summary>
-        <para>A block arrow that curves left.</para>
+        <para>Specifies a block arrow that curves left.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CurvedRightArrow">
       <summary>
-        <para>A block arrow that curves right.</para>
+        <para>Specifies a block arrow that curves right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CurvedUpArrow">
       <summary>
-        <para>A block arrow that curves up.</para>
+        <para>Specifies a block arrow that curves up.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.CurvedUpRibbon">
       <summary>
-        <para>A curved up ribbon banner.</para>
+        <para>Specifies a curved up ribbon banner.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Custom">
       <summary>
-        <para>A custom shape.</para>
+        <para>Specifies a custom geometric shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Decagon">
       <summary>
-        <para>A decagon.</para>
+        <para>Specifies a decagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DiagonalStripe">
       <summary>
-        <para>A diagonal stripe.</para>
+        <para>Specifies a diagonal stripe.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Diamond">
       <summary>
-        <para>A diamond.</para>
+        <para>Specifies a diamond.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Division">
       <summary>
-        <para>A division sign.</para>
+        <para>Specifies a division sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Dodecagon">
       <summary>
-        <para>A dodecagon.</para>
+        <para>Specifies a dodecagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Donut">
       <summary>
-        <para>A donut.</para>
+        <para>Specifies a donut.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DoubleBrace">
       <summary>
-        <para>A pair of braces.</para>
+        <para>Specifies a pair of braces.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DoubleBracket">
       <summary>
-        <para>A pair of brackets.</para>
+        <para>Specifies a pair of brackets.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DoubleWave">
       <summary>
-        <para>A double wave.</para>
+        <para>Specifies a double wave.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DownArrow">
       <summary>
-        <para>A block arrow that points down.</para>
+        <para>Specifies a block arrow that points down.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DownArrowCallout">
       <summary>
-        <para>A callout with an arrow that points down.</para>
+        <para>Specifies a callout with an arrow that points down.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.DownRibbon">
       <summary>
-        <para>A ribbon banner with its center area below the ribbon ends.</para>
+        <para>Specifies a ribbon banner with its center area below the ribbon ends.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Equal">
       <summary>
-        <para>An equal sign.</para>
+        <para>Specifies an equal sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Explosion1">
       <summary>
-        <para>An explosion shape.</para>
+        <para>Specifies an explosion shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Explosion2">
       <summary>
-        <para>An explosion shape.</para>
+        <para>Specifies an explosion shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartAlternateProcess">
       <summary>
-        <para>The Alternate Process flowchart symbol.</para>
+        <para>Specifies the Alternate Process flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartCollate">
       <summary>
-        <para>The Collate flowchart symbol.</para>
+        <para>Specifies the Collate flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartConnector">
       <summary>
-        <para>The Connector flowchart symbol.</para>
+        <para>Specifies the Connector flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartDecision">
       <summary>
-        <para>The Decision flowchart symbol.</para>
+        <para>Specifies the Decision flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartDelay">
       <summary>
-        <para>The Delay flowchart symbol.</para>
+        <para>Specifies the Delay flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartDirectAccessStorage">
       <summary>
-        <para>The Direct Access Storage flowchart symbol.</para>
+        <para>Specifies the Direct Access Storage flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartDisplay">
       <summary>
-        <para>The Display flowchart symbol.</para>
+        <para>Specifies the Display flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartDocument">
       <summary>
-        <para>The Document flowchart symbol.</para>
+        <para>Specifies the Document flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartExtract">
       <summary>
-        <para>The Extract flowchart symbol.</para>
+        <para>Specifies the Extract flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartInputOutput">
       <summary>
-        <para>The Input/Output (Data) flowchart symbol.</para>
+        <para>Specifies the Input/Output (Data) flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartInternalStorage">
       <summary>
-        <para>The Internal Storage flowchart symbol.</para>
+        <para>Specifies the Internal Storage flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartMagneticDisk">
       <summary>
-        <para>The Magnetic Disk flowchart symbol.</para>
+        <para>Specifies the Magnetic Disk flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartMagneticTape">
       <summary>
-        <para>The Magnetic Tape (Sequential Access Storage) flowchart symbol.</para>
+        <para>Specifies the Magnetic Tape (Sequential Access Storage) flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartManualInput">
       <summary>
-        <para>The Manual Input flowchart symbol.</para>
+        <para>Specifies the Manual Input flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartManualOperation">
       <summary>
-        <para>The Manual Operation flowchart symbol.</para>
+        <para>Specifies the Manual Operation flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartMerge">
       <summary>
-        <para>The Merge flowchart symbol.</para>
+        <para>Specifies the Merge flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartMultidocument">
       <summary>
-        <para>The Multi-document flowchart symbol.</para>
+        <para>Specifies the Multi-document flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartOfflineStorage">
       <summary>
-        <para>The Offline Storage flowchart symbol.</para>
+        <para>Specifies the Offline Storage flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartOffpageConnector">
       <summary>
-        <para>The Off-page Connector flowchart symbol.</para>
+        <para>Specifies the Off-page Connector flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartOr">
       <summary>
-        <para>The Or flowchart symbol.</para>
+        <para>Specifies the Or flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartPredefinedProcess">
       <summary>
-        <para>The Predefined Process flowchart symbol.</para>
+        <para>Specifies the Predefined Process flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartPreparation">
       <summary>
-        <para>The Preparation flowchart symbol.</para>
+        <para>Specifies the Preparation flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartProcess">
       <summary>
-        <para>The Process flowchart symbol.</para>
+        <para>Specifies the Process flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartPunchedCard">
       <summary>
-        <para>The Card flowchart symbol.</para>
+        <para>Specifies the Card flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartPunchedTape">
       <summary>
-        <para>The Punched Tape flowchart symbol.</para>
+        <para>Specifies the Punched Tape flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartSort">
       <summary>
-        <para>The Sort flowchart symbol.</para>
+        <para>Specifies the Sort flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartStoredData">
       <summary>
-        <para>The Stored Data flowchart symbol.</para>
+        <para>Specifies the Stored Data flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartSummingJunction">
       <summary>
-        <para>The Summing Junction flowchart symbol.</para>
+        <para>Specifies the Summing Junction flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FlowChartTerminator">
       <summary>
-        <para>The Terminator flowchart symbol.</para>
+        <para>Specifies the Terminator flowchart symbol.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.FoldedCorner">
       <summary>
-        <para>A rectangle with a folded corner.</para>
+        <para>Specifies a rectangle with a folded corner.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Frame">
       <summary>
-        <para>A rectangular picture frame.</para>
+        <para>Specifies a rectangular picture frame.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Funnel">
       <summary>
-        <para>A funnel.</para>
+        <para>Specifies a funnel.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Gear6">
       <summary>
-        <para>A gear with six teeth.</para>
+        <para>Specifies a gear with six teeth.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Gear9">
       <summary>
-        <para>A gear with nine teeth.</para>
+        <para>Specifies a gear with nine teeth.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.HalfFrame">
       <summary>
-        <para>Half of a rectangular picture frame.</para>
+        <para>Specifies half of a rectangular picture frame.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Heart">
       <summary>
-        <para>A heart.</para>
+        <para>Specifies a heart.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Heptagon">
       <summary>
-        <para>A heptagon.</para>
+        <para>Specifies a heptagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Hexagon">
       <summary>
-        <para>A hexagon.</para>
+        <para>Specifies a hexagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.HorizontalScroll">
       <summary>
-        <para>A horizontal scroll.</para>
+        <para>Specifies a horizontal scroll.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftArrow">
       <summary>
-        <para>A block arrow that points left.</para>
+        <para>Specifies a block arrow that points left.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftArrowCallout">
       <summary>
-        <para>A callout with an arrow that points left.</para>
+        <para>Specifies a callout with an arrow that points left.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftBrace">
       <summary>
-        <para>An opening brace.</para>
+        <para>Specifies an opening brace.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftBracket">
       <summary>
-        <para>An opening bracket.</para>
+        <para>Specifies an opening bracket.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftCircularArrow">
       <summary>
-        <para>A circular arrow pointing counter-clockwise.</para>
+        <para>Specifies a circular arrow pointing counter-clockwise.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftRightArrow">
       <summary>
-        <para>A block arrow that points left and right.</para>
+        <para>Specifies a block arrow that points left and right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftRightArrowCallout">
       <summary>
-        <para>A callout with arrows that point both left and right.</para>
+        <para>Specifies a callout with arrows that point both left and right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftRightCircularArrow">
       <summary>
-        <para>A circular arrow pointing both clockwise and counter-clockwise.</para>
+        <para>Specifies a circular arrow pointing both clockwise and counter-clockwise.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftRightRibbon">
       <summary>
-        <para>A ribbon with an arrow at both ends.</para>
+        <para>Specifies a ribbon with an arrow at both ends.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftRightUpArrow">
       <summary>
-        <para>A block arrow that points left, right, and up.</para>
+        <para>Specifies a block arrow that points left, right, and up.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LeftUpArrow">
       <summary>
-        <para>A block arrow that points left and up.</para>
+        <para>Specifies a block arrow that points left and up.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LightningBolt">
       <summary>
-        <para>A lightning bolt.</para>
+        <para>Specifies a lightning bolt.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LineCallout1">
       <summary>
-        <para>A callout with no border and a straight callout line.</para>
+        <para>Specifies a callout with no border and a straight callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LineCallout2">
       <summary>
-        <para>A callout with no border and a two-segment callout line.</para>
+        <para>Specifies a callout with no border and a two-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LineCallout3">
       <summary>
-        <para>A callout with no border and a three-segment callout line.</para>
+        <para>Specifies a callout with no border and a three-segment callout line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LineInverse">
       <summary>
-        <para>An inverse line shape.</para>
+        <para>Specifies an inverse line shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.LShape">
       <summary>
-        <para>An L-shape.</para>
+        <para>Specifies an L-shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Minus">
       <summary>
-        <para>A minus sign.</para>
+        <para>Specifies a minus sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Moon">
       <summary>
-        <para>A moon shape.</para>
+        <para>Specifies a moon shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Multiply">
       <summary>
-        <para>A multiplication sign.</para>
+        <para>Specifies a multiplication sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.NonIsoscelesTrapezoid">
       <summary>
-        <para>A non-isosceles trapezoid.</para>
+        <para>Specifies a non-isosceles trapezoid.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.NoSymbol">
       <summary>
-        <para>A prohibition sign.</para>
+        <para>Specifies a prohibition sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.NotchedRightArrow">
       <summary>
-        <para>A notched block arrow that points right.</para>
+        <para>Specifies a notched block arrow that points right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.NotEqual">
       <summary>
-        <para>A not-equal sign.</para>
+        <para>Specifies a not-equal sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Octagon">
       <summary>
-        <para>An octagon.</para>
+        <para>Specifies an octagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Oval">
       <summary>
-        <para>An oval.</para>
+        <para>Specifies an oval.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.OvalCallout">
       <summary>
-        <para>An oval-shaped callout.</para>
+        <para>Specifies an oval-shaped callout.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Parallelogram">
       <summary>
-        <para>A parallelogram.</para>
+        <para>Specifies a parallelogram.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Pentagon">
       <summary>
-        <para>A pentagon.</para>
+        <para>Specifies a pentagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Pie">
       <summary>
-        <para>A circle with a portion missing.</para>
+        <para>Specifies a circle with a portion missing.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.PieWedge">
       <summary>
-        <para>A quarter of a circular shape.</para>
+        <para>Specifies a quarter of a circular shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Plaque">
       <summary>
-        <para>A plaque.</para>
+        <para>Specifies a plaque.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.PlaqueTabs">
       <summary>
-        <para>Four quarter circles that define a rectangular shape.</para>
+        <para>Specifies four quarter circles that define a rectangular shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Plus">
       <summary>
-        <para>A plus sign.</para>
+        <para>Specifies a plus sign.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.QuadArrow">
       <summary>
-        <para>A block arrow that points up, down, left, and right.</para>
+        <para>Specifies a block arrow that points up, down, left, and right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.QuadArrowCallout">
       <summary>
-        <para>A callout with arrows that point up, down, left, and right.</para>
+        <para>Specifies a callout with arrows that point up, down, left, and right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Rectangle">
       <summary>
-        <para>A rectangle.</para>
+        <para>Specifies a rectangle.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RectangularCallout">
       <summary>
-        <para>A rectangular callout.</para>
+        <para>Specifies a rectangular callout.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RegularPentagon">
       <summary>
-        <para>A regular pentagon.</para>
+        <para>Specifies a regular pentagon.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RightArrow">
       <summary>
-        <para>A block arrow that points right.</para>
+        <para>Specifies a block arrow that points right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RightArrowCallout">
       <summary>
-        <para>A callout with an arrow that points right.</para>
+        <para>Specifies a callout with an arrow that points right.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RightBrace">
       <summary>
-        <para>A closing brace.</para>
+        <para>Specifies a closing brace.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RightBracket">
       <summary>
-        <para>A closing bracket.</para>
+        <para>Specifies a closing bracket.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RightTriangle">
       <summary>
-        <para>A right triangle.</para>
+        <para>Specifies a right triangle.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RoundDiagonalCornerRectangle">
       <summary>
-        <para>A rectangle with two rounded corners, diagonally-opposed.</para>
+        <para>Specifies a rectangle with two rounded corners, diagonally-opposed.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RoundedRectangle">
       <summary>
-        <para>A rounded rectangle.</para>
+        <para>Specifies a rounded rectangle.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RoundedRectangularCallout">
       <summary>
-        <para>A rectangular callout with rounded corners.</para>
+        <para>Specifies a rectangular callout with rounded corners.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RoundSameSideCornerRectangle">
       <summary>
-        <para>A rectangle with two-rounded corners that share a side.</para>
+        <para>Represents a rectangle with two-rounded corners that share a side.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.RoundSingleCornerRectangle">
       <summary>
-        <para>A rectangle with one rounded corner.</para>
+        <para>Represents a rectangle with one rounded corner.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SmileyFace">
       <summary>
-        <para>A smiley face.</para>
+        <para>Specifies a smiley face.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SnipAndRoundSingleCornerRectangle">
       <summary>
-        <para>A rectangle with one snipped corner and one rounded corner.</para>
+        <para>Specifies a rectangle with one snipped corner and one rounded corner.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SnipDiagonalCornerRectangle">
       <summary>
-        <para>A rectangle with two snipped corners, diagonally-opposed.</para>
+        <para>Specifies a rectangle with two snipped corners, diagonally-opposed.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SnipSameSideCornerRectangle">
       <summary>
-        <para>A rectangle with two snipped corners that share a side.</para>
+        <para>Specifies a rectangle with two snipped corners that share a side.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SnipSingleCornerRectangle">
       <summary>
-        <para>A rectangle with one snipped corner.</para>
+        <para>Specifies a rectangle with one snipped corner.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SquareTabs">
       <summary>
-        <para>Four small squares that define a rectangular shape.</para>
+        <para>Specifies four small squares that define a rectangular shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star10">
       <summary>
-        <para>A 10-point star.</para>
+        <para>Specifies a 10-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star12">
       <summary>
-        <para>A 12-point star.</para>
+        <para>Specifies a 12-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star16">
       <summary>
-        <para>A 16-point star.</para>
+        <para>Specifies a 16-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star24">
       <summary>
-        <para>A 24-point star.</para>
+        <para>Specifies a 24-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star32">
       <summary>
-        <para>A 32-point star.</para>
+        <para>Specifies a 32-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star4">
       <summary>
-        <para>A 4-point star.</para>
+        <para>Specifies a 4-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star5">
       <summary>
-        <para>A 5-point star.</para>
+        <para>Specifies a 5-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star6">
       <summary>
-        <para>A 6-point star.</para>
+        <para>Specifies a 6-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star7">
       <summary>
-        <para>A 7-point star.</para>
+        <para>Specifies a 7-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Star8">
       <summary>
-        <para>An 8-point star.</para>
+        <para>Specifies an 8-point star.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.StripedRightArrow">
       <summary>
-        <para>A block arrow that points right and has stripes on the tail.</para>
+        <para>Specifies a block arrow that points right and has stripes on the tail.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Sun">
       <summary>
-        <para>A sun shape.</para>
+        <para>Specifies a sun shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.SwooshArrow">
       <summary>
-        <para>A curved arrow.</para>
+        <para>Specifies a curved arrow.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Teardrop">
       <summary>
-        <para>A water droplet.</para>
+        <para>Specifies a water droplet.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Trapezoid">
       <summary>
-        <para>A trapezoid.</para>
+        <para>Specifies a trapezoid.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Triangle">
       <summary>
-        <para>An isosceles triangle.</para>
+        <para>Specifies an isosceles triangle.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.UpArrow">
       <summary>
-        <para>A block arrow that points up.</para>
+        <para>Specifies a block arrow that points up.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.UpArrowCallout">
       <summary>
-        <para>A callout with an arrow that points up.</para>
+        <para>Specifies a callout with an arrow that points up.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.UpDownArrow">
       <summary>
-        <para>A block arrow that points up and down.</para>
+        <para>Specifies a block arrow that points up and down.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.UpDownArrowCallout">
       <summary>
-        <para>A callout with arrows that point up and down.</para>
+        <para>Specifies a callout with arrows that point up and down.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.UpRibbon">
       <summary>
-        <para>A ribbon banner with its center area above the ribbon ends.</para>
+        <para>Specifies a ribbon banner with its center area above the ribbon ends.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.UTurnArrow">
       <summary>
-        <para>A block arrow that forms a U-shape.</para>
+        <para>Specifies a block arrow that forms a U-shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.VerticalScroll">
       <summary>
-        <para>A vertical scroll.</para>
+        <para>Specifies a vertical scroll.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeGeometryPreset.Wave">
       <summary>
-        <para>A wave.</para>
+        <para>Specifies a wave.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment">
       <summary>
-        <para>Lists values that specify the horizontal alignment for a shape.</para>
+        <para>Specifies the horizontal alignment of a shape.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment.Center">
       <summary>
-        <para>The shape is centered relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property.</para>
+        <para>The shape is centered relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment.Inside">
       <summary>
-        <para>The shape is left-aligned relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property on odd pages, and right-aligned on even pages.The Rich Text Editor left-aligns the shape relative to the given element for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment.Left">
       <summary>
-        <para>The shape is left-aligned relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property.</para>
+        <para>The shape is left-aligned relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment.None">
       <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetX"/> property specifies the shape&#39;s position relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property.</para>
+        <para>The shape is positioned explicitly via the <see cref="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Offset"/> property relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment.Outside">
       <summary>
-        <para>The shape is right-aligned relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property on odd pages, and left-aligned on even pages.The Rich Text Editor right-aligns the shape relative to the given element for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeHorizontalAlignment.Right">
       <summary>
-        <para>The shape is right-aligned relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/> property.</para>
+        <para>The shape is right-aligned relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeHorizontalPosition"/>.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeLine">
@@ -13247,227 +13167,127 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition">
       <summary>
-        <para>Lists elements to which the horizontal position of a shape is relative.</para>
+        <para>Specifies to what the horizontal position of a shape is relative.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.Character">
       <summary>
-        <para>The shape&#39;s position is relative to the character that contains the shape&#39;s anchor.</para>
+        <para>Relative to character.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.Column">
       <summary>
-        <para>The shape&#39;s position is relative to the column that contains the anchoring paragraph.</para>
+        <para>Relative to column.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.InsideMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the inside margin (i.e., the left margin for odd pages, and the right margin for even pages).The Rich Text Editor positions the shape relative to the left margin for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.LeftMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the left margin.</para>
+        <para>Relative to left margin.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.Margin">
       <summary>
-        <para>The shape&#39;s position is relative to page margins.</para>
+        <para>Relative to margin.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.OutsideMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the outside margin (i.e., the right margin for odd pages, and the left margin for even pages).The Rich Text Editor positions the shape relative to the right margin for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.Page">
       <summary>
-        <para>The shape&#39;s position is relative to the page.</para>
+        <para>Relative to page.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalPosition.RightMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the right margin.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize">
-      <summary>
-        <para>Lists elements to which the shape width is relative.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize.InsideMargin">
-      <summary>
-        <para>The shape width is relative to the inside margin size (that is the right margin size for odd pages, and the left margin size for even pages).The Rich Text Editor calculates the shape width relative to the right margin size for both odd and even pages.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize.LeftMargin">
-      <summary>
-        <para>The shape width is relative to the left margin size.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize.Margin">
-      <summary>
-        <para>The shape width is relative to the distance between the left and right margins.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize.OutsideMargin">
-      <summary>
-        <para>The shape width is relative to the outside margin size (that is the left margin size for odd pages, and the right margin size for even pages).The Rich Text Editor calculates the shape width relative to the left margin size for both odd and even pages.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize.Page">
-      <summary>
-        <para>The shape width is relative to the page width.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeHorizontalSize.RightMargin">
-      <summary>
-        <para>The shape width is relative to the right margin width.</para>
+        <para>Relative to right margin.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition">
       <summary>
-        <para>Lists elements to which the vertical position of a shape is relative.</para>
+        <para>Specifies to what the vertical position of a shape is relative.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.BottomMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the bottom margin.</para>
+        <para>Relative to bottom margin.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.InsideMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the inside margin (i.e., the top margin for odd pages, and the bottom margin for even pages).The Rich Text Editor positions the shape relative to the top margin for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.Line">
       <summary>
-        <para>The shape&#39;s position is relative to the line that contains the shape&#39;s anchor.</para>
+        <para>Relative to line.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.Margin">
       <summary>
-        <para>The shape&#39;s position is relative to page margins.</para>
+        <para>Relative to margin.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.OutsideMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the outside margin (i.e., the bottom margin for odd pages, and the top margin for even pages).The Rich Text Editor positions the shape relative to the bottom margin for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.Page">
       <summary>
-        <para>The shape&#39;s position is relative to the page.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.Paragraph">
       <summary>
-        <para>The shape&#39;s position is relative to the paragraph that contains the shape&#39;s anchor.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalPosition.TopMargin">
       <summary>
-        <para>The shape&#39;s position is relative to the top margin.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize">
-      <summary>
-        <para>Lists elements to which the shape height is relative.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize.BottomMargin">
-      <summary>
-        <para>The shape height is relative to the bottom margin size.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize.InsideMargin">
-      <summary>
-        <para>The shape height is relative to the inside margin size (that is the top margin size for odd pages, and the bottom margin size for even pages).The Rich Text Editor calculates the shape width relative to the top margin size for both odd and even pages.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize.Margin">
-      <summary>
-        <para>The shape height is relative to the distance between the top and bottom margins.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize.OutsideMargin">
-      <summary>
-        <para>The shape height is relative to the outside margin size (that is the top margin size for odd pages, and the bottom margin size for even pages).The Rich Text Editor calculates the shape width relative to the top margin size for both odd and even pages.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize.Page">
-      <summary>
-        <para>The shape height is relative to the page height.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeRelativeVerticalSize.TopMargin">
-      <summary>
-        <para>The shape height is relative to the top margin size.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeType">
-      <summary>
-        <para>Lists graphical objects a document can contain.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeType.Canvas">
-      <summary>
-        <para>A drawing canvas.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeType.Connector">
-      <summary>
-        <para>A connector between two shapes.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeType.Group">
-      <summary>
-        <para>A shape group.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeType.Picture">
-      <summary>
-        <para>A picture.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeType.Shape">
-      <summary>
-        <para>A shape.</para>
+        <para>Relative to top margin.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment">
       <summary>
-        <para>Lists values that specify the vertical alignment for a shape.</para>
+        <para>Specifies the type of vertical alignment to apply.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment.Bottom">
       <summary>
-        <para>The shape is aligned to the bottom of the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property.</para>
+        <para>The shape is aligned to the bottom relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment.Center">
       <summary>
-        <para>The shape is centered relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property.</para>
+        <para>The shape is centered relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment.Inside">
       <summary>
-        <para>The shape is aligned to the top of the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property on odd pages, and is aligned to the bottom of the specified element on even pages.The Rich Text Editor aligns the shape to the top of the specified element for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment.None">
       <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.OffsetY"/> property specifies the shape&#39;s position relative to the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property.</para>
+        <para>The exact position is specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.DrawingObject.Offset"/> property.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment.Outside">
       <summary>
-        <para>The shape is aligned to the bottom of the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property on odd pages, and is aligned to the top of the specified element on even pages.The Rich Text Editor aligns the shape to the bottom of the specified element for both odd and even pages.</para>
+        <para>Not in use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ShapeVerticalAlignment.Top">
       <summary>
-        <para>The shape is aligned to the top of the element defined by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/> property.</para>
+        <para>The shape is top aligned relative to its <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.RelativeVerticalPosition"/>.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.SolidFill">
@@ -14198,9 +14018,9 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.SubDocument.Shapes">
       <summary>
-        <para>Returns the collection of drawing objects in the document.</para>
+        <para>Provides access to a collection of Shapes (pictures, text boxes) in the current SubDocument.</para>
       </summary>
-      <value>The collection of <see cref="T:DevExpress.XtraRichEdit.API.Native.Shape"/> objects.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ShapeCollection"/> object that is the collection of shapes.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.SubDocument.ShowPageBackground">
       <summary>
@@ -16220,50 +16040,50 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TextBox">
       <summary>
-        <para>Defines text box content and its settings.</para>
+        <para>Text box within a <see cref="T:DevExpress.XtraRichEdit.API.Native.Shape"/> object. Contains the text document and the properties that control the size and alignment of the text box.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.Document">
       <summary>
-        <para>Provides access to text box content.</para>
+        <para>Provides access to content of the text box.</para>
       </summary>
-      <value>An object that exposes text box content.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> interface exposing the text box content.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.HeightRule">
       <summary>
-        <para>Gets or sets the rule that determines the text box height.</para>
+        <para>Gets or sets the rule for determining the height of the text box.</para>
       </summary>
-      <value>An enumeration member that specifies how to determine the text box height.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TextBoxSizeRule"/> enumeration member specifying how the text box size is determined.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.MarginBottom">
       <summary>
-        <para>Gets or sets the distance between the bottom of the text and the bottom edge of the text box.</para>
+        <para>Gets or sets the distance between the bottom of the text and the bottom edge of the shape that contains the text.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that specifies the distance in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.MarginLeft">
       <summary>
-        <para>Gets or sets the distance between the left edge of the text and the left side of the text box.</para>
+        <para>Gets or sets the distance between the left edge of the text and the left edge of the shape that contains the text.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that specifies the distance in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.MarginRight">
       <summary>
-        <para>Gets or sets the distance between the right edge of the text and the right side of the text box.</para>
+        <para>Gets or sets the distance between the right edge of the text and the right edge of the shape that contains the text.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that specifies the distance in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.MarginTop">
       <summary>
-        <para>Gets or sets the distance between the top of the text and the top edge of the text box.</para>
+        <para>Gets or sets the distance between the top of the text and the top edge of the shape that contains the text.</para>
       </summary>
-      <value>The distance in measurement units specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property.</value>
+      <value>A <see cref="T:System.Single"/> value that specifies the distance in current measure units.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.ResizeShapeToFitText">
       <summary>
-        <para>Specifies whether to resize the text box to fit its content.</para>
+        <para></para>
       </summary>
-      <value>true to resize the shape to fit text; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.RotateTextWithShape">
       <summary>
@@ -16273,13 +16093,13 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TextBox.VerticalTextAlignment">
       <summary>
-        <para>Gets or sets the vertical alignment of text box content.</para>
+        <para></para>
       </summary>
-      <value>An enumeration member that specifies how to position text vertically in the text box.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TextBoxSizeRule">
       <summary>
-        <para>Specifies the rule that determines the text box height.</para>
+        <para>Specifies interpretation of the rule used to determine the height of a text box.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextBoxSizeRule.Auto">
@@ -16294,12 +16114,12 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TextWrappingSide">
       <summary>
-        <para>Lists values that specify how the text wraps around the shape&#39;s sides.</para>
+        <para>Lists values used to specify how the text should wrap around the shape&#39;s sides.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingSide.Both">
       <summary>
-        <para>The text is wrapped around the shape&#39;s left and right sides.</para>
+        <para>The text is wrapped around both the shape&#39;s sides.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingSide.Largest">
@@ -16319,7 +16139,7 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TextWrappingType">
       <summary>
-        <para>Lists values that specify how a shape is surrounded by text.</para>
+        <para>Lists values that specify how the shape is surrounded by the text.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingType.BehindText">
@@ -16334,7 +16154,7 @@ Example: I, II, III</para>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingType.InLineWithText">
       <summary>
-        <para>The shape is placed in line with text.</para>
+        <para>The text is placed in line with text.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingType.Square">
@@ -16459,27 +16279,27 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TileFlipType">
       <summary>
-        <para>Lists values that specify how to flip tiles when a texture fill is applied to a shape.</para>
+        <para>Lists values that specify how to flip tiles.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TileFlipType.Both">
       <summary>
-        <para>Flips tiles both horizontally and vertically.</para>
+        <para>Specifies that tiles are flipped both horizontally and vertically.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TileFlipType.Horizontal">
       <summary>
-        <para>Flips tiles horizontally.</para>
+        <para>Specifies that tiles are flipped horizontally.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TileFlipType.None">
       <summary>
-        <para>Tiles are not flipped.</para>
+        <para>Specifies that tiles are not flipped.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TileFlipType.Vertical">
       <summary>
-        <para>Flips tiles vertically.</para>
+        <para>Specifies that tiles are flipped vertically.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.UnderlineType">
@@ -16599,22 +16419,22 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.VerticalTextAlignmentType">
       <summary>
-        <para>Lists values that specify the vertical alignment of text box content.</para>
+        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.VerticalTextAlignmentType.Bottom">
       <summary>
-        <para>Text is vertically aligned at the bottom.</para>
+        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.VerticalTextAlignmentType.Center">
       <summary>
-        <para>Text is vertically aligned in the middle.</para>
+        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.VerticalTextAlignmentType.Top">
       <summary>
-        <para>Text is vertically aligned at the top.</para>
+        <para></para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.WidthType">
@@ -32513,16 +32333,6 @@ Example: I, II, III</para>
         <para>All document properties (built-in and custom).</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Application">
-      <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Application"/> property.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.AppVersion">
-      <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.AppVersion"/> property.</para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.BuiltinProperties">
       <summary>
         <para>Built-in (core) properties contained in the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> class.</para>
@@ -32531,11 +32341,6 @@ Example: I, II, III</para>
     <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Category">
       <summary>
         <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Category"/> property.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Company">
-      <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Company"/> property.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.ContentStatus">
@@ -32593,11 +32398,6 @@ Example: I, II, III</para>
         <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.LastPrinted"/> property.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Manager">
-      <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Manager"/> property.</para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Modified">
       <summary>
         <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Modified"/> property.</para>
@@ -32616,11 +32416,6 @@ Example: I, II, III</para>
     <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Subject">
       <summary>
         <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Subject"/> property.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Template">
-      <summary>
-        <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Template"/> property.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Title">
@@ -34774,7 +34569,6 @@ Example: I, II, III</para>
       <summary>
         <para>Gets service of the specified type.</para>
       </summary>
-      <typeparam name="T"></typeparam>
       <returns>A service object of the specified type or null for reference types and zero for numeric value types if a service is not available.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.HtmlText">
@@ -34964,7 +34758,6 @@ Example: I, II, III</para>
         <para>Performs a service substitution.</para>
       </summary>
       <param name="newService">A service of the specified type that will replace the former service.</param>
-      <typeparam name="T"></typeparam>
       <returns>Previously registered service of the specified type, or null (Nothing in Visual Basic) if the service does not exist.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.RtfText">
@@ -36596,7 +36389,6 @@ Example: I, II, III</para>
       <summary>
         <para>Gets the specified service.</para>
       </summary>
-      <typeparam name="T"></typeparam>
       <returns>A service object of the specified type or null for reference types and zero for numeric value types if a service is not available.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.HtmlText">
@@ -36896,7 +36688,6 @@ Example: I, II, III</para>
         <para>Performs a service substitution.</para>
       </summary>
       <param name="newService">A service of the specified type that will be registered.</param>
-      <typeparam name="T"></typeparam>
       <returns>Previously registered service of the specified type, or null (Nothing in Visual Basic) if the service does not exist.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.RtfText">

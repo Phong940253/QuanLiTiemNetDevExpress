@@ -1801,7 +1801,6 @@ The Default value is equivalent to False.</value>
       <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraNavBar.NavBarItem"/>.</returns>
     </member>
     <member name="P:DevExpress.XtraNavBar.NavBarItem.CanDrag">

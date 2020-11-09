@@ -77,27 +77,27 @@
     </member>
     <member name="T:DevExpress.Office.Drawing.TileFlipType">
       <summary>
-        <para>Lists values that specify how to flip tiles when a texture fill is applied to a shape.</para>
+        <para>Lists values used to specify how to flip the tile contents.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Office.Drawing.TileFlipType.Both">
       <summary>
-        <para>Flips tiles both horizontally and vertically.</para>
+        <para>Specifies that the tiles should be flipped both horizontally and vertically.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Office.Drawing.TileFlipType.Horizontal">
       <summary>
-        <para>Flips tiles horizontally.</para>
+        <para>Specifies that the tiles should be flipped horizontally.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Office.Drawing.TileFlipType.None">
       <summary>
-        <para>Tiles are not flipped.</para>
+        <para>Specifies that the tiles should not be flipped.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Office.Drawing.TileFlipType.Vertical">
       <summary>
-        <para>Flips tiles vertically.</para>
+        <para>Specifies that the tiles should be flipped vertically.</para>
       </summary>
     </member>
     <member name="N:DevExpress.Office.Export">
@@ -288,7 +288,6 @@
       <summary>
         <para>A generic base interface for custom XML parts that allows you to compare two objects.</para>
       </summary>
-      <typeparam name="T">An object that exposes the ICustomXmlPart interface and represents a document&#39;s custom XML part.</typeparam>
     </member>
     <member name="M:DevExpress.Office.OfficeCustomXmlPart`1.Equals(`0)">
       <summary>
@@ -301,7 +300,6 @@
       <summary>
         <para>A base interface for a workbook&#39;s or text document&#39;s collection of custom XML parts.</para>
       </summary>
-      <typeparam name="T">An object that exposes the ICustomXmlPart interface and specifies a document&#39;s custom XML part.</typeparam>
     </member>
     <member name="M:DevExpress.Office.OfficeCustomXmlPartCollection`1.Add">
       <summary>

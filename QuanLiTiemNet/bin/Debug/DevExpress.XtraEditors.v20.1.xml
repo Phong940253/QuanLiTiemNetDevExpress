@@ -805,7 +805,6 @@
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="updateState">An Action that specifies whether this <see cref="T:DevExpress.XtraEditors.BaseButton"/> is currently enabled.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraEditors.BaseButton"/>.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseButton.BindCommand``1(System.Linq.Expressions.Expression{System.Action{``0}},System.Object,System.Func{``0},System.Action{DevExpress.XtraEditors.BaseButton,System.Func{System.Boolean}})">
@@ -816,7 +815,6 @@
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
       <param name="updateState">An Action that specifies whether this <see cref="T:DevExpress.XtraEditors.BaseButton"/> is currently enabled.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraEditors.BaseButton"/>.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.BaseButton.BorderStyle">
@@ -1835,14 +1833,12 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
       <summary>
         <para>Adds new items that represent elements of the specified enumeration to the control.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseListBoxControl.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Adds new items that represent elements of the specified enumeration to the control, allowing you to customize item descriptions.</para>
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item descriptions.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseListBoxControl.AddEnum``1(System.Converter{``0,System.String},System.Boolean)">
       <summary>
@@ -1850,7 +1846,6 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item descriptions to be displayed.</param>
       <param name="addEnumeratorIntegerValues">true, if values for generated items should store numeric enumerator values; false, if these values should store constant enumerator names instead.</param>
-      <typeparam name="TEnum">The type of the required enumeration.</typeparam>
     </member>
     <member name="P:DevExpress.XtraEditors.BaseListBoxControl.AllowHtmlDraw">
       <summary>
@@ -2864,16 +2859,6 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
       <param name="value">A String value that is the newly created node&#39;s value.</param>
       <param name="populateOnDemand">true, if this node should raise the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit.QueryChildNodes"/> event when an end-user clicks its drop-down button; otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.XtraEditors.BreadCrumbNode.BeginUpdate">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraEditors.BreadCrumbNode.CancelUpdate">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="P:DevExpress.XtraEditors.BreadCrumbNode.Caption">
       <summary>
         <para>Gets or sets this <see cref="T:DevExpress.XtraEditors.BreadCrumbNode"/>&#39;s caption.</para>
@@ -2910,11 +2895,6 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
       <value></value>
-    </member>
-    <member name="M:DevExpress.XtraEditors.BreadCrumbNode.EndUpdate">
-      <summary>
-        <para></para>
-      </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.BreadCrumbNode.Equals(System.Object)">
       <summary>
@@ -3942,12 +3922,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>A Bitmap object that is the frame currently captured by the device.</value>
     </member>
-    <member name="M:DevExpress.XtraEditors.Camera.CameraDevice.GetMaxResolution">
-      <summary>
-        <para></para>
-      </summary>
-      <returns></returns>
-    </member>
     <member name="M:DevExpress.XtraEditors.Camera.CameraDevice.SetDirectXProvider(DevExpress.Utils.DirectXPaint.DirectXProvider)">
       <summary>
         <para>For internal use.</para>
@@ -4230,7 +4204,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
       <param name="updateState">An Action that specifies whether this <see cref="T:DevExpress.XtraEditors.CheckButton"/> is currently checked.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraEditors.CheckButton"/>.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.CheckButton.Checked">
@@ -4498,7 +4471,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ColorDialogOptions">
       <summary>
-        <para>Allows you to customize options provided by the &quot;Select Color&quot; dialog.</para>
+        <para>Contains settings affecting the appearance of the &quot;Select Color&quot; dialog.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ColorDialogOptions.#ctor">
@@ -4508,9 +4481,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.ColorDialogOptions.AllowTransparency">
       <summary>
-        <para>Gets or sets whether the dialog&#39;s UI allows users to select a transparent color (set the transparency level).</para>
+        <para>Gets or sets whether the &quot;Select Color&quot; dialog contains controls allowing an end-user to set a transparency level for selected colors.</para>
       </summary>
-      <value>true, if the dialog&#39;s UI allows users to set the color transparency level; otherwise, false.</value>
+      <value>true if an end-user can select translucent colors via the &quot;Select Color&quot; dialog via dedicated controls; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.ColorDialogOptions.Assign(DevExpress.XtraEditors.ColorDialogOptions)">
       <summary>
@@ -4548,19 +4521,19 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.ColorDialogOptions.ShowMakeWebSafeButton">
       <summary>
-        <para>Gets or sets whether the &quot;Select Color&quot; dialog contains the &quot;Make Web-Safe&quot; button.</para>
+        <para>Gets or sets whether the &quot;Make Web-Safe&quot; button is available within the &quot;Select Color&quot; dialog.</para>
       </summary>
-      <value>true if the &quot;Select Color&quot; dialog contains the &quot;Make Web-Safe&quot; button; otherwise, false.</value>
+      <value>true if the &quot;Make Web-Safe&quot; button is available within the &quot;Select Color&quot; dialog; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.ColorDialogOptions.ShowPreview">
       <summary>
-        <para>Gets or sets whether the dialog contains a preview box.</para>
+        <para>Gets or sets whether the &quot;Select Color&quot; dialog contains a preview box demonstrating the current color.</para>
       </summary>
       <value>true if the &quot;Select Color&quot; dialog contains a preview box; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.ColorDialogOptions.ShowTabs">
       <summary>
-        <para>Gets or sets whether the RGB, HSB or both tabs (color models) are available.</para>
+        <para>Gets or sets which tabs are displayed within the &quot;Select Color&quot; dialog.</para>
       </summary>
       <value>A ShowTabs value that specifies which tabs are displayed within the &quot;Select Color&quot; dialog.</value>
     </member>
@@ -4617,7 +4590,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.ColorPickEdit">
       <summary>
-        <para>An advanced dropdown color picker that supports multiple palettes (a predefined color palette, Web and System) to choose colors from.</para>
+        <para>An advanced dropdown color picker that supports multiple palettes (a predefined color palette, Web, Web-Safe and System) to choose colors from.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ColorPickEdit.#ctor">
@@ -7287,7 +7260,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
       <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraEditors.Controls.EditorButton"/>.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.Controls.EditorButton.Caption">
@@ -7935,14 +7907,12 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Adds new items to the collection that will represent elements of the specified enumeration.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.ImageComboBoxItemCollection.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Adds new items to the collection that will represent elements of the specified enumeration. The display captions of the items are generated by the specified converter.</para>
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that will generate item display captions.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.ImageComboBoxItemCollection.AddEnum``1(System.Converter{``0,System.String},System.Boolean)">
       <summary>
@@ -7950,7 +7920,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item descriptions to be displayed.</param>
       <param name="addEnumeratorIntegerValues">true, if values for generated items should store numeric enumerator values; false, if these values should store constant enumerator names instead.</param>
-      <typeparam name="TEnum">The type of the required enumeration.</typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.ImageComboBoxItemCollection.AddImages(System.Object)">
       <summary>
@@ -8504,14 +8473,12 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Controls.ListBoxItemCollection"/> with items generated from values of the specific enumeration.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.ListBoxItemCollection.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Controls.ListBoxItemCollection"/> with items generated from values of the specific enumeration and replaces default item descriptions. This overload should be used only for the <see cref="T:DevExpress.XtraEditors.Controls.ListBoxItemCollection"/> class descendants.</para>
       </summary>
       <param name="displayTextConverter">A Delegate that encapsulates a method which replaces generated items&#39; captions. This parameter is not in effect when the method is called for <see cref="T:DevExpress.XtraEditors.ListBoxControl"/> objects, since their child items do not have the Value-Description property pair.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.ListBoxItemCollection.AddEnum``1(System.Converter{``0,System.String},System.Boolean)">
       <summary>
@@ -8519,7 +8486,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item descriptions to be displayed.</param>
       <param name="addEnumeratorIntegerValues">true, if values for generated items should store numeric enumerator values; false, if these values should store constant enumerator names instead.</param>
-      <typeparam name="TEnum">The type of the required enumeration.</typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.ListBoxItemCollection.AddRange(System.Object[])">
       <summary>
@@ -8750,12 +8716,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <returns>The owner of the collection containing the current <see cref="T:DevExpress.XtraEditors.Controls.LookUpColumnInfo"/> object.</returns>
     </member>
-    <member name="P:DevExpress.XtraEditors.Controls.LookUpColumnInfo.MaxWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraEditors.Controls.LookUpColumnInfo.SortOrder">
       <summary>
         <para>Gets or sets the sort order applied to the current column.</para>
@@ -8958,7 +8918,6 @@ A specific version of the addressed image is automatically chosen based on the a
         <para>Sets a <see cref="T:System.Threading.Tasks.Task"/> that defines the items the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> or <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> display in AutoSuggest mode.</para>
       </summary>
       <param name="querySuggestionsAsAsyncList">A <see cref="T:System.Threading.Tasks.Task"/> that returns a list of database entries for the editor&#39;s drop-down menu.</param>
-      <typeparam name="T">The type of entries the <see cref="T:System.Threading.Tasks.Task"/> processes.</typeparam>
     </member>
     <member name="T:DevExpress.XtraEditors.Controls.LookUpEditSearchHighlightEventArgs">
       <summary>
@@ -9740,14 +9699,12 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Adds items that represent elements of the specified enumeration to the current collection.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.RadioGroupItemCollection.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Adds items that represent elements of the specified enumeration to the current collection. Enumeration values are converted to string values using the specified method to represent item descriptions.</para>
       </summary>
       <param name="displayTextConverter">A method that converts enumeration values to string values. The returned string representation for each enumeration value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Description"/> property of the corresponding <see cref="T:DevExpress.XtraEditors.Controls.RadioGroupItem"/> added to the current collection.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Controls.RadioGroupItemCollection.AddRange(DevExpress.XtraEditors.Controls.RadioGroupItem[])">
       <summary>
@@ -13214,11 +13171,6 @@ A specific version of the addressed image is automatically chosen based on the a
         <para>Returns &quot;Cancel pending&quot;.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StringId.ProgressCopyingData">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraEditors.Controls.StringId.ProgressCreateDocument">
       <summary>
         <para>Returns &quot;Creating document&quot;.</para>
@@ -13242,11 +13194,6 @@ A specific version of the addressed image is automatically chosen based on the a
     <member name="F:DevExpress.XtraEditors.Controls.StringId.ProgressPanelDefaultDescription">
       <summary>
         <para>The <see cref="T:DevExpress.XtraWaitForm.ProgressPanel"/>&#39;s default description.Return value: Loading ...</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StringId.ProgressPastingData">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.StringId.ProgressPrinting">
@@ -14788,7 +14735,7 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="E:DevExpress.XtraEditors.FilterControl.QueryCustomFunctions">
       <summary>
-        <para>Allows you to add custom-function-based filters (for example, &#39;discount is more than 15%&#39;) to Excel-style pop-up filter menus and/or the filter editor.</para>
+        <para>Allows you to add custom function based filters (for example, &#39;discount is more than 15%&#39;) to Excel-style pop-up filter menus and/or the filter editor.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.FilterControl.ReadOnly">
@@ -15106,7 +15053,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Provides data for events that allow you to customize filter conditions in the Excel-style filter dropdowns.</para>
       </summary>
-      <typeparam name="TColumn"></typeparam>
     </member>
     <member name="P:DevExpress.XtraEditors.Filtering.ExcelFilteringDataEventArgs`1.Column">
       <summary>
@@ -16355,7 +16301,6 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
       <summary>
         <para>Returns the <see cref="P:DevExpress.XtraEditors.FormatRuleBase.Rule"/> object type-cast to the specified type.</para>
       </summary>
-      <typeparam name="T"></typeparam>
       <returns>The <see cref="P:DevExpress.XtraEditors.FormatRuleBase.Rule"/> object type-cast to the specified type.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.FormatRuleBase.RuleType">
@@ -17029,7 +16974,6 @@ In <see cref="F:DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnHotTrack"/
       <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraEditors.LabelControl"/>.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.LabelControl.GetPreferredSize(System.Drawing.Size)">
@@ -18095,7 +18039,6 @@ In <see cref="F:DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnHotTrack"/
       <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this navigator button.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.NavigatorButtonBase.ButtonType">
@@ -18667,7 +18610,7 @@ In <see cref="F:DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnHotTrack"/
     </member>
     <member name="T:DevExpress.XtraEditors.PictureEdit">
       <summary>
-        <para>Displays images stored in bitmap, metafile, icon, JPEG, GIF, PNG or SVG format. The built-in editor allows users to perform basic edit operations (crop and straighten, adjust brightness, contrast and saturation, etc.)</para>
+        <para>The editor that displays images stored in bitmap, metafile, icon, JPEG, GIF, PNG or SVG format.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.PictureEdit.#ctor">
@@ -19201,7 +19144,8 @@ To enable DirectX hardware acceleration, call the static <see cref="M:DevExpress
     </member>
     <member name="F:DevExpress.XtraEditors.PopupFilterMode.Default">
       <summary>
-        <para>This option is equivalent to the StartsWith option for <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> and <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/> controls in the following cases: 1) users cannot edit text in the text box (<see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.TextEditStyle"/> is not set to Standard), 2) users can edit text in the text box and the control automatically completes the entered text (<see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.AutoComplete"/> or <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.AutoComplete"/> is enabled). Otherwise, this option is equivalent to the Contains option for the <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> and <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/> controls. This option is equivalent to the StartsWith option for the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> control. This option is equivalent to the Contains option for the <see cref="T:DevExpress.XtraEditors.SearchLookUpEdit"/> control. Users can use the Find Panel to search for keywords. You can use the <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFind.FindFilterColumns"/> property to specify grid columns in which to search for keywords.</para>
+        <para>For the <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> control, this option is equivalent to the Contains option, except in the following cases, where it&#39;s equivalent to the StartsWith mode: For <see cref="T:DevExpress.XtraEditors.LookUpEdit"/>, this option is equivalent to the StartsWith option, regardless of the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.TextEditStyle"/> property.For <see cref="T:DevExpress.XtraEditors.SearchLookUpEdit"/>, this option is equivalent to the Contains option. A search is performed using the search functionality provided by the Find Panel.
+By default, all columns are searched through. If required, you can limit the search columns via the editor&#39;s Properties.View.OptionsFind.FindFilterColumns property (<see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFind.FindFilterColumns"/>).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.PopupFilterMode.StartsWith">
@@ -21520,14 +21464,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Adds new items that represent elements of the specified enumeration to the editor drop-down.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Adds new items that represent elements of the specified enumeration to the editor drop-down, allowing you to customize item descriptions.</para>
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item display captions.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.AddEnum``1(System.Converter{``0,System.String},System.Boolean)">
       <summary>
@@ -21535,7 +21477,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item descriptions to be displayed.</param>
       <param name="addEnumeratorIntegerValues">true, if values for generated items should store numeric enumerator values; false, if these values should store constant enumerator names instead.</param>
-      <typeparam name="TEnum">The type of the required enumeration.</typeparam>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.AllowHtmlDraw">
       <summary>
@@ -22170,12 +22111,6 @@ In bound mode, this method populates the item collection before returning it.</p
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.HighlightStyle"/> value that specifies how selected items are highlighted.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.OwnerEdit">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.PopupFormMinSize">
       <summary>
         <para>This property is not supported by the <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit"/> class.</para>
@@ -22208,9 +22143,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowCustomColors">
       <summary>
-        <para>Gets or sets the visibility of the Custom tab.</para>
+        <para>Gets or sets whether the Custom tabbed page is visible.</para>
       </summary>
-      <value>true, if the Custom tab is visible; otherwise, false.</value>
+      <value>true if the Custom tabbed page is visible; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowMoreColorsButton">
       <summary>
@@ -22220,15 +22155,15 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowSystemColors">
       <summary>
-        <para>Gets or sets the visibility of the System tab that displays colors from the System.Drawing.SystemColors enumeration.</para>
+        <para>Gets or sets whether the System tabbed page is visible.</para>
       </summary>
-      <value>true, if the System tab is visible; otherwise, false.</value>
+      <value>true if the System tabbed page is visible; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowWebColors">
       <summary>
-        <para>Gets or sets the visibility of the Web tab that displays colors provided by the System.Drawing.Color type.</para>
+        <para>Gets or sets whether the Web tabbed page is visible.</para>
       </summary>
-      <value>true, if the Web tab is visible; otherwise, false.</value>
+      <value>true if the Web tabbed page is visible; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.StoreColorAsInteger">
       <summary>
@@ -22347,9 +22282,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.RecentColors">
       <summary>
-        <para>Provides access to colors displayed in the Recent Colors group in the Custom tab.</para>
+        <para>Provides access to colors displayed in the Recent Colors group in the Custom page.</para>
       </summary>
-      <value>A DevExpress.XtraEditors.ColorPickEditControl.Matrix object that comprises colors displayed in the Recent Colors group in the Custom tab.</value>
+      <value>A DevExpress.XtraEditors.ColorPickEditControl.Matrix object that comprises colors displayed in the Recent Colors group in the Custom page.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.ReleaseEventsCore(System.Boolean)">
       <summary>
@@ -22364,31 +22299,31 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.ShowWebSafeColors">
       <summary>
-        <para>Gets or sets the visibility of the Web-Safe tab.</para>
+        <para>Gets or sets whether the Web-Safe palette is displayed in a separate tab in the <see cref="T:DevExpress.XtraEditors.ColorPickEdit"/> control&#39;s dropdown.</para>
       </summary>
       <value>true if the Web-Safe tab is accessible to end-users; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.StandardColors">
       <summary>
-        <para>Provides access to colors displayed in the Standard Colors group in the Custom tab.</para>
+        <para>Provides access to colors displayed in the Standard Colors group in the Custom page.</para>
       </summary>
-      <value>A DevExpress.XtraEditors.ColorPickEditControl.Matrix object that comprises colors displayed in the Standard Colors group in the Custom tab.</value>
+      <value>A DevExpress.XtraEditors.ColorPickEditControl.Matrix object that comprises colors displayed in the Standard Colors group in the Custom page.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.ThemeColors">
       <summary>
-        <para>Provides access to colors displayed in the Theme Colors group in the Custom tab.</para>
+        <para>Provides access to colors displayed in the Theme Colors group in the Custom page.</para>
       </summary>
-      <value>A DevExpress.XtraEditors.ColorPickEditControl.Matrix object that comprises colors displayed in the Theme Colors group in the Custom tab.</value>
+      <value>A DevExpress.XtraEditors.ColorPickEditControl.Matrix object that comprises colors displayed in the Theme Colors group in the Custom page.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.TooltipFormat">
       <summary>
-        <para>Gets or sets how color values are formatted in tooltips.</para>
+        <para>Gets or sets the tooltip display format of a color&#39;s value.</para>
       </summary>
-      <value>The display format of color values in tooltips.</value>
+      <value>A <see cref="T:DevExpress.XtraEditors.ColorTooltipFormat"/> value that is the tooltip display format of a color&#39;s value.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.TooltipShowing">
       <summary>
-        <para>Allows you to customize tooltips displayed when the mouse cursor hovers over colors in the Custom and Web-Safe palettes.</para>
+        <para>Allows you to customize tooltips displayed when hovering over colors in the Custom and Web-Safe palettes.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemComboBox">
@@ -23428,14 +23363,12 @@ In bound mode, this method populates the item collection before returning it.</p
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox"/> with items generated from values of the specific enumeration.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox"/> with items generated from values of the specific enumeration and replaces default item descriptions.</para>
       </summary>
       <param name="displayTextConverter">A Delegate that encapsulates a method which replaces generated items&#39; captions.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox.AddEnum``1(System.Converter{``0,System.String},System.Boolean)">
       <summary>
@@ -23443,7 +23376,6 @@ In bound mode, this method populates the item collection before returning it.</p
       </summary>
       <param name="displayTextConverter">A System.Converter delegate that generates item descriptions to be displayed.</param>
       <param name="addEnumeratorIntegerValues">true, if values for generated items should store numeric enumerator values; false, if these values should store constant enumerator names instead.</param>
-      <typeparam name="TEnum">The type of the required enumeration.</typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox.AddImages(System.Object)">
       <summary>
@@ -24097,9 +24029,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.UseCtrlScroll">
       <summary>
-        <para>Gets or sets whether you should use the CTRL+UP-DOWN ARROW/CTRL+MOUSE WHEEL or UP-DOWN ARROW/MOUSE WHEEL combinations to scroll lookup records when the pop-up window is closed.</para>
+        <para>Gets or sets whether the CTRL key must be pressed to scroll data records using the UP/DOWN ARROW keys when the popup window is closed.</para>
       </summary>
-      <value>true if you need to hold down the CTRL key when you use the UP or DOWN ARROW/MOUSE WHEEL combinations; false if the CTRL key should not be pressed.</value>
+      <value>true, if the CTRL key must be pressed to scroll data records using the UP/DOWN ARROW keys when the popup window is closed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.ValueMember">
       <summary>
@@ -24632,12 +24564,12 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ImageLoading">
       <summary>
-        <para>Allows you to execute actions when a user loads a file via the control&#39;s context menu. You can handle this event to perform image preprocessing or to load images stored in unsupported formats.</para>
+        <para></para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ImageSaving">
       <summary>
-        <para>Allows you to execute actions when a user saves the current image via the control&#39;s context menu. You can handle this event to perform image preprocessing or to save the image to a custom image format.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.InitialImage">
@@ -24664,12 +24596,6 @@ In bound mode, this method populates the item collection before returning it.</p
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.OpenFileDialogFilter">
-      <summary>
-        <para>Gets or sets a custom filter for the Open File dialog.</para>
-      </summary>
-      <value>The Open File dialog&#39;s custom filter. If this property is set to an empty string, the dialog uses a default filter.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.OptionsEditDialog">
       <summary>
         <para></para>
       </summary>
@@ -24718,9 +24644,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.SaveFileDialogFilter">
       <summary>
-        <para>Gets or sets a custom filter for the Save File dialog.</para>
+        <para></para>
       </summary>
-      <value>The Save File dialog&#39;s custom filter. If this property is set to an empty string, the dialog uses a default filter.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ShowCameraMenuItem">
       <summary>
@@ -25305,14 +25231,12 @@ In bound mode, this method populates the item collection before returning it.</p
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup"/> with items generated from values of the specific enumeration.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup.AddEnum``1(System.Converter{``0,System.String})">
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup"/> with items generated from values of the specific enumeration and replaces default item descriptions.</para>
       </summary>
       <param name="displayTextConverter">A Delegate that encapsulates a method which replaces generated items&#39; captions.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup.AllowAsyncSelection">
       <summary>
@@ -26457,12 +26381,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       </summary>
       <value>The editor&#39;s class name.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.EditValueChangedFiringMode">
-      <summary>
-        <para>Gets or sets whether the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItem.EditValueChanged"/> event fires when the value changes or after a delay.</para>
-      </summary>
-      <value>A value that specifies whether the event fires when the edit value changes or after a delay.</value>
-    </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.GetDisplayText(DevExpress.Utils.FormatInfo,System.Object)">
       <summary>
         <para>Returns the text representation of the specified value, formatted according to the specified settings.</para>
@@ -26715,14 +26633,12 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit"/> with items generated from values of the specific enumeration.</para>
       </summary>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.AddEnum``1(System.Boolean)">
       <summary>
         <para>Populates this <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit"/> with items generated from values of the specific enumeration. Allows generated items to store numeric enumeration values instead of enumeration constant names.</para>
       </summary>
       <param name="addEnumeratorIntegerValues">true if values for generated tokens should store numeric enumerator values ; false if these values should store constant enumerator names instead.</param>
-      <typeparam name="TEnum"></typeparam>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.AppearanceDropDown">
       <summary>
@@ -27888,9 +27804,9 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.NullText">
       <summary>
-        <para>Gets or sets text that <see cref="T:DevExpress.XtraEditors.StepProgressBar"/> displays when it has no items.</para>
+        <para></para>
       </summary>
-      <value>Text that <see cref="T:DevExpress.XtraEditors.StepProgressBar"/> displays when it contains no items.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.Orientation">
       <summary>
@@ -27908,12 +27824,6 @@ A specific version of the addressed image is automatically chosen based on the a
         <para>Gets or ses the scrollbar style. Step Progress Bar displays a scroll bar when its <see cref="P:DevExpress.XtraEditors.StepProgressBar.LayoutMode"/> equals Fixed and there is not enough space to display all of the control items.</para>
       </summary>
       <value>The scrollbar style.</value>
-    </member>
-    <member name="M:DevExpress.XtraEditors.StepProgressBar.ScrollToItem(DevExpress.XtraEditors.StepProgressBarItem)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="item"></param>
     </member>
     <member name="M:DevExpress.XtraEditors.StepProgressBar.SelectAll">
       <summary>
@@ -28131,12 +28041,6 @@ A specific version of the addressed image is automatically chosen based on the a
         <para>Returns whether this content block nas no content.</para>
       </summary>
       <value>true, if this block does not have a caption, description, or image; otherwise, false.</value>
-    </member>
-    <member name="M:DevExpress.XtraEditors.StepProgressBarItemContentBlock.ToString">
-      <summary>
-        <para></para>
-      </summary>
-      <returns></returns>
     </member>
     <member name="T:DevExpress.XtraEditors.StepProgressBarItemOptions">
       <summary>
@@ -28772,11 +28676,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <value>An Image displayed as the <see cref="T:DevExpress.XtraEditors.TileControl"/>&#39;s background.</value>
     </member>
-    <member name="E:DevExpress.XtraEditors.TileControl.BeforeLoadLayout">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="M:DevExpress.XtraEditors.TileControl.BeginUpdate">
       <summary>
         <para>Locks the <see cref="T:DevExpress.XtraEditors.TileControl"></see> object by preventing visual updates of the object and its elements until the EndUpdate method is called.</para>
@@ -29078,11 +28977,6 @@ This property is now obsolete. Use the <see cref="P:DevExpress.XtraEditors.TileC
       </summary>
       <value>A TileControlLayoutMode enumerator value that specifies whether this <see cref="T:DevExpress.XtraEditors.TileControl"/> operates in regular or adaptive layout mode.</value>
     </member>
-    <member name="E:DevExpress.XtraEditors.TileControl.LayoutUpgrade">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="P:DevExpress.XtraEditors.TileControl.LookAndFeel">
       <summary>
         <para>Provides access to the <see cref="T:DevExpress.XtraEditors.TileControl"/>&#39;s look and feel settings.</para>
@@ -29139,12 +29033,6 @@ This property is now obsolete. Use the <see cref="P:DevExpress.XtraEditors.TileC
         <para>Gets or sets the tile arrangement algorithm.</para>
       </summary>
       <value>The value specifying the tile arrangement algorithm.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TileControl.Padding">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraEditors.TileControl.PaintEx">
       <summary>
@@ -29612,7 +29500,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="commandSelector">An Expression that selects the appropriate command from the source object.</param>
       <param name="source">An Object (typically, a ViewModel) where the commandSelector looks for the required command.</param>
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
-      <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this <see cref="T:DevExpress.XtraEditors.TileItem"/>.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.TileItem.BorderVisibility">
@@ -31364,7 +31251,7 @@ Always equal to true.</para>
     </member>
     <member name="T:DevExpress.XtraEditors.TrackBarControl">
       <summary>
-        <para>Displays a scale with tickmarks. Users can drag a thumb to change the current value.</para>
+        <para>The control that allows end-users to select a value by dragging a small thumb along a scale.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.TrackBarControl.#ctor">
@@ -31650,12 +31537,6 @@ Always equal to true.</para>
       </summary>
       <value></value>
     </member>
-    <member name="P:DevExpress.XtraEditors.XtraBaseArgs.ButtonPadding">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraEditors.XtraBaseArgs.Buttons">
       <summary>
         <para>Gets or sets buttons that the shown object (XtraMessageBox, XtraInputBox, etc.) has.</para>
@@ -31667,12 +31548,6 @@ Always equal to true.</para>
         <para>Gets or sets the shown object (XtraMessageBox, XtraInputBox, etc.) caption.</para>
       </summary>
       <value>The owner caption.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.XtraBaseArgs.ContentPadding">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraBaseArgs.DefaultButtonIndex">
       <summary>
@@ -31688,7 +31563,7 @@ Always equal to true.</para>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraBaseArgs.HtmlImages">
       <summary>
-        <para>Gets or sets <see cref="T:DevExpress.Utils.ImageCollection"/> or <see cref="T:DevExpress.Utils.SvgImageCollection"/>. <see cref="T:DevExpress.XtraEditors.XtraMessageBox"/> can display images from this collection.</para>
+        <para>Gets or sets an <see cref="T:DevExpress.Utils.ImageCollection"/> or an <see cref="T:DevExpress.Utils.SvgImageCollection"/>. The <see cref="T:DevExpress.XtraEditors.XtraMessageBox"/> can display images from this collection.</para>
       </summary>
       <value>An object that is an image collection.</value>
     </member>
@@ -32216,7 +32091,6 @@ Always equal to true.</para>
         <para>Displays an input box with the specified settings.</para>
       </summary>
       <param name="args">An object that specifies the input box settings.</param>
-      <typeparam name="T">The returned value&#39;s type.</typeparam>
       <returns>If <see cref="F:System.Windows.Forms.DialogResult.OK"/> or <see cref="F:System.Windows.Forms.DialogResult.Yes"/> is clicked, the editor&#39;s value converted to the specified type. Otherwise, the type&#39;s default value.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraInputBox.Show``1(System.String,System.String,``0)">
@@ -32226,7 +32100,6 @@ Always equal to true.</para>
       <param name="prompt">The text above the editor.</param>
       <param name="title">The text in the title bar.</param>
       <param name="defaultResponse">The editor&#39;s default value.</param>
-      <typeparam name="T">The returned value&#39;s type.</typeparam>
       <returns>If <see cref="F:System.Windows.Forms.DialogResult.OK"/> or <see cref="F:System.Windows.Forms.DialogResult.Yes"/> is clicked, the editor&#39;s value converted to the specified type. Otherwise, the type&#39;s default value.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraInputBox.Show``1(System.String,System.String,``0,System.Windows.Forms.MessageBoxButtons)">
@@ -32237,7 +32110,6 @@ Always equal to true.</para>
       <param name="title">The text in the title bar.</param>
       <param name="defaultResponse">The text that is the editor&#39;s default value.</param>
       <param name="buttons">A value that specifies which buttons to display in the input box.</param>
-      <typeparam name="T">The returned value&#39;s type.</typeparam>
       <returns>If <see cref="F:System.Windows.Forms.DialogResult.OK"/> or <see cref="F:System.Windows.Forms.DialogResult.Yes"/> is clicked, the editor&#39;s value converted to the specified type. Otherwise, the type&#39;s default value.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraInputBox.Show``1(System.Windows.Forms.IWin32Window,System.String,System.String,``0)">
@@ -32248,7 +32120,6 @@ Always equal to true.</para>
       <param name="prompt">The text above the editor.</param>
       <param name="title">The text in the title bar.</param>
       <param name="defaultResponse">The editor&#39;s default value.</param>
-      <typeparam name="T">The returned value&#39;s type.</typeparam>
       <returns>If <see cref="F:System.Windows.Forms.DialogResult.OK"/> or <see cref="F:System.Windows.Forms.DialogResult.Yes"/> is clicked, the editor&#39;s value converted to the specified type. Otherwise, the type&#39;s default value.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraInputBox.Show``1(System.Windows.Forms.IWin32Window,System.String,System.String,``0,System.Windows.Forms.MessageBoxButtons)">
@@ -32260,7 +32131,6 @@ Always equal to true.</para>
       <param name="title">The text in the title bar.</param>
       <param name="defaultResponse">The editor&#39;s default value.</param>
       <param name="buttons">A value that specifies which buttons to display in the input box.</param>
-      <typeparam name="T">The returned value&#39;s type.</typeparam>
       <returns>If <see cref="F:System.Windows.Forms.DialogResult.OK"/> or <see cref="F:System.Windows.Forms.DialogResult.Yes"/> is clicked, the editor&#39;s value converted to the specified type. Otherwise, the type&#39;s default value.</returns>
     </member>
     <member name="T:DevExpress.XtraEditors.XtraInputBoxArgs">
@@ -32366,9 +32236,9 @@ Always equal to true.</para>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraMessageBox.RegistryPath">
       <summary>
-        <para>Gets or sets the registry path used to store <see cref="P:DevExpress.XtraEditors.XtraMessageBoxEventArgs.Visible"/> and <see cref="P:DevExpress.XtraEditors.XtraMessageBoxEventArgs.DialogResult"/> property values in the registry.</para>
+        <para></para>
       </summary>
-      <value>The registry path.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraMessageBox.Show(DevExpress.LookAndFeel.UserLookAndFeel,System.String)">
       <summary>
@@ -32889,16 +32759,16 @@ Always equal to true.</para>
       <param name="icon">The icon in the title bar.</param>
       <param name="defaultButtonIndex">An integer value that specifies the default button&#39;s index in the buttons array.</param>
     </member>
+    <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.ButtonAlignment">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
     <member name="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Closed">
       <summary>
         <para>Occurs when an <see cref="T:DevExpress.XtraEditors.XtraMessageBox"/> closes.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.DoNotShowAgainCheckBoxPadding">
-      <summary>
-        <para>Gets or sets padding for the &quot;Do not show this message again&quot; checkbox.</para>
-      </summary>
-      <value>Checkbox padding.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.DoNotShowAgainCheckBoxText">
       <summary>
@@ -32931,15 +32801,9 @@ Always equal to true.</para>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.Icon">
       <summary>
-        <para>Gets or sets an <see cref="T:DevExpress.XtraEditors.XtraMessageBox"/> icon. The icon is displayed in the message body.</para>
+        <para>Gets or sets the message box icon.</para>
       </summary>
-      <value>An <see cref="T:System.Drawing.Icon"/> object that specifies the message box icon.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.IconPadding">
-      <summary>
-        <para>Gets or sets padding for an <see cref="T:DevExpress.XtraEditors.XtraMessageBox"/> icon.</para>
-      </summary>
-      <value>Message box icon padding.</value>
+      <value>An Icon object that specifies the message box icon.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.XtraMessageBoxArgs.Load">
       <summary>
@@ -32964,12 +32828,6 @@ Always equal to true.</para>
       </summary>
       <value>A String value that specifies the message box text.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.TextPadding">
-      <summary>
-        <para>Gets or sets text padding within an <see cref="T:DevExpress.XtraEditors.XtraMessageBox"/>.</para>
-      </summary>
-      <value>Text padding.</value>
-    </member>
     <member name="P:DevExpress.XtraEditors.XtraMessageBoxArgs.UseGdiPlusTextPainter">
       <summary>
         <para>Gets or sets whether to use GDI+ to render strings.</para>
@@ -32989,7 +32847,7 @@ Always equal to true.</para>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraMessageBoxClosedArgs.SaveToRegistry">
       <summary>
-        <para>Saves <see cref="P:DevExpress.XtraEditors.XtraMessageBoxEventArgs.Visible"/> and <see cref="P:DevExpress.XtraEditors.XtraMessageBoxEventArgs.DialogResult"/> property values to the registry.</para>
+        <para>Saves <see cref="P:DevExpress.XtraEditors.XtraMessageBoxEventArgs.Visible"/> and DevExpress.XtraEditors.XtraMessageBoxEventArgs.DialogResult property values to the registry.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.XtraMessageBoxEventArgs">
@@ -33344,7 +33202,7 @@ Allows you to select a form that should be subsequently activated.</para>
     </member>
     <member name="P:DevExpress.XtraSplashScreen.FluentSplashScreenOptions.Opacity">
       <summary>
-        <para>Gets or sets the opacity level of the splashscreen&#39;s background. This setting is supported if the application runs under Windows 10 Version 1803 (OS build 17134) or newer. On older Windows versions, the splashscreen fills its background with a non-trasparent color specified by the OpacityColor property.</para>
+        <para>Gets or sets the opacity level of the splashscreen&#39;s background.</para>
       </summary>
       <value>The opacity level (between 0 and 255) of the splashscreen&#39;s background.</value>
     </member>
@@ -33579,21 +33437,6 @@ Allows you to select a form that should be subsequently activated.</para>
       </summary>
       <value>The delay before the form is shown.</value>
     </member>
-    <member name="T:DevExpress.XtraSplashScreen.ParentFormState">
-      <summary>
-        <para>Enumerates values that specify whether the form under the wait form is enabled.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraSplashScreen.ParentFormState.Locked">
-      <summary>
-        <para>The form under the wait form is disabled.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked">
-      <summary>
-        <para>The form under the wait form is enabled.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraSplashScreen.ShowMode">
       <summary>
         <para>Contains values that specify how a <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> is displayed, as a form or as an image.</para>
@@ -33797,22 +33640,22 @@ Allows you to select a form that should be subsequently activated.</para>
     </member>
     <member name="T:DevExpress.XtraSplashScreen.SplashFormStartPosition">
       <summary>
-        <para>Enumerates values that specify the screen position where a splash screen/wait indicator is displayed.</para>
+        <para>Contains values that specify a splash form&#39;s start position.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.CenterScreen">
       <summary>
-        <para>A splash screen/wait form is displayed at the center of the screen.</para>
+        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default">
       <summary>
-        <para>The position is not specified explicitly. If the main application form is not yet displayed, the splash form is shown at the center of the screen. If the main application form is already displayed, the splash form is centered relative to the active form. If the parentForm parameter of a method that shows a wait form is specified, the wait form is centered relative to the parent form.</para>
+        <para>A splash form&#39;s default start position. A <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> is displayed centered against the screen and a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is centered against its parent form.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual">
       <summary>
-        <para>To specify the position, use the <see cref="P:DevExpress.XtraSplashScreen.SplashScreenManager.SplashFormLocation"/> property or the location parameter of a method that shows the splash form.</para>
+        <para>The start position of a splash form is specified manually (via the <see cref="P:DevExpress.XtraSplashScreen.SplashScreenManager.SplashFormLocation"/> property or a parameter of the splash form display method).</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraSplashScreen.SplashScreen">
@@ -34073,47 +33916,47 @@ Allows you to select a form that should be subsequently activated.</para>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm">
       <summary>
-        <para>Closes the wait form or splash screen. Throws an exception if no splash form is opened.</para>
+        <para>Closes the currently displayed splash screen/wait form. The method throws an exception if no splash form is currently open.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(System.Boolean)">
       <summary>
-        <para>Closes the displayed wait form or splash screen. Allows you to suppress the exception raised if no splash form is opened.</para>
+        <para>Closes the currently displayed splash screen/wait form. The method&#39;s parameter allows you to suppress an exception that is raised when no splash form is currently opened.</para>
       </summary>
-      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is opened; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyClosed">true, to raise an exception if no splash form is currently open; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(System.Boolean,System.Boolean)">
       <summary>
-        <para>Closes the wait form or splash screen.</para>
+        <para>Closes the currently displayed splash screen/wait form, and blocks the current thread until the splash form has actually been closed. The method&#39;s parameter allows you to suppress an exception that is raised when no splash form is currently opened.</para>
       </summary>
-      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is opened; otherwise, false.</param>
-      <param name="waitForSplashFormClose">true to block the current thread until the splash form is closed;  otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyClosed">true, to raise an exception if no splash form is currently open; otherwise, false.</param>
+      <param name="waitForSplashFormClose">true, to block the current thread until the splash form has actually been closed;  otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(System.Boolean,System.Int32,System.Windows.Forms.Form)">
       <summary>
-        <para>Closes the wait form or splash screen after a delay. Allows you to select the form that should be subsequently activated, and suppress the exception raised if no splash form is opened.</para>
+        <para>Closes the currently displayed splash screen/wait form after a specified delay. This method overload allows you to select a form that should be subsequently activated, and suppress an exception that is raised when no splash form is currently opened.</para>
       </summary>
-      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is opened; otherwise, false.</param>
-      <param name="closingDelay">An integer value that specifies the amount of time (in milliseconds) that should elapse before the splash form is closed.</param>
-      <param name="parent">A form that is activated after the splash form is closed. This parameter is only in effect if the closingDelay parameter is greater than 0.</param>
+      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is currently open; otherwise, false.</param>
+      <param name="closingDelay">An Int32 value that is the number of milliseconds that elapses before the splash form is closed.</param>
+      <param name="parent">A Form object that should be activated after the splash form is closed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(System.Boolean,System.Int32,System.Windows.Forms.Form,System.Boolean)">
       <summary>
-        <para>Closes the wait form or splash screen after a delay.</para>
+        <para>Closes the currently displayed splash screen/wait form after a specified delay, and blocks the current thread until the splash form has actually been closed. Allows you to select a form that should be subsequently activated, and suppress an exception that is raised when no splash form is currently opened.</para>
       </summary>
-      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is opened; otherwise, false.</param>
-      <param name="closingDelay">An integer value that specifies the amount of time (in milliseconds) that should elapse before the splash form is closed.</param>
-      <param name="parent">A form that is activated after the splash form is closed. This parameter is only in effect if the closingDelay parameter is greater than 0.</param>
-      <param name="waitForSplashFormClose">true to block the current thread until the splash form is closed;  otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is currently open; otherwise, false.</param>
+      <param name="closingDelay">An Int32 value that is the number of milliseconds that elapses before the splash form is closed.</param>
+      <param name="parent">A Form object that should be activated after the splash form is closed.</param>
+      <param name="waitForSplashFormClose">true to block the current thread until the splash form has actually been closed;  otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(System.Boolean,System.Int32,System.Windows.Forms.Form,System.Boolean,System.Boolean)">
       <summary>
-        <para>Closes the wait form or splash screen. For internal use.</para>
+        <para>Closes the currently displayed splash screen/wait form. This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is opened; otherwise, false.</param>
-      <param name="closingDelay">An integer value that specifies the amount of time (in milliseconds) that should elapse before the splash form is closed.</param>
-      <param name="parent">A form that is activated after the splash form is closed. This parameter is only in effect if the closingDelay parameter is greater than 0.</param>
-      <param name="waitForSplashFormClose">true to block the current thread until the splash form is closed;  otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyClosed">true, to raise an exception if no splash form is currently open; otherwise, false.</param>
+      <param name="closingDelay">An Int32 value that is the number of milliseconds that elapses before the splash form is closed.</param>
+      <param name="parent">A Form object that should be activated after the splash form is closed.</param>
+      <param name="waitForSplashFormClose">true, to block the current thread until the splash form has actually been closed;  otherwise, false.</param>
       <param name="allowUseInDT">For internal use.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseOverlayForm(DevExpress.XtraSplashScreen.IOverlaySplashScreenHandle)">
@@ -34232,7 +34075,7 @@ Allows you to select a form that should be subsequently activated.</para>
       <param name="subtitle">A string displayed in the subtitle region. If this parameter is not specified (null), the subtitle region displays the value of the AssemblyCompany attribute (see your project&#39;s AssemblyInfo.cs/AssemblyInfo.vb file).</param>
       <param name="leftFooter">A string displayed in the left footer. If this parameter is not specified (null), the left footer displays the value of the AssemblyCopyright attribute (see your project&#39;s AssemblyInfo.cs/AssemblyInfo.vb file).</param>
       <param name="rightFooter">A string displayed in the right footer. If this parameter is not specified (null), the right footer displays the value of the AssemblyFileVersion attribute (see your project&#39;s AssemblyInfo.cs/AssemblyInfo.vb file).</param>
-      <param name="opacity">The opacity level for the splashscreen&#39;s background. This setting is supported if the application runs under Windows 10 Version 1803 (OS build 17134) or newer. On older Windows versions, the splashscreen fills its background with a non-trasparent color (the &#39;opacityColor&#39; parameter).</param>
+      <param name="opacity">The opacity level for the splashscreen&#39;s background.</param>
       <param name="opacityColor">The background color. If the opacityColor parameter is set to Color.Empty, the actual background color is Color.Black.</param>
       <param name="loadingIndicatorType">The loading indicator kind to use.</param>
       <param name="logoImageOptions">The object to specify the logo image and its settings.</param>
@@ -34246,295 +34089,282 @@ Allows you to select a form that should be subsequently activated.</para>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Type)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against your application&#39;s main form.</para>
       </summary>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Type,System.Boolean,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering against your application&#39;s main form.</para>
       </summary>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true to use the fade-out effect when closing the form; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against another form.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against another form.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true to use the fade-out effect when closing the form; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against another form.The method&#39;s parameter allows you to disable the parent form while the splash form is displayed.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para></para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
+      <param name="parentForm"></param>
+      <param name="splashFormType"></param>
+      <param name="useFadeIn"></param>
+      <param name="useFadeOut"></param>
+      <param name="startPos"></param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it.The method&#39;s parameter allows you to disable the parent form while the splash form is displayed.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against another form.The method&#39;s parameter allows you to suppress an exception that is thrown if another splash form has already been opened.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against another form.The method&#39;s parameter allows you to disable the parent form while the splash form is displayed.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it. The method&#39;s parameter allows you to suppress an exception that is thrown if another splash form has already been opened.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it.The method&#39;s parameter allows you to disable the parent form while the splash form is displayed.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it.The method&#39;s parameter allows you to specify whether the splash form is displayed using the glow effect.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="allowGlowEffect">true if the manager uses a glow effect to display the splash form; otherwise, false.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true, to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="allowGlowEffect">true, to use the glow effect when displaying the splash form; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,System.Int32)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant and displays it after a delay. Allows you to manually position the splash form, and suppress an exception that is thrown if another splash form has already been opened.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="pendingTime">The time delay (in milliseconds) before the splash form is displayed. If the <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm"></see> method is called at this time, the splash form is not displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="pendingTime">The time in milliseconds that should elapse before the splash form is actually displayed onscreen. If a close command is sent to the splash form during this time, the splash form will not be displayed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,System.Int32,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it.The method&#39;s parameter allows you to disable the parent form while the splash form is displayed.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="pendingTime">The time delay (in milliseconds) before the splash form is displayed. If the <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm"></see> method is called at this time, the splash form is not displayed.</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="pendingTime">The time in milliseconds that should elapse before the splash form is actually displayed onscreen. If a close command is sent to the splash form during this time, the splash form will not be displayed.</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,System.Int32,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type. For internal use.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="pendingTime">The time delay (in milliseconds) before the splash form is displayed. If the <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm"></see> method is called at this time, the splash form is not displayed.</param>
-      <param name="allowUseInDT">For internal use.</param>
+      <param name="parentForm"></param>
+      <param name="splashFormType"></param>
+      <param name="useFadeIn"></param>
+      <param name="useFadeOut"></param>
+      <param name="throwExceptionIfAlreadyOpened"></param>
+      <param name="startPos"></param>
+      <param name="location"></param>
+      <param name="pendingTime"></param>
+      <param name="allowUseInDT"></param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,System.Int32,System.Boolean,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type. For internal use.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="pendingTime">The time delay (in milliseconds) before the splash form is displayed. If the <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm"></see> method is called at this time, the splash form is not displayed.</param>
-      <param name="allowUseInDT">For internal use.</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentForm"></param>
+      <param name="splashFormType"></param>
+      <param name="useFadeIn"></param>
+      <param name="useFadeOut"></param>
+      <param name="throwExceptionIfAlreadyOpened"></param>
+      <param name="startPos"></param>
+      <param name="location"></param>
+      <param name="pendingTime"></param>
+      <param name="allowUseInDT"></param>
+      <param name="parentFormDesiredState"></param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,System.Int32,System.Boolean,DevExpress.XtraSplashScreen.ParentFormState,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type. For internal use.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="pendingTime">The time delay (in milliseconds) before the splash form is displayed. If the <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm"></see> method is called at this time, the splash form is not displayed.</param>
-      <param name="allowUseInDT">For internal use.</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
-      <param name="allowGlowEffect">true if the manager uses a glow effect to display the splash form; otherwise, false.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true, to throw an exception if another splash form has already been opened; false, to suppress this exception.</param>
+      <param name="startPos">The splash form&#39;s arrangement.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="pendingTime">The time in milliseconds that should elapse before the splash form is actually displayed onscreen. If a close command is sent to the splash form during this time, the splash form will not be displayed.</param>
+      <param name="allowUseInDT">This member supports the internal infrastructure, and is not intended to be used directly from your code.</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.</param>
+      <param name="allowGlowEffect">true, to use the glow effect when displaying the splash form; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against another form.The method&#39;s parameter allows you to specify whether the splash form is displayed using the glow effect.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="allowGlowEffect">true if the manager uses a glow effect to display the splash form; otherwise, false.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true, to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="allowGlowEffect">true, to use the glow effect when displaying the splash form; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.Form,System.Type,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
       <summary>
-        <para>Creates and displays a splash form (wait form or splash screen) of the specified type.</para>
+        <para>Creates the specified <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant and displays it after a delay, centering it against another form.The method&#39;s parameter allows you to suppress an exception that is thrown if another splash form has already been opened.</para>
       </summary>
-      <param name="parentForm">The splash form&#39;s parent form. The wait form is centered relative to the parent. The parent form is activated when the splash form is closed. If the parent form is not specified, the manager shows the wait form over the active (top-level) form or activates the main application form.</param>
-      <param name="splashFormType">The type of the object that specifies the splash form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> or <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="throwExceptionIfAlreadyOpened">true to throw <see cref="T:System.InvalidOperationException"></see> if another splash form is already displayed; false to suppress the exception.</param>
-      <param name="pendingTime">The time delay (in milliseconds) before the splash form is displayed. If the <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm"></see> method is called at this time, the splash form is not displayed.</param>
+      <param name="parentForm">A Form relative to which the displayed splash form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.</param>
+      <param name="splashFormType">The type of splash form to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="throwExceptionIfAlreadyOpened">true to throw an exception if another splash form has already been opened; false to suppress this exception.</param>
+      <param name="pendingTime">The time in milliseconds that should elapse before the splash form is actually displayed onscreen. If a close command is sent to the splash form during this time, the splash form will not be displayed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean)">
       <summary>
-        <para>Creates and displays a wait form of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, centering it against the form containing the specified UserControl.</para>
       </summary>
-      <param name="parentControl">A <see cref="T:System.Windows.Forms.UserControl"></see> object that specifies a user control. The manager displays the wait form over the form that contains the specified control. This parameter is only in effect for wait forms.</param>
-      <param name="splashFormType">The type of the object that specifies the wait form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
+      <param name="parentControl">A UserControl. The splash form is centered against the form where the UserControl resides.</param>
+      <param name="splashFormType">The type of WaitForm to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a wait form of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, centering it against the form containing the specified UserControl.The method&#39;s parameter allows you to disable this form while the splash form is displayed.</para>
       </summary>
-      <param name="parentControl">A <see cref="T:System.Windows.Forms.UserControl"></see> object that specifies a user control. The manager displays the wait form over the form that contains the specified control. This parameter is only in effect for wait forms.</param>
-      <param name="splashFormType">The type of the object that specifies the wait form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentControl">A UserControl. The splash form is centered against the form where the UserControl resides.</param>
+      <param name="splashFormType">The type of WaitForm to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition)">
       <summary>
-        <para>Creates and displays a wait form of the specified type.</para>
+        <para></para>
       </summary>
-      <param name="parentControl">A <see cref="T:System.Windows.Forms.UserControl"></see> object that specifies a user control. The manager displays the wait form over the form that contains the specified control. This parameter is only in effect for wait forms.</param>
-      <param name="splashFormType">The type of the object that specifies the wait form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
+      <param name="parentControl"></param>
+      <param name="splashFormType"></param>
+      <param name="useFadeIn"></param>
+      <param name="useFadeOut"></param>
+      <param name="startPos"></param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
       <summary>
-        <para>Creates and displays a wait form of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, allowing you to manually position it.</para>
       </summary>
-      <param name="parentControl">A <see cref="T:System.Windows.Forms.UserControl"></see> object that specifies a user control. The manager displays the wait form over the form that contains the specified control. This parameter is only in effect for wait forms.</param>
-      <param name="splashFormType">The type of the object that specifies the wait form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
+      <param name="parentControl">A UserControl. The WaitForm is positioned relative to the screen or the form where the UserControl resides.</param>
+      <param name="splashFormType">The type of WaitForm to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="startPos">SplashFormStartPosition.Default to center the WaitForm against the UserControl&#39;s parent form. SplashFormStartPosition.Manual to manually specify the WaitForm&#39;s location with the &#39;loc&#39; parameter.</param>
+      <param name="location">Coordinates at which the Wait Form is shown (if the startPos parameter is set to Manual).</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,DevExpress.XtraSplashScreen.ParentFormState)">
       <summary>
-        <para>Creates and displays a wait form of the specified type.</para>
+        <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>,  allowing you to manually position it.
+The method&#39;s parameter allows you to disable the parent form while the splash form is displayed.</para>
       </summary>
-      <param name="parentControl">A <see cref="T:System.Windows.Forms.UserControl"></see> object that specifies a user control. The manager displays the wait form over the form that contains the specified control. This parameter is only in effect for wait forms.</param>
-      <param name="splashFormType">The type of the object that specifies the wait form to be displayed. You can pass the type of a <see cref="T:DevExpress.XtraWaitForm.WaitForm"></see> descendant.</param>
-      <param name="useFadeIn">true if the manager uses a fade-in effect when it shows the splash form; otherwise, false.</param>
-      <param name="useFadeOut">true if the manager uses a fade-out effect when it closes the splash form; otherwise, false.</param>
-      <param name="startPos">The position where the splash form is displayed. <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Default"></see> to display the wait form over the parent form (the splash screen - over the active form) or in the center of the screen if the main application form is not yet displayed.
-<see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see> to specify the splash form&#39;s upper-left corner coordinates in the location parameter.</param>
-      <param name="location">The screen coordinates of the splash form&#39;s upper-left corner (if the startPos parameter is set to <see cref="F:DevExpress.XtraSplashScreen.SplashFormStartPosition.Manual"></see>).</param>
-      <param name="parentFormDesiredState"><see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Locked"></see> if the parent form is disabled while the wait form is displayed; otherwise, <see cref="F:DevExpress.XtraSplashScreen.ParentFormState.Unlocked"></see>. This parameter is only in effect when a wait form is displayed.</param>
+      <param name="parentControl">A UserControl. The WaitForm is positioned relative to the screen or the form where the UserControl resides.</param>
+      <param name="splashFormType">The type of WaitForm to be displayed.</param>
+      <param name="useFadeIn">true, to use the fade-in effect when opening the form; otherwise, false.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when closing the form; otherwise, false.</param>
+      <param name="startPos">SplashFormStartPosition.Default to center the WaitForm against the UserControl&#39;s parent form. SplashFormStartPosition.Manual to manually specify the WaitForm&#39;s location with the &#39;loc&#39; parameter.</param>
+      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
+      <param name="parentFormDesiredState">A ParentFormState enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowImage(DevExpress.Utils.Svg.SvgImage)">
       <summary>
@@ -34735,16 +34565,16 @@ Allows you to disable fade-in and fade-out effects for the image and draw custom
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowImage(System.Drawing.Image,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,DevExpress.XtraSplashScreen.ICustomImagePainter,System.Int32,System.Boolean)">
       <summary>
-        <para>This method supports the internal infrastructure, and is not intended to be used directly from your code.</para>
+        <para>Displays an image as a splash form. This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <param name="image">An Image to be displayed as a splash form.</param>
-      <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
-      <param name="startPos">The splash form&#39;s arrangement.</param>
-      <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
-      <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>
-      <param name="pendingTime">The time in milliseconds that should elapse before the splash form is actually displayed onscreen. If a close command is sent to the splash form during this time, the splash form will not be displayed.</param>
-      <param name="allowUseInDT">This member supports the internal infrastructure, and is not intended to be used directly from your code.</param>
+      <param name="image"></param>
+      <param name="useFadeIn"></param>
+      <param name="useFadeOut"></param>
+      <param name="startPos"></param>
+      <param name="location"></param>
+      <param name="painter"></param>
+      <param name="pendingTime"></param>
+      <param name="allowUseInDT"></param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowOverlayForm(System.Windows.Forms.Control)">
       <summary>

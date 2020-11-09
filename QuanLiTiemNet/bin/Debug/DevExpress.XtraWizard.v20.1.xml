@@ -473,9 +473,9 @@
       </summary>
       <value>true to display the Help button; otherwise, false.</value>
     </member>
-    <member name="E:DevExpress.XtraWizard.WizardControl.HyperlinkClick">
+    <member name="E:DevExpress.XtraWizard.WizardControl.HyperLinkClick">
       <summary>
-        <para>Fires when a user clicks a hyperlink on a wizard page.</para>
+        <para>Fires when a user clicks a hyperlink on the welcome or completion page.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraWizard.WizardControl.Image">

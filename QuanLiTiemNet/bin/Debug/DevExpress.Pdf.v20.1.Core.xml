@@ -9,92 +9,9 @@
         <para>Contains classes and enumerations that are used to implement the main functionality of WinForms and WPF PDF Viewers, and the PDF Document API.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.Pdf.ExternalSignerInfo">
-      <summary>
-        <para>Contains information about the signature contents.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.ExternalSignerInfo.#ctor(DevExpress.Pdf.PdfSignatureType,System.Int32,DevExpress.Pdf.IDigestCalculator)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.ExternalSignerInfo"/> class with specified settings.</para>
-      </summary>
-      <param name="type">The signature type.</param>
-      <param name="signatureSize">The signature size (in bytes).</param>
-      <param name="digestCalculator">The signature&#39;s digest calculator.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.ExternalSignerInfo.#ctor(DevExpress.Pdf.PdfSignatureType,System.Int32,DevExpress.Pdf.PdfHashAlgorithm)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.ExternalSignerInfo"/> class with specified settings.</para>
-      </summary>
-      <param name="type">The signature type.</param>
-      <param name="signatureSize">The signature size (in bytes).</param>
-      <param name="hashAlgorithm">The signature&#39;s hashing algorithm.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.ExternalSignerInfo.#ctor(System.String,System.String,System.String,System.Int32,DevExpress.Pdf.IDigestCalculator)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.ExternalSignerInfo"/> class with specified settings.</para>
-      </summary>
-      <param name="type">The signature type.</param>
-      <param name="filter">The name of the preferred signature handler.</param>
-      <param name="subFilter">The signature&#39;s encoding and key information.</param>
-      <param name="signatureSize">The signature size.</param>
-      <param name="digestCalculator">The signature&#39;s digest calculator.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.ExternalSignerInfo.#ctor(System.String,System.String,System.String,System.Int32,DevExpress.Pdf.PdfHashAlgorithm)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.ExternalSignerInfo"/> class with specified settings.</para>
-      </summary>
-      <param name="type">The signature type.</param>
-      <param name="filter">The name of the preferred signature handler.</param>
-      <param name="subFilter">The signature&#39;s encoding and key information.</param>
-      <param name="signatureSize">The signature size (in bytes).</param>
-      <param name="hashAlgorithm">The signature&#39;s hashing algorithm.</param>
-    </member>
-    <member name="P:DevExpress.Pdf.ExternalSignerInfo.DigestCalculator">
-      <summary>
-        <para>Returns the signature&#39;s digest calculator.</para>
-      </summary>
-      <value>An object used to calculate the digest value.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.ExternalSignerInfo.Filter">
-      <summary>
-        <para>Retrieves the name of the preferred signature handler.</para>
-      </summary>
-      <value>Preferred signature handler&#39;s name.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.ExternalSignerInfo.SignatureSize">
-      <summary>
-        <para>Returns the signature size (in bytes).</para>
-      </summary>
-      <value>The signature size (in bytes).</value>
-    </member>
-    <member name="P:DevExpress.Pdf.ExternalSignerInfo.SubFilter">
-      <summary>
-        <para>Returns information about the signature&#39;s format.</para>
-      </summary>
-      <value>The signature&#39;s encoding and key information.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.ExternalSignerInfo.Type">
-      <summary>
-        <para>Returns the signature type.</para>
-      </summary>
-      <value>The signature type.</value>
-    </member>
-    <member name="T:DevExpress.Pdf.ICrlClient">
-      <summary>
-        <para>Allows you to send a CLR request for specific a certificate.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.ICrlClient.GetEncoded(System.Collections.Generic.IList{System.Byte[]})">
-      <summary>
-        <para>Returns a list of CertificateList ASN.1 objects.</para>
-      </summary>
-      <param name="chain">A list of DER-encoded x509 certificates to check.</param>
-      <returns>A collection of DER- or BER-encoded CertificateList ASN.1 objects.</returns>
-    </member>
     <member name="T:DevExpress.Pdf.IDigestCalculator">
       <summary>
-        <para>Allows you to calculate a digest from a stream.</para>
+        <para>Allows you to add a digest value calculator.</para>
       </summary>
     </member>
     <member name="P:DevExpress.Pdf.IDigestCalculator.AlgorithmOid">
@@ -116,63 +33,6 @@
       </summary>
       <returns>The digest value&#39;s size (in bytes).</returns>
     </member>
-    <member name="T:DevExpress.Pdf.IExternalSigner">
-      <summary>
-        <para>Exposes the basic functionality to generate signatures.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.IExternalSigner.BuildSignature(System.Byte[],System.String)">
-      <summary>
-        <para>Builds the signature and returns its contents.</para>
-      </summary>
-      <param name="digest">The document&#39;s hash value.</param>
-      <param name="digestAlgorithmOID">The hash algorithm&#39;s object identifier.</param>
-      <returns>The signature contents.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.IExternalSigner.BuildSignature(System.IO.Stream)">
-      <summary>
-        <para>Builds the signature for the specified document.</para>
-      </summary>
-      <param name="stream">A stream that contains the document to sign.</param>
-      <returns>A signature.</returns>
-    </member>
-    <member name="P:DevExpress.Pdf.IExternalSigner.Filter">
-      <summary>
-        <para>Retrieves the name of the preferred signature handler.</para>
-      </summary>
-      <value>Preferred signature handler&#39;s name.</value>
-    </member>
-    <member name="M:DevExpress.Pdf.IExternalSigner.GetSignatureSize">
-      <summary>
-        <para>Returns the signature size (in bytes).</para>
-      </summary>
-      <returns>A signature&#39;s size (in bytes).</returns>
-    </member>
-    <member name="P:DevExpress.Pdf.IExternalSigner.SubFilter">
-      <summary>
-        <para>Returns information about the signature&#39;s format.</para>
-      </summary>
-      <value>The signature&#39;s encoding and key information.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.IExternalSigner.Type">
-      <summary>
-        <para>Returns the signature type.</para>
-      </summary>
-      <value>The signature type.</value>
-    </member>
-    <member name="T:DevExpress.Pdf.IOcspClient">
-      <summary>
-        <para>Allows you to send an Online Certificate Status Protocol (OCSP) request for a certificate.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.IOcspClient.GetEncoded(System.Byte[],System.Byte[])">
-      <summary>
-        <para>Returns a DER- or BER-encoded OCSPResponse ASN.1 object.</para>
-      </summary>
-      <param name="checkCertificateBytes">A DER-encoded x509 certificate to check.</param>
-      <param name="issuerCertificateBytes">A DER-encoded x509 issuers certificate.</param>
-      <returns>A DER- or BER-encoded OCSPResponse ASN.1 object or null.</returns>
-    </member>
     <member name="T:DevExpress.Pdf.IPdfViewer">
       <summary>
         <para>For internal use. Provides the functionality of  <see cref="T:DevExpress.XtraPdfViewer.PdfViewer"/> and <see cref="T:DevExpress.Xpf.PdfViewer.PdfViewerControl"/> classes.</para>
@@ -188,14 +48,6 @@
       <summary>
         <para>Interface used to generate time stamps.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.ITsaClient.GenerateTimeStamp(System.Byte[],System.String)">
-      <summary>
-        <para>Generates a timestamp and returns its contents.</para>
-      </summary>
-      <param name="digest">The document&#39;s hash value.</param>
-      <param name="digestAlgorithmOID">The hash algorithm&#39;s object identifier.</param>
-      <returns>The timestamp contents.</returns>
     </member>
     <member name="M:DevExpress.Pdf.ITsaClient.GenerateTimeStamp(System.IO.Stream)">
       <summary>
@@ -1389,7 +1241,7 @@
       <summary>
         <para>Gets or sets the JavaScript to be performed when the field’s value is changed. This action may check the new value for validity.</para>
       </summary>
-      <value>The calculation JavaScript. For JS API reference, use JavaScript for Acrobat API Reference</value>
+      <value>The calculation script.</value>
     </member>
     <member name="M:DevExpress.Pdf.PdfAcroFormValueFormat.CreateDateTimeFormat(System.String)">
       <summary>
@@ -1450,19 +1302,19 @@
       <summary>
         <para>Gets or sets the JavaScript to be performed before the field is formatted. This action may modify the field’s value before formatting.</para>
       </summary>
-      <value>The format JavaScript. For JS API reference, use JavaScript for Acrobat API Reference</value>
+      <value>The format script.</value>
     </member>
     <member name="P:DevExpress.Pdf.PdfAcroFormValueFormat.KeystrokeScript">
       <summary>
         <para>Gets or sets the JavaScript to be performed when the user modifies a character in a This action may check the added text for validity and reject or modify it.</para>
       </summary>
-      <value>The keystroke JavaScript. For JS API reference, use JavaScript for Acrobat API Reference</value>
+      <value>The keystroke script.</value>
     </member>
     <member name="P:DevExpress.Pdf.PdfAcroFormValueFormat.ValidateScript">
       <summary>
         <para>Gets os sets the JavaScript to be performed to recalculate the value of this field when that of another field changes.</para>
       </summary>
-      <value>The validation JavaScript. For JS API reference, use JavaScript for Acrobat API Reference</value>
+      <value>The validation script.</value>
     </member>
     <member name="T:DevExpress.Pdf.PdfAcroFormVisualField">
       <summary>
@@ -1979,31 +1831,6 @@
       </summary>
       <value>A <see cref="T:System.String"/> object that represents the state of the button form field.</value>
     </member>
-    <member name="T:DevExpress.Pdf.PdfCertificationLevel">
-      <summary>
-        <para>Lists values used to specify permissions granted by a signature.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfCertificationLevel.FillForms">
-      <summary>
-        <para>Allows users to fill in forms and sign the document.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfCertificationLevel.FillFormsAndAnnotate">
-      <summary>
-        <para>Allows users to fill in forms, create, modify and delete annotations, and sign the document.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfCertificationLevel.NoCertification">
-      <summary>
-        <para>All changes are allowed.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfCertificationLevel.NoChangesAllowed">
-      <summary>
-        <para>No changes are allowed.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.Pdf.PdfCharacter">
       <summary>
         <para>An individual character in a document.</para>
@@ -2209,61 +2036,6 @@
       </summary>
       <value>A string list representing the collection of font families that are not embedded in a document.</value>
     </member>
-    <member name="T:DevExpress.Pdf.PdfCrlClient">
-      <summary>
-        <para>Allows you to send a CLR request for a certificate.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfCrlClient.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfCrlClient"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfCrlClient.#ctor(System.Collections.Generic.IList{System.Uri})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfCrlClient"/> class with specified settings.</para>
-      </summary>
-      <param name="uriList">A list of OCSP server Uri&#39;s.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfCrlClient.#ctor(System.Collections.Generic.IList{System.Uri},System.Boolean)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfCrlClient"/> class with specified settings.</para>
-      </summary>
-      <param name="uriList">A list of OCSP server Uri&#39;s.</param>
-      <param name="throwOnFail">true to throw a WebException when the response failed; otherwise, false.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfCrlClient.GetEncoded(System.Collections.Generic.IList{System.Byte[]})">
-      <summary>
-        <para>Returns a list of DER- or BER-encoded responses.</para>
-      </summary>
-      <param name="chain">A list of DER-encoded x509 certificates to check.</param>
-      <returns>A collection of DER- or BER-encoded CertificateList ASN.1 objects.</returns>
-    </member>
-    <member name="T:DevExpress.Pdf.PdfDeferredSignatureBuilder">
-      <summary>
-        <para>Allows you to build a signature for a document hash.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfDeferredSignatureBuilder.#ctor(DevExpress.Pdf.ExternalSignerInfo)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDeferredSignatureBuilder"/> class with specified settings.</para>
-      </summary>
-      <param name="signerInfo">An object that contains information about the external signature.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfDeferredSignatureBuilder.#ctor(DevExpress.Pdf.ExternalSignerInfo,DevExpress.Pdf.PdfSignatureFieldInfo)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDeferredSignatureBuilder"/> class with specified settings.</para>
-      </summary>
-      <param name="signerInfo">An object that contains information about the external signature.</param>
-      <param name="info">An object that contains information about a signature field.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfDeferredSignatureBuilder.#ctor(DevExpress.Pdf.ExternalSignerInfo,System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDeferredSignatureBuilder"/> class with specified settings.</para>
-      </summary>
-      <param name="signerInfo">An object that contains information about the external signature.</param>
-      <param name="formFieldName">The name of the signature form field to apply an external signature.</param>
-    </member>
     <member name="T:DevExpress.Pdf.PdfDestination">
       <summary>
         <para>Represents a destination (a particular view of a document) to which a document target (e.g. a bookmark) is referred to.</para>
@@ -2280,36 +2052,6 @@
         <para>Gets the zero-based index of a page where the destination is located.</para>
       </summary>
       <value>An integer value that is the zero-based index of the destination page.</value>
-    </member>
-    <member name="T:DevExpress.Pdf.PdfDigestCalculator">
-      <summary>
-        <para>Allows you to calculate a digest from a stream. Supports hash algorithms listed in <see cref="T:DevExpress.Pdf.PdfHashAlgorithm"/> enumeration.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfDigestCalculator.#ctor(DevExpress.Pdf.PdfHashAlgorithm)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDigestCalculator"/> class with specified settings.</para>
-      </summary>
-      <param name="algorithm">The hashing algorithm.</param>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfDigestCalculator.AlgorithmOid">
-      <summary>
-        <para>Specifies the hash algorithm&#39;s object identifier.</para>
-      </summary>
-      <value>An algorithm OID.</value>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfDigestCalculator.ComputeDigest(System.IO.Stream)">
-      <summary>
-        <para>Calculates the digest value for specified data.</para>
-      </summary>
-      <param name="stream">The stream that contains data used to calculate the digest value.</param>
-      <returns>The digest value.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfDigestCalculator.GetDigestSize">
-      <summary>
-        <para>Returns the digest value&#39;s size.</para>
-      </summary>
-      <returns>The digest value&#39;s size (in bytes).</returns>
     </member>
     <member name="T:DevExpress.Pdf.PdfDocument">
       <summary>
@@ -4368,48 +4110,6 @@
       </summary>
       <value>A dictionary, containing the DevExpress.Pdf.PdfSpiderSet objects, along with their <see cref="T:System.String"/> key values.</value>
     </member>
-    <member name="T:DevExpress.Pdf.PdfOcspClient">
-      <summary>
-        <para>Allows you to send an Online Certificate Status Protocol (OCSP) request for a certificate.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfOcspClient.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOcspClient"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfOcspClient.#ctor(System.Uri)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOcspClient"/> class with specified settings.</para>
-      </summary>
-      <param name="uri">An OCSP server URI.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfOcspClient.#ctor(System.Uri,DevExpress.Pdf.PdfHashAlgorithm)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOcspClient"/> class with specified settings.</para>
-      </summary>
-      <param name="uri">An OCSP server URI.</param>
-      <param name="hashAlgorithm">The hashing algorithm used to hash the issuer name and issuer public key. Default value is <see cref="F:DevExpress.Pdf.PdfHashAlgorithm.SHA1"/>.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfOcspClient.GetEncoded(System.Byte[],System.Byte[])">
-      <summary>
-        <para>Returns a DER- or BER-encoded OCSPResponse ASN.1 object.</para>
-      </summary>
-      <param name="checkCertificateBytes">A DER-encoded x509 certificate to check.</param>
-      <param name="issuerCertificateBytes">A DER-encoded x509 issuers certificate.</param>
-      <returns>DER- or BER-encoded OCSPResponse ASN.1 object or null.</returns>
-    </member>
-    <member name="T:DevExpress.Pdf.PdfOcspException">
-      <summary>
-        <para>Fires when the OCSP response fails.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfOcspException.#ctor(System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOcspException"/> class with specified settings.</para>
-      </summary>
-      <param name="message">An exception message.</param>
-    </member>
     <member name="T:DevExpress.Pdf.PdfOptionalContent">
       <summary>
         <para>Represents content in a PDF document that can be selectively viewed or hidden.</para>
@@ -6183,47 +5883,47 @@
         <para>An electronic signature used to sign a PDF file.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner)">
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.Pkcs7SignerBase)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
       </summary>
-      <param name="signer"></param>
+      <param name="signer">A PKCS#7 signature.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner,System.Byte[],System.Int32,DevExpress.Pdf.PdfOrientedRectangle)">
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.Pkcs7SignerBase,System.Byte[],System.Int32,DevExpress.Pdf.PdfOrientedRectangle)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
       </summary>
-      <param name="signer"></param>
-      <param name="imageData"></param>
-      <param name="pageNumber"></param>
-      <param name="signatureBounds"></param>
+      <param name="signer">A PKCS#7 signature.</param>
+      <param name="imageData">An array of bytes containing an image.</param>
+      <param name="pageNumber">The page number to add the signature.</param>
+      <param name="signatureBounds">The signature bounds in the default user space and the signature rotation angle (in radians). A positive angle means counterclockwise rotation; a negative angle means clockwise rotation.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner,System.Byte[],System.Int32,DevExpress.Pdf.PdfRectangle)">
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.Pkcs7SignerBase,System.Byte[],System.Int32,DevExpress.Pdf.PdfRectangle)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
       </summary>
-      <param name="signer"></param>
-      <param name="imageData"></param>
-      <param name="pageNumber"></param>
-      <param name="signatureBounds"></param>
+      <param name="signer">A PKCS#7 signature.</param>
+      <param name="imageData">An array of bytes containing an image.</param>
+      <param name="pageNumber">The page number to add the signature.</param>
+      <param name="signatureBounds">The signature bounds in the default user space</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner,System.IO.Stream,System.Int32,DevExpress.Pdf.PdfOrientedRectangle)">
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.Pkcs7SignerBase,System.IO.Stream,System.Int32,DevExpress.Pdf.PdfOrientedRectangle)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
       </summary>
-      <param name="signer"></param>
+      <param name="signer">A PKCS#7 signature.</param>
       <param name="imageData"></param>
-      <param name="pageNumber"></param>
-      <param name="signatureBounds"></param>
+      <param name="pageNumber">The page number to add the signature.</param>
+      <param name="signatureBounds">The signature bounds in the default user space and the signature rotation angle (in radians). A positive angle means counterclockwise rotation; a negative angle means clockwise rotation.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner,System.IO.Stream,System.Int32,DevExpress.Pdf.PdfRectangle)">
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.Pkcs7SignerBase,System.IO.Stream,System.Int32,DevExpress.Pdf.PdfRectangle)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
       </summary>
-      <param name="signer"></param>
+      <param name="signer">A PKCS#7 signature.</param>
       <param name="imageData"></param>
-      <param name="pageNumber"></param>
-      <param name="signatureBounds"></param>
+      <param name="pageNumber">The page number to add the signature.</param>
+      <param name="signatureBounds">The signature bounds in the default user space</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfSignature.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
       <summary>
@@ -6308,37 +6008,25 @@
         <para>Allows you to build a signature.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.IExternalSigner)">
+    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.Pkcs7SignerBase)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureBuilder"/> class with specified settings.</para>
       </summary>
-      <param name="signer">An object used to generate a signature.</param>
+      <param name="signer">A PKCS#7 signature.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.IExternalSigner,DevExpress.Pdf.PdfSignatureFieldInfo)">
+    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.Pkcs7SignerBase,DevExpress.Pdf.PdfSignatureFieldInfo)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureBuilder"/> class with specified settings.</para>
       </summary>
-      <param name="signer">An object used to generate a signature.</param>
+      <param name="signer">A PKCS#7 signature.</param>
       <param name="info">An object that contains information about a signature field.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.IExternalSigner,System.String)">
+    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.Pkcs7SignerBase,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureBuilder"/> class with specified settings.</para>
       </summary>
-      <param name="signer">An object used to generate a signature.</param>
-      <param name="formFieldName">The name of the signature form field to sign.</param>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfSignatureBuilder.ApplicationName">
-      <summary>
-        <para>Specifies the name of the software module used to create the signature.</para>
-      </summary>
-      <value>The software module name.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfSignatureBuilder.CertificationLevel">
-      <summary>
-        <para>Specifies the signature certification level.</para>
-      </summary>
-      <value>One of the enumeration values specifying the certification level.</value>
+      <param name="signer">An object used to create the PKCS#7 signature.</param>
+      <param name="formFieldName">A name of a signature form field to sign.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfSignatureBuilder.ContactInfo">
       <summary>
@@ -6386,12 +6074,6 @@
       <summary>
         <para>Contains information about the signature field.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfSignatureFieldInfo.#ctor(System.Collections.Generic.IList{System.Int32})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureFieldInfo"/> class with specified settings.</para>
-      </summary>
-      <param name="pageNumbers"></param>
     </member>
     <member name="M:DevExpress.Pdf.PdfSignatureFieldInfo.#ctor(System.Int32)">
       <summary>
@@ -6441,41 +6123,6 @@
     <member name="F:DevExpress.Pdf.PdfSignatureFlags.SignaturesExist">
       <summary>
         <para>The document contains at least one signature field.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Pdf.PdfSignatureProfile">
-      <summary>
-        <para>Lists values used to specify the signature profile type.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfSignatureProfile.PAdES_BES">
-      <summary>
-        <para>PAdES (PDF Advanced Electronic Signature) baseline profile.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfSignatureProfile.Pdf">
-      <summary>
-        <para>Standard PDF profile for PKCS#7 signatures.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Pdf.PdfSignatureType">
-      <summary>
-        <para>Lists values used to specify the signature type.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfSignatureType.PAdES">
-      <summary>
-        <para>A signature with a PAdES baseline profile.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfSignatureType.Pkcs7">
-      <summary>
-        <para>A PKCS#7 signature.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfSignatureType.Timestamp">
-      <summary>
-        <para>A document-level timestamp.</para>
       </summary>
     </member>
     <member name="T:DevExpress.Pdf.PdfStringAlignment">
@@ -6663,22 +6310,6 @@
         <para>Gets a model corresponding to the specific annotation  state.</para>
       </summary>
       <value>A string that represents the state model of the annotation.</value>
-    </member>
-    <member name="T:DevExpress.Pdf.PdfTextExtractionOptions">
-      <summary>
-        <para>Contains text extraction options.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfTextExtractionOptions.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfTextExtractionOptions"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfTextExtractionOptions.ClipToCropBox">
-      <summary>
-        <para>Gets or sets whether to clip extracted content to the crop box.</para>
-      </summary>
-      <value>true, to clip content to the crop box; otherwise false.</value>
     </member>
     <member name="T:DevExpress.Pdf.PdfTextFormField">
       <summary>
@@ -6886,56 +6517,6 @@
         <para>The text, which is being searched for, has not been found.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.Pdf.PdfTimeStamp">
-      <summary>
-        <para>Allows you to generate document-level timestamps.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfTimeStamp.#ctor(DevExpress.Pdf.ITsaClient)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfTimeStamp"/> class with specified settings.</para>
-      </summary>
-      <param name="tsaClient">An object used to generate a timestamp.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfTimeStamp.BuildSignature(System.Byte[],System.String)">
-      <summary>
-        <para>Builds the signature and returns its contents.</para>
-      </summary>
-      <param name="digest">The document&#39;s hash value.</param>
-      <param name="digestAlgorithmOID">The hash algorithm&#39;s object identifier.</param>
-      <returns>The signature contents.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfTimeStamp.BuildSignature(System.IO.Stream)">
-      <summary>
-        <para>Builds the signature for the specified document.</para>
-      </summary>
-      <param name="stream">A stream that contains the document to sign.</param>
-      <returns>The document-level timestamp signature.</returns>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfTimeStamp.Filter">
-      <summary>
-        <para>Retrieves the name of the preferred signature handler.</para>
-      </summary>
-      <value>Preferred signature handler&#39;s name.</value>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfTimeStamp.GetSignatureSize">
-      <summary>
-        <para>Returns the signature size (in bytes).</para>
-      </summary>
-      <returns>A signature&#39;s size (in bytes).</returns>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfTimeStamp.SubFilter">
-      <summary>
-        <para>Returns information about a timestamp signature&#39;s format.</para>
-      </summary>
-      <value>The signature&#39;s encoding and key information.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.PdfTimeStamp.Type">
-      <summary>
-        <para>Returns the signature type.</para>
-      </summary>
-      <value>The signature type.</value>
-    </member>
     <member name="T:DevExpress.Pdf.PdfTsaClient">
       <summary>
         <para>Allows you to generate timestamps.</para>
@@ -6972,14 +6553,6 @@
       <param name="algorithm">A timestamp&#39;s hashing algorithm.</param>
       <param name="userName">A username to log into the server.</param>
       <param name="password">A password to log into the server.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfTsaClient.GenerateTimeStamp(System.Byte[],System.String)">
-      <summary>
-        <para>Generates a timestamp and returns its contents.</para>
-      </summary>
-      <param name="digest">The document&#39;s hash value.</param>
-      <param name="digestAlgorithmOID">The hash algorithm&#39;s object identifier.</param>
-      <returns>The timestamp contents.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfTsaClient.GenerateTimeStamp(System.IO.Stream)">
       <summary>
@@ -7310,18 +6883,6 @@
       <param name="hashAlgorithm">A signature&#39;s hash algorithm.</param>
       <param name="tsaClient">An object that provides a time stamp.</param>
     </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Pdf.PdfHashAlgorithm,DevExpress.Pdf.ITsaClient,DevExpress.Pdf.IOcspClient,DevExpress.Pdf.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="stream">A stream containing signature certificate (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-      <param name="hashAlgorithm">Signature&#39;s hash algorithm.</param>
-      <param name="tsaClient">An object that provides a time stamp.</param>
-      <param name="ocspClient">An object that performs Online Certificate Status Protocol (OCSP) request for a certificate.</param>
-      <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
-      <param name="profile">An enumeration value type that specifies the signature&#39;s baseline profile type.</param>
-    </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
@@ -7342,17 +6903,6 @@
       <param name="certificate">An X.509 certificate for a signature.</param>
       <param name="hashAlgorithm">A signature&#39;s hash algorithm.</param>
       <param name="tsaClient">An object that provides a time stamp.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Pdf.PdfHashAlgorithm,DevExpress.Pdf.ITsaClient,DevExpress.Pdf.IOcspClient,DevExpress.Pdf.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="certificate">An X.509 signature certificate.</param>
-      <param name="hashAlgorithm">Signature&#39;s hash algorithm.</param>
-      <param name="tsaClient">An object that provides a time stamp.</param>
-      <param name="ocspClient">An object that performs an Online Certificate Status Protocol (OCSP) request for a certificate.</param>
-      <param name="crlClient">An object that performs Certificate Revocation List (CRL) request for a certificate.</param>
-      <param name="profile">An enumeration value type that specifies the signature&#39;s baseline profile type.</param>
     </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String)">
       <summary>
@@ -7378,30 +6928,10 @@
       <param name="hashAlgorithm">Signature&#39;s hash algorithm.</param>
       <param name="tsaClient">An object that provides a time stamp.</param>
     </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Pdf.PdfHashAlgorithm,DevExpress.Pdf.ITsaClient,DevExpress.Pdf.IOcspClient,DevExpress.Pdf.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-      <param name="hashAlgorithm">Signature&#39;s hash algorithm.</param>
-      <param name="tsaClient">An object that provides a time stamp.</param>
-      <param name="ocspClient">An object that performs an Online Certificate Status Protocol (OCSP) request for a certificate.</param>
-      <param name="crlClient">An object that performs Certificate Revocation List (CRL) request for a certificate.</param>
-      <param name="profile">An enumeration value type that specifies the signature&#39;s baseline profile type.</param>
-    </member>
     <member name="T:DevExpress.Pdf.Pkcs7SignerBase">
       <summary>
         <para>A base class used to create PKCS#7 signatures.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7SignerBase.BuildSignature(System.Byte[],System.String)">
-      <summary>
-        <para>Builds the signature and returns its contents.</para>
-      </summary>
-      <param name="digest">The document&#39;s hash value.</param>
-      <param name="digestAlgorithmOID">The hash algorithm&#39;s object identifier.</param>
-      <returns>The signature contents.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Pkcs7SignerBase.BuildSignature(System.IO.Stream)">
       <summary>
@@ -7412,7 +6942,7 @@
     </member>
     <member name="P:DevExpress.Pdf.Pkcs7SignerBase.Filter">
       <summary>
-        <para>Retrieves the name of the preferred signature handler.</para>
+        <para>Provides access to the name of the preferred signature handler.</para>
       </summary>
       <value>Preferred signature handler&#39;s name.</value>
     </member>
@@ -7427,12 +6957,6 @@
         <para>Returns information about a signature&#39;s format.</para>
       </summary>
       <value>The signature&#39;s encoding and key information.</value>
-    </member>
-    <member name="P:DevExpress.Pdf.Pkcs7SignerBase.Type">
-      <summary>
-        <para>Returns the signature type.</para>
-      </summary>
-      <value>null (Nothing in Visual Basic)</value>
     </member>
     <member name="T:DevExpress.Pdf.TspValidationException">
       <summary>

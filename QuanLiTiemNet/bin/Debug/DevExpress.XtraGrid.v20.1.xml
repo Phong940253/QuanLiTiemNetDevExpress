@@ -1133,7 +1133,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.GridColumn.FieldName">
       <summary>
-        <para>To bind a column to a data source field, set this property to the required data field name. To create unbound columns, assign a unique identifier to this property. If you obtained a column as a method return value or as an event argument, read the FieldName property value to identify this column.</para>
+        <para>To bind a column to a data source field, set this property to the required data field name. To create unbound columns, assign a unique identifier to this property. If you have obtained a column as a method return value or as an event argument, read the FieldName property value to identify the column.</para>
       </summary>
       <value>A <see cref="T:System.String"/> value that specifies the unique column field name.</value>
     </member>
@@ -2263,7 +2263,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
       <summary>
         <para>Gets or sets whether the filter button in Grid Views (field filter button in Layout Views) is displayed within the column header.</para>
       </summary>
-      <value>true if the column&#39;s filter button is enabled; otherwise, false.</value>
+      <value>true if the column&#39;s  filter button is enabled; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.OptionsColumnFilter.AllowFilterModeChanging">
       <summary>
@@ -4140,7 +4140,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.GridSummaryItem.Mode">
       <summary>
-        <para>Gets or sets whether to calculate the current summary against all rows or the selection. Use this property when you enable multiple row selection (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsSelection.MultiSelect"/>).</para>
+        <para>Gets or sets whether the current summary is calculated against all rows or the selection. This property makes sense when you enable multiple row selection (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsSelection.MultiSelect"/>).</para>
       </summary>
       <value>A value that specifies whether the current summary is calculated against all rows or the selection.</value>
     </member>
@@ -4168,7 +4168,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.GridSummaryItem.SummaryValue">
       <summary>
-        <para>Gets the current total summary item&#39;s value. This value may differ from the actual View data if the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior.AutoUpdateTotalSummary"/> setting is disabled. Call the <see cref="M:DevExpress.XtraGrid.Views.Grid.GridView.UpdateTotalSummary"/> method to forcibly recalculate summaries.</para>
+        <para>Gets the current total summary item&#39;s value.</para>
       </summary>
       <value>A <see cref="T:System.Object"/> representing the total summary value.</value>
     </member>
@@ -8363,7 +8363,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.QueryCustomFunctions">
       <summary>
-        <para>Allows you to add custom-function-based filters (for example, &#39;discount is more than 15%&#39;) to Excel-style pop-up filter menus and/or the filter editor.</para>
+        <para>Allows you to add custom function based filters (for example, &#39;discount is more than 15%&#39;) to Excel-style pop-up filter menus and/or the filter editor.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.RefreshData">
@@ -11996,161 +11996,6 @@ In server mode, this option is not in effect.</para>
         <para>The same as the <see cref="F:DevExpress.XtraGrid.Views.Grid.DetailExpandButtonMode.CheckDefaultDetail"/> option.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.XtraGrid.Views.Grid.DragDropGridEventArgs">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragDropGridEventArgs.CustomData">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.DragDropGridEventArgs.GetDragDropGridEventArgs(DevExpress.Utils.DragDrop.DragDropEventArgs)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="e"></param>
-      <returns></returns>
-    </member>
-    <member name="T:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Action">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Cursor">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Data">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.DataRows">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Default">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.GetData``1">
-      <summary>
-        <para></para>
-      </summary>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.GetDataRows``1">
-      <summary>
-        <para></para>
-      </summary>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Handled">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.HitInfo">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.HitLocation">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.KeyState">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Location">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Source">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragGridEventArgs.Target">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="T:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgs">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgs.GetDragOverGridEventArgs(DevExpress.Utils.DragDrop.DragOverEventArgs)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="e"></param>
-      <returns></returns>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgs.InsertIndicator">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgs.InsertIndicatorLocation">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgs.InsertIndicatorSize">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="T:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgsBase">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgsBase.InsertType">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.DragOverGridEventArgsBase.Tag">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="T:DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle">
       <summary>
         <para>Contains values specifying how the focus rectangle is painted within Grid Views.</para>
@@ -13462,9 +13307,9 @@ In server mode, this option is not in effect.</para>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsMenu.ShowSummaryItemMode">
       <summary>
-        <para>Gets or sets whether to show a &#39;Mode&#39; summary sub-menu that allows a user to calculate summaries against all rows or the selection.</para>
+        <para></para>
       </summary>
-      <value>A value that specifies whether to display the &#39;Mode&#39; summary sub-menu.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Grid.GridOptionsNavigation">
       <summary>
@@ -13631,12 +13476,6 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
         <para>Gets or sets whether to display the preview sections in the print/export output.</para>
       </summary>
       <value>true to print preview/export sections; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.PrintSelectedGroupChildren">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.PrintSelectedRowsOnly">
       <summary>
@@ -14329,13 +14168,13 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.ClipboardDataProvider">
       <summary>
-        <para>Gets an object that provides data for the clipboard in various formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</para>
+        <para>Gets an object that provides data for the clipboard in a variety of formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</para>
       </summary>
-      <value>An object that provides data for the clipboard in various formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</value>
+      <value>An object that provides data for the clipboard in a variety of formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.ClipboardRowCopying">
       <summary>
-        <para>Fires before a data row, a group row, column headers, or band headers are copied to the clipboard. Allows you to apply a format, change copied data, or skip a data row or header.</para>
+        <para>Fires before a data row, group row, column headers, or band headers are copied to the clipboard. Allows you to apply a format, change copied data, or skip a data row or header.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.ClipboardRowPasting">
@@ -20297,31 +20136,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       </summary>
       <param name="group">The group to be removed from the collection.</param>
     </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.KanbanGroupCollection.Sort">
-      <summary>
-        <para>Sorts groups according to their captions (<see cref="P:DevExpress.XtraGrid.Views.Tile.KanbanGroup.Caption"/>), using a case-sensitive comparison.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.KanbanGroupCollection.Sort(System.Collections.Generic.IComparer{DevExpress.XtraGrid.Views.Tile.KanbanGroup})">
-      <summary>
-        <para>Sorts groups in the current collection using the specified comparer.</para>
-      </summary>
-      <param name="comparer">The object that compares elements in the collection.</param>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.KanbanGroupCollection.Sort(System.Comparison{DevExpress.XtraGrid.Views.Tile.KanbanGroup})">
-      <summary>
-        <para>Sorts groups using the specified Comparison method.</para>
-      </summary>
-      <param name="comparison">The method used to compare elements in the collection.</param>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.KanbanGroupCollection.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{DevExpress.XtraGrid.Views.Tile.KanbanGroup})">
-      <summary>
-        <para>Sorts groups in the specified range using the specified comparer.</para>
-      </summary>
-      <param name="index">The zero-based starting index of the range to sort.</param>
-      <param name="count">The length of the range to sort.</param>
-      <param name="comparer">The object that compares elements in the collection.</param>
-    </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.KanbanGroupCollection.View">
       <summary>
         <para>Gets the TileView to which the current collection belongs.</para>
@@ -20370,7 +20184,7 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Tile.TileView">
       <summary>
-        <para>Displays records as read-only tiles, using one of the following layout modes: default (standard table layout), list (tiles have no space between them) and Kanban. This View provides the Tile Template feature, which helps you arrange fields relative to other fields, specify absolute or relative field display bounds, etc.</para>
+        <para>Displays records as read-only tiles, using one of the following layout modes: default (one or multiple columns/rows), list (without spaces between records) and Kanban. This View provides the advanced field positioning feature, which helps you arrange fields relative to other fields, specify absolute or relative field display bounds, etc.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.#ctor">
@@ -20784,12 +20598,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       </summary>
       <value></value>
     </member>
-    <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsFind">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsImageLoad">
       <summary>
         <para>Provides access to a set of properties that manage tile background image loading.</para>
@@ -21076,11 +20884,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       </summary>
       <param name="view">The owner of the created group.</param>
     </member>
-    <member name="M:DevExpress.XtraGrid.Views.Tile.TileViewGroup.CheckUpdatePosition">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewGroup.ControlInfo">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
@@ -21161,7 +20964,7 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Returns the row handle for this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileViewItem"/>.</para>
       </summary>
-      <value>An Int32 value that is the integer index associated with a data row, displayed within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileViewItem"/>. Row handles are not data source indexes, see the Accessing Rows in Code. Row Handles section of the &quot;Rows&quot; article for more information.</value>
+      <value>An Int32 value that is the integer index associated with a data row, displayed within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileViewItem"/>.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItem.View">
       <summary>
@@ -21708,12 +21511,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
         <para>Copies settings from the specified object to the current object.</para>
       </summary>
       <param name="options">The object whose settings are copied to the current object.</param>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewOptionsKanban.FadeOutGroupContent">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewOptionsKanban.GroupFooterButton">
       <summary>
@@ -22340,12 +22137,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       </summary>
       <param name="rowHandle">An Int32 value that is the target row&#39;s handle.</param>
       <param name="expanded">true to expand the target row; false to collapse it.</param>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.SetSelectionStart(System.Int32)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="rowHandle"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.ShowEditor">
       <summary>

@@ -317,9 +317,9 @@
     </member>
     <member name="P:DevExpress.XtraPrinting.Control.PrintControl.UseAsyncDocumentCreation">
       <summary>
-        <para>Gets or sets whether the <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/> should create a report document asynchronously in a separate task.</para>
+        <para></para>
       </summary>
-      <value>True or Default, to create a report document asynchronously in a separate task; otherwise, False.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraPrinting.Control.PrintControl.VerticalScrollBarVisibility">
       <summary>
@@ -2760,6 +2760,12 @@
         <para>Displays a customized Page Setup dialog that reflects the application&#39;s current Look And Feel settings.</para>
       </summary>
       <returns>true if a user clicks OK; false if a user clicks Cancel, otherwise null (Nothing in Visual Basic).</returns>
+    </member>
+    <member name="P:DevExpress.XtraReports.UI.ReportPrintTool.UseAsyncDocumentCreation">
+      <summary>
+        <para>This property is obsolete (not in use anymore).</para>
+      </summary>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraReports.UI.XtraReportPreviewExtensions">
       <summary>

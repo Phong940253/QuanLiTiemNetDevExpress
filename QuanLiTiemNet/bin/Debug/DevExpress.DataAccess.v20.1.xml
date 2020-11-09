@@ -662,26 +662,11 @@
       <param name="userName">A <see cref="T:System.String"/> that specifies the user name used to authenticate to the Oracle server. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters.UserName"/> property.</param>
       <param name="password">A <see cref="T:System.String"/> that specifies the password used to authenticate to the Oracle server. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters.Password"/> property.</param>
     </member>
-    <member name="M:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters.#ctor(System.String,System.String,System.String,DevExpress.DataAccess.ConnectionParameters.OracleProviderType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters"/> class with specified settings.</para>
-      </summary>
-      <param name="serverName"></param>
-      <param name="userName"></param>
-      <param name="password"></param>
-      <param name="providerType"></param>
-    </member>
     <member name="P:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters.Password">
       <summary>
         <para>Gets or sets the password used to authenticate to an Oracle server.</para>
       </summary>
       <value>A <see cref="T:System.String"/> that specifies the password used to authenticate to an Oracle server.</value>
-    </member>
-    <member name="P:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters.ProviderType">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.DataAccess.ConnectionParameters.OracleConnectionParameters.ServerName">
       <summary>
@@ -2208,7 +2193,7 @@
       <summary>
         <para>Gets or sets the union type.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.DataAccess.DataFederation.UnionType"/> value that specifies the result set in the query.</value>
+      <value>A DevExpress.DataAccess.DataFederation.UnionType value that specifies the result set in the query.</value>
     </member>
     <member name="T:DevExpress.DataAccess.DataFederation.UnionNodeBuilder">
       <summary>
@@ -3837,12 +3822,6 @@
       </summary>
       <param name="theOperand">An <see cref="T:DevExpress.Data.Filtering.AggregateOperand"/> object.</param>
     </member>
-    <member name="M:DevExpress.DataAccess.ExpressionEditor.CriteriaOperatorValidator.Visit(DevExpress.Data.Filtering.BinaryOperator)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="theOperator"></param>
-    </member>
     <member name="M:DevExpress.DataAccess.ExpressionEditor.CriteriaOperatorValidator.Visit(DevExpress.Data.Filtering.FunctionOperator)">
       <summary>
         <para>Enables custom processing of the specified <see cref="T:DevExpress.Data.Filtering.FunctionOperator"/>.</para>
@@ -4152,10 +4131,10 @@
     </member>
     <member name="M:DevExpress.DataAccess.Json.JsonDataSource.LoadSchema(System.Type)">
       <summary>
-        <para>Creates the data source schema from the provided type.</para>
+        <para></para>
       </summary>
-      <param name="type">The type used to create the schema.</param>
-      <returns>The created data source schema.</returns>
+      <param name="type"></param>
+      <returns></returns>
     </member>
     <member name="P:DevExpress.DataAccess.Json.JsonDataSource.RootElement">
       <summary>
@@ -5279,11 +5258,6 @@
         <para>Default value: &quot;The specified relation is incomplete: &quot;{0}&quot;.&quot;</para>
       </summary>
     </member>
-    <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.IntegerDivisionValidationMessage">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.InvalidExpressionStringValidationException">
       <summary>
         <para>Default value: &quot;Cannot parse the following expression string: &quot;{0}&quot;.&quot;</para>
@@ -5893,7 +5867,6 @@
       <summary>
         <para>A base class that defines a node in a tree-like structure of objects.</para>
       </summary>
-      <typeparam name="T">The node value type.</typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Node`1.#ctor(`0)">
       <summary>
@@ -7082,7 +7055,6 @@
         <para>Gets an individual column value from the specified row.</para>
       </summary>
       <param name="row">An object implementing the <see cref="T:DevExpress.DataAccess.Sql.DataApi.IRow"/> interface that specifies the required row.</param>
-      <typeparam name="T"></typeparam>
       <returns>An individual column value.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.DataApi.IColumn.GetValue``1(System.Int32)">
@@ -7090,7 +7062,6 @@
         <para>Gets an individual column value by the specified row index.</para>
       </summary>
       <param name="rowIndex">A zero-based integer that specifies the row index.</param>
-      <typeparam name="T"></typeparam>
       <returns>An individual column value.</returns>
     </member>
     <member name="P:DevExpress.DataAccess.Sql.DataApi.IColumn.Item(System.Int32)">
@@ -7212,7 +7183,6 @@
         <para>Gets an individual row value for the specified column.</para>
       </summary>
       <param name="column">An object implementing the <see cref="T:DevExpress.DataAccess.Sql.DataApi.IColumn"/> interface that specifies the column.</param>
-      <typeparam name="T"></typeparam>
       <returns>An individual row value.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.DataApi.IRow.GetValue``1(System.Int32)">
@@ -7220,7 +7190,6 @@
         <para>Gets an individual row value by the column index.</para>
       </summary>
       <param name="columnIndex">A zero-based integer that specifies the column index.</param>
-      <typeparam name="T"></typeparam>
       <returns>An individual row value.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.DataApi.IRow.GetValue``1(System.String)">
@@ -7228,7 +7197,6 @@
         <para>Gets an individual row value by the column name.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value that specifies the column name.</param>
-      <typeparam name="T"></typeparam>
       <returns>An individual row value.</returns>
     </member>
     <member name="P:DevExpress.DataAccess.Sql.DataApi.IRow.Item(System.Int32)">
@@ -9682,7 +9650,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SqlDataConnection.CreateDataConnectionParameters">
       <summary>
-        <para>Creates an object that contains data connection parameters.</para>
+        <para>Creates a container storing the data connection parameters.</para>
       </summary>
       <returns>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant, specifying the connection parameters corresponding to the appropriate data provider.</returns>
     </member>
@@ -9791,7 +9759,7 @@
       <summary>
         <para>Specifies the name of a data connection in the App.config file.</para>
       </summary>
-      <value>A <see cref="T:System.String"/> value that specifies the data connection name in the App.config file.</value>
+      <value>A <see cref="T:System.String"/> value, specifying the data connection name in the App.config file.</value>
     </member>
     <member name="P:DevExpress.DataAccess.Sql.SqlDataSource.ConnectionOptions">
       <summary>
@@ -9803,7 +9771,7 @@
       <summary>
         <para>Specifies the data connection settings of the <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that specifies the connection parameters of the <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>.</value>
+      <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant, specifying the connection parameters of the <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>.</value>
     </member>
     <member name="E:DevExpress.DataAccess.Sql.SqlDataSource.CustomizeFilterExpression">
       <summary>
@@ -11163,16 +11131,6 @@
     <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.ConnectionProperties_KeyFileName">
       <summary>
         <para>Default value: &quot;Key file name:&quot;</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.ConnectionProperties_OracleProviderTypeODP">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.ConnectionProperties_OracleProviderTypeODPManaged">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.ConnectionProperties_Password">
@@ -12885,11 +12843,6 @@
         <para>For internal use.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.DataAccess.UI.Wizard.ConnectionParameterEdits.ProviderTypeOracle">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.DataAccess.UI.Wizard.ConnectionParameterEdits.ServerName">
       <summary>
         <para>For internal use.</para>
@@ -13200,6 +13153,11 @@
         <para>Identifies the MySQL data provider.</para>
       </summary>
     </member>
+    <member name="F:DevExpress.DataAccess.UI.Wizard.SqlDataProviders.NetCoreAll">
+      <summary>
+        <para></para>
+      </summary>
+    </member>
     <member name="F:DevExpress.DataAccess.UI.Wizard.SqlDataProviders.None">
       <summary>
         <para>No data providers are displayed in the Data Source wizard.</para>
@@ -13429,30 +13387,19 @@
     </member>
     <member name="T:DevExpress.DataAccess.Web.IDataSourceWizardDBSchemaProviderExFactory">
       <summary>
-        <para>Contains a method that creates a custom database schema provider (an object with the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface) for the Data Source Wizard.</para>
+        <para>If implemented by a class, supports automatic creation of the database schema provider (that is implemented by the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface).</para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IDataSourceWizardDBSchemaProviderExFactory.Create">
       <summary>
-        <para>Creates a new database schema provider.</para>
+        <para>Creates a new database schema provider, by using the SQL Data Source Wizard to obtain a custom database schema.</para>
       </summary>
-      <returns>A database schema provider that implements the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface.</returns>
+      <returns>A database schema provider, implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface.</returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.IDataSourceWizardJsonConnectionStorage">
       <summary>
-        <para>Defines a connection storage that receives, stores, and provides JSON connection strings on demand.</para>
+        <para></para>
       </summary>
-    </member>
-    <member name="T:DevExpress.DataAccess.Web.IDBSchemaProviderExFactory">
-      <summary>
-        <para>Contains a method that creates a custom database schema provider (an object with the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface) for the report&#39;s preview.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.DataAccess.Web.IDBSchemaProviderExFactory.Create">
-      <summary>
-        <para>Creates a new database schema provider.</para>
-      </summary>
-      <returns>A database schema provider that implements the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface.</returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.IJsonDataConnectionProviderFactory">
       <summary>
@@ -13560,7 +13507,6 @@
       <summary>
         <para>Provides a model that stores the information about a custom query on the Create a Query or Select a Stored Procedure (Multi-Query Version) page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Model.CheckItem`1.#ctor(`0,System.Boolean,System.Boolean)">
       <summary>
@@ -14663,7 +14609,6 @@
       <summary>
         <para>Provides a presenter to the Select a Data Connection page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>
@@ -14685,7 +14630,6 @@
       <summary>
         <para>Serves as the base for classes that provide presenters to the Data Source Wizard pages.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPageBase`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>
@@ -14736,7 +14680,6 @@
       <summary>
         <para>Provides a presenter to the Enter the Data Source Name page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView,DevExpress.DataAccess.Wizard.Services.IDataSourceNameCreationService)">
       <summary>
@@ -14784,7 +14727,6 @@
       <summary>
         <para>Provides a presenter to the Select the Data Source Type page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
       <summary>
@@ -14846,7 +14788,6 @@
       <summary>
         <para>Provides a presenter to the Select the Connection String page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Data.Entity.IConnectionStringsProvider,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService)">
       <summary>
@@ -14956,7 +14897,6 @@
       <summary>
         <para>Provides a presenter to the Select the Data Context page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.Data.Entity.IConnectionStringsProvider)">
       <summary>
@@ -15012,7 +14952,6 @@
       <summary>
         <para>Provides a presenter to the Select a Data Member page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext)">
       <summary>
@@ -15048,7 +14987,6 @@
       <summary>
         <para>Provides a presenter to the Select a Worksheet, Table or Named Range page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Excel.IExcelSchemaProvider,DevExpress.Data.Utils.IDataDirectoryPatchingService)">
       <summary>
@@ -15092,7 +15030,6 @@
       <summary>
         <para>Provides a presenter to the Specify Import Settings page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Excel.IExcelSchemaProvider,DevExpress.Data.Utils.IDataDirectoryPatchingService)">
       <summary>
@@ -15136,7 +15073,6 @@
       <summary>
         <para>Provides a presenter to the Select an Excel Workbook or CSV File page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseFilePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Data.Utils.IDataDirectoryPatchingService)">
       <summary>
@@ -15179,7 +15115,6 @@
       <summary>
         <para>Provides a presenter to the Select Data Fields page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseJsonSchemaPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseJsonSchemaPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext)">
       <summary>
@@ -15221,7 +15156,6 @@
       <summary>
         <para>Provides a presenter to the Specify JSON Data Location page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseJsonSourcePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseJsonSourcePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IJsonConnectionStorageService,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>
@@ -15277,7 +15211,6 @@
       <summary>
         <para>Provides a presenter to the Select an Assembly page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider)">
       <summary>
@@ -15320,7 +15253,6 @@
       <summary>
         <para>Provides a presenter to the Select the Data Binding Mode page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.#ctor(DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView,DevExpress.DataAccess.Wizard.OperationMode)">
       <summary>
@@ -15369,7 +15301,6 @@
       <summary>
         <para>Provides a presenter to the Select a Data Source Constructor page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView,DevExpress.DataAccess.Wizard.OperationMode)">
       <summary>
@@ -15410,7 +15341,6 @@
       <summary>
         <para>Provides a presenter to the Select a Data Source Member page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.OperationMode)">
       <summary>
@@ -15465,7 +15395,6 @@
       <summary>
         <para>Provides a presenter to the Select a Data Source Type page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.OperationMode)">
       <summary>
@@ -15514,7 +15443,6 @@
       <summary>
         <para>Provides a presenter to the Select a Data Connection page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseXPObjectSourceConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>
@@ -15530,7 +15458,6 @@
       <summary>
         <para>Provides a presenter to the Choose an Entity Type page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseXPObjectSourceEntityTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseXPObjectSourceEntityTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.Data.Entity.IConnectionStringsProvider)">
       <summary>
@@ -15573,7 +15500,6 @@
       <summary>
         <para>Provides a presenter to the Specify a Connection String page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService)">
       <summary>
@@ -15622,7 +15548,6 @@
       <summary>
         <para>Provides a presenter to the Configure Filters page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFFiltersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureEFFiltersPageView)">
       <summary>
@@ -15656,7 +15581,6 @@
       <summary>
         <para>Provides a presenter to the Bind to a Stored Procedure page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IParameterService)">
       <summary>
@@ -15704,7 +15628,6 @@
       <summary>
         <para>Provides a presenter to the Choose Columns page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureExcelFileColumnsPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Data.Utils.IDataDirectoryPatchingService)">
       <summary>
@@ -15734,19 +15657,18 @@
       <summary>
         <para>Provides a presenter to the Create a Query or Select a Stored Procedure page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Sql.IResultSchemaProvider,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1"/> class with specified settings.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1"/> class with the specified settings.</para>
       </summary>
-      <param name="view"></param>
-      <param name="context"></param>
-      <param name="options"></param>
-      <param name="dbSchemaProviderEx"></param>
-      <param name="resultSchemaProvider"></param>
-      <param name="parameterService"></param>
-      <param name="customQueryValidator"></param>
+      <param name="view">An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView"/> interface.</param>
+      <param name="context">An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface.</param>
+      <param name="options">One or more <see cref="T:DevExpress.DataAccess.Wizard.SqlWizardOptions"/> enumeration values.</param>
+      <param name="dbSchemaProviderEx">An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface.</param>
+      <param name="resultSchemaProvider">An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IResultSchemaProvider"/> interface.</param>
+      <param name="parameterService">An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface.</param>
+      <param name="customQueryValidator">An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface.</param>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
       <summary>
@@ -15804,7 +15726,6 @@
       <summary>
         <para>Provides a presenter to the Configure Query Parameters page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Sql.IResultSchemaProvider,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
       <summary>
@@ -15862,7 +15783,6 @@
       <summary>
         <para>Provides a presenter to the Specify a Connection String page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureXPObjectSourceConnectionPropertiesPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior,System.Collections.Generic.List{DevExpress.DataAccess.UI.Wizard.ProviderLookupItem})">
       <summary>
@@ -15879,7 +15799,6 @@
       <summary>
         <para>Provides a presenter to the Specify a Connection String page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior,System.Collections.Generic.List{DevExpress.DataAccess.UI.Wizard.ProviderLookupItem})">
       <summary>
@@ -15919,7 +15838,6 @@
       <summary>
         <para>Serves as the base for classes that provide presenters to the Data Source Wizard pages.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPageBase`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior,System.Collections.Generic.List{DevExpress.DataAccess.UI.Wizard.ProviderLookupItem})">
       <summary>
@@ -16054,7 +15972,6 @@
       <summary>
         <para>Provides a presenter to the Create a Query or Select a Stored Procedure page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.MultiQueryConfigurePage`1.#ctor(DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigurePageView,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Sql.IResultSchemaProvider,DevExpress.DataAccess.Wizard.Services.IParameterService)">
       <summary>
@@ -16079,7 +15996,6 @@
       <summary>
         <para>Provides a presenter to the Configure Query Parameters page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.MultiQueryConfigureParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IMultiQueryConfigureParametersPageView,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Sql.IResultSchemaProvider,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
       <summary>
@@ -16247,7 +16163,6 @@
       <summary>
         <para>Provides a presenter to the Specify the Constructor Parameters page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView,DevExpress.DataAccess.Wizard.Services.IParameterService)">
       <summary>
@@ -16284,7 +16199,6 @@
       <summary>
         <para>Provides a presenter to the Specify the Member Parameters page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IObjectMemberParametersPageView,DevExpress.DataAccess.Wizard.OperationMode)">
       <summary>
@@ -16340,7 +16254,6 @@
       <summary>
         <para>Provides a presenter to the Save the Connection String page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>
@@ -16380,7 +16293,6 @@
       <summary>
         <para>Serves as the base for classes that provide presenters to the Data Source Wizard pages.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPageBase`1.#ctor(DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>
@@ -16437,7 +16349,6 @@
       <summary>
         <para>Provides a presenter to the Save the Connection String page of the Data Source Wizard.</para>
       </summary>
-      <typeparam name="TModel"></typeparam>
     </member>
     <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveXPObjectSourceConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior)">
       <summary>

@@ -2167,12 +2167,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       </summary>
       <value>An <see cref="T:DevExpress.Export.Xl.XlDocumentTheme"/> enumeration member specifying the document theme.</value>
     </member>
-    <member name="P:DevExpress.Export.Xl.IXlDocument.View">
-      <summary>
-        <para>Provides access to the view options of the workbook.</para>
-      </summary>
-      <value>An object that contains view options.</value>
-    </member>
     <member name="T:DevExpress.Export.Xl.IXlDocumentOptions">
       <summary>
         <para>Contains options related to culture-specific settings of a workbook and document format specifications and limits.</para>
@@ -2914,7 +2908,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.Export.Xl.IXlSheetSelection.SelectedRanges">
       <summary>
-        <para>Returns cell ranges selected in a worksheet.</para>
+        <para>Gets or sets cell ranges selected in a worksheet.</para>
       </summary>
       <value>A list of selected ranges.</value>
     </member>
@@ -4518,13 +4512,13 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.Export.Xl.XlCondFmtCustomIcon.IconSetType">
       <summary>
-        <para>Returns the icon set to which the specified icon belongs.</para>
+        <para>Gets or sets the icon set to which the specified icon belongs.</para>
       </summary>
       <value>A <see cref="T:DevExpress.Export.Xl.XlCondFmtIconSetType"/> object that defines the built-in icon sets.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlCondFmtCustomIcon.Id">
       <summary>
-        <para>Returns the index of the particular icon in the icon set.</para>
+        <para>Gets or sets the index of the particular icon in the icon set.</para>
       </summary>
       <value>An integer that is the desired icon&#39;s position within the icon set.</value>
     </member>
@@ -4990,7 +4984,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.Export.Xl.XlCondFmtRuleIconSet.IsCustom">
       <summary>
-        <para>Indicates whether the custom icon set is specified.</para>
+        <para>Gets or sets whether the custom icon set is specified.</para>
       </summary>
       <value>true to use the custom icon style; otherwise, false. The default value is false.</value>
     </member>
@@ -5808,7 +5802,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.Export.Xl.XlDateGroupItem.Value">
       <summary>
-        <para>Returns the base date or time value used to construct the filter criteria.</para>
+        <para>Gets or sets the base date or time value used to construct the filter criteria.</para>
       </summary>
       <value>A <see cref="T:System.DateTime"/> object.</value>
     </member>
@@ -6053,82 +6047,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Specifies the Office 2013 document theme.</para>
       </summary>
-    </member>
-    <member name="T:DevExpress.Export.Xl.XlDocumentView">
-      <summary>
-        <para>Contains display options for the workbook.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Export.Xl.XlDocumentView.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Export.Xl.XlDocumentView"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.FirstVisibleTabIndex">
-      <summary>
-        <para>Gets or sets the index of the first visible worksheet.</para>
-      </summary>
-      <value>The index of the first visible worksheet. The default is 0</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.GroupDatesInAutoFilterMenu">
-      <summary>
-        <para>Specifies whether to group DateTime values in the AutoFilter menu.</para>
-      </summary>
-      <value>true to group dates in AutoFilter menu; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.SelectedTabIndex">
-      <summary>
-        <para>Gets or sets the index of the active worksheet.</para>
-      </summary>
-      <value>The active worksheet&#39;s index. The default is 0.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.ShowHorizontalScrollBar">
-      <summary>
-        <para>Gets or sets whether to show a horizontal scrollbar.</para>
-      </summary>
-      <value>true to show the horizontal scrollbar; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.ShowSheetTabs">
-      <summary>
-        <para>Gets or sets whether to show worksheet tabs.</para>
-      </summary>
-      <value>true to show worksheet tabs; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.ShowVerticalScrollBar">
-      <summary>
-        <para>Gets or sets whether to show a vertical scrollbar.</para>
-      </summary>
-      <value>true to show the vertical scrollbar; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.TabRatio">
-      <summary>
-        <para>Specifies the ratio between the sheet tabs selector and horizontal scrollbar.</para>
-      </summary>
-      <value>The ratio value in percent. The default is 60.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.WindowHeight">
-      <summary>
-        <para>Specifies the height of the workbook window. The value is measured in twips.</para>
-      </summary>
-      <value>The workbook window&#39;s height in twips.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.WindowWidth">
-      <summary>
-        <para>Specifies the width of the workbook window. The value is measured in twips.</para>
-      </summary>
-      <value>The workbook window&#39;s width in twips.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.WindowX">
-      <summary>
-        <para>Specifies the X coordinate for the upper left corner of the workbook window. The value is measured in twips.</para>
-      </summary>
-      <value>The upper left corner&#39;s X coordinate in twips.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlDocumentView.WindowY">
-      <summary>
-        <para>Specifies the Y coordinate for the upper left corner of the workbook window. The value is measured in twips.</para>
-      </summary>
-      <value>The upper left corner&#39;s Y coordinate in twips.</value>
     </member>
     <member name="T:DevExpress.Export.Xl.XlDynamicFilter">
       <summary>
@@ -6898,7 +6816,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
       <param name="other"></param>
-      <typeparam name="T"></typeparam>
       <returns></returns>
     </member>
     <member name="P:DevExpress.Export.Xl.XlFormatting.Fill">
@@ -12683,7 +12600,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Registers a custom parameter type.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="N:DevExpress.XtraExport.Csv">
       <summary>
@@ -14221,12 +14137,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       </summary>
       <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.QRCodeErrorCorrectionLevel"/> enumeration value.</value>
     </member>
-    <member name="P:DevExpress.XtraPrinting.BarCode.QRCodeGenerator.IncludeQuietZone">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraPrinting.BarCode.QRCodeGenerator.Logo">
       <summary>
         <para>Specifies the image that overlays the QR code.</para>
@@ -14935,7 +14845,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         <para></para>
       </summary>
       <param name="prop"></param>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPrinting.Brick.SafeGetAttachedValue(System.String,System.Object)">
       <summary>
@@ -14951,7 +14860,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       </summary>
       <param name="prop"></param>
       <param name="defaultValue"></param>
-      <typeparam name="T"></typeparam>
       <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPrinting.Brick.SafeGetAttachedValue``1(System.String)">
@@ -14959,7 +14867,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         <para>For internal use.</para>
       </summary>
       <param name="propertyName">A <see cref="T:System.String"/> value.</param>
-      <typeparam name="T"></typeparam>
       <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPrinting.Brick.Separable">
@@ -14994,7 +14901,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <param name="prop"></param>
       <param name="value"></param>
       <param name="defaultValue"></param>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPrinting.Brick.Target">
       <summary>
@@ -15008,7 +14914,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       </summary>
       <param name="prop"></param>
       <param name="value"></param>
-      <typeparam name="T"></typeparam>
       <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPrinting.Brick.TryGetAttachedValue(System.String,System.Object@)">
@@ -15025,7 +14930,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       </summary>
       <param name="prop"></param>
       <param name="value"></param>
-      <typeparam name="T"></typeparam>
       <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPrinting.Brick.Url">
@@ -15695,13 +15599,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para></para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraPrinting.Caching.CachedReportSourceBase.CompleteWorkingAsync(System.Boolean)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="cancel"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPrinting.Caching.CachedReportSourceBase.CreateDocument">
       <summary>
@@ -17059,7 +16956,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Returns the current value of an editing field.</para>
       </summary>
-      <typeparam name="T"></typeparam>
       <returns>A &lt;T&gt; object that specifies the current field value.</returns>
     </member>
     <member name="M:DevExpress.XtraPrinting.EditingField.GetPage">
@@ -17947,9 +17843,9 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.XtraPrinting.ExportOptions.Email">
       <summary>
-        <para>Gets the settings used to specify exporting parameters when a document is sent by e-mail in Print Preview.</para>
+        <para>Gets the settings used to specify exporting parameters when a document is exported and sent via e-mail from the Print Preview.</para>
       </summary>
-      <value>Email export options.</value>
+      <value>A <see cref="T:DevExpress.XtraPrinting.EmailOptions"/> object which contains e-mail settings.</value>
     </member>
     <member name="M:DevExpress.XtraPrinting.ExportOptions.GetOptionVisibility(DevExpress.XtraPrinting.ExportOptionKind)">
       <summary>
@@ -21017,9 +20913,9 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ExportEditingFieldsToAcroForms">
       <summary>
-        <para>Specifies whether to convert editable fields to AcroForms fields on PDF export.</para>
+        <para>Specifies whether to convert a report&#39;s editing fields to AcroForms on PDF export.</para>
       </summary>
-      <value>true, to export editable fields to PDF AcroForms fields; otherwise, false.</value>
+      <value>true, to export report editing fields to PDF AcroForms; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ImageQuality">
       <summary>
@@ -21575,13 +21471,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         <para>Clears the current document.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraPrinting.PrintingSystemBase.CompleteWorkingAsync(System.Boolean)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="cancel"></param>
-      <returns></returns>
-    </member>
     <member name="P:DevExpress.XtraPrinting.PrintingSystemBase.ContinuousPageNumbering">
       <summary>
         <para>Gets or sets a value indicating whether pages should be renumbered following reordering in the <see cref="P:DevExpress.XtraPrinting.PrintingSystemBase.Pages"/> collection.</para>
@@ -21608,7 +21497,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.XtraPrinting.PrintingSystemBase.Culture">
       <summary>
-        <para>Specifies the culture used for date and time values in the <see cref="T:DevExpress.XtraReports.UI.XRPageInfo"/> control.</para>
+        <para>Specifies the culture that is used to display date-time values by the <see cref="T:DevExpress.XtraReports.UI.XRPageInfo"/> control.</para>
       </summary>
       <value>A <see cref="T:System.Globalization.CultureInfo"/> object.</value>
     </member>
@@ -24321,12 +24210,6 @@ The DefaultBoolean.Default value is equivalent to True.</value>
       </summary>
       <value></value>
     </member>
-    <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.ExportInplaceEditorGlyphs">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="E:DevExpress.XtraPrinting.XlsExportOptionsEx.ExportProgress">
       <summary>
         <para>Fires repeatedly while the data is being exported.Only available in data-aware export mode.</para>
@@ -24673,12 +24556,6 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.ExportHyperlinks">
       <summary>
         <para>This property is not supported by the <see cref="T:DevExpress.XtraPrinting.XlsxExportOptionsEx"/> class. Use the <see cref="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.AllowHyperLinks"/> property instead.Only available in data-aware export mode.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.ExportInplaceEditorGlyphs">
-      <summary>
-        <para></para>
       </summary>
       <value></value>
     </member>
@@ -25433,7 +25310,6 @@ The DefaultBoolean.Default value is equivalent to True.</value>
       <summary>
         <para>The base class for the <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> collection.</para>
       </summary>
-      <typeparam name="T">A descendant of the <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> class.</typeparam>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1.#ctor">
       <summary>

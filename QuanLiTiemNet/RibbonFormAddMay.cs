@@ -157,5 +157,10 @@ namespace QuanLiTiemNet
             deleDataRow(sender, e);
             bbiClose_ItemClick(sender, e);
         }
+
+        private void memoEditThongSoMay_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

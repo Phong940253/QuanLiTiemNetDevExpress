@@ -129,7 +129,7 @@ namespace QuanLiTiemNet
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(761, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(761, 158);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiSave
@@ -267,11 +267,11 @@ namespace QuanLiTiemNet
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Controls.Add(this.comboBoxEditMaPhong);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Controls.Add(this.comboBoxEditMaTaiKhoan);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Location = new System.Drawing.Point(0, 143);
+            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Location = new System.Drawing.Point(0, 158);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Name = "RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout";
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 91, 650, 400);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Root = this.layoutControlGroup2;
-            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Size = new System.Drawing.Size(761, 217);
+            this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.Size = new System.Drawing.Size(761, 202);
             this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout.TabIndex = 2;
             // 
             // memoEditThongSoMay
@@ -282,6 +282,7 @@ namespace QuanLiTiemNet
             this.memoEditThongSoMay.Size = new System.Drawing.Size(260, 190);
             this.memoEditThongSoMay.StyleController = this.RibbonFormAddNguoiDungNhanVienlayoutControl1ConvertedLayout;
             this.memoEditThongSoMay.TabIndex = 12;
+            this.memoEditThongSoMay.EditValueChanged += new System.EventHandler(this.memoEditThongSoMay_EditValueChanged);
             // 
             // timeSpanEditThoiGianSuDung
             // 

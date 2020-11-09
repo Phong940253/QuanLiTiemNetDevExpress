@@ -38,9 +38,9 @@
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.AutoComplete">
       <summary>
-        <para>Gets or sets whether the editor predicts the value that the user is typing and automatically applies that value. The property is in effect when text editing is enabled in the edit box (TextEditStyle is set to Standard).</para>
+        <para>Gets or sets whether the automatic completion feature is enabled.</para>
       </summary>
-      <value>true, if the editor predicts the value that the user is typing and automatically applies that value; otherwise, false.</value>
+      <value>true, if the automatic completion feature is enabled; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.AutoExpandAllNodes">
       <summary>
@@ -125,11 +125,6 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.RegisterTreeListLookUpEdit">
       <summary>
         <para>Registers the <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/> control.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.ResetEvents">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.TreeList">
@@ -1594,12 +1589,6 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraTreeList.Columns.TreeListOptionsColumn"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsColumn.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraTreeList.Columns.TreeListOptionsColumn"/> class with specified settings.</para>
-      </summary>
-      <param name="column"></param>
-    </member>
     <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumn.AllowEdit">
       <summary>
         <para>Gets or sets whether users can invoke editors for the column&#39;s cells.</para>
@@ -2825,31 +2814,6 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
         <para>Indicates that the column contains string values (the <see cref="T:System.String"/> type).</para>
       </summary>
     </member>
-    <member name="T:DevExpress.XtraTreeList.EditFormColumnCaptionLocation">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.Default">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.Near">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.None">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.Top">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraTreeList.EditFormHiddenEventArgs">
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraTreeList.TreeList.EditFormHidden"/> event.</para>
@@ -2966,7 +2930,7 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
     </member>
     <member name="T:DevExpress.XtraTreeList.EditFormUserControl">
       <summary>
-        <para>Represents a custom Edit Form in the Tree List.</para>
+        <para>Represents a custom Edit Form for the Tree List control.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.EditFormUserControl.#ctor">
@@ -4148,11 +4112,6 @@ By using <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> class method
     <member name="M:DevExpress.XtraTreeList.Nodes.TreeListNode.Collapse">
       <summary>
         <para>Collapses this expanded node.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.Nodes.TreeListNode.CollapseAll">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraTreeList.Nodes.TreeListNode.Data">
@@ -5613,13 +5572,13 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.ClipboardDataProvider">
       <summary>
-        <para>Gets an object that provides data for the clipboard in various formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</para>
+        <para>Gets an object that provides data for the clipboard in a variety of formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</para>
       </summary>
-      <value>An object that provides data for the clipboard in various formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</value>
+      <value>An object that provides data for the clipboard in a variety of formats (plain text, plain unicode text, rich text, CSV, BIFF8, HTML).</value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ClipboardNodeCopying">
       <summary>
-        <para>Fires before a data row, a group row, column headers, or band headers are copied to the clipboard. Allows you to apply a format, change copied data, or skip a data row or header.</para>
+        <para>Fires before a data row, group row, column headers, or band headers are copied to the clipboard. Allows you to apply a format, change copied data, or skip a data row or header.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ClipboardNodePasting">
@@ -6610,7 +6569,7 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetCustomSummaryValue">
       <summary>
-        <para>Allows you to specify custom summary values when the control is displayed on-screen.</para>
+        <para>Enables you to perform custom summary value calculations.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetDataRecordByNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
@@ -6705,7 +6664,7 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetNodeDisplayValue">
       <summary>
-        <para>Allows you to display custom values within cells. This event is obsolete. Use the <see cref="E:DevExpress.XtraTreeList.TreeList.CustomColumnDisplayText"/> event instead.</para>
+        <para>Provides the ability to display custom values within cells.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetNodeIndex(DevExpress.XtraTreeList.Nodes.TreeListNode)">
@@ -6728,7 +6687,7 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetPrintCustomSummaryValue">
       <summary>
-        <para>Allows you to specify custom summary values when the control is printed.</para>
+        <para>Permits manual calculations of summary values for the printed version of the Tree List control.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetPrintPreviewText">
@@ -6924,13 +6883,13 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.IndicatorWidth">
       <summary>
-        <para>Gets or sets the indicator panel&#39;s width.</para>
+        <para>Gets or sets the node indicator&#39;s width.</para>
       </summary>
-      <value>An integer value that specifies the width of the node indicator panel in pixels.</value>
+      <value>An integer value specifying the width of the node indicator in pixels.</value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.InitNewRow">
       <summary>
-        <para>Fires when a new node is about to be created in the New Item Row and allows you to initialize column values.</para>
+        <para>Fires when a new node is about to be created in the New-Item Row and allows you to initialize column values.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.InternalGetService(System.Type)">
@@ -7067,15 +7026,15 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.IsPrinting">
       <summary>
-        <para>Gets whether the control is sending data to the print/export engine.</para>
+        <para>Gets whether the <see cref="T:DevExpress.XtraTreeList.TreeList"/> control is sending information to the print/export engine.</para>
       </summary>
-      <value>true, if the control is sending data to the print/export engine; otherwise, false.</value>
+      <value>true, if the <see cref="T:DevExpress.XtraTreeList.TreeList"/> control is sending information to the print/export engine; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.IsPrintingAvailable">
       <summary>
-        <para>Gets whether the control can be printed or exported.</para>
+        <para>Indicates whether the Tree List can be printed or exported.</para>
       </summary>
-      <value>true, if the control can be printed or exported; otherwise, false.</value>
+      <value>true if the Tree List can be printed or exported; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.IsRootNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -7386,9 +7345,9 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.OptionsPrint">
       <summary>
-        <para>Provides access to options that specify how the control is printed and exported.</para>
+        <para>Provides access to the Tree List&#39;s options that affect how the control is printed and exported.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraTreeList.TreeListOptionsPrint"/> object that contains the print and export options.</value>
+      <value>A <see cref="T:DevExpress.XtraTreeList.TreeListOptionsPrint"/> object which contains the print and export options.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.OptionsScrollAnnotations">
       <summary>
@@ -7471,12 +7430,12 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.Print">
       <summary>
-        <para>Prints the data displayed in the control.</para>
+        <para>Prints the Tree List control.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.PrintDialog">
       <summary>
-        <para>Opens the Print dialog that allows a user to print the data displayed in the control.</para>
+        <para>Displays the standard Print dialog to print the data displayed in the TreeList control.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.PrintExportProgress">
@@ -7486,7 +7445,7 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.QueryCustomFunctions">
       <summary>
-        <para>Allows you to add custom-function-based filters (for example, &#39;discount is more than 15%&#39;) to Excel-style pop-up filter menus and/or the filter editor.</para>
+        <para>Allows you to add custom function based filters (for example, &#39;discount is more than 15%&#39;) to Excel-style pop-up filter menus and/or the filter editor.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.Refresh">
@@ -7973,12 +7932,12 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowPrintPreview">
       <summary>
-        <para>Opens the Print Preview window, which displays commands in bars.</para>
+        <para>Opens the Print Preview window with a Bars UI.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowRibbonPrintPreview">
       <summary>
-        <para>Opens the Print Preview window, which displays commands in a ribbon.</para>
+        <para>Displays the Print Preview window with a Ribbon UI.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ShowTreeListMenu">
@@ -8901,22 +8860,22 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraTreeList.TreeListNewItemRowPosition">
       <summary>
-        <para>Enumerates values that specify whether the New Item Row is displayed at the top or bottom of the list.</para>
+        <para>Enumerates values that specify whether the New-Item Row is displayed at the top or bottom of the list.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraTreeList.TreeListNewItemRowPosition.Bottom">
       <summary>
-        <para>The New Item Row is displayed at the bottom of the list.</para>
+        <para>The New-Item Row is displayed at the bottom of the list.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraTreeList.TreeListNewItemRowPosition.None">
       <summary>
-        <para>The New Item Row is not displayed.</para>
+        <para>The New-Item Row is not displayed.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraTreeList.TreeListNewItemRowPosition.Top">
       <summary>
-        <para>The New Item Row is displayed at the top of the list.</para>
+        <para>The New-Item Row is displayed at the top of the list.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraTreeList.TreeListOptionsBehavior">
