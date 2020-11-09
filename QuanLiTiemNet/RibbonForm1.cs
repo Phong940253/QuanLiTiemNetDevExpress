@@ -95,23 +95,9 @@ namespace QuanLiTiemNet
             updateRecord(ref gridView1);
         }
 
-        private void navigationPane1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void officeNavigationBar1_Click(object sender, EventArgs e)
         {
-            if (officeNavigationBar1.SelectedItem.Text == "Nhân viên")
-            {
-
-            }
-            else if (officeNavigationBar1.SelectedItem.Text == "Người dùng")
-            {
-                barButtonItemAddNguoiDung.Links[0].Visible = true;
-                barButtonItemAddNhanVien.Links[0].Visible = false;
-                barButtonItemAddTaiKhoan.Links[0].Visible = false;
-            }
+            lockBarButton(1);
         }
 
         private void officeNavigationBar1_ItemClick(object sender, DevExpress.XtraBars.Navigation.NavigationBarItemEventArgs e)
@@ -134,8 +120,20 @@ namespace QuanLiTiemNet
                     lockBarButton(4);
                     updateRecord(ref gridView4);
                     break;
+                case "navigationPage5":
+                    lockBarButton(5);
+                    updateRecord(ref gridView1);
+                    break;
                 case "navigationPage6":
                     lockBarButton(6);
+                    updateRecord(ref gridView6);
+                    break;
+                case "navigationPage7":
+                    lockBarButton(7);
+                    updateRecord(ref gridView6);
+                    break;
+                case "navigationPage8":
+                    lockBarButton(8);
                     updateRecord(ref gridView6);
                     break;
                 default:
@@ -144,7 +142,7 @@ namespace QuanLiTiemNet
         }
         private void lockBarButton(int index)
         {
-            BarButtonItem[] barButtonItems = { barButtonItemAddNhanVien, barButtonItemAddNguoiDung, barButtonItemAddTaiKhoan, barButtonItemAddMay, barButtonItemAddThietBi, barButtonItemAddPhong };
+            BarButtonItem[] barButtonItems = { barButtonItemAddNhanVien, barButtonItemAddNguoiDung, barButtonItemAddTaiKhoan, barButtonItemAddMay, barButtonItemAddThietBi, barButtonItemAddPhong, barButtonItemAddGiaoDich, barButtonItemAddKhuyenMai };
             int i = 1;
             foreach (BarButtonItem BarButton in barButtonItems)
             {
