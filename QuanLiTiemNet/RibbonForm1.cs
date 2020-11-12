@@ -46,7 +46,7 @@ namespace QuanLiTiemNet
             else if (navigationFrame1.SelectedPage == navigationPage4)
                 deleteRowGridView(ref gridView4);
             else if (navigationFrame1.SelectedPage == navigationPage5)
-                deleteRowGridView(ref gridView3);
+                deleteRowGridView(ref gridView5);
             else if (navigationFrame1.SelectedPage == navigationPage6)
                 deleteRowGridView(ref gridView6);
             else if (navigationFrame1.SelectedPage == navigationPage7)
@@ -87,6 +87,7 @@ namespace QuanLiTiemNet
             loadTableNguoiDung();
             loadTableTaiKhoan();
             loadTableMay();
+            loadTableThietBi();
             loadTablePhong();
             setProfile(0);
             setTaiKhoan(0);
@@ -222,7 +223,11 @@ namespace QuanLiTiemNet
             gridControl4.DataSource = quanLiTiemNet;
             gridControl4.DataMember = "MAY";
         }
-
+        private void loadTableThietBi()
+        {
+            gridControl5.DataSource = quanLiTiemNet;
+            gridControl5.DataMember = "THIETBI";
+        }
         private void loadTablePhong()
         {
             gridControl6.DataSource = quanLiTiemNet;
@@ -276,7 +281,17 @@ namespace QuanLiTiemNet
             {
             }
         }
-
+        public void addDataSetThietBi(DataRow dataRow)
+        {
+            try
+            {
+                quanLiTiemNet.Tables[4].Rows.Add(dataRow);
+                SaveDatabase(ref gridView5);
+            }
+            catch (ArgumentException ex)
+            {
+            }
+        }
         public void addDataSetPhong(DataRow dataRow)
         {
             try
@@ -307,6 +322,8 @@ namespace QuanLiTiemNet
                     sqlDataTaiKhoan.Update(quanLiTiemNet, "TAIKHOAN");
                 else if (gridView == gridView4)
                     sqlDataMay.Update(quanLiTiemNet, "MAY");
+                else if (gridView == gridView5)
+                    sqlDataThietBi.Update(quanLiTiemNet, "THIETBI");
                 else if (gridView == gridView6)
                     sqlDataPhong.Update(quanLiTiemNet, "PHONG");
                 updateRecord(ref gridView);
@@ -348,11 +365,15 @@ namespace QuanLiTiemNet
             }
             else if (navigationFrame1.SelectedPage == navigationPage5)
             {
-                editDataSet(gridView3);
+                editDataSet(gridView5);
             }
             else if (navigationFrame1.SelectedPage == navigationPage6)
             {
                 editDataSet(gridView6);
+            }
+            else if (navigationFrame1.SelectedPage == navigationPage7)
+            {
+                editDataSet(gridView3);
             }
             else if (navigationFrame1.SelectedPage == navigationPage7)
             {
@@ -389,6 +410,13 @@ namespace QuanLiTiemNet
                 int indexMaMay = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAMAY"];
                 RibbonFormAddMay editMay = new RibbonFormAddMay(true, addDataSetMay, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaMay, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editMay.Show();
+                SaveDatabase(ref gridView);
+            }
+            else if (gridView == gridView5)
+            {
+                int indeThietBi = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MATHIETBI"];
+                RibbonFormAddThietBi editThietBi = new RibbonFormAddThietBi(true, addDataSetThietBi, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indeThietBi, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+                editThietBi.Show();
                 SaveDatabase(ref gridView);
             }
             else if (gridView == gridView6)
@@ -439,6 +467,13 @@ namespace QuanLiTiemNet
             int indexMaMay = GetNewCode(3, "MAMAY");
             RibbonFormAddMay addMay = new RibbonFormAddMay(false, addDataSetMay, editDataSet, quanLiTiemNet.Tables[3].NewRow(), ref gridView4, indexMaMay, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addMay.Show();
+        }
+
+        private void barButtonItemAddThietBi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int indexMaThietBi = GetNewCode(4, "MATHIETBI");
+            RibbonFormAddThietBi addThietBi = new RibbonFormAddThietBi(false, addDataSetThietBi, editDataSet, quanLiTiemNet.Tables[4].NewRow(), ref gridView5, indexMaThietBi, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+            addThietBi.Show();
         }
         private void barButtonItemAddPhong_ItemClick(object sender, ItemClickEventArgs e)
         {

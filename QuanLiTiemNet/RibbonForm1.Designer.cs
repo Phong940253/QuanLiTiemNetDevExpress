@@ -189,6 +189,16 @@
             this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.navigationPage5 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.tablePanel6 = new DevExpress.Utils.Layout.TablePanel();
+            this.gridControl5 = new DevExpress.XtraGrid.GridControl();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENTHIETBI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.navigationPage6 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tablePanel5 = new DevExpress.Utils.Layout.TablePanel();
             this.gridControl6 = new DevExpress.XtraGrid.GridControl();
@@ -203,6 +213,7 @@
             this.navigationPage7 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationPage8 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
@@ -304,6 +315,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            this.navigationPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel6)).BeginInit();
+            this.tablePanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             this.navigationPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel5)).BeginInit();
             this.tablePanel5.SuspendLayout();
@@ -472,6 +490,7 @@
             this.barButtonItemAddThietBi.Id = 23;
             this.barButtonItemAddThietBi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddThietBi.ImageOptions.SvgImage")));
             this.barButtonItemAddThietBi.Name = "barButtonItemAddThietBi";
+            this.barButtonItemAddThietBi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddThietBi_ItemClick);
             // 
             // barButtonItemAddPhong
             // 
@@ -2019,8 +2038,131 @@
             // navigationPage5
             // 
             this.navigationPage5.Caption = "Thiết bị";
+            this.navigationPage5.Controls.Add(this.tablePanel6);
             this.navigationPage5.Name = "navigationPage5";
             this.navigationPage5.Size = new System.Drawing.Size(1109, 469);
+            // 
+            // tablePanel6
+            // 
+            this.tablePanel6.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 60F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30F)});
+            this.tablePanel6.Controls.Add(this.gridControl5);
+            this.tablePanel6.Controls.Add(this.layoutControl5);
+            this.tablePanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel6.Location = new System.Drawing.Point(0, 0);
+            this.tablePanel6.Name = "tablePanel6";
+            this.tablePanel6.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
+            this.tablePanel6.Size = new System.Drawing.Size(1109, 469);
+            this.tablePanel6.TabIndex = 3;
+            // 
+            // gridControl5
+            // 
+            this.tablePanel6.SetColumn(this.gridControl5, 1);
+            this.gridControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl5.Location = new System.Drawing.Point(121, 10);
+            this.gridControl5.MainView = this.gridView5;
+            this.gridControl5.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.gridControl5.MenuManager = this.ribbon;
+            this.gridControl5.Name = "gridControl5";
+            this.tablePanel6.SetRow(this.gridControl5, 0);
+            this.gridControl5.Size = new System.Drawing.Size(650, 449);
+            this.gridControl5.TabIndex = 2;
+            this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
+            // 
+            // gridView5
+            // 
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn24,
+            this.gridColumn26,
+            this.gridColumn27,
+            this.gridColumn28,
+            this.TENTHIETBI,
+            this.gridColumn25});
+            this.gridView5.GridControl = this.gridControl5;
+            this.gridView5.GroupCount = 1;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsView.ShowIndicator = false;
+            this.gridView5.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn25, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "Mã thiết bị";
+            this.gridColumn24.FieldName = "MATHIETBI";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.OptionsColumn.AllowFocus = false;
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 0;
+            this.gridColumn24.Width = 76;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "Trạng thái";
+            this.gridColumn26.FieldName = "TRANGTHAI";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.OptionsColumn.AllowFocus = false;
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 2;
+            this.gridColumn26.Width = 136;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "Giá tiền";
+            this.gridColumn27.DisplayFormat.FormatString = "#,##0 đ";
+            this.gridColumn27.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn27.FieldName = "GIATIEN";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.OptionsColumn.AllowFocus = false;
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 3;
+            this.gridColumn27.Width = 106;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.Caption = "Người tạo";
+            this.gridColumn28.FieldName = "NGUOITAO";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.OptionsColumn.AllowFocus = false;
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 4;
+            this.gridColumn28.Width = 102;
+            // 
+            // TENTHIETBI
+            // 
+            this.TENTHIETBI.Caption = "Tên thiết bị";
+            this.TENTHIETBI.Name = "TENTHIETBI";
+            this.TENTHIETBI.OptionsColumn.AllowFocus = false;
+            this.TENTHIETBI.Visible = true;
+            this.TENTHIETBI.VisibleIndex = 1;
+            this.TENTHIETBI.Width = 130;
+            // 
+            // layoutControl5
+            // 
+            this.tablePanel6.SetColumn(this.layoutControl5, 2);
+            this.layoutControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl5.Location = new System.Drawing.Point(781, 10);
+            this.layoutControl5.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.layoutControl5.Name = "layoutControl5";
+            this.layoutControl5.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
+            this.layoutControl5.Root = this.layoutControlGroup4;
+            this.tablePanel6.SetRow(this.layoutControl5, 0);
+            this.layoutControl5.Size = new System.Drawing.Size(318, 449);
+            this.layoutControl5.TabIndex = 1;
+            this.layoutControl5.Text = "layoutControl5";
+            // 
+            // layoutControlGroup4
+            // 
+            this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup4.GroupBordersVisible = false;
+            this.layoutControlGroup4.Name = "Root";
+            this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(318, 449);
+            this.layoutControlGroup4.TextVisible = false;
             // 
             // navigationPage6
             // 
@@ -2166,6 +2308,14 @@
             this.imageList1.ImageSize = new System.Drawing.Size(32, 40);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "Loại thiết bị";
+            this.gridColumn25.FieldName = "LOAI";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 5;
+            // 
             // RibbonForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2283,6 +2433,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            this.navigationPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel6)).EndInit();
+            this.tablePanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             this.navigationPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel5)).EndInit();
             this.tablePanel5.ResumeLayout(false);
@@ -2466,5 +2623,16 @@
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator3;
+        private DevExpress.Utils.Layout.TablePanel tablePanel6;
+        private DevExpress.XtraGrid.GridControl gridControl5;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn TENTHIETBI;
+        private DevExpress.XtraLayout.LayoutControl layoutControl5;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
     }
 }
