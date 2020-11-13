@@ -131,7 +131,7 @@ namespace QuanLiTiemNet
                     break;
                 case "navigationPage7":
                     lockBarButton(7);
-                    updateRecord(ref gridView6);
+                    updateRecord(ref gridView7);
                     break;
                 case "navigationPage8":
                     lockBarButton(8);
@@ -233,6 +233,11 @@ namespace QuanLiTiemNet
             gridControl6.DataSource = quanLiTiemNet;
             gridControl6.DataMember = "PHONG";
         }
+        private void loadTableGiaoDich()
+        {
+            gridControl6.DataSource = quanLiTiemNet;
+            gridControl6.DataMember = "GIAODICH";
+        }
 
         public void addDataSetNhanVien(DataRow dataRow)
         {
@@ -303,7 +308,17 @@ namespace QuanLiTiemNet
             {
             }
         }
-
+        public void addDataSetGiaoDichGiaoDich(DataRow dataRow)
+        {
+            try
+            {
+                quanLiTiemNet.Tables[66].Rows.Add(dataRow);
+                SaveDatabase(ref gridView3);
+            }
+            catch (ArgumentException ex)
+            {
+            }
+        }
 
         public void editDataSet(DataRow dataRow, ref GridView gridView)
         {
@@ -326,6 +341,8 @@ namespace QuanLiTiemNet
                     sqlDataThietBi.Update(quanLiTiemNet, "THIETBI");
                 else if (gridView == gridView6)
                     sqlDataPhong.Update(quanLiTiemNet, "PHONG");
+                else if (gridView == gridView7)
+                    sqlDataGiaoDich.Update(quanLiTiemNet, "GIAODICH");
                 updateRecord(ref gridView);
             }
             catch (Exception ex)
@@ -373,7 +390,7 @@ namespace QuanLiTiemNet
             }
             else if (navigationFrame1.SelectedPage == navigationPage7)
             {
-                editDataSet(gridView3);
+                editDataSet(gridView7);
             }
             else if (navigationFrame1.SelectedPage == navigationPage7)
             {
@@ -426,7 +443,13 @@ namespace QuanLiTiemNet
                 editPhong.Show();
                 SaveDatabase(ref gridView);
             }
-
+            else if (gridView == gridView7)
+            {
+                int indexMaPhong = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAPHONG"];
+                RibbonFormAddPhong editPhong = new RibbonFormAddPhong(true, addDataSetPhong, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+                editPhong.Show();
+                SaveDatabase(ref gridView);
+            }
         }
 
         private void setChucVuNhanVien(string chucVu)

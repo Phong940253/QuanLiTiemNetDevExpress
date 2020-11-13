@@ -104,6 +104,12 @@
     <Compile Include="RibbonFormAddPhong.Designer.cs">
       <DependentUpon>RibbonFormAddPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="RibbonFormAddGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonFormAddGiaoDich.Designer.cs">
+      <DependentUpon>RibbonFormAddGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="RibbonFormAddThietBi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonFormAddPhong.resx">
       <DependentUpon>RibbonFormAddPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonFormAddGiaoDich.resx">
+      <DependentUpon>RibbonFormAddGiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonFormAddThietBi.resx">
       <DependentUpon>RibbonFormAddThietBi.cs</DependentUpon>
