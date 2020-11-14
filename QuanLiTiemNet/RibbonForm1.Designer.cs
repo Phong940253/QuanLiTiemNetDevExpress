@@ -212,8 +212,6 @@
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.navigationPage7 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.navigationPage8 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tablePanel7 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
             this.spinEdit3 = new DevExpress.XtraEditors.SpinEdit();
@@ -259,8 +257,10 @@
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSpinEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemSpinEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.navigationPage8 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
@@ -598,6 +598,7 @@
             this.barButtonItemAddGiaoDich.Id = 25;
             this.barButtonItemAddGiaoDich.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddGiaoDich.ImageOptions.SvgImage")));
             this.barButtonItemAddGiaoDich.Name = "barButtonItemAddGiaoDich";
+            this.barButtonItemAddGiaoDich.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddGiaoDich_ItemClick);
             // 
             // barButtonItemAddKhuyenMai
             // 
@@ -667,10 +668,10 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 648);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 650);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1109, 33);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1109, 31);
             // 
             // barButtonItemModule1
             // 
@@ -688,7 +689,7 @@
             // officeNavigationBar1
             // 
             this.officeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar1.Location = new System.Drawing.Point(0, 610);
+            this.officeNavigationBar1.Location = new System.Drawing.Point(0, 612);
             this.officeNavigationBar1.Name = "officeNavigationBar1";
             this.officeNavigationBar1.NavigationClient = this.navigationFrame1;
             this.officeNavigationBar1.Size = new System.Drawing.Size(1109, 38);
@@ -720,7 +721,7 @@
             this.navigationPage7,
             this.navigationPage8});
             this.navigationFrame1.SelectedPage = this.navigationPage1;
-            this.navigationFrame1.Size = new System.Drawing.Size(1109, 467);
+            this.navigationFrame1.Size = new System.Drawing.Size(1109, 469);
             this.navigationFrame1.TabIndex = 3;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -729,7 +730,7 @@
             this.navigationPage1.Caption = "Nhân viên";
             this.navigationPage1.Controls.Add(this.tablePanel1);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(1109, 467);
+            this.navigationPage1.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel1
             // 
@@ -744,7 +745,7 @@
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel1.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel1.TabIndex = 0;
             // 
             // layoutControl1
@@ -759,7 +760,7 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
             this.layoutControl1.Root = this.Root;
             this.tablePanel1.SetRow(this.layoutControl1, 0);
-            this.layoutControl1.Size = new System.Drawing.Size(318, 447);
+            this.layoutControl1.Size = new System.Drawing.Size(318, 449);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -806,7 +807,7 @@
             this.layoutControlItem2});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(318, 447);
+            this.Root.Size = new System.Drawing.Size(318, 449);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -814,7 +815,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 174);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(318, 273);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(318, 275);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
@@ -887,7 +888,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1});
             this.tablePanel1.SetRow(this.gridControl1, 0);
-            this.gridControl1.Size = new System.Drawing.Size(650, 447);
+            this.gridControl1.Size = new System.Drawing.Size(650, 449);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1021,7 +1022,7 @@
             this.navigationPage2.Caption = "Người dùng";
             this.navigationPage2.Controls.Add(this.tablePanel2);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(1109, 467);
+            this.navigationPage2.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel2
             // 
@@ -1034,7 +1035,7 @@
             this.tablePanel2.Name = "tablePanel2";
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel2.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel2.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel2.TabIndex = 1;
             // 
             // gridControl2
@@ -1049,7 +1050,7 @@
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit2});
             this.tablePanel2.SetRow(this.gridControl2, 0);
-            this.gridControl2.Size = new System.Drawing.Size(931, 447);
+            this.gridControl2.Size = new System.Drawing.Size(931, 449);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -1166,7 +1167,7 @@
             this.navigationPage3.Caption = "Tài khoản";
             this.navigationPage3.Controls.Add(this.tablePanel3);
             this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(1109, 467);
+            this.navigationPage3.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel3
             // 
@@ -1181,7 +1182,7 @@
             this.tablePanel3.Name = "tablePanel3";
             this.tablePanel3.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel3.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel3.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel3.TabIndex = 1;
             // 
             // layoutControl3
@@ -1205,7 +1206,7 @@
             this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(99, 87, 650, 400);
             this.layoutControl3.Root = this.layoutControlGroup2;
             this.tablePanel3.SetRow(this.layoutControl3, 0);
-            this.layoutControl3.Size = new System.Drawing.Size(318, 447);
+            this.layoutControl3.Size = new System.Drawing.Size(318, 449);
             this.layoutControl3.TabIndex = 1;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -1337,7 +1338,7 @@
             this.layoutControlGroup10});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(318, 447);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(318, 449);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlGroup6
@@ -1510,7 +1511,7 @@
             this.layoutControlItem15});
             this.layoutControlGroup10.Location = new System.Drawing.Point(0, 162);
             this.layoutControlGroup10.Name = "layoutControlGroup10";
-            this.layoutControlGroup10.Size = new System.Drawing.Size(318, 285);
+            this.layoutControlGroup10.Size = new System.Drawing.Size(318, 287);
             this.layoutControlGroup10.Text = "Thông tin thêm";
             // 
             // layoutControlItem9
@@ -1584,7 +1585,7 @@
             this.emptySpaceItem10.Location = new System.Drawing.Point(0, 111);
             this.emptySpaceItem10.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(294, 132);
+            this.emptySpaceItem10.Size = new System.Drawing.Size(294, 134);
             this.emptySpaceItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -1656,7 +1657,7 @@
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit3});
             this.tablePanel3.SetRow(this.gridControl3, 0);
-            this.gridControl3.Size = new System.Drawing.Size(650, 447);
+            this.gridControl3.Size = new System.Drawing.Size(650, 449);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -1772,7 +1773,7 @@
             this.navigationPage4.Caption = "Máy";
             this.navigationPage4.Controls.Add(this.tablePanel4);
             this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(1109, 467);
+            this.navigationPage4.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel4
             // 
@@ -1787,7 +1788,7 @@
             this.tablePanel4.Name = "tablePanel4";
             this.tablePanel4.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel4.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel4.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel4.TabIndex = 1;
             // 
             // gridControl4
@@ -1800,7 +1801,7 @@
             this.gridControl4.MenuManager = this.ribbon;
             this.gridControl4.Name = "gridControl4";
             this.tablePanel4.SetRow(this.gridControl4, 0);
-            this.gridControl4.Size = new System.Drawing.Size(650, 447);
+            this.gridControl4.Size = new System.Drawing.Size(650, 449);
             this.gridControl4.TabIndex = 2;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -1901,7 +1902,7 @@
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(62, 129, 650, 400);
             this.layoutControl2.Root = this.layoutControlGroup1;
             this.tablePanel4.SetRow(this.layoutControl2, 0);
-            this.layoutControl2.Size = new System.Drawing.Size(318, 447);
+            this.layoutControl2.Size = new System.Drawing.Size(318, 449);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -1997,7 +1998,7 @@
             this.memoEdit1.MenuManager = this.ribbon;
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Size = new System.Drawing.Size(226, 253);
+            this.memoEdit1.Size = new System.Drawing.Size(226, 255);
             this.memoEdit1.StyleController = this.layoutControl2;
             this.memoEdit1.TabIndex = 12;
             // 
@@ -2016,7 +2017,7 @@
             this.layoutControlItem17});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(318, 447);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(318, 449);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem20
@@ -2024,7 +2025,7 @@
             this.layoutControlItem20.Control = this.memoEdit1;
             this.layoutControlItem20.Location = new System.Drawing.Point(0, 190);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(318, 257);
+            this.layoutControlItem20.Size = new System.Drawing.Size(318, 259);
             this.layoutControlItem20.Text = "Thông tin máy";
             this.layoutControlItem20.TextSize = new System.Drawing.Size(85, 13);
             // 
@@ -2132,7 +2133,7 @@
             this.navigationPage5.Caption = "Thiết bị";
             this.navigationPage5.Controls.Add(this.tablePanel6);
             this.navigationPage5.Name = "navigationPage5";
-            this.navigationPage5.Size = new System.Drawing.Size(1109, 467);
+            this.navigationPage5.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel6
             // 
@@ -2147,7 +2148,7 @@
             this.tablePanel6.Name = "tablePanel6";
             this.tablePanel6.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel6.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel6.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel6.TabIndex = 3;
             // 
             // gridControl5
@@ -2160,7 +2161,7 @@
             this.gridControl5.MenuManager = this.ribbon;
             this.gridControl5.Name = "gridControl5";
             this.tablePanel6.SetRow(this.gridControl5, 0);
-            this.gridControl5.Size = new System.Drawing.Size(650, 447);
+            this.gridControl5.Size = new System.Drawing.Size(650, 449);
             this.gridControl5.TabIndex = 2;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -2251,7 +2252,7 @@
             this.layoutControl5.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
             this.layoutControl5.Root = this.layoutControlGroup4;
             this.tablePanel6.SetRow(this.layoutControl5, 0);
-            this.layoutControl5.Size = new System.Drawing.Size(318, 447);
+            this.layoutControl5.Size = new System.Drawing.Size(318, 449);
             this.layoutControl5.TabIndex = 1;
             this.layoutControl5.Text = "layoutControl5";
             // 
@@ -2261,7 +2262,7 @@
             this.layoutControlGroup4.GroupBordersVisible = false;
             this.layoutControlGroup4.Name = "Root";
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup4.Size = new System.Drawing.Size(318, 447);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(318, 449);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // navigationPage6
@@ -2269,7 +2270,7 @@
             this.navigationPage6.Caption = "Phòng";
             this.navigationPage6.Controls.Add(this.tablePanel5);
             this.navigationPage6.Name = "navigationPage6";
-            this.navigationPage6.Size = new System.Drawing.Size(1109, 467);
+            this.navigationPage6.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel5
             // 
@@ -2284,7 +2285,7 @@
             this.tablePanel5.Name = "tablePanel5";
             this.tablePanel5.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel5.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel5.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel5.TabIndex = 2;
             // 
             // gridControl6
@@ -2297,7 +2298,7 @@
             this.gridControl6.MenuManager = this.ribbon;
             this.gridControl6.Name = "gridControl6";
             this.tablePanel5.SetRow(this.gridControl6, 0);
-            this.gridControl6.Size = new System.Drawing.Size(650, 447);
+            this.gridControl6.Size = new System.Drawing.Size(650, 449);
             this.gridControl6.TabIndex = 2;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -2377,7 +2378,7 @@
             this.layoutControl4.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
             this.layoutControl4.Root = this.layoutControlGroup3;
             this.tablePanel5.SetRow(this.layoutControl4, 0);
-            this.layoutControl4.Size = new System.Drawing.Size(318, 447);
+            this.layoutControl4.Size = new System.Drawing.Size(318, 449);
             this.layoutControl4.TabIndex = 1;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -2387,7 +2388,7 @@
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(318, 447);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(318, 449);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // navigationPage7
@@ -2395,19 +2396,7 @@
             this.navigationPage7.Caption = "Giao dịch";
             this.navigationPage7.Controls.Add(this.tablePanel7);
             this.navigationPage7.Name = "navigationPage7";
-            this.navigationPage7.Size = new System.Drawing.Size(1109, 467);
-            // 
-            // navigationPage8
-            // 
-            this.navigationPage8.Caption = "Khuyến mãi";
-            this.navigationPage8.Name = "navigationPage8";
-            this.navigationPage8.Size = new System.Drawing.Size(1109, 467);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth16Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(32, 40);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.navigationPage7.Size = new System.Drawing.Size(1109, 469);
             // 
             // tablePanel7
             // 
@@ -2422,7 +2411,7 @@
             this.tablePanel7.Name = "tablePanel7";
             this.tablePanel7.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 100F)});
-            this.tablePanel7.Size = new System.Drawing.Size(1109, 467);
+            this.tablePanel7.Size = new System.Drawing.Size(1109, 469);
             this.tablePanel7.TabIndex = 2;
             // 
             // layoutControl6
@@ -2446,7 +2435,7 @@
             this.layoutControl6.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(99, 87, 650, 400);
             this.layoutControl6.Root = this.layoutControlGroup7;
             this.tablePanel7.SetRow(this.layoutControl6, 0);
-            this.layoutControl6.Size = new System.Drawing.Size(318, 447);
+            this.layoutControl6.Size = new System.Drawing.Size(318, 449);
             this.layoutControl6.TabIndex = 1;
             this.layoutControl6.Text = "layoutControl6";
             // 
@@ -2578,7 +2567,7 @@
             this.layoutControlGroup9});
             this.layoutControlGroup7.Name = "Root";
             this.layoutControlGroup7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup7.Size = new System.Drawing.Size(318, 447);
+            this.layoutControlGroup7.Size = new System.Drawing.Size(318, 449);
             this.layoutControlGroup7.TextVisible = false;
             // 
             // layoutControlGroup8
@@ -2751,7 +2740,7 @@
             this.layoutControlItem31});
             this.layoutControlGroup9.Location = new System.Drawing.Point(0, 162);
             this.layoutControlGroup9.Name = "layoutControlGroup10";
-            this.layoutControlGroup9.Size = new System.Drawing.Size(318, 285);
+            this.layoutControlGroup9.Size = new System.Drawing.Size(318, 287);
             this.layoutControlGroup9.Text = "Thông tin thêm";
             // 
             // layoutControlItem27
@@ -2825,7 +2814,7 @@
             this.emptySpaceItem23.Location = new System.Drawing.Point(0, 111);
             this.emptySpaceItem23.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem23.Name = "emptySpaceItem10";
-            this.emptySpaceItem23.Size = new System.Drawing.Size(294, 132);
+            this.emptySpaceItem23.Size = new System.Drawing.Size(294, 134);
             this.emptySpaceItem23.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem23.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -2897,7 +2886,7 @@
             this.gridControl7.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit4});
             this.tablePanel7.SetRow(this.gridControl7, 0);
-            this.gridControl7.Size = new System.Drawing.Size(650, 447);
+            this.gridControl7.Size = new System.Drawing.Size(650, 449);
             this.gridControl7.TabIndex = 0;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -2960,6 +2949,15 @@
             this.gridColumn32.VisibleIndex = 4;
             this.gridColumn32.Width = 154;
             // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "Loại giao dịch";
+            this.gridColumn33.FieldName = "LOAI";
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 1;
+            this.gridColumn33.Width = 150;
+            // 
             // repositoryItemSpinEdit4
             // 
             this.repositoryItemSpinEdit4.AutoHeight = false;
@@ -2969,14 +2967,17 @@
             this.repositoryItemSpinEdit4.Mask.EditMask = "N00";
             this.repositoryItemSpinEdit4.Name = "repositoryItemSpinEdit4";
             // 
-            // gridColumn33
+            // navigationPage8
             // 
-            this.gridColumn33.Caption = "Loại giao dịch";
-            this.gridColumn33.FieldName = "LOAI";
-            this.gridColumn33.Name = "gridColumn33";
-            this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 1;
-            this.gridColumn33.Width = 150;
+            this.navigationPage8.Caption = "Khuyến mãi";
+            this.navigationPage8.Name = "navigationPage8";
+            this.navigationPage8.Size = new System.Drawing.Size(1109, 469);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth16Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(32, 40);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // RibbonForm1
             // 

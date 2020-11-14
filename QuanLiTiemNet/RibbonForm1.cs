@@ -89,6 +89,7 @@ namespace QuanLiTiemNet
             loadTableMay();
             loadTableThietBi();
             loadTablePhong();
+            loadTableGiaoDich();
             setProfile(0);
             setTaiKhoan(0);
             setMay(0);
@@ -235,8 +236,8 @@ namespace QuanLiTiemNet
         }
         private void loadTableGiaoDich()
         {
-            gridControl6.DataSource = quanLiTiemNet;
-            gridControl6.DataMember = "GIAODICH";
+            gridControl7.DataSource = quanLiTiemNet;
+            gridControl7.DataMember = "GIAODICH";
         }
 
         public void addDataSetNhanVien(DataRow dataRow)
@@ -308,7 +309,7 @@ namespace QuanLiTiemNet
             {
             }
         }
-        public void addDataSetGiaoDichGiaoDich(DataRow dataRow)
+        public void addDataSetGiaoDich(DataRow dataRow)
         {
             try
             {
@@ -445,9 +446,9 @@ namespace QuanLiTiemNet
             }
             else if (gridView == gridView7)
             {
-                int indexMaPhong = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAPHONG"];
-                RibbonFormAddPhong editPhong = new RibbonFormAddPhong(true, addDataSetPhong, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
-                editPhong.Show();
+                int indexMaGiaoDich = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAGD"];
+                RibbonFormAddGiaoDich editGiaoDich = new RibbonFormAddGiaoDich(true, addDataSetGiaoDich, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaGiaoDich, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+                editGiaoDich.Show();
                 SaveDatabase(ref gridView);
             }
         }
@@ -503,6 +504,12 @@ namespace QuanLiTiemNet
             int indexMaPhong = GetNewCode(5, "MAPHONG");
             RibbonFormAddPhong addPhong = new RibbonFormAddPhong(false, addDataSetPhong, editDataSet, quanLiTiemNet.Tables[5].NewRow(), ref gridView6, indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
             addPhong.Show();
+        }
+        private void barButtonItemAddGiaoDich_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int indexMaGiaoDich = GetNewCode(6, "MAGD");
+            RibbonFormAddGiaoDich addGiaoDich = new RibbonFormAddGiaoDich(false, addDataSetGiaoDich, editDataSet, quanLiTiemNet.Tables[6].NewRow(), ref gridView7, indexMaGiaoDich, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
+            addGiaoDich.Show();
         }
 
         public DataRow GetNewDataRow(int index)

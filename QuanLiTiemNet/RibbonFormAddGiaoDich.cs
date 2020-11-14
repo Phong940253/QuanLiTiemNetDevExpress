@@ -41,27 +41,26 @@ namespace QuanLiTiemNet
 
         private void loadDataRow()
         {
-            textEditTenGiaoDich.Text = dataRow["TENTK"]?.ToString();
-            textEditMatKhau.Text = dataRow["MATKHAU"].ToString();
-            spinEditTongSoTien.Text = dataRow["TONGTIEN"]?.ToString();
-            comboBoxEditTrangThai.Text = dataRow["TRANGTHAI"]?.ToString();
+            comboBoxEditMaNV.Text = dataRow["MANV"]?.ToString();
+            comboBoxEditMaThietBi.Text = dataRow["MATB"].ToString();
+            comboBoxEditMaTK.Text = dataRow["MATK"]?.ToString();
+            spinEditTienThu.Text = dataRow["TIENTHU"]?.ToString();
             comboBoxEditLoaiGiaoDich.Text = dataRow["LOAI"]?.ToString();
-            comboBoxEditMaNguoiDung.Text = dataRow["MANGUOIDUNG"]?.ToString();
+            spinEditTienTra.Text = dataRow["TIENTRA"]?.ToString();
+            memoEditNoiDungGiaoDich.Text = dataRow["NOIDUNGGIAODICH"]?.ToString();
         }
 
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!isEdit) dataRow["MATK"] = maGiaoDich;
-            dataRow["TENTK"] = textEditTenGiaoDich.Text;
-            dataRow["MATKHAU"] = textEditMatKhau.Text;
-            dataRow["TONGTIEN"] = spinEditTongSoTien.Value.ToString();
-            dataRow["TRANGTHAI"] = string.IsNullOrEmpty(comboBoxEditTrangThai.Text) ? "UNLOCK" : comboBoxEditTrangThai.Text;
+            if (!isEdit) dataRow["MAGD"] = maGiaoDich;
+            dataRow["MAKM"] = comboBoxEditMaKhuyenMai.Text;
+            dataRow["MATK"] = comboBoxEditMaTK.Text;
+            dataRow["MANV"] = comboBoxEditMaNV.Text;
+            dataRow["TIENTHU"] = spinEditTienThu.Value.ToString();
+            dataRow["TIENTRA"] = spinEditTienTra.Value.ToString();
             dataRow["LOAI"] = string.IsNullOrEmpty(comboBoxEditLoaiGiaoDich.Text) ? "Thường" : comboBoxEditLoaiGiaoDich.Text;
-            dataRow["SOTIENSUDUNG"] = "0";
-            dataRow["SOGIOSUDUNG"] = "00:00:00";
-            if (!string.IsNullOrEmpty(comboBoxEditMaNguoiDung.Text))
-                dataRow["MANGUOIDUNG"] = comboBoxEditMaNguoiDung.Text;
-            dataRow["NGAYTAO"] = DateTime.Now;
+            dataRow["THOIGIAN"] = DateTime.Now;
+            dataRow["NOIDUNGGIAODICH"] = memoEditNoiDungGiaoDich.Text;
             if (isEdit) sendEditData(dataRow, ref gridView);
             else sendNewGiaoDich(dataRow);
         }
@@ -100,7 +99,7 @@ namespace QuanLiTiemNet
 
         private void textEditValidate_EditValueChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textEditTenGiaoDich.Text))
+            if (string.IsNullOrEmpty(comboBoxEditMaNV.Text))
                 lockSave();
             else
                 unlockSave();
@@ -116,21 +115,23 @@ namespace QuanLiTiemNet
         private void setCaptionForm()
         {
             string Caption = null;
-            if (!Convert.IsDBNull(dataRow["TENTK"]))
+            if (!Convert.IsDBNull(dataRow["MAGD"]))
             {
-                Caption += dataRow["TENTK"]?.ToString();
+                Caption += dataRow["LOAI"]?.ToString() + dataRow["MAGD"]?.ToString();
             }
-            this.Text += Caption ?? "Tài khoản mới";
+            this.Text += Caption ?? "Giao dịch mới";
         }
 
         private void bbiReset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            textEditTenGiaoDich.Text = null;
-            textEditMatKhau.Text = null;
-            spinEditTongSoTien.Text = null;
-            comboBoxEditTrangThai.Text = null;
+            comboBoxEditMaNV.Text = null;
+            comboBoxEditMaTK.Text = null;
+            spinEditTienThu.Text = null;
+            spinEditTienTra.Text = null;
             comboBoxEditLoaiGiaoDich.Text = null;
-            comboBoxEditMaNguoiDung.Text = null;
+            comboBoxEditMaThietBi.Text = null;
+            comboBoxEditMaKhuyenMai.Text = null;
+            memoEditNoiDungGiaoDich.Text = null;
         }
 
         private void bbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -139,7 +140,7 @@ namespace QuanLiTiemNet
             bbiReset_ItemClick(sender, e);
             dataRow = getNewDataRow(2);
             isEdit = false;
-            maGiaoDich = getNewCode(2, "MATK");
+            maGiaoDich = getNewCode(6, "MAGD");
         }
 
         private void bbiSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
