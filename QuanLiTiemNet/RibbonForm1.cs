@@ -21,7 +21,6 @@ namespace QuanLiTiemNet
         SqlDataAdapter sqlDataNhanVien, sqlDataNguoiDung, sqlDataTaiKhoan, sqlDataMay, sqlDataThietBi, sqlDataPhong, sqlDataGiaoDich, sqlDataKhuyenMai;
         SqlCommandBuilder sqlCommandNhanVien, sqlCommandNguoiDung, sqlCommandTaiKhoan, sqlCommandMay, sqlCommandThietBi, sqlCommandPhong, sqlCommandGiaoDich, sqlCommandKhuyenMai;
         DataSet quanLiTiemNet = new DataSet();
-
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
@@ -313,8 +312,8 @@ namespace QuanLiTiemNet
         {
             try
             {
-                quanLiTiemNet.Tables[66].Rows.Add(dataRow);
-                SaveDatabase(ref gridView3);
+                quanLiTiemNet.Tables[6].Rows.Add(dataRow);
+                SaveDatabase(ref gridView7);
             }
             catch (ArgumentException ex)
             {
@@ -597,6 +596,11 @@ namespace QuanLiTiemNet
         private void gridView4_RowCellClick(object sender, RowCellClickEventArgs e)
         {
             setMay(e.RowHandle);
+        }
+
+        private void backstageViewClientControl2_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void setSoTienSuDung(string s)

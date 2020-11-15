@@ -53,9 +53,12 @@ namespace QuanLiTiemNet
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (!isEdit) dataRow["MAGD"] = maGiaoDich;
-            dataRow["MAKM"] = comboBoxEditMaKhuyenMai.Text;
-            dataRow["MATK"] = comboBoxEditMaTK.Text;
-            dataRow["MANV"] = comboBoxEditMaNV.Text;
+            if (!string.IsNullOrEmpty(comboBoxEditMaKhuyenMai.Text))
+                dataRow["MAKM"] = comboBoxEditMaKhuyenMai.Text;
+            if (!string.IsNullOrEmpty(comboBoxEditMaNV.Text))
+                dataRow["MANV"] = comboBoxEditMaNV.Text;
+            if (!string.IsNullOrEmpty(comboBoxEditMaTK.Text))
+                dataRow["MATK"] = comboBoxEditMaTK.Text;
             dataRow["TIENTHU"] = spinEditTienThu.Value.ToString();
             dataRow["TIENTRA"] = spinEditTienTra.Value.ToString();
             dataRow["LOAI"] = string.IsNullOrEmpty(comboBoxEditLoaiGiaoDich.Text) ? "Thường" : comboBoxEditLoaiGiaoDich.Text;
