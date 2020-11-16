@@ -158,11 +158,23 @@
     <Compile Include="WizardFormInstall.Designer.cs">
       <DependentUpon>WizardFormInstall.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraReportNguoiDung.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportNguoiDung.Designer.cs">
+      <DependentUpon>XtraReportNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraReportNhanVien.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="XtraReportNhanVien.Designer.cs">
       <DependentUpon>XtraReportNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportTaiKhoan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportTaiKhoan.Designer.cs">
+      <DependentUpon>XtraReportTaiKhoan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -202,8 +214,14 @@
     <EmbeddedResource Include="WizardFormInstall.resx">
       <DependentUpon>WizardFormInstall.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportNguoiDung.resx">
+      <DependentUpon>XtraReportNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XtraReportNhanVien.resx">
       <DependentUpon>XtraReportNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportTaiKhoan.resx">
+      <DependentUpon>XtraReportTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

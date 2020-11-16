@@ -39,6 +39,7 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.documentViewer2 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dropDownButton2 = new DevExpress.XtraEditors.DropDownButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -59,6 +60,7 @@
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.backstageViewClientControl4 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl5 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -293,7 +295,11 @@
             this.repositoryItemSpinEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.navigationPage8 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
+            this.documentViewerBarManager1 = new DevExpress.XtraPrinting.Preview.DocumentViewerBarManager(this.components);
+            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -462,6 +468,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentViewerBarManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // recentlyUsedItemsComboBox1
@@ -530,14 +537,15 @@
             this.backstageViewControl1.Location = new System.Drawing.Point(111, 12);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.OwnerControl = this.ribbon;
-            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem2;
-            this.backstageViewControl1.SelectedTabIndex = 1;
+            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem4;
+            this.backstageViewControl1.SelectedTabIndex = 3;
             this.backstageViewControl1.Size = new System.Drawing.Size(582, 396);
             this.backstageViewControl1.TabIndex = 6;
             this.backstageViewControl1.VisibleInDesignTime = true;
             // 
             // backstageViewClientControl2
             // 
+            this.backstageViewClientControl2.Controls.Add(this.documentViewer2);
             this.backstageViewClientControl2.Controls.Add(this.labelControl1);
             this.backstageViewClientControl2.Controls.Add(this.dropDownButton2);
             this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
@@ -545,6 +553,18 @@
             this.backstageViewClientControl2.Size = new System.Drawing.Size(449, 332);
             this.backstageViewClientControl2.TabIndex = 2;
             this.backstageViewClientControl2.Load += new System.EventHandler(this.backstageViewClientControl2_Load);
+            // 
+            // documentViewer2
+            // 
+            this.documentViewer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.documentViewer2.DocumentSource = typeof(QuanLiTiemNet.XtraReportNhanVien);
+            this.documentViewer2.IsMetric = true;
+            this.documentViewer2.Location = new System.Drawing.Point(250, 20);
+            this.documentViewer2.Name = "documentViewer2";
+            this.documentViewer2.Size = new System.Drawing.Size(177, 288);
+            this.documentViewer2.TabIndex = 2;
             // 
             // labelControl1
             // 
@@ -702,22 +722,35 @@
             // 
             // backstageViewClientControl1
             // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(446, 334);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(450, 334);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl3
             // 
+            this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
             this.backstageViewClientControl3.Controls.Add(this.dropDownButton1);
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(446, 334);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(450, 334);
             this.backstageViewClientControl3.TabIndex = 3;
+            // 
+            // documentViewer1
+            // 
+            this.documentViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.documentViewer1.DocumentSource = typeof(QuanLiTiemNet.XtraReportNhanVien);
+            this.documentViewer1.IsMetric = true;
+            this.documentViewer1.Location = new System.Drawing.Point(250, 20);
+            this.documentViewer1.Name = "documentViewer1";
+            this.documentViewer1.Size = new System.Drawing.Size(177, 286);
+            this.documentViewer1.TabIndex = 3;
             // 
             // dropDownButton1
             // 
-            this.dropDownButton1.Location = new System.Drawing.Point(77, 66);
+            this.dropDownButton1.Location = new System.Drawing.Point(18, 45);
             this.dropDownButton1.MenuManager = this.ribbon;
             this.dropDownButton1.Name = "dropDownButton1";
             this.dropDownButton1.Size = new System.Drawing.Size(135, 23);
@@ -726,16 +759,16 @@
             // 
             // backstageViewClientControl4
             // 
-            this.backstageViewClientControl4.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(446, 334);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(449, 332);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewClientControl5
             // 
-            this.backstageViewClientControl5.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl5.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(446, 334);
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(450, 334);
             this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewTabItem1
@@ -749,7 +782,6 @@
             this.backstageViewTabItem2.Caption = "Xuất";
             this.backstageViewTabItem2.ContentControl = this.backstageViewClientControl2;
             this.backstageViewTabItem2.Name = "backstageViewTabItem2";
-            this.backstageViewTabItem2.Selected = true;
             // 
             // backstageViewTabItem3
             // 
@@ -759,9 +791,10 @@
             // 
             // backstageViewTabItem4
             // 
-            this.backstageViewTabItem4.Caption = "Giúp đỡ";
+            this.backstageViewTabItem4.Caption = "Hỗ trợ";
             this.backstageViewTabItem4.ContentControl = this.backstageViewClientControl4;
             this.backstageViewTabItem4.Name = "backstageViewTabItem4";
+            this.backstageViewTabItem4.Selected = true;
             // 
             // backstageViewTabItem5
             // 
@@ -3292,14 +3325,49 @@
             this.imageList1.ImageSize = new System.Drawing.Size(32, 40);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // documentViewer1
+            // documentViewerBarManager1
             // 
-            this.documentViewer1.DocumentSource = typeof(QuanLiTiemNet.XtraReportNhanVien);
-            this.documentViewer1.IsMetric = true;
-            this.documentViewer1.Location = new System.Drawing.Point(73, 3);
-            this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(313, 326);
-            this.documentViewer1.TabIndex = 1;
+            this.documentViewerBarManager1.DockControls.Add(this.barDockControl1);
+            this.documentViewerBarManager1.DockControls.Add(this.barDockControl2);
+            this.documentViewerBarManager1.DockControls.Add(this.barDockControl3);
+            this.documentViewerBarManager1.DockControls.Add(this.barDockControl4);
+            this.documentViewerBarManager1.DocumentViewer = this.documentViewer2;
+            this.documentViewerBarManager1.Form = this;
+            this.documentViewerBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("documentViewerBarManager1.ImageStream")));
+            this.documentViewerBarManager1.MaxItemId = 59;
+            this.documentViewerBarManager1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // barDockControl1
+            // 
+            this.barDockControl1.CausesValidation = false;
+            this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl1.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl1.Manager = this.documentViewerBarManager1;
+            this.barDockControl1.Size = new System.Drawing.Size(1109, 0);
+            // 
+            // barDockControl2
+            // 
+            this.barDockControl2.CausesValidation = false;
+            this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControl2.Location = new System.Drawing.Point(0, 681);
+            this.barDockControl2.Manager = this.documentViewerBarManager1;
+            this.barDockControl2.Size = new System.Drawing.Size(1109, 0);
+            // 
+            // barDockControl3
+            // 
+            this.barDockControl3.CausesValidation = false;
+            this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControl3.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl3.Manager = this.documentViewerBarManager1;
+            this.barDockControl3.Size = new System.Drawing.Size(0, 681);
+            // 
+            // barDockControl4
+            // 
+            this.barDockControl4.CausesValidation = false;
+            this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControl4.Location = new System.Drawing.Point(1109, 0);
+            this.barDockControl4.Manager = this.documentViewerBarManager1;
+            this.barDockControl4.Size = new System.Drawing.Size(0, 681);
             // 
             // RibbonForm1
             // 
@@ -3315,6 +3383,10 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Controls.Add(this.barDockControl3);
+            this.Controls.Add(this.barDockControl4);
+            this.Controls.Add(this.barDockControl2);
+            this.Controls.Add(this.barDockControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("RibbonForm1.IconOptions.SvgImage")));
             this.Name = "RibbonForm1";
             this.Ribbon = this.ribbon;
@@ -3491,6 +3563,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentViewerBarManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3756,7 +3829,13 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem4;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem5;
         private DevExpress.XtraEditors.DropDownButton dropDownButton2;
-        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer2;
+        private DevExpress.XtraBars.BarDockControl barDockControl3;
+        private DevExpress.XtraPrinting.Preview.DocumentViewerBarManager documentViewerBarManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraBars.BarDockControl barDockControl2;
+        private DevExpress.XtraBars.BarDockControl barDockControl4;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
     }
 }
