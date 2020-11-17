@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraPrinting;
 
 namespace QuanLiTiemNet
 {
@@ -21,6 +24,7 @@ namespace QuanLiTiemNet
         SqlDataAdapter sqlDataNhanVien, sqlDataNguoiDung, sqlDataTaiKhoan, sqlDataMay, sqlDataThietBi, sqlDataPhong, sqlDataGiaoDich, sqlDataKhuyenMai;
         SqlCommandBuilder sqlCommandNhanVien, sqlCommandNguoiDung, sqlCommandTaiKhoan, sqlCommandMay, sqlCommandThietBi, sqlCommandPhong, sqlCommandGiaoDich, sqlCommandKhuyenMai;
         DataSet quanLiTiemNet = new DataSet();
+        XtraReportNhanVien nhanVien = new XtraReportNhanVien();
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
@@ -608,6 +612,7 @@ namespace QuanLiTiemNet
             spinEdit2.Text = s;
         }
 
+
         private void setNgayTaoTaiKhoan(string s)
         {
             textEdit12.Text = s;
@@ -677,5 +682,75 @@ namespace QuanLiTiemNet
         {
             barStaticItem1.Caption = "Số lượng: " + gridView.DataRowCount;
         }
+        private void exportFile(DevExpress.XtraReports.UI.XtraReport report)
+        {
+            // A path to export a report.
+            string reportPath = "";
+            // Specify PDF-specific export options.
+            PdfExportOptions pdfOptions = report.ExportOptions.Pdf;
+            // Specify the pages to be exported.
+            //pdfOptions.PageRange = "1, 3-5";
+
+            // Specify the quality of exported images.
+            pdfOptions.ConvertImagesToJpeg = false;
+            pdfOptions.ImageQuality = PdfJpegImageQuality.Medium;
+
+            // Specify the PDF/A-compatibility.
+            pdfOptions.PdfACompatibility = PdfACompatibility.PdfA3b;
+
+            // The following options are not compatible with PDF/A.
+            // The use of these options will result in errors on PDF validation.
+            //pdfOptions.NeverEmbeddedFonts = "Tahoma;Courier New";
+            //pdfOptions.ShowPrintDialogOnOpen = true;
+
+            // If required, you can specify the security and signature options. 
+            //pdfOptions.PasswordSecurityOptions
+            //pdfOptions.SignatureOptions
+
+            // If required, specify necessary metadata and attachments
+            // (e.g., to produce a ZUGFeRD-compatible PDF).
+            //pdfOptions.AdditionalMetadata
+            //pdfOptions.Attachments
+
+            // Specify the document options.
+            pdfOptions.DocumentOptions.Application = "Test Application";
+            pdfOptions.DocumentOptions.Author = "DX Documentation Team";
+            pdfOptions.DocumentOptions.Keywords = "DevExpress, Reporting, PDF";
+            pdfOptions.DocumentOptions.Producer = Environment.UserName.ToString();
+            pdfOptions.DocumentOptions.Subject = "Document Subject";
+            pdfOptions.DocumentOptions.Title = "Document Title";
+
+            // Checks the validity of PDF export options 
+            // and return a list of any detected inconsistencies.
+            IList<string> result = pdfOptions.Validate();
+            
+            SaveFileDialog sf = new SaveFileDialog();
+            // Feed the dummy name to the save dialog 
+            sf.FileName = "Save Here.pdf";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                // Now here's our save folder 
+                reportPath = Path.GetDirectoryName(sf.FileName);
+                // Do whatever 
+            }
+            if (result.Count > 0)
+                Console.WriteLine(String.Join(Environment.NewLine, result));
+            else
+            {
+                try
+                {
+                    report.ExportToPdf(reportPath, pdfOptions);
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void dropDownButtonExportFile_Click(object sender, EventArgs e)
+        {
+            exportFile(nhanVien);
+        }
+
     }
 }
