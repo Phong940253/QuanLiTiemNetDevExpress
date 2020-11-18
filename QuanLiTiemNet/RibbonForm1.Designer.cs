@@ -740,9 +740,9 @@
             // 
             this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
             this.backstageViewClientControl3.Controls.Add(this.dropDownButton1);
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 63);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(136, 62);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(434, 332);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(431, 334);
             this.backstageViewClientControl3.TabIndex = 3;
             // 
             // documentViewer1
@@ -2532,6 +2532,7 @@
             this.gridView5.GridControl = this.gridControl5;
             this.gridView5.GroupCount = 1;
             this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridView5.OptionsView.ShowIndicator = false;
             this.gridView5.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
             this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
@@ -3343,11 +3344,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 681);
-            this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.navigationFrame1);
             this.Controls.Add(this.officeNavigationBar1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
