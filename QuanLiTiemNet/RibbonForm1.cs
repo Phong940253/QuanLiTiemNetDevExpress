@@ -127,7 +127,7 @@ namespace QuanLiTiemNet
                     break;
                 case "navigationPage5":
                     lockBarButton(5);
-                    updateRecord(ref gridView1);
+                    updateRecord(ref gridView5);
                     break;
                 case "navigationPage6":
                     lockBarButton(6);
@@ -723,7 +723,7 @@ namespace QuanLiTiemNet
             // Checks the validity of PDF export options 
             // and return a list of any detected inconsistencies.
             IList<string> result = pdfOptions.Validate();
-            
+
             SaveFileDialog sf = new SaveFileDialog();
             // Feed the dummy name to the save dialog 
             sf.FileName = "Save Here.pdf";
@@ -732,19 +732,21 @@ namespace QuanLiTiemNet
                 // Now here's our save folder 
                 reportPath = Path.GetDirectoryName(sf.FileName);
                 // Do whatever 
-            }
-            if (result.Count > 0)
-                Console.WriteLine(String.Join(Environment.NewLine, result));
-            else
-            {
-                try
+                if (result.Count > 0)
+                    Console.WriteLine(String.Join(Environment.NewLine, result));
+                else
                 {
-                    report.ExportToPdf(reportPath, pdfOptions);
-                }catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        report.ExportToPdf(reportPath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
+
         }
 
         private void dropDownButtonExportFile_Click(object sender, EventArgs e)
