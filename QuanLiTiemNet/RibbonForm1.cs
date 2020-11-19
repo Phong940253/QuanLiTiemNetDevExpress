@@ -26,6 +26,13 @@ namespace QuanLiTiemNet
         SqlDataAdapter sqlDataNhanVien, sqlDataNguoiDung, sqlDataTaiKhoan, sqlDataMay, sqlDataThietBi, sqlDataPhong, sqlDataGiaoDich, sqlDataKhuyenMai;
         SqlCommandBuilder sqlCommandNhanVien, sqlCommandNguoiDung, sqlCommandTaiKhoan, sqlCommandMay, sqlCommandThietBi, sqlCommandPhong, sqlCommandGiaoDich, sqlCommandKhuyenMai;
         DataSet quanLiTiemNet = new DataSet();
+        XtraReportNguoiDung nguoiDung = new XtraReportNguoiDung();
+        XtraReportNhanVien nhanVien = new XtraReportNhanVien();
+        XtraReportTaiKhoan taiKhoan = new XtraReportTaiKhoan();
+        XtraReportMay may = new XtraReportMay();
+        XtraReportThietBi thietBi = new XtraReportThietBi();
+        XtraReportPhong phong = new XtraReportPhong();
+        XtraReportGiaoDich giaoDich = new XtraReportGiaoDich();
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
@@ -100,8 +107,21 @@ namespace QuanLiTiemNet
             setMay(0);
             gridView1.SelectRow(1);
             updateRecord(ref gridView1);
+            createReport();
         }
 
+        private void createReport()
+        {
+            nhanVien.CreateDocument();
+            documentViewer1.DocumentSource = nhanVien;
+            documentViewer2.DocumentSource = nhanVien;
+            nguoiDung.CreateDocument();
+            taiKhoan.CreateDocument();
+            may.CreateDocument();
+            thietBi.CreateDocument();
+            phong.CreateDocument();
+            giaoDich.CreateDocument();
+        }
         private void officeNavigationBar1_Click(object sender, EventArgs e)
         {
             lockBarButton(1);
@@ -114,30 +134,37 @@ namespace QuanLiTiemNet
                 case "navigationPage1":
                     lockBarButton(1);
                     updateRecord(ref gridView1);
+                    setExport(nhanVien);
                     break;
                 case "navigationPage2":
                     lockBarButton(2);
                     updateRecord(ref gridView2);
+                    setExport(nguoiDung);
                     break;
                 case "navigationPage3":
                     lockBarButton(3);
                     updateRecord(ref gridView3);
+                    setExport(taiKhoan);
                     break;
                 case "navigationPage4":
                     lockBarButton(4);
                     updateRecord(ref gridView4);
+                    setExport(may);
                     break;
                 case "navigationPage5":
                     lockBarButton(5);
                     updateRecord(ref gridView5);
+                    setExport(thietBi);
                     break;
                 case "navigationPage6":
                     lockBarButton(6);
                     updateRecord(ref gridView6);
+                    setExport(phong);
                     break;
                 case "navigationPage7":
                     lockBarButton(7);
                     updateRecord(ref gridView7);
+                    setExport(giaoDich);
                     break;
                 case "navigationPage8":
                     lockBarButton(8);
@@ -146,6 +173,16 @@ namespace QuanLiTiemNet
                 default:
                     break;
             }
+        }
+        private void setExport(XtraReport report)
+        {
+            //report.CreateDocument();
+            documentViewer1.DocumentSource = report;
+            documentViewer2.DocumentSource = report;
+        }
+        private void updateReport(XtraReport report)
+        {
+            report.CreateDocument();
         }
         private void lockBarButton(int index)
         {
@@ -336,19 +373,40 @@ namespace QuanLiTiemNet
             try
             {
                 if (gridView == gridView1)
+                {
                     sqlDataNhanVien.Update(quanLiTiemNet, "NHANVIEN");
+                    updateReport(nhanVien);
+                }
                 else if (gridView == gridView2)
+                {
                     sqlDataNguoiDung.Update(quanLiTiemNet, "NGUOIDUNG");
+                    updateReport(nguoiDung);
+                }
                 else if (gridView == gridView3)
+                {
                     sqlDataTaiKhoan.Update(quanLiTiemNet, "TAIKHOAN");
+                    updateReport(taiKhoan);
+                }
                 else if (gridView == gridView4)
+                {
                     sqlDataMay.Update(quanLiTiemNet, "MAY");
+                    updateReport(may);
+                }
                 else if (gridView == gridView5)
+                {
                     sqlDataThietBi.Update(quanLiTiemNet, "THIETBI");
+                    updateReport(thietBi);
+                }
                 else if (gridView == gridView6)
+                {
                     sqlDataPhong.Update(quanLiTiemNet, "PHONG");
+                    updateReport(phong);
+                }
                 else if (gridView == gridView7)
+                {
                     sqlDataGiaoDich.Update(quanLiTiemNet, "GIAODICH");
+                    updateReport(giaoDich);
+                }
                 updateRecord(ref gridView);
             }
             catch (Exception ex)
@@ -687,7 +745,7 @@ namespace QuanLiTiemNet
 
         private void updateRecord(ref GridView gridView)
         {
-            barStaticItem1.Caption = "Số lượng: " + gridView.DataRowCount;
+            barStaticItem3.Caption = "Số lượng: " + gridView.DataRowCount;
         }
         private void exportFilePdf(XtraReport report)
         {

@@ -160,6 +160,12 @@
     <Compile Include="WizardFormInstall.Designer.cs">
       <DependentUpon>WizardFormInstall.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraReportGiaoDich.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportGiaoDich.Designer.cs">
+      <DependentUpon>XtraReportGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraReportMay.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WizardFormInstall.resx">
       <DependentUpon>WizardFormInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportGiaoDich.resx">
+      <DependentUpon>XtraReportGiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReportMay.resx">
       <DependentUpon>XtraReportMay.cs</DependentUpon>
