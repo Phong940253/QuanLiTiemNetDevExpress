@@ -2,6 +2,9 @@
 using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Data.SqlClient;
+using System.Configuration;
+using DevExpress.XtraEditors.Controls;
 
 namespace QuanLiTiemNet
 {
@@ -50,6 +53,20 @@ namespace QuanLiTiemNet
             textEditDiaChi.Text = dataRow["DIACHI"]?.ToString();
         }
 
+        private void fillChucVu()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT DISTINCT(CHUCVU) FROM NHANVIEN ORDER BY CHUCVU ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditChucVu.Properties.Items.Add(reader[0].ToString());
+                }
+            }
+        }
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             dataRow["HO"] = textEditHo.Text;
@@ -123,6 +140,7 @@ namespace QuanLiTiemNet
             setCaptionForm();
             lockSave();
             loadDataRow();
+            fillChucVu();
         }
 
         private void setCaptionForm()

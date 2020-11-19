@@ -3,6 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QuanLiTiemNet
 {
@@ -107,8 +109,22 @@ namespace QuanLiTiemNet
             setCaptionForm();
             lockSave();
             loadDataRow();
+            fillMaMay();
         }
-
+        private void fillMaMay()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT MAMAY FROM MAY ORDER BY MAMAY ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditMaMay.Properties.Items.Add(reader[0].ToString());
+                }
+            }
+        }
         private void setCaptionForm()
         {
             string Caption = null;

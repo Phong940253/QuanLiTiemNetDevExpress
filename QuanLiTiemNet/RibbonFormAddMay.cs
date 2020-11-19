@@ -3,6 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QuanLiTiemNet
 {
@@ -113,6 +115,36 @@ namespace QuanLiTiemNet
             setCaptionForm();
             lockSave();
             loadDataRow();
+            fillMaTaiKhoan();
+            fillMaPhong();
+        }
+        private void fillMaTaiKhoan()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT MATK FROM TAIKHOAN ORDER BY MATK ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditMaTaiKhoan.Properties.Items.Add(reader[0].ToString());
+                }
+            }
+        }
+        private void fillMaPhong()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT MAPHONG FROM PHONG ORDER BY MAPHONG ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditMaPhong.Properties.Items.Add(reader[0].ToString());
+                }
+            }
         }
 
         private void setCaptionForm()

@@ -3,6 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QuanLiTiemNet
 {
@@ -113,8 +115,52 @@ namespace QuanLiTiemNet
             setCaptionForm();
             lockSave();
             loadDataRow();
+            fillMaiKhoan();
+            fillMaNhanVien();
+            fillMaThietBi();
         }
-
+        private void fillMaNhanVien()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT MANV FROM NHANVIEN ORDER BY MANV ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditMaNV.Properties.Items.Add(reader[0].ToString());
+                }
+            }
+        }
+        private void fillMaiKhoan()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT MATK FROM TAIKHOAN ORDER BY MATK ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditMaTK.Properties.Items.Add(reader[0].ToString());
+                }
+            }
+        }
+        private void fillMaThietBi()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["QuanLiTiemNet.Properties.Settings.quanlitiemnetConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT MATHIETBI FROM THIETBI ORDER BY MATHIETBI ASC", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxEditMaThietBi.Properties.Items.Add(reader[0].ToString());
+                }
+            }
+        }
         private void setCaptionForm()
         {
             string Caption = null;

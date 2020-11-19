@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonForm1));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
             this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -231,7 +231,7 @@
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENTHIETBI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -546,9 +546,9 @@
             this.backstageViewClientControl2.Controls.Add(this.documentViewer2);
             this.backstageViewClientControl2.Controls.Add(this.labelControl1);
             this.backstageViewClientControl2.Controls.Add(this.dropDownButtonExportFile);
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(434, 332);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(435, 334);
             this.backstageViewClientControl2.TabIndex = 2;
             this.backstageViewClientControl2.Load += new System.EventHandler(this.backstageViewClientControl2_Load);
             // 
@@ -559,7 +559,7 @@
             this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorControl1.Location = new System.Drawing.Point(134, 20);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(75, 271);
+            this.separatorControl1.Size = new System.Drawing.Size(75, 273);
             this.separatorControl1.TabIndex = 3;
             // 
             // documentViewer2
@@ -571,7 +571,7 @@
             this.documentViewer2.IsMetric = true;
             this.documentViewer2.Location = new System.Drawing.Point(250, 20);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(161, 286);
+            this.documentViewer2.Size = new System.Drawing.Size(162, 288);
             this.documentViewer2.TabIndex = 2;
             // 
             // labelControl1
@@ -731,18 +731,18 @@
             // 
             // backstageViewClientControl1
             // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(431, 334);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(435, 334);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl3
             // 
             this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
             this.backstageViewClientControl3.Controls.Add(this.dropDownButton1);
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(431, 334);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(435, 334);
             this.backstageViewClientControl3.TabIndex = 3;
             // 
             // documentViewer1
@@ -768,16 +768,16 @@
             // 
             // backstageViewClientControl4
             // 
-            this.backstageViewClientControl4.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(431, 334);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(435, 334);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewClientControl5
             // 
-            this.backstageViewClientControl5.Location = new System.Drawing.Point(136, 62);
+            this.backstageViewClientControl5.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(431, 334);
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(435, 334);
             this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewTabItem1
@@ -1120,15 +1120,15 @@
             // 
             // windowsUIButtonPanel1
             // 
-            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
-            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
-            windowsUIButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions3.SvgImage")));
-            windowsUIButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions4.SvgImage")));
+            windowsUIButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions5.SvgImage")));
+            windowsUIButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions6.SvgImage")));
+            windowsUIButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions7.SvgImage")));
+            windowsUIButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions8.SvgImage")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", false, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(142, 47);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(174, 40);
@@ -2519,6 +2519,7 @@
             this.gridControl5.TabIndex = 2;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
+            this.gridControl5.Click += new System.EventHandler(this.gridControl5_Click);
             // 
             // gridView5
             // 
@@ -2527,7 +2528,7 @@
             this.gridColumn26,
             this.gridColumn27,
             this.gridColumn28,
-            this.TENTHIETBI,
+            this.gridColumnn,
             this.gridColumn25});
             this.gridView5.GridControl = this.gridControl5;
             this.gridView5.GroupCount = 1;
@@ -2580,14 +2581,15 @@
             this.gridColumn28.VisibleIndex = 4;
             this.gridColumn28.Width = 102;
             // 
-            // TENTHIETBI
+            // gridColumnn
             // 
-            this.TENTHIETBI.Caption = "Tên thiết bị";
-            this.TENTHIETBI.Name = "TENTHIETBI";
-            this.TENTHIETBI.OptionsColumn.AllowFocus = false;
-            this.TENTHIETBI.Visible = true;
-            this.TENTHIETBI.VisibleIndex = 1;
-            this.TENTHIETBI.Width = 130;
+            this.gridColumnn.Caption = "Tên thiết bị";
+            this.gridColumnn.FieldName = "TENTHIETBI";
+            this.gridColumnn.Name = "gridColumnn";
+            this.gridColumnn.OptionsColumn.AllowFocus = false;
+            this.gridColumnn.Visible = true;
+            this.gridColumnn.VisibleIndex = 1;
+            this.gridColumnn.Width = 130;
             // 
             // gridColumn25
             // 
@@ -3262,10 +3264,10 @@
             // 
             // gridColumn29
             // 
-            this.gridColumn29.Caption = "Tiền nhận";
+            this.gridColumn29.Caption = "Tiền thu";
             this.gridColumn29.DisplayFormat.FormatString = "#,##0 đ";
             this.gridColumn29.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.gridColumn29.FieldName = "TENTHU";
+            this.gridColumn29.FieldName = "TIENTHU";
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.OptionsColumn.AllowFocus = false;
             this.gridColumn29.Visible = true;
@@ -3284,7 +3286,7 @@
             // 
             // gridColumn31
             // 
-            this.gridColumn31.Caption = "Tiền trả";
+            this.gridColumn31.Caption = "Tiền chi";
             this.gridColumn31.DisplayFormat.FormatString = "#,##0 đ";
             this.gridColumn31.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumn31.FieldName = "TIENTRA";
@@ -3713,7 +3715,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
-        private DevExpress.XtraGrid.Columns.GridColumn TENTHIETBI;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnn;
         private DevExpress.XtraLayout.LayoutControl layoutControl5;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
 
 namespace QuanLiTiemNet
 {
@@ -24,7 +26,7 @@ namespace QuanLiTiemNet
         SqlDataAdapter sqlDataNhanVien, sqlDataNguoiDung, sqlDataTaiKhoan, sqlDataMay, sqlDataThietBi, sqlDataPhong, sqlDataGiaoDich, sqlDataKhuyenMai;
         SqlCommandBuilder sqlCommandNhanVien, sqlCommandNguoiDung, sqlCommandTaiKhoan, sqlCommandMay, sqlCommandThietBi, sqlCommandPhong, sqlCommandGiaoDich, sqlCommandKhuyenMai;
         DataSet quanLiTiemNet = new DataSet();
-        XtraReportNhanVien nhanVien = new XtraReportNhanVien();
+
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
@@ -658,6 +660,11 @@ namespace QuanLiTiemNet
             textEdit6.Text = s;
         }
 
+        private void gridControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void setThoiGianSuDung(string s)
         {
             textEdit9.Text = s;
@@ -682,63 +689,32 @@ namespace QuanLiTiemNet
         {
             barStaticItem1.Caption = "Số lượng: " + gridView.DataRowCount;
         }
-        private void exportFile(DevExpress.XtraReports.UI.XtraReport report)
+        private void exportFilePdf(XtraReport report)
         {
-            // A path to export a report.
             string reportPath = "";
-            // Specify PDF-specific export options.
             PdfExportOptions pdfOptions = report.ExportOptions.Pdf;
-            // Specify the pages to be exported.
-            //pdfOptions.PageRange = "1, 3-5";
-
-            // Specify the quality of exported images.
-            pdfOptions.ConvertImagesToJpeg = false;
             pdfOptions.ImageQuality = PdfJpegImageQuality.Medium;
-
-            // Specify the PDF/A-compatibility.
             pdfOptions.PdfACompatibility = PdfACompatibility.PdfA3b;
-
-            // The following options are not compatible with PDF/A.
-            // The use of these options will result in errors on PDF validation.
-            //pdfOptions.NeverEmbeddedFonts = "Tahoma;Courier New";
-            //pdfOptions.ShowPrintDialogOnOpen = true;
-
-            // If required, you can specify the security and signature options. 
-            //pdfOptions.PasswordSecurityOptions
-            //pdfOptions.SignatureOptions
-
-            // If required, specify necessary metadata and attachments
-            // (e.g., to produce a ZUGFeRD-compatible PDF).
-            //pdfOptions.AdditionalMetadata
-            //pdfOptions.Attachments
-
-            // Specify the document options.
             pdfOptions.DocumentOptions.Application = "Test Application";
             pdfOptions.DocumentOptions.Author = "DX Documentation Team";
             pdfOptions.DocumentOptions.Keywords = "DevExpress, Reporting, PDF";
             pdfOptions.DocumentOptions.Producer = Environment.UserName.ToString();
             pdfOptions.DocumentOptions.Subject = "Document Subject";
             pdfOptions.DocumentOptions.Title = "Document Title";
-
-            // Checks the validity of PDF export options 
-            // and return a list of any detected inconsistencies.
             IList<string> result = pdfOptions.Validate();
-
             SaveFileDialog sf = new SaveFileDialog();
-            // Feed the dummy name to the save dialog 
             sf.FileName = "Save Here.pdf";
             if (sf.ShowDialog() == DialogResult.OK)
             {
-                // Now here's our save folder 
-                reportPath = Path.GetDirectoryName(sf.FileName);
-                // Do whatever 
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
                 if (result.Count > 0)
                     Console.WriteLine(String.Join(Environment.NewLine, result));
                 else
                 {
                     try
                     {
-                        report.ExportToPdf(reportPath);
+                        report.ExportToPdf(sf.FileName);
+                        MessageBox.Show("Lưu thành công!");
                     }
                     catch (Exception ex)
                     {
@@ -746,12 +722,165 @@ namespace QuanLiTiemNet
                     }
                 }
             }
-
         }
-
+        private void exportFileMht(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.mht";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToMht(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileHtml(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.html";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToHtml(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileCsv(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.csv";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToCsv(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileXls(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.xls";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToXls(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileXlsx(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.xlsx";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToXlsx(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileRtf(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.rtf";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToRtf(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileDocx(XtraReport report)
+        {
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.docx";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToDocx(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void exportFileImage(XtraReport report)
+        {
+            ImageExportOptions imageOptions = report.ExportOptions.Image;
+            imageOptions.Format = ImageFormat.Png;
+            string reportPath = "";
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "Save Here.png";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                reportPath = Path.GetDirectoryName(sf.FileName) + sf.FileName;
+                try
+                {
+                    report.ExportToImage(sf.FileName);
+                    MessageBox.Show("Lưu thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
         private void dropDownButtonExportFile_Click(object sender, EventArgs e)
         {
-            exportFile(nhanVien);
+            XtraReport report = (XtraReport)documentViewer1.DocumentSource;
+            exportFilePdf(report);
         }
 
     }
