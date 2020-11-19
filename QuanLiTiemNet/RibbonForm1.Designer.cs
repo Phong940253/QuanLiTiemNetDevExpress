@@ -38,6 +38,8 @@
             this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
+            this.backstageViewClientControl5 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.documentViewer2 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
@@ -52,18 +54,19 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
-            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.backstageViewClientControl4 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.backstageViewClientControl5 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem3 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
@@ -87,6 +90,10 @@
             this.barButtonItemAddGiaoDich = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemAddKhuyenMai = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemFontEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -94,6 +101,7 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItemModule1 = new DevExpress.XtraBars.BarButtonItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
@@ -296,6 +304,7 @@
             this.navigationPage8 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
+            this.backstageViewManager1 = new DevExpress.XtraBars.Ribbon.BackstageViewManager();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -306,6 +315,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.backstageViewClientControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
             this.navigationFrame1.SuspendLayout();
@@ -507,37 +519,56 @@
             this.barButtonItemAddPhong,
             this.barButtonItemAddGiaoDich,
             this.barButtonItemAddKhuyenMai,
-            this.barStaticItem3});
+            this.barStaticItem3,
+            this.barEditItem1,
+            this.barEditItem2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 29;
+            this.ribbon.MaxItemId = 31;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemFontEdit1,
+            this.repositoryItemFontEdit2});
             this.ribbon.ShowSearchItem = true;
             this.ribbon.Size = new System.Drawing.Size(1109, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // backstageViewControl1
             // 
-            this.backstageViewControl1.Controls.Add(this.backstageViewClientControl2);
+            this.backstageViewControl1.Controls.Add(this.backstageViewClientControl5);
             this.backstageViewControl1.Controls.Add(this.backstageViewClientControl1);
+            this.backstageViewControl1.Controls.Add(this.backstageViewClientControl2);
             this.backstageViewControl1.Controls.Add(this.backstageViewClientControl3);
             this.backstageViewControl1.Controls.Add(this.backstageViewClientControl4);
-            this.backstageViewControl1.Controls.Add(this.backstageViewClientControl5);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem1);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem2);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem3);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem4);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem5);
-            this.backstageViewControl1.Location = new System.Drawing.Point(149, 92);
+            this.backstageViewControl1.Location = new System.Drawing.Point(94, 21);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.OwnerControl = this.ribbon;
-            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem2;
-            this.backstageViewControl1.SelectedTabIndex = 1;
-            this.backstageViewControl1.Size = new System.Drawing.Size(567, 396);
+            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem5;
+            this.backstageViewControl1.SelectedTabIndex = 4;
+            this.backstageViewControl1.Size = new System.Drawing.Size(615, 396);
             this.backstageViewControl1.TabIndex = 6;
-            this.backstageViewControl1.VisibleInDesignTime = true;
+            this.backstageViewControl1.Enter += new System.EventHandler(this.backstageViewControl1_Enter);
+            // 
+            // backstageViewClientControl5
+            // 
+            this.backstageViewClientControl5.Location = new System.Drawing.Point(132, 63);
+            this.backstageViewClientControl5.Name = "backstageViewClientControl5";
+            this.backstageViewClientControl5.Size = new System.Drawing.Size(482, 332);
+            this.backstageViewClientControl5.TabIndex = 5;
+            // 
+            // backstageViewClientControl1
+            // 
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(483, 334);
+            this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl2
             // 
@@ -547,7 +578,7 @@
             this.backstageViewClientControl2.Controls.Add(this.dropDownButtonExportFile);
             this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(435, 334);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(483, 334);
             this.backstageViewClientControl2.TabIndex = 2;
             this.backstageViewClientControl2.Load += new System.EventHandler(this.backstageViewClientControl2_Load);
             // 
@@ -558,7 +589,7 @@
             this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorControl1.Location = new System.Drawing.Point(134, 20);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(75, 273);
+            this.separatorControl1.Size = new System.Drawing.Size(75, 263);
             this.separatorControl1.TabIndex = 3;
             // 
             // documentViewer2
@@ -570,7 +601,7 @@
             this.documentViewer2.IsMetric = true;
             this.documentViewer2.Location = new System.Drawing.Point(250, 20);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(162, 288);
+            this.documentViewer2.Size = new System.Drawing.Size(206, 278);
             this.documentViewer2.TabIndex = 2;
             // 
             // labelControl1
@@ -604,7 +635,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem11),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem13)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem13),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem14)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -613,48 +645,63 @@
             this.barButtonItem4.Caption = "Pdf";
             this.barButtonItem4.Id = 0;
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
             this.barButtonItem5.Caption = "Html";
             this.barButtonItem5.Id = 1;
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "Mht";
             this.barButtonItem6.Id = 2;
             this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // barButtonItem8
             // 
             this.barButtonItem8.Caption = "Rtf";
             this.barButtonItem8.Id = 3;
             this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
             this.barButtonItem9.Caption = "Xls";
             this.barButtonItem9.Id = 4;
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // barButtonItem10
             // 
             this.barButtonItem10.Caption = "Xlsx";
             this.barButtonItem10.Id = 5;
             this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem11
             // 
             this.barButtonItem11.Caption = "Ccs";
             this.barButtonItem11.Id = 6;
             this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
             // 
             // barButtonItem13
             // 
             this.barButtonItem13.Caption = "Image";
             this.barButtonItem13.Id = 8;
             this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+            // 
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Caption = "Docx";
+            this.barButtonItem14.Id = 9;
+            this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barManager1
             // 
@@ -672,8 +719,9 @@
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
-            this.barButtonItem13});
-            this.barManager1.MaxItemId = 9;
+            this.barButtonItem13,
+            this.barButtonItem14});
+            this.barManager1.MaxItemId = 10;
             // 
             // barDockControlTop
             // 
@@ -713,21 +761,47 @@
             this.barButtonItem12.Id = 7;
             this.barButtonItem12.Name = "barButtonItem12";
             // 
-            // backstageViewClientControl1
-            // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
-            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(435, 334);
-            this.backstageViewClientControl1.TabIndex = 1;
-            // 
             // backstageViewClientControl3
             // 
+            this.backstageViewClientControl3.Controls.Add(this.labelControl2);
+            this.backstageViewClientControl3.Controls.Add(this.simpleButton1);
+            this.backstageViewClientControl3.Controls.Add(this.separatorControl2);
             this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
-            this.backstageViewClientControl3.Controls.Add(this.dropDownButton1);
             this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(435, 334);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(483, 334);
             this.backstageViewClientControl3.TabIndex = 3;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(35, 20);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(33, 42);
+            this.labelControl2.TabIndex = 6;
+            this.labelControl2.Text = "In";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(35, 80);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(62, 52);
+            this.simpleButton1.TabIndex = 5;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // separatorControl2
+            // 
+            this.separatorControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.separatorControl2.LineOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.separatorControl2.Location = new System.Drawing.Point(134, 20);
+            this.separatorControl2.Name = "separatorControl2";
+            this.separatorControl2.Size = new System.Drawing.Size(75, 269);
+            this.separatorControl2.TabIndex = 4;
+            this.separatorControl2.Click += new System.EventHandler(this.separatorControl2_Click);
             // 
             // documentViewer1
             // 
@@ -738,31 +812,15 @@
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(250, 20);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(161, 286);
+            this.documentViewer1.Size = new System.Drawing.Size(208, 282);
             this.documentViewer1.TabIndex = 3;
-            // 
-            // dropDownButton1
-            // 
-            this.dropDownButton1.Location = new System.Drawing.Point(18, 45);
-            this.dropDownButton1.MenuManager = this.ribbon;
-            this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton1.TabIndex = 0;
-            this.dropDownButton1.Text = "dropDownButton1";
             // 
             // backstageViewClientControl4
             // 
             this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(435, 334);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(483, 334);
             this.backstageViewClientControl4.TabIndex = 4;
-            // 
-            // backstageViewClientControl5
-            // 
-            this.backstageViewClientControl5.Location = new System.Drawing.Point(132, 62);
-            this.backstageViewClientControl5.Name = "backstageViewClientControl5";
-            this.backstageViewClientControl5.Size = new System.Drawing.Size(435, 334);
-            this.backstageViewClientControl5.TabIndex = 5;
             // 
             // backstageViewTabItem1
             // 
@@ -775,7 +833,6 @@
             this.backstageViewTabItem2.Caption = "Xuất";
             this.backstageViewTabItem2.ContentControl = this.backstageViewClientControl2;
             this.backstageViewTabItem2.Name = "backstageViewTabItem2";
-            this.backstageViewTabItem2.Selected = true;
             // 
             // backstageViewTabItem3
             // 
@@ -794,6 +851,7 @@
             this.backstageViewTabItem5.Caption = "Thoát";
             this.backstageViewTabItem5.ContentControl = this.backstageViewClientControl5;
             this.backstageViewTabItem5.Name = "backstageViewTabItem5";
+            this.backstageViewTabItem5.Selected = true;
             // 
             // barButtonItem1
             // 
@@ -945,6 +1003,36 @@
             this.barStaticItem3.Id = 28;
             this.barStaticItem3.Name = "barStaticItem3";
             // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "Font";
+            this.barEditItem1.Edit = this.repositoryItemFontEdit1;
+            this.barEditItem1.Id = 29;
+            this.barEditItem1.Name = "barEditItem1";
+            this.barEditItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barEditItem1_ItemClick);
+            // 
+            // repositoryItemFontEdit1
+            // 
+            this.repositoryItemFontEdit1.AutoHeight = false;
+            this.repositoryItemFontEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
+            // 
+            // barEditItem2
+            // 
+            this.barEditItem2.Caption = "Font";
+            this.barEditItem2.Edit = this.repositoryItemFontEdit2;
+            this.barEditItem2.Id = 30;
+            this.barEditItem2.Name = "barEditItem2";
+            this.barEditItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // repositoryItemFontEdit2
+            // 
+            this.repositoryItemFontEdit2.AutoHeight = false;
+            this.repositoryItemFontEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemFontEdit2.Name = "repositoryItemFontEdit2";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -965,7 +1053,7 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddNhanVien);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddNhanVien, true);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddNguoiDung);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddTaiKhoan);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemAddMay);
@@ -992,7 +1080,8 @@
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup6});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Hiển thị";
             // 
@@ -1002,6 +1091,12 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Chủ đề";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.barEditItem2);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Chữ viết";
             // 
             // ribbonStatusBar
             // 
@@ -3325,16 +3420,20 @@
             // 
             this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
             // 
+            // backstageViewManager1
+            // 
+            this.backstageViewManager1.BackstageView = this.backstageViewControl1;
+            // 
             // RibbonForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 681);
+            this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.navigationFrame1);
+            this.Controls.Add(this.ribbon);
             this.Controls.Add(this.officeNavigationBar1);
             this.Controls.Add(this.ribbonStatusBar);
-            this.Controls.Add(this.ribbon);
-            this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -3357,6 +3456,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.backstageViewClientControl3.ResumeLayout(false);
+            this.backstageViewClientControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).EndInit();
             this.navigationFrame1.ResumeLayout(false);
@@ -3758,7 +3861,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl3;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem2;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem3;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton1;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -3785,5 +3887,15 @@
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraEditors.XtraSaveFileDialog xtraSaveFileDialog1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem3;
+        private DevExpress.XtraBars.Ribbon.BackstageViewManager backstageViewManager1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl2;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
+        private DevExpress.XtraBars.BarEditItem barEditItem2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

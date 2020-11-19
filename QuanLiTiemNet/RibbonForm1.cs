@@ -33,6 +33,8 @@ namespace QuanLiTiemNet
         XtraReportThietBi thietBi = new XtraReportThietBi();
         XtraReportPhong phong = new XtraReportPhong();
         XtraReportGiaoDich giaoDich = new XtraReportGiaoDich();
+        string currentExport = "";
+        XtraReport currentReport;
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
@@ -112,15 +114,16 @@ namespace QuanLiTiemNet
 
         private void createReport()
         {
-            nhanVien.CreateDocument();
+            //nhanVien.CreateDocument();
             documentViewer1.DocumentSource = nhanVien;
             documentViewer2.DocumentSource = nhanVien;
-            nguoiDung.CreateDocument();
-            taiKhoan.CreateDocument();
-            may.CreateDocument();
-            thietBi.CreateDocument();
-            phong.CreateDocument();
-            giaoDich.CreateDocument();
+            currentReport = nhanVien;
+            //nguoiDung.CreateDocument();
+            //taiKhoan.CreateDocument();
+            //may.CreateDocument();
+            //thietBi.CreateDocument();
+            //phong.CreateDocument();
+            //giaoDich.CreateDocument();
         }
         private void officeNavigationBar1_Click(object sender, EventArgs e)
         {
@@ -179,10 +182,11 @@ namespace QuanLiTiemNet
             //report.CreateDocument();
             documentViewer1.DocumentSource = report;
             documentViewer2.DocumentSource = report;
+            currentReport = report;
         }
         private void updateReport(XtraReport report)
         {
-            report.CreateDocument();
+            //report.CreateDocument();
         }
         private void lockBarButton(int index)
         {
@@ -470,49 +474,49 @@ namespace QuanLiTiemNet
             {
                 RibbonFormAddNhanVien editNhanVien = new RibbonFormAddNhanVien(true, addDataSetNhanVien, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, barButtonItemDelete_ItemClick, GetNewDataRow);
                 editNhanVien.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
             else if (gridView == gridView2)
             {
                 int indexMaNguoiDung = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MANGUOIDUNG"];
                 RibbonFormAddNguoiDung editNguoiDung = new RibbonFormAddNguoiDung(true, addDataSetNguoiDung, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaNguoiDung, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editNguoiDung.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
             else if (gridView == gridView3)
             {
                 int indexMaTaiKhoan = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MATK"];
                 RibbonFormAddTaiKhoan editTaiKhoan = new RibbonFormAddTaiKhoan(true, addDataSetTaiKhoan, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaTaiKhoan, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editTaiKhoan.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
             else if (gridView == gridView4)
             {
                 int indexMaMay = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAMAY"];
                 RibbonFormAddMay editMay = new RibbonFormAddMay(true, addDataSetMay, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaMay, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editMay.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
             else if (gridView == gridView5)
             {
                 int indeThietBi = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MATHIETBI"];
                 RibbonFormAddThietBi editThietBi = new RibbonFormAddThietBi(true, addDataSetThietBi, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indeThietBi, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editThietBi.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
             else if (gridView == gridView6)
             {
                 int indexMaPhong = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAPHONG"];
                 RibbonFormAddPhong editPhong = new RibbonFormAddPhong(true, addDataSetPhong, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaPhong, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editPhong.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
             else if (gridView == gridView7)
             {
                 int indexMaGiaoDich = (int)gridView.GetDataRow(gridView.GetSelectedRows()[0])["MAGD"];
                 RibbonFormAddGiaoDich editGiaoDich = new RibbonFormAddGiaoDich(true, addDataSetGiaoDich, editDataSet, gridView.GetDataRow(gridView.GetSelectedRows()[0]), ref gridView, indexMaGiaoDich, barButtonItemDelete_ItemClick, GetNewDataRow, GetNewCode);
                 editGiaoDich.Show();
-                SaveDatabase(ref gridView);
+                //SaveDatabase(ref gridView);
             }
         }
 
@@ -721,6 +725,71 @@ namespace QuanLiTiemNet
         private void gridControl5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "pdf";
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "html";
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "mht";
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "rtf";
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "xls";
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "xlsx";
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "csv";
+        }
+
+        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "image";
+        }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            currentExport = "docx";
+        }
+
+        private void separatorControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barEditItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backstageViewControl1_Enter(object sender, EventArgs e)
+        {
+            currentReport.CreateDocument();
         }
 
         private void setThoiGianSuDung(string s)
@@ -937,9 +1006,39 @@ namespace QuanLiTiemNet
         }
         private void dropDownButtonExportFile_Click(object sender, EventArgs e)
         {
-            XtraReport report = (XtraReport)documentViewer1.DocumentSource;
-            exportFilePdf(report);
-        }
 
+            switch (currentExport)
+            {
+                case "pdf":
+                    exportFilePdf(currentReport);
+                    break;
+                case "html":
+                    exportFileHtml(currentReport);
+                    break;
+                case "rtf":
+                    exportFileRtf(currentReport);
+                    break;
+                case "image":
+                    exportFileImage(currentReport);
+                    break;
+                case "csv":
+                    exportFileCsv(currentReport);
+                    break;
+                case "docx":
+                    exportFileDocx(currentReport);
+                    break;
+                case "xls":
+                    exportFileXls(currentReport);
+                    break;
+                case "xlsx":
+                    exportFileXlsx(currentReport);
+                    break;
+                case "mht":
+                    exportFileMht(currentReport);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
