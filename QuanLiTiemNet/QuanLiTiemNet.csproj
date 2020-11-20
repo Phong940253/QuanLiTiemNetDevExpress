@@ -198,6 +198,12 @@
     <Compile Include="XtraReportProfilePhong.Designer.cs">
       <DependentUpon>XtraReportProfilePhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraReportProfileGiaoDich.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportProfileGiaoDich.Designer.cs">
+      <DependentUpon>XtraReportProfileGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraReportProfileThietBi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReportProfilePhong.resx">
       <DependentUpon>XtraReportProfilePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportProfileGiaoDich.resx">
+      <DependentUpon>XtraReportProfileGiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReportProfileThietBi.resx">
       <DependentUpon>XtraReportProfileThietBi.cs</DependentUpon>

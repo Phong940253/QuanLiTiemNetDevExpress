@@ -41,6 +41,7 @@ namespace QuanLiTiemNet
         XtraReportProfileNguoiDung reportProfileNguoiDung = new XtraReportProfileNguoiDung();
         XtraReportProfileThietBi reportProfileThietBi = new XtraReportProfileThietBi();
         XtraReportProfilePhong reportProfilePhong = new XtraReportProfilePhong();
+        XtraReportProfileGiaoDich reportProfileGiaoDich = new XtraReportProfileGiaoDich();
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
@@ -60,6 +61,11 @@ namespace QuanLiTiemNet
         {
             //setProfile(e.RowHandle);
             setPhong(e.RowHandle);
+        }
+        private void gridView7_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            //setProfile(e.RowHandle);
+            setGiaoDich(e.RowHandle);
         }
 
         private void setNguoiDung(int index)
@@ -111,6 +117,27 @@ namespace QuanLiTiemNet
             pdfViewer3.LoadDocument("testphong.pdf");
             pdfViewer3.HorizontalScrollPosition = (float)0.15;
             pdfViewer3.VerticalScrollPosition = (float)0.038;
+        }
+
+        private void setGiaoDich(int index)
+        {
+            DataRow dataRow = gridView7.GetDataRow(index);
+            reportProfileGiaoDich.Parameters["MATB"].Value = dataRow["MATB"]?.ToString();
+            reportProfileGiaoDich.Parameters["MATK"].Value = dataRow["MATK"]?.ToString();
+            reportProfileGiaoDich.Parameters["MANV"].Value = dataRow["MANV"]?.ToString();
+            reportProfileGiaoDich.Parameters["MAKM"].Value = dataRow["MAKM"]?.ToString();
+            reportProfileGiaoDich.Parameters["TIENTHU"].Value = dataRow["TIENTHU"];
+            reportProfileGiaoDich.Parameters["TIENTRA"].Value = dataRow["TIENTRA"];
+            reportProfileGiaoDich.Parameters["LOAI"].Value = dataRow["LOAI"]?.ToString();
+            reportProfileGiaoDich.Parameters["NOIDUNGGIAODICH"].Value = dataRow["NOIDUNGGIAODICH"]?.ToString();
+            reportProfileGiaoDich.Parameters["THOIGIAN"].Value = dataRow["THOIGIAN"]?.ToString();
+            reportProfileGiaoDich.Parameters["MAGD"].Value = dataRow["MAGD"]?.ToString();
+            pdfViewer4.CloseDocument();
+            reportProfileGiaoDich.CreateDocument();
+            reportProfileGiaoDich.ExportToPdf("testgiaodich.pdf");
+            pdfViewer4.LoadDocument("testgiaodich.pdf");
+            pdfViewer4.HorizontalScrollPosition = (float)0.15;
+            pdfViewer4.VerticalScrollPosition = (float)0.038;
         }
 
         public RibbonForm1()
@@ -195,6 +222,7 @@ namespace QuanLiTiemNet
             setNguoiDung(0);
             setThietBi(0);
             setPhong(0);
+            setGiaoDich(0);
             //nguoiDung.CreateDocument();
             //taiKhoan.CreateDocument();
             //may.CreateDocument();
