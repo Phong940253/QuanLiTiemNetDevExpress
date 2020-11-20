@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonForm1));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
             this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -484,9 +484,9 @@
             // 
             // backstageViewClientControl1
             // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(483, 334);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(482, 332);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl2
@@ -495,9 +495,9 @@
             this.backstageViewClientControl2.Controls.Add(this.documentViewer2);
             this.backstageViewClientControl2.Controls.Add(this.labelControl1);
             this.backstageViewClientControl2.Controls.Add(this.dropDownButtonExportFile);
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(483, 334);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(482, 332);
             this.backstageViewClientControl2.TabIndex = 2;
             this.backstageViewClientControl2.Load += new System.EventHandler(this.backstageViewClientControl2_Load);
             // 
@@ -508,7 +508,7 @@
             this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorControl1.Location = new System.Drawing.Point(134, 20);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(75, 263);
+            this.separatorControl1.Size = new System.Drawing.Size(75, 261);
             this.separatorControl1.TabIndex = 3;
             // 
             // documentViewer2
@@ -519,7 +519,7 @@
             this.documentViewer2.IsMetric = true;
             this.documentViewer2.Location = new System.Drawing.Point(250, 20);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(206, 278);
+            this.documentViewer2.Size = new System.Drawing.Size(205, 276);
             this.documentViewer2.TabIndex = 2;
             // 
             // labelControl1
@@ -685,9 +685,9 @@
             this.backstageViewClientControl3.Controls.Add(this.simpleButton1);
             this.backstageViewClientControl3.Controls.Add(this.separatorControl2);
             this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(483, 334);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(482, 332);
             this.backstageViewClientControl3.TabIndex = 3;
             // 
             // labelControl2
@@ -717,7 +717,7 @@
             this.separatorControl2.LineOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorControl2.Location = new System.Drawing.Point(134, 20);
             this.separatorControl2.Name = "separatorControl2";
-            this.separatorControl2.Size = new System.Drawing.Size(75, 269);
+            this.separatorControl2.Size = new System.Drawing.Size(75, 267);
             this.separatorControl2.TabIndex = 4;
             this.separatorControl2.Click += new System.EventHandler(this.separatorControl2_Click);
             // 
@@ -729,14 +729,14 @@
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(250, 20);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(208, 282);
+            this.documentViewer1.Size = new System.Drawing.Size(207, 280);
             this.documentViewer1.TabIndex = 3;
             // 
             // backstageViewClientControl4
             // 
-            this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(483, 334);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(482, 332);
             this.backstageViewClientControl4.TabIndex = 4;
             // 
             // backstageViewTabItem1
@@ -769,6 +769,7 @@
             this.backstageViewTabItem5.ContentControl = this.backstageViewClientControl5;
             this.backstageViewTabItem5.Name = "backstageViewTabItem5";
             this.backstageViewTabItem5.Selected = true;
+            this.backstageViewTabItem5.SelectedChanged += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewTabItem5_SelectedChanged);
             // 
             // barButtonItem1
             // 
@@ -1116,15 +1117,15 @@
             // 
             // windowsUIButtonPanel1
             // 
-            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
-            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
-            windowsUIButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions3.SvgImage")));
-            windowsUIButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions4.SvgImage")));
+            windowsUIButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions5.SvgImage")));
+            windowsUIButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions6.SvgImage")));
+            windowsUIButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions7.SvgImage")));
+            windowsUIButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions8.SvgImage")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", false, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(142, 47);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(229, 40);

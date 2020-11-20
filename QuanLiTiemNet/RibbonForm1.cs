@@ -950,12 +950,26 @@ namespace QuanLiTiemNet
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
+            if (currentReport == null) return;
+            try
+            {
+                ReportPrintTool printTool = new ReportPrintTool(currentReport);
+                // Invoke the Print dialog.
+                printTool.PrintDialog();
+                // Send the report to the default printer.
+                printTool.Print();
+                // Send the report to the specified printer.
+                printTool.Print("myPrinter");
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void backstageViewControl1_Enter(object sender, EventArgs e)
         {
-            currentReport.CreateDocument();
+            if (currentReport != null)
+                currentReport.CreateDocument();
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
@@ -983,6 +997,11 @@ namespace QuanLiTiemNet
             afterLogout();
             barButtonItem1.Enabled = false;
             barButtonItem2.Enabled = true;
+        }
+
+        private void backstageViewTabItem5_SelectedChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
+        {
+            this.Close();
         }
 
         private void setThoiGianSuDung(string s)
