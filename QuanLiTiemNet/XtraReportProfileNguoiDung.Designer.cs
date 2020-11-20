@@ -69,10 +69,12 @@ namespace QuanLiTiemNet
             // 
             // TopMargin
             // 
+            this.TopMargin.HeightF = 0F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
+            this.BottomMargin.HeightF = 0F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // ReportHeader
@@ -103,7 +105,7 @@ namespace QuanLiTiemNet
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(273.9583F, 23F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.Text = "xrLabel1";
             // 
@@ -143,7 +145,7 @@ namespace QuanLiTiemNet
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
-            this.Detail.HeightF = 224.125F;
+            this.Detail.HeightF = 272.2083F;
             this.Detail.Name = "Detail";
             // 
             // xrTable1
@@ -158,7 +160,7 @@ namespace QuanLiTiemNet
             this.xrTableRow4,
             this.xrTableRow5,
             this.xrTableRow6});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(521.3333F, 197.9166F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(413.5416F, 197.9166F);
             // 
             // xrTableRow2
             // 
@@ -180,7 +182,7 @@ namespace QuanLiTiemNet
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "Thông tin người dùng";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell4.Weight = 5.0704448576084964D;
+            this.xrTableCell4.Weight = 4.0220721099475751D;
             // 
             // xrTableRow3
             // 
@@ -210,7 +212,7 @@ namespace QuanLiTiemNet
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
             this.xrTableCell8.Text = "[?MANGUOIDUNG]";
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell8.Weight = 3.5885807934907641D;
+            this.xrTableCell8.Weight = 2.5402080458298424D;
             // 
             // xrTableRow1
             // 
@@ -242,7 +244,7 @@ namespace QuanLiTiemNet
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
             this.xrTableCell2.Text = "xrTableCell2";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell2.Weight = 3.5885807594947683D;
+            this.xrTableCell2.Weight = 2.5402080118338466D;
             // 
             // xrTableRow4
             // 
@@ -274,7 +276,7 @@ namespace QuanLiTiemNet
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
             this.xrTableCell5.Text = "xrTableCell5";
             this.xrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell5.Weight = 3.5885807594947683D;
+            this.xrTableCell5.Weight = 2.5402080118338466D;
             // 
             // xrTableRow5
             // 
@@ -306,7 +308,7 @@ namespace QuanLiTiemNet
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
             this.xrTableCell9.Text = "xrTableCell9";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell9.Weight = 3.5885807594947683D;
+            this.xrTableCell9.Weight = 2.5402080118338466D;
             // 
             // xrTableRow6
             // 
@@ -338,7 +340,7 @@ namespace QuanLiTiemNet
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
             this.xrTableCell11.Text = "xrTableCell11";
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell11.Weight = 3.5885807594947683D;
+            this.xrTableCell11.Weight = 2.5402080118338466D;
             // 
             // PageFooter
             // 
@@ -353,7 +355,7 @@ namespace QuanLiTiemNet
             this.xrLine2.LineWidth = 20F;
             this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 87.00002F);
             this.xrLine2.Name = "xrLine2";
-            this.xrLine2.SizeF = new System.Drawing.SizeF(626.9999F, 23.00001F);
+            this.xrLine2.SizeF = new System.Drawing.SizeF(826.9999F, 23.00001F);
             this.xrLine2.StylePriority.UseForeColor = false;
             // 
             // NGAYTAO
@@ -376,6 +378,7 @@ namespace QuanLiTiemNet
             this.bindingSource1});
             this.DataSource = this.bindingSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;

@@ -45,7 +45,12 @@ namespace QuanLiTiemNet
         private void gridView2_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             //setProfile(e.RowHandle);
-            DataRow dataRow = gridView2.GetDataRow(e.RowHandle);
+            setNguoiDung(e.RowHandle);
+        }
+
+        private void setNguoiDung(int index)
+        {
+            DataRow dataRow = gridView2.GetDataRow(index);
             reportProfileNguoiDung.Parameters["MANGUOIDUNG"].Value = dataRow["MANGUOIDUNG"]?.ToString();
             reportProfileNguoiDung.Parameters["EMAIL"].Value = dataRow["EMAIL"]?.ToString();
             reportProfileNguoiDung.Parameters["TEN"].Value = dataRow["HO"]?.ToString() + " " + dataRow["TENDEM"]?.ToString() + " " + dataRow["TEN"]?.ToString();
@@ -56,6 +61,8 @@ namespace QuanLiTiemNet
             reportProfileNguoiDung.CreateDocument();
             reportProfileNguoiDung.ExportToPdf("test.pdf");
             pdfViewer1.LoadDocument("test.pdf");
+            pdfViewer1.HorizontalScrollPosition = (float)0.15;
+            pdfViewer1.VerticalScrollPosition = (float)0.04;
         }
 
         string stringConnection;
@@ -135,6 +142,7 @@ namespace QuanLiTiemNet
             documentViewer1.DocumentSource = nhanVien;
             documentViewer2.DocumentSource = nhanVien;
             currentReport = nhanVien;
+            setNguoiDung(0);
             //nguoiDung.CreateDocument();
             //taiKhoan.CreateDocument();
             //may.CreateDocument();

@@ -107,7 +107,7 @@ namespace QuanLiTiemNet
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(682, 143);
+            this.mainRibbonControl.Size = new System.Drawing.Size(674, 143);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiSave
@@ -230,7 +230,7 @@ namespace QuanLiTiemNet
             this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout.Name = "RibbonFormAddNguoiDunglayoutControl1ConvertedLayout";
             this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 91, 650, 400);
             this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout.Root = this.layoutControlGroup2;
-            this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout.Size = new System.Drawing.Size(682, 145);
+            this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout.Size = new System.Drawing.Size(674, 141);
             this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout.TabIndex = 2;
             // 
             // textEditHo
@@ -240,7 +240,7 @@ namespace QuanLiTiemNet
             this.textEditHo.Properties.Mask.EditMask = "\\p{Lu}\\p{Ll}+";
             this.textEditHo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEditHo.Properties.ValidateOnEnterKey = true;
-            this.textEditHo.Size = new System.Drawing.Size(242, 20);
+            this.textEditHo.Size = new System.Drawing.Size(230, 20);
             this.textEditHo.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditHo.TabIndex = 1;
             // 
@@ -252,7 +252,7 @@ namespace QuanLiTiemNet
             this.textEditTenDem.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEditTenDem.Properties.Mask.ShowPlaceHolders = false;
             this.textEditTenDem.Properties.ValidateOnEnterKey = true;
-            this.textEditTenDem.Size = new System.Drawing.Size(242, 20);
+            this.textEditTenDem.Size = new System.Drawing.Size(230, 20);
             this.textEditTenDem.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditTenDem.TabIndex = 2;
             // 
@@ -263,38 +263,38 @@ namespace QuanLiTiemNet
             this.textEditTen.Properties.Mask.EditMask = "\\p{Lu}\\p{Ll}+";
             this.textEditTen.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEditTen.Properties.ValidateOnEnterKey = true;
-            this.textEditTen.Size = new System.Drawing.Size(242, 20);
+            this.textEditTen.Size = new System.Drawing.Size(230, 20);
             this.textEditTen.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditTen.TabIndex = 3;
             this.textEditTen.TextChanged += new System.EventHandler(this.textEditValidate_EditValueChanged);
             // 
             // textEditSDT
             // 
-            this.textEditSDT.Location = new System.Drawing.Point(406, 42);
+            this.textEditSDT.Location = new System.Drawing.Point(394, 42);
             this.textEditSDT.Name = "textEditSDT";
             this.textEditSDT.Properties.Mask.EditMask = "[1-9]\\d\\d-\\d\\d\\d-\\d\\d\\d";
             this.textEditSDT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEditSDT.Properties.ValidateOnEnterKey = true;
-            this.textEditSDT.Size = new System.Drawing.Size(252, 20);
+            this.textEditSDT.Size = new System.Drawing.Size(239, 20);
             this.textEditSDT.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditSDT.TabIndex = 6;
             // 
             // textEditDiaChi
             // 
-            this.textEditDiaChi.Location = new System.Drawing.Point(406, 90);
+            this.textEditDiaChi.Location = new System.Drawing.Point(394, 90);
             this.textEditDiaChi.Name = "textEditDiaChi";
             this.textEditDiaChi.Properties.ValidateOnEnterKey = true;
-            this.textEditDiaChi.Size = new System.Drawing.Size(252, 20);
+            this.textEditDiaChi.Size = new System.Drawing.Size(239, 20);
             this.textEditDiaChi.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditDiaChi.TabIndex = 8;
             // 
             // textEditEmail
             // 
-            this.textEditEmail.Location = new System.Drawing.Point(406, 66);
+            this.textEditEmail.Location = new System.Drawing.Point(394, 66);
             this.textEditEmail.Name = "textEditEmail";
             this.textEditEmail.Properties.Mask.EditMask = "\\w+@\\w+.\\w+";
             this.textEditEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEditEmail.Size = new System.Drawing.Size(252, 20);
+            this.textEditEmail.Size = new System.Drawing.Size(239, 20);
             this.textEditEmail.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditEmail.TabIndex = 7;
             // 
@@ -305,7 +305,7 @@ namespace QuanLiTiemNet
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup6});
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(682, 145);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(657, 144);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlGroup6
@@ -321,7 +321,7 @@ namespace QuanLiTiemNet
             this.layoutControlItem9});
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(662, 125);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(637, 124);
             this.layoutControlGroup6.Text = "Thông tin cơ bản";
             // 
             // layoutControlItem1
@@ -332,7 +332,7 @@ namespace QuanLiTiemNet
             this.layoutControlItem1.CustomizationFormText = "Họ <b><color=red>*</color></b>";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(314, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(302, 24);
             this.layoutControlItem1.Text = "Họ ";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -344,7 +344,7 @@ namespace QuanLiTiemNet
             this.layoutControlItem2.CustomizationFormText = "Tên đệm <b><color=red>*</color></b>";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(314, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(302, 24);
             this.layoutControlItem2.Text = "Tên đệm";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -356,7 +356,7 @@ namespace QuanLiTiemNet
             this.layoutControlItem3.CustomizationFormText = "Tên <b><color=red>*</color></b>";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(314, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(302, 24);
             this.layoutControlItem3.Text = "Tên <b><color=red>*</color></b>";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -366,9 +366,9 @@ namespace QuanLiTiemNet
             this.layoutControlItem7.Control = this.textEditSDT;
             this.layoutControlItem7.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem7.CustomizationFormText = "Số điện thoại <b><color=red>*</color></b>";
-            this.layoutControlItem7.Location = new System.Drawing.Point(314, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(302, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(324, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem7.Text = "Số điện thoại ";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -377,9 +377,9 @@ namespace QuanLiTiemNet
             this.layoutControlItem8.Control = this.textEditEmail;
             this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem8.CustomizationFormText = "Email";
-            this.layoutControlItem8.Location = new System.Drawing.Point(314, 24);
+            this.layoutControlItem8.Location = new System.Drawing.Point(302, 24);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(324, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem8.Text = "Email";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -388,7 +388,7 @@ namespace QuanLiTiemNet
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 72);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(638, 11);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(613, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
@@ -397,9 +397,9 @@ namespace QuanLiTiemNet
             this.layoutControlItem9.Control = this.textEditDiaChi;
             this.layoutControlItem9.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem9.CustomizationFormText = "Địa chỉ <b><color=red>*</color></b>";
-            this.layoutControlItem9.Location = new System.Drawing.Point(314, 48);
+            this.layoutControlItem9.Location = new System.Drawing.Point(302, 48);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(324, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem9.Text = "Địa chỉ";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(65, 13);
             // 
@@ -412,7 +412,7 @@ namespace QuanLiTiemNet
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(682, 288);
+            this.ClientSize = new System.Drawing.Size(674, 284);
             this.Controls.Add(this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout);
             this.Controls.Add(this.mainRibbonControl);
             this.Name = "RibbonFormAddNguoiDung";
