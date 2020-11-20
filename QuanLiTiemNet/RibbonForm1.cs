@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraPrinting;
@@ -100,20 +101,23 @@ namespace QuanLiTiemNet
 
         private void barButtonItemDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (navigationFrame1.SelectedPage == navigationPage1)
-                deleteRowGridView(ref gridView1);
-            else if (navigationFrame1.SelectedPage == navigationPage2)
-                deleteRowGridView(ref gridView2);
-            else if (navigationFrame1.SelectedPage == navigationPage3)
-                deleteRowGridView(ref gridView3);
-            else if (navigationFrame1.SelectedPage == navigationPage4)
-                deleteRowGridView(ref gridView4);
-            else if (navigationFrame1.SelectedPage == navigationPage5)
-                deleteRowGridView(ref gridView5);
-            else if (navigationFrame1.SelectedPage == navigationPage6)
-                deleteRowGridView(ref gridView6);
-            else if (navigationFrame1.SelectedPage == navigationPage7)
-                deleteRowGridView(ref gridView3);
+            if (XtraMessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Đồng ý", MessageBoxButtons.YesNo) != DialogResult.No)
+            {
+                if (navigationFrame1.SelectedPage == navigationPage1)
+                    deleteRowGridView(ref gridView1);
+                else if (navigationFrame1.SelectedPage == navigationPage2)
+                    deleteRowGridView(ref gridView2);
+                else if (navigationFrame1.SelectedPage == navigationPage3)
+                    deleteRowGridView(ref gridView3);
+                else if (navigationFrame1.SelectedPage == navigationPage4)
+                    deleteRowGridView(ref gridView4);
+                else if (navigationFrame1.SelectedPage == navigationPage5)
+                    deleteRowGridView(ref gridView5);
+                else if (navigationFrame1.SelectedPage == navigationPage6)
+                    deleteRowGridView(ref gridView6);
+                else if (navigationFrame1.SelectedPage == navigationPage7)
+                    deleteRowGridView(ref gridView3);
+            }
         }
 
         private void deleteRowGridView(ref GridView gridView)
