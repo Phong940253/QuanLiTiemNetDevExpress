@@ -95,7 +95,7 @@ namespace QuanLiTiemNet
             // xrLabel1
             // 
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Upper(?TENPhong)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Upper(?TENPHONG)")});
             this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(52.70831F, 10.00001F);
             this.xrLabel1.Multiline = true;

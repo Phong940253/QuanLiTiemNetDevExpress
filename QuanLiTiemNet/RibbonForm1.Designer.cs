@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonForm1));
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
             this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -251,8 +251,6 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.navigationPage7 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tablePanel7 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
@@ -305,6 +303,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
             this.backstageViewManager1 = new DevExpress.XtraBars.Ribbon.BackstageViewManager();
+            this.pdfViewer3 = new DevExpress.XtraPdfViewer.PdfViewer();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -428,8 +427,6 @@
             this.tablePanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             this.navigationPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel7)).BeginInit();
             this.tablePanel7.SuspendLayout();
@@ -1195,15 +1192,15 @@
             // 
             // windowsUIButtonPanel1
             // 
-            windowsUIButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions5.SvgImage")));
-            windowsUIButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions6.SvgImage")));
-            windowsUIButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions7.SvgImage")));
-            windowsUIButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions8.SvgImage")));
+            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
+            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
+            windowsUIButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions3.SvgImage")));
+            windowsUIButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions4.SvgImage")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", false, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", false, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(142, 47);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(229, 40);
@@ -2596,6 +2593,7 @@
             // pdfViewer2
             // 
             this.tablePanel6.SetColumn(this.pdfViewer2, 1);
+            this.pdfViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfViewer2.Location = new System.Drawing.Point(726, 10);
             this.pdfViewer2.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
             this.pdfViewer2.Name = "pdfViewer2";
@@ -2713,8 +2711,8 @@
             this.tablePanel5.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 65F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 35F)});
+            this.tablePanel5.Controls.Add(this.pdfViewer3);
             this.tablePanel5.Controls.Add(this.gridControl6);
-            this.tablePanel5.Controls.Add(this.layoutControl4);
             this.tablePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel5.Location = new System.Drawing.Point(0, 0);
             this.tablePanel5.Name = "tablePanel5";
@@ -2750,6 +2748,7 @@
             this.gridView6.Name = "gridView6";
             this.gridView6.OptionsView.ShowIndicator = false;
             this.gridView6.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView6.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView6_RowCellClick);
             // 
             // gridColumn4
             // 
@@ -2802,29 +2801,6 @@
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 1;
             this.gridColumn17.Width = 109;
-            // 
-            // layoutControl4
-            // 
-            this.tablePanel5.SetColumn(this.layoutControl4, 1);
-            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl4.Location = new System.Drawing.Point(726, 10);
-            this.layoutControl4.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.layoutControl4.Name = "layoutControl4";
-            this.layoutControl4.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(115, 95, 650, 400);
-            this.layoutControl4.Root = this.layoutControlGroup3;
-            this.tablePanel5.SetRow(this.layoutControl4, 0);
-            this.layoutControl4.Size = new System.Drawing.Size(373, 449);
-            this.layoutControl4.TabIndex = 1;
-            this.layoutControl4.Text = "layoutControl4";
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup3.GroupBordersVisible = false;
-            this.layoutControlGroup3.Name = "Root";
-            this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(373, 449);
-            this.layoutControlGroup3.TextVisible = false;
             // 
             // navigationPage7
             // 
@@ -3422,6 +3398,20 @@
             // 
             this.backstageViewManager1.BackstageView = this.backstageViewControl1;
             // 
+            // pdfViewer3
+            // 
+            this.tablePanel5.SetColumn(this.pdfViewer3, 1);
+            this.pdfViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer3.Location = new System.Drawing.Point(726, 10);
+            this.pdfViewer3.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.pdfViewer3.Name = "pdfViewer3";
+            this.pdfViewer3.NavigationPaneInitialVisibility = DevExpress.XtraPdfViewer.PdfNavigationPaneVisibility.Hidden;
+            this.tablePanel5.SetRow(this.pdfViewer3, 0);
+            this.pdfViewer3.Size = new System.Drawing.Size(373, 449);
+            this.pdfViewer3.TabIndex = 4;
+            this.pdfViewer3.ZoomFactor = 80F;
+            this.pdfViewer3.ZoomMode = DevExpress.XtraPdfViewer.PdfZoomMode.Custom;
+            // 
             // RibbonForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3569,8 +3559,6 @@
             this.tablePanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             this.navigationPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel7)).EndInit();
             this.tablePanel7.ResumeLayout(false);
@@ -3753,8 +3741,6 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.Utils.Layout.TablePanel tablePanel5;
-        private DevExpress.XtraLayout.LayoutControl layoutControl4;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraGrid.GridControl gridControl6;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
@@ -3894,5 +3880,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraPdfViewer.PdfViewer pdfViewer1;
         private DevExpress.XtraPdfViewer.PdfViewer pdfViewer2;
+        private DevExpress.XtraPdfViewer.PdfViewer pdfViewer3;
     }
 }

@@ -23,6 +23,8 @@ namespace QuanLiTiemNet
 
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+
+        string stringConnection;
         SqlConnection sqlConnection;
         SqlDataAdapter sqlDataNhanVien, sqlDataNguoiDung, sqlDataTaiKhoan, sqlDataMay, sqlDataThietBi, sqlDataPhong, sqlDataGiaoDich, sqlDataKhuyenMai;
         SqlCommandBuilder sqlCommandNhanVien, sqlCommandNguoiDung, sqlCommandTaiKhoan, sqlCommandMay, sqlCommandThietBi, sqlCommandPhong, sqlCommandGiaoDich, sqlCommandKhuyenMai;
@@ -38,7 +40,7 @@ namespace QuanLiTiemNet
         XtraReport currentReport;
         XtraReportProfileNguoiDung reportProfileNguoiDung = new XtraReportProfileNguoiDung();
         XtraReportProfileThietBi reportProfileThietBi = new XtraReportProfileThietBi();
-
+        XtraReportProfilePhong reportProfilePhong = new XtraReportProfilePhong();
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
@@ -53,6 +55,11 @@ namespace QuanLiTiemNet
         {
             //setProfile(e.RowHandle);
             setThietBi(e.RowHandle);
+        }
+        private void gridView6_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            //setProfile(e.RowHandle);
+            setPhong(e.RowHandle);
         }
 
         private void setNguoiDung(int index)
@@ -90,8 +97,22 @@ namespace QuanLiTiemNet
             pdfViewer2.HorizontalScrollPosition = (float)0.15;
             pdfViewer2.VerticalScrollPosition = (float)0.038;
         }
+        private void setPhong(int index)
+        {
+            DataRow dataRow = gridView6.GetDataRow(index);
+            reportProfilePhong.Parameters["MAPHONG"].Value = dataRow["MAPHONG"]?.ToString();
+            reportProfilePhong.Parameters["TENPHONG"].Value = dataRow["TENPHONG"]?.ToString();
+            reportProfilePhong.Parameters["TRANGTHAI"].Value = dataRow["TRANGTHAI"]?.ToString();
+            reportProfilePhong.Parameters["LOAIPHONG"].Value = dataRow["LOAIPHONG"]?.ToString();
+            reportProfilePhong.Parameters["DONGIA"].Value = dataRow["DONGIA"];
+            pdfViewer3.CloseDocument();
+            reportProfilePhong.CreateDocument();
+            reportProfilePhong.ExportToPdf("testphong.pdf");
+            pdfViewer3.LoadDocument("testphong.pdf");
+            pdfViewer3.HorizontalScrollPosition = (float)0.15;
+            pdfViewer3.VerticalScrollPosition = (float)0.038;
+        }
 
-        string stringConnection;
         public RibbonForm1()
         {
             InitializeComponent();
@@ -173,6 +194,7 @@ namespace QuanLiTiemNet
             currentReport = nhanVien;
             setNguoiDung(0);
             setThietBi(0);
+            setPhong(0);
             //nguoiDung.CreateDocument();
             //taiKhoan.CreateDocument();
             //may.CreateDocument();
