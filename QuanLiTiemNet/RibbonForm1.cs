@@ -36,6 +36,7 @@ namespace QuanLiTiemNet
         string currentExport = "";
         XtraReport currentReport;
         XtraReportProfileNguoiDung reportProfileNguoiDung = new XtraReportProfileNguoiDung();
+        XtraReportProfileThietBi reportProfileThietBi = new XtraReportProfileThietBi();
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
@@ -46,6 +47,11 @@ namespace QuanLiTiemNet
         {
             //setProfile(e.RowHandle);
             setNguoiDung(e.RowHandle);
+        }
+        private void gridView5_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            //setProfile(e.RowHandle);
+            setThietBi(e.RowHandle);
         }
 
         private void setNguoiDung(int index)
@@ -59,10 +65,29 @@ namespace QuanLiTiemNet
             reportProfileNguoiDung.Parameters["DIACHI"].Value = dataRow["DIACHI"]?.ToString();
             pdfViewer1.CloseDocument();
             reportProfileNguoiDung.CreateDocument();
-            reportProfileNguoiDung.ExportToPdf("test.pdf");
-            pdfViewer1.LoadDocument("test.pdf");
+            reportProfileNguoiDung.ExportToPdf("testnguoidung.pdf");
+            pdfViewer1.LoadDocument("testnguoidung.pdf");
             pdfViewer1.HorizontalScrollPosition = (float)0.15;
-            pdfViewer1.VerticalScrollPosition = (float)0.04;
+            pdfViewer1.VerticalScrollPosition = (float)0.038;
+        }
+
+        private void setThietBi(int index)
+        {
+            DataRow dataRow = gridView5.GetDataRow(index);
+            reportProfileThietBi.Parameters["MATB"].Value = dataRow["MATHIETBI"]?.ToString();
+            reportProfileThietBi.Parameters["MAMAY"].Value = dataRow["MAMAY"]?.ToString();
+            reportProfileThietBi.Parameters["TENTHIETBI"].Value = dataRow["TENTHIETBI"]?.ToString();
+            reportProfileThietBi.Parameters["TRANGTHAI"].Value = dataRow["TRANGTHAI"]?.ToString();
+            reportProfileThietBi.Parameters["GIATIEN"].Value = dataRow["GIATIEN"];
+            reportProfileThietBi.Parameters["NGUOITAO"].Value = dataRow["NGUOITAO"]?.ToString();
+            reportProfileThietBi.Parameters["TRANGTHAI"].Value = dataRow["TRANGTHAI"]?.ToString();
+            reportProfileThietBi.Parameters["LOAI"].Value = dataRow["LOAI"]?.ToString();
+            pdfViewer2.CloseDocument();
+            reportProfileThietBi.CreateDocument();
+            reportProfileThietBi.ExportToPdf("testthietbi.pdf");
+            pdfViewer2.LoadDocument("testthietbi.pdf");
+            pdfViewer2.HorizontalScrollPosition = (float)0.15;
+            pdfViewer2.VerticalScrollPosition = (float)0.038;
         }
 
         string stringConnection;
@@ -143,6 +168,7 @@ namespace QuanLiTiemNet
             documentViewer2.DocumentSource = nhanVien;
             currentReport = nhanVien;
             setNguoiDung(0);
+            setThietBi(0);
             //nguoiDung.CreateDocument();
             //taiKhoan.CreateDocument();
             //may.CreateDocument();

@@ -64,7 +64,7 @@ namespace QuanLiTiemNet
             dataRow["GIATIEN"] = spinEditGiaTien.Value.ToString();
             dataRow["SOTIEN"] = spinEditSoTien.Value.ToString();
             dataRow["LOAIMAY"] = string.IsNullOrEmpty(comboBoxEditLoaiMay.Text) ? "Thường" : comboBoxEditLoaiMay.Text;
-            dataRow["THONGSOMAY"] = memoEditThongSoMay.Text = dataRow["THONGSOMAY"]?.ToString();
+            dataRow["THONGSOMAY"] = memoEditThongSoMay.Text;
             dataRow["THOIGIANSUDUNG"] = string.IsNullOrEmpty(timeSpanEditThoiGianSuDung.Text) ? "00:00:00" : timeSpanEditThoiGianSuDung.Text;
             if (isEdit) sendEditData(dataRow, ref gridView);
             else sendNewMay(dataRow);
