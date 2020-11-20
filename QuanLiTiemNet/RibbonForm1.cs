@@ -20,6 +20,7 @@ namespace QuanLiTiemNet
     public delegate void xoaDataRow(object sender, ItemClickEventArgs e);
     public delegate DataRow getNewDataRow(int index);
     public delegate int getNewCode(int index, string column);
+    public delegate void login(bool isLogin, string username = "");
 
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -42,6 +43,7 @@ namespace QuanLiTiemNet
         XtraReportProfileThietBi reportProfileThietBi = new XtraReportProfileThietBi();
         XtraReportProfilePhong reportProfilePhong = new XtraReportProfilePhong();
         XtraReportProfileGiaoDich reportProfileGiaoDich = new XtraReportProfileGiaoDich();
+        string maNhanVien = "";
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
@@ -66,6 +68,17 @@ namespace QuanLiTiemNet
         {
             //setProfile(e.RowHandle);
             setGiaoDich(e.RowHandle);
+        }
+
+        private void setMaNhanVien(bool isLogin, string maNhanVien)
+        {
+            if (isLogin)
+            {
+                barButtonItem2.Enabled = false;
+                barButtonItem1.Enabled = true;
+                this.maNhanVien = maNhanVien;
+                afterLogin();
+            }
         }
 
         private void setNguoiDung(int index)
@@ -198,6 +211,11 @@ namespace QuanLiTiemNet
             getSqlConnection();
             getDataSet();
             lockBarButton(1);
+
+        }
+
+        private void afterLogin()
+        {
             loadTableNhanVien();
             loadTableNguoiDung();
             loadTableTaiKhoan();
@@ -212,7 +230,50 @@ namespace QuanLiTiemNet
             updateRecord(ref gridView1);
             createReport();
         }
-
+        private void afterLogout()
+        {
+            gridControl1.DataSource = null;
+            gridView1.Columns.Clear();
+            gridControl2.DataSource = null;
+            gridView2.Columns.Clear();
+            gridControl3.DataSource = null;
+            gridView3.Columns.Clear();
+            gridControl4.DataSource = null;
+            gridView4.Columns.Clear();
+            gridControl5.DataSource = null;
+            gridView5.Columns.Clear();
+            gridControl6.DataSource = null;
+            gridView6.Columns.Clear();
+            gridControl7.DataSource = null;
+            gridView7.Columns.Clear();
+            pictureEditAvatar.EditValue = null;
+            simpleLabelItem1.Text = "null";
+            simpleLabelItem2.Text = "null";
+            pdfViewer1.CloseDocument();
+            pdfViewer2.CloseDocument();
+            pdfViewer3.CloseDocument();
+            pdfViewer4.CloseDocument();
+            textEdit11.Text = null;
+            textEdit2.Text = null;
+            textEdit3.Text = null;
+            spinEdit1.Value = 0;
+            textEdit31.Text = null;
+            textEdit32.Text = null;
+            textEdit12.Text = null;
+            spinEdit2.Value = 0;
+            textEdit13.Text = null;
+            textEdit34.Text = null;
+            textEdit33.Text = null;
+            textEdit4.Text = null;
+            textEdit1.Text = null;
+            textEdit5.Text = null;
+            textEdit10.Text = null;
+            textEdit7.Text = null;
+            textEdit8.Text = null;
+            textEdit6.Text = null;
+            textEdit9.Text = null;
+            memoEdit1.Text = null;
+        }
         private void createReport()
         {
             //nhanVien.CreateDocument();
@@ -908,6 +969,20 @@ namespace QuanLiTiemNet
             {
                 e.Cancel = true;
             }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OverlayFormShow.Instance.ShowFormOverlay(this);
+            XtraFormLogin frm = new XtraFormLogin(setMaNhanVien);
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            afterLogout();
+            barButtonItem1.Enabled = false;
+            barButtonItem2.Enabled = true;
         }
 
         private void setThoiGianSuDung(string s)

@@ -105,6 +105,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OverlayFormShow.cs" />
     <Compile Include="ProcessImage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +162,12 @@
     </Compile>
     <Compile Include="WizardFormInstall.Designer.cs">
       <DependentUpon>WizardFormInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraFormLogin.Designer.cs">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="XtraReportGiaoDich.cs">
       <SubType>Component</SubType>
@@ -265,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WizardFormInstall.resx">
       <DependentUpon>WizardFormInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormLogin.resx">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReportGiaoDich.resx">
       <DependentUpon>XtraReportGiaoDich.cs</DependentUpon>
