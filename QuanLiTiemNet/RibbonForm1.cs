@@ -101,7 +101,7 @@ namespace QuanLiTiemNet
 
         private void barButtonItemDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (XtraMessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Đồng ý", MessageBoxButtons.YesNo) != DialogResult.No)
+            if (XtraMessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xóa", MessageBoxButtons.YesNo) != DialogResult.No)
             {
                 if (navigationFrame1.SelectedPage == navigationPage1)
                     deleteRowGridView(ref gridView1);
@@ -845,6 +845,19 @@ namespace QuanLiTiemNet
         private void backstageViewControl1_Enter(object sender, EventArgs e)
         {
             currentReport.CreateDocument();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RibbonForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (XtraMessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void setThoiGianSuDung(string s)
