@@ -33,6 +33,7 @@ namespace QuanLiTiemNet
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonFormAddNguoiDung));
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -64,7 +65,6 @@ namespace QuanLiTiemNet
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dxValidationProvider2 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout)).BeginInit();
@@ -84,7 +84,6 @@ namespace QuanLiTiemNet
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // mainRibbonControl
@@ -266,6 +265,10 @@ namespace QuanLiTiemNet
             this.textEditTen.Size = new System.Drawing.Size(230, 20);
             this.textEditTen.StyleController = this.RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
             this.textEditTen.TabIndex = 3;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Tên không được để trống!";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.textEditTen, conditionValidationRule1);
             this.textEditTen.TextChanged += new System.EventHandler(this.textEditValidate_EditValueChanged);
             // 
             // textEditSDT
@@ -403,10 +406,6 @@ namespace QuanLiTiemNet
             this.layoutControlItem9.Text = "Địa chỉ";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(65, 13);
             // 
-            // dxValidationProvider2
-            // 
-            this.dxValidationProvider2.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
-            // 
             // RibbonFormAddNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,7 +438,6 @@ namespace QuanLiTiemNet
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,7 +458,6 @@ namespace QuanLiTiemNet
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
-        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider2;
         private DevExpress.XtraLayout.LayoutControl RibbonFormAddNguoiDunglayoutControl1ConvertedLayout;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
