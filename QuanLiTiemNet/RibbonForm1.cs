@@ -35,10 +35,27 @@ namespace QuanLiTiemNet
         XtraReportGiaoDich giaoDich = new XtraReportGiaoDich();
         string currentExport = "";
         XtraReport currentReport;
+        XtraReportProfileNguoiDung reportProfileNguoiDung = new XtraReportProfileNguoiDung();
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             setProfile(e.RowHandle);
+        }
+
+        private void gridView2_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            //setProfile(e.RowHandle);
+            DataRow dataRow = gridView2.GetDataRow(e.RowHandle);
+            reportProfileNguoiDung.Parameters["MANGUOIDUNG"].Value = dataRow["MANGUOIDUNG"]?.ToString();
+            reportProfileNguoiDung.Parameters["EMAIL"].Value = dataRow["EMAIL"]?.ToString();
+            reportProfileNguoiDung.Parameters["TEN"].Value = dataRow["HO"]?.ToString() + " " + dataRow["TENDEM"]?.ToString() + " " + dataRow["TEN"]?.ToString();
+            reportProfileNguoiDung.Parameters["SDT"].Value = dataRow["SDT"]?.ToString();
+            reportProfileNguoiDung.Parameters["NGAYTAO"].Value = dataRow["NGAYTAO"]?.ToString();
+            reportProfileNguoiDung.Parameters["DIACHI"].Value = dataRow["DIACHI"]?.ToString();
+            pdfViewer1.CloseDocument();
+            reportProfileNguoiDung.CreateDocument();
+            reportProfileNguoiDung.ExportToPdf("test.pdf");
+            pdfViewer1.LoadDocument("test.pdf");
         }
 
         string stringConnection;
